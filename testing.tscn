@@ -1,0 +1,2852 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh8hmsjnmkj5f"]
+
+[ext_resource type="Script" path="res://groundarraytest.gd" id="1_xlb4c"]
+
+[node name="testing" type="Node2D"]
+
+[node name="groundarraytest" type="Node2D" parent="."]
+script = ExtResource("1_xlb4c")
+
+[node name="groundcell1" type="ColorRect" parent="groundarraytest"]
+offset_top = 596.0
+offset_right = 40.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell2" type="ColorRect" parent="groundarraytest"]
+offset_left = 13.0
+offset_top = 596.0
+offset_right = 53.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell3" type="ColorRect" parent="groundarraytest"]
+offset_left = 26.0
+offset_top = 596.0
+offset_right = 66.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell4" type="ColorRect" parent="groundarraytest"]
+offset_left = 39.0
+offset_top = 596.0
+offset_right = 79.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell5" type="ColorRect" parent="groundarraytest"]
+offset_left = 52.0
+offset_top = 596.0
+offset_right = 92.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell6" type="ColorRect" parent="groundarraytest"]
+offset_left = 65.0
+offset_top = 596.0
+offset_right = 105.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell7" type="ColorRect" parent="groundarraytest"]
+offset_left = 78.0
+offset_top = 596.0
+offset_right = 118.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell8" type="ColorRect" parent="groundarraytest"]
+offset_left = 91.0
+offset_top = 596.0
+offset_right = 131.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell9" type="ColorRect" parent="groundarraytest"]
+offset_left = 104.0
+offset_top = 596.0
+offset_right = 144.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell10" type="ColorRect" parent="groundarraytest"]
+offset_left = 117.0
+offset_top = 596.0
+offset_right = 157.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell11" type="ColorRect" parent="groundarraytest"]
+offset_left = 130.0
+offset_top = 596.0
+offset_right = 170.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell12" type="ColorRect" parent="groundarraytest"]
+offset_left = 143.0
+offset_top = 596.0
+offset_right = 183.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell13" type="ColorRect" parent="groundarraytest"]
+offset_left = 156.0
+offset_top = 596.0
+offset_right = 196.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell14" type="ColorRect" parent="groundarraytest"]
+offset_left = 169.0
+offset_top = 596.0
+offset_right = 209.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell15" type="ColorRect" parent="groundarraytest"]
+offset_left = 182.0
+offset_top = 596.0
+offset_right = 222.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell16" type="ColorRect" parent="groundarraytest"]
+offset_left = 195.0
+offset_top = 596.0
+offset_right = 235.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell17" type="ColorRect" parent="groundarraytest"]
+offset_top = 609.0
+offset_right = 40.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell18" type="ColorRect" parent="groundarraytest"]
+offset_left = 13.0
+offset_top = 609.0
+offset_right = 53.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell19" type="ColorRect" parent="groundarraytest"]
+offset_left = 26.0
+offset_top = 609.0
+offset_right = 66.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell20" type="ColorRect" parent="groundarraytest"]
+offset_left = 39.0
+offset_top = 609.0
+offset_right = 79.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell21" type="ColorRect" parent="groundarraytest"]
+offset_left = 52.0
+offset_top = 609.0
+offset_right = 92.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell22" type="ColorRect" parent="groundarraytest"]
+offset_left = 65.0
+offset_top = 609.0
+offset_right = 105.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell23" type="ColorRect" parent="groundarraytest"]
+offset_left = 78.0
+offset_top = 609.0
+offset_right = 118.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell24" type="ColorRect" parent="groundarraytest"]
+offset_left = 91.0
+offset_top = 609.0
+offset_right = 131.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell25" type="ColorRect" parent="groundarraytest"]
+offset_left = 104.0
+offset_top = 609.0
+offset_right = 144.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell26" type="ColorRect" parent="groundarraytest"]
+offset_left = 117.0
+offset_top = 609.0
+offset_right = 157.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell27" type="ColorRect" parent="groundarraytest"]
+offset_left = 130.0
+offset_top = 609.0
+offset_right = 170.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell28" type="ColorRect" parent="groundarraytest"]
+offset_left = 143.0
+offset_top = 609.0
+offset_right = 183.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell29" type="ColorRect" parent="groundarraytest"]
+offset_left = 156.0
+offset_top = 609.0
+offset_right = 196.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell30" type="ColorRect" parent="groundarraytest"]
+offset_left = 169.0
+offset_top = 609.0
+offset_right = 209.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell31" type="ColorRect" parent="groundarraytest"]
+offset_left = 182.0
+offset_top = 609.0
+offset_right = 222.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell32" type="ColorRect" parent="groundarraytest"]
+offset_left = 195.0
+offset_top = 609.0
+offset_right = 235.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell33" type="ColorRect" parent="groundarraytest"]
+offset_top = 622.0
+offset_right = 40.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell34" type="ColorRect" parent="groundarraytest"]
+offset_left = 13.0
+offset_top = 622.0
+offset_right = 53.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell35" type="ColorRect" parent="groundarraytest"]
+offset_left = 26.0
+offset_top = 622.0
+offset_right = 66.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell36" type="ColorRect" parent="groundarraytest"]
+offset_left = 39.0
+offset_top = 622.0
+offset_right = 79.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell37" type="ColorRect" parent="groundarraytest"]
+offset_left = 52.0
+offset_top = 622.0
+offset_right = 92.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell38" type="ColorRect" parent="groundarraytest"]
+offset_left = 65.0
+offset_top = 622.0
+offset_right = 105.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell39" type="ColorRect" parent="groundarraytest"]
+offset_left = 78.0
+offset_top = 622.0
+offset_right = 118.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell40" type="ColorRect" parent="groundarraytest"]
+offset_left = 91.0
+offset_top = 622.0
+offset_right = 131.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell41" type="ColorRect" parent="groundarraytest"]
+offset_left = 104.0
+offset_top = 622.0
+offset_right = 144.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell42" type="ColorRect" parent="groundarraytest"]
+offset_left = 117.0
+offset_top = 622.0
+offset_right = 157.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell43" type="ColorRect" parent="groundarraytest"]
+offset_left = 130.0
+offset_top = 622.0
+offset_right = 170.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell44" type="ColorRect" parent="groundarraytest"]
+offset_left = 143.0
+offset_top = 622.0
+offset_right = 183.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell45" type="ColorRect" parent="groundarraytest"]
+offset_left = 156.0
+offset_top = 622.0
+offset_right = 196.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell46" type="ColorRect" parent="groundarraytest"]
+offset_left = 169.0
+offset_top = 622.0
+offset_right = 209.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell47" type="ColorRect" parent="groundarraytest"]
+offset_left = 182.0
+offset_top = 622.0
+offset_right = 222.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell48" type="ColorRect" parent="groundarraytest"]
+offset_left = 195.0
+offset_top = 622.0
+offset_right = 235.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell49" type="ColorRect" parent="groundarraytest"]
+offset_top = 635.0
+offset_right = 40.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell50" type="ColorRect" parent="groundarraytest"]
+offset_left = 13.0
+offset_top = 635.0
+offset_right = 53.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell51" type="ColorRect" parent="groundarraytest"]
+offset_left = 26.0
+offset_top = 635.0
+offset_right = 66.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell52" type="ColorRect" parent="groundarraytest"]
+offset_left = 39.0
+offset_top = 635.0
+offset_right = 79.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell53" type="ColorRect" parent="groundarraytest"]
+offset_left = 52.0
+offset_top = 635.0
+offset_right = 92.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell54" type="ColorRect" parent="groundarraytest"]
+offset_left = 65.0
+offset_top = 635.0
+offset_right = 105.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell55" type="ColorRect" parent="groundarraytest"]
+offset_left = 78.0
+offset_top = 635.0
+offset_right = 118.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell56" type="ColorRect" parent="groundarraytest"]
+offset_left = 91.0
+offset_top = 635.0
+offset_right = 131.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell57" type="ColorRect" parent="groundarraytest"]
+offset_left = 104.0
+offset_top = 635.0
+offset_right = 144.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell58" type="ColorRect" parent="groundarraytest"]
+offset_left = 117.0
+offset_top = 635.0
+offset_right = 157.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell59" type="ColorRect" parent="groundarraytest"]
+offset_left = 130.0
+offset_top = 635.0
+offset_right = 170.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell60" type="ColorRect" parent="groundarraytest"]
+offset_left = 143.0
+offset_top = 635.0
+offset_right = 183.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell61" type="ColorRect" parent="groundarraytest"]
+offset_left = 156.0
+offset_top = 635.0
+offset_right = 196.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell62" type="ColorRect" parent="groundarraytest"]
+offset_left = 169.0
+offset_top = 635.0
+offset_right = 209.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell63" type="ColorRect" parent="groundarraytest"]
+offset_left = 182.0
+offset_top = 635.0
+offset_right = 222.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell64" type="ColorRect" parent="groundarraytest"]
+offset_left = 195.0
+offset_top = 635.0
+offset_right = 235.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell65" type="ColorRect" parent="groundarraytest"]
+offset_left = 208.0
+offset_top = 596.0
+offset_right = 248.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell66" type="ColorRect" parent="groundarraytest"]
+offset_left = 221.0
+offset_top = 596.0
+offset_right = 261.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell67" type="ColorRect" parent="groundarraytest"]
+offset_left = 234.0
+offset_top = 596.0
+offset_right = 274.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell68" type="ColorRect" parent="groundarraytest"]
+offset_left = 247.0
+offset_top = 596.0
+offset_right = 287.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell69" type="ColorRect" parent="groundarraytest"]
+offset_left = 260.0
+offset_top = 596.0
+offset_right = 300.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell70" type="ColorRect" parent="groundarraytest"]
+offset_left = 273.0
+offset_top = 596.0
+offset_right = 313.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell71" type="ColorRect" parent="groundarraytest"]
+offset_left = 286.0
+offset_top = 596.0
+offset_right = 326.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell72" type="ColorRect" parent="groundarraytest"]
+offset_left = 299.0
+offset_top = 596.0
+offset_right = 339.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell73" type="ColorRect" parent="groundarraytest"]
+offset_left = 312.0
+offset_top = 596.0
+offset_right = 352.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell74" type="ColorRect" parent="groundarraytest"]
+offset_left = 325.0
+offset_top = 596.0
+offset_right = 365.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell75" type="ColorRect" parent="groundarraytest"]
+offset_left = 338.0
+offset_top = 596.0
+offset_right = 378.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell76" type="ColorRect" parent="groundarraytest"]
+offset_left = 351.0
+offset_top = 596.0
+offset_right = 391.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell77" type="ColorRect" parent="groundarraytest"]
+offset_left = 364.0
+offset_top = 596.0
+offset_right = 404.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell78" type="ColorRect" parent="groundarraytest"]
+offset_left = 377.0
+offset_top = 596.0
+offset_right = 417.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell79" type="ColorRect" parent="groundarraytest"]
+offset_left = 390.0
+offset_top = 596.0
+offset_right = 430.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell80" type="ColorRect" parent="groundarraytest"]
+offset_left = 403.0
+offset_top = 596.0
+offset_right = 443.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell81" type="ColorRect" parent="groundarraytest"]
+offset_left = 208.0
+offset_top = 609.0
+offset_right = 248.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell82" type="ColorRect" parent="groundarraytest"]
+offset_left = 221.0
+offset_top = 609.0
+offset_right = 261.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell83" type="ColorRect" parent="groundarraytest"]
+offset_left = 234.0
+offset_top = 609.0
+offset_right = 274.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell84" type="ColorRect" parent="groundarraytest"]
+offset_left = 247.0
+offset_top = 609.0
+offset_right = 287.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell85" type="ColorRect" parent="groundarraytest"]
+offset_left = 260.0
+offset_top = 609.0
+offset_right = 300.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell86" type="ColorRect" parent="groundarraytest"]
+offset_left = 273.0
+offset_top = 609.0
+offset_right = 313.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell87" type="ColorRect" parent="groundarraytest"]
+offset_left = 286.0
+offset_top = 609.0
+offset_right = 326.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell88" type="ColorRect" parent="groundarraytest"]
+offset_left = 299.0
+offset_top = 609.0
+offset_right = 339.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell89" type="ColorRect" parent="groundarraytest"]
+offset_left = 312.0
+offset_top = 609.0
+offset_right = 352.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell90" type="ColorRect" parent="groundarraytest"]
+offset_left = 325.0
+offset_top = 609.0
+offset_right = 365.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell91" type="ColorRect" parent="groundarraytest"]
+offset_left = 338.0
+offset_top = 609.0
+offset_right = 378.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell92" type="ColorRect" parent="groundarraytest"]
+offset_left = 351.0
+offset_top = 609.0
+offset_right = 391.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell93" type="ColorRect" parent="groundarraytest"]
+offset_left = 364.0
+offset_top = 609.0
+offset_right = 404.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell94" type="ColorRect" parent="groundarraytest"]
+offset_left = 377.0
+offset_top = 609.0
+offset_right = 417.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell95" type="ColorRect" parent="groundarraytest"]
+offset_left = 390.0
+offset_top = 609.0
+offset_right = 430.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell96" type="ColorRect" parent="groundarraytest"]
+offset_left = 403.0
+offset_top = 609.0
+offset_right = 443.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell97" type="ColorRect" parent="groundarraytest"]
+offset_left = 208.0
+offset_top = 622.0
+offset_right = 248.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell98" type="ColorRect" parent="groundarraytest"]
+offset_left = 221.0
+offset_top = 622.0
+offset_right = 261.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell99" type="ColorRect" parent="groundarraytest"]
+offset_left = 234.0
+offset_top = 622.0
+offset_right = 274.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell100" type="ColorRect" parent="groundarraytest"]
+offset_left = 247.0
+offset_top = 622.0
+offset_right = 287.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell101" type="ColorRect" parent="groundarraytest"]
+offset_left = 260.0
+offset_top = 622.0
+offset_right = 300.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell102" type="ColorRect" parent="groundarraytest"]
+offset_left = 273.0
+offset_top = 622.0
+offset_right = 313.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell103" type="ColorRect" parent="groundarraytest"]
+offset_left = 286.0
+offset_top = 622.0
+offset_right = 326.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell104" type="ColorRect" parent="groundarraytest"]
+offset_left = 299.0
+offset_top = 622.0
+offset_right = 339.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell105" type="ColorRect" parent="groundarraytest"]
+offset_left = 312.0
+offset_top = 622.0
+offset_right = 352.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell106" type="ColorRect" parent="groundarraytest"]
+offset_left = 325.0
+offset_top = 622.0
+offset_right = 365.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell107" type="ColorRect" parent="groundarraytest"]
+offset_left = 338.0
+offset_top = 622.0
+offset_right = 378.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell108" type="ColorRect" parent="groundarraytest"]
+offset_left = 351.0
+offset_top = 622.0
+offset_right = 391.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell109" type="ColorRect" parent="groundarraytest"]
+offset_left = 364.0
+offset_top = 622.0
+offset_right = 404.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell110" type="ColorRect" parent="groundarraytest"]
+offset_left = 377.0
+offset_top = 622.0
+offset_right = 417.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell111" type="ColorRect" parent="groundarraytest"]
+offset_left = 390.0
+offset_top = 622.0
+offset_right = 430.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell112" type="ColorRect" parent="groundarraytest"]
+offset_left = 403.0
+offset_top = 622.0
+offset_right = 443.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell113" type="ColorRect" parent="groundarraytest"]
+offset_left = 208.0
+offset_top = 635.0
+offset_right = 248.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell114" type="ColorRect" parent="groundarraytest"]
+offset_left = 221.0
+offset_top = 635.0
+offset_right = 261.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell115" type="ColorRect" parent="groundarraytest"]
+offset_left = 234.0
+offset_top = 635.0
+offset_right = 274.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell116" type="ColorRect" parent="groundarraytest"]
+offset_left = 247.0
+offset_top = 635.0
+offset_right = 287.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell117" type="ColorRect" parent="groundarraytest"]
+offset_left = 260.0
+offset_top = 635.0
+offset_right = 300.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell118" type="ColorRect" parent="groundarraytest"]
+offset_left = 273.0
+offset_top = 635.0
+offset_right = 313.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell119" type="ColorRect" parent="groundarraytest"]
+offset_left = 286.0
+offset_top = 635.0
+offset_right = 326.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell120" type="ColorRect" parent="groundarraytest"]
+offset_left = 299.0
+offset_top = 635.0
+offset_right = 339.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell121" type="ColorRect" parent="groundarraytest"]
+offset_left = 312.0
+offset_top = 635.0
+offset_right = 352.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell122" type="ColorRect" parent="groundarraytest"]
+offset_left = 325.0
+offset_top = 635.0
+offset_right = 365.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell123" type="ColorRect" parent="groundarraytest"]
+offset_left = 338.0
+offset_top = 635.0
+offset_right = 378.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell124" type="ColorRect" parent="groundarraytest"]
+offset_left = 351.0
+offset_top = 635.0
+offset_right = 391.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell125" type="ColorRect" parent="groundarraytest"]
+offset_left = 364.0
+offset_top = 635.0
+offset_right = 404.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell126" type="ColorRect" parent="groundarraytest"]
+offset_left = 377.0
+offset_top = 635.0
+offset_right = 417.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell127" type="ColorRect" parent="groundarraytest"]
+offset_left = 390.0
+offset_top = 635.0
+offset_right = 430.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell128" type="ColorRect" parent="groundarraytest"]
+offset_left = 403.0
+offset_top = 635.0
+offset_right = 443.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell129" type="ColorRect" parent="groundarraytest"]
+offset_left = 416.0
+offset_top = 596.0
+offset_right = 456.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell130" type="ColorRect" parent="groundarraytest"]
+offset_left = 429.0
+offset_top = 596.0
+offset_right = 469.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell131" type="ColorRect" parent="groundarraytest"]
+offset_left = 442.0
+offset_top = 596.0
+offset_right = 482.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell132" type="ColorRect" parent="groundarraytest"]
+offset_left = 455.0
+offset_top = 596.0
+offset_right = 495.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell133" type="ColorRect" parent="groundarraytest"]
+offset_left = 468.0
+offset_top = 596.0
+offset_right = 508.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell134" type="ColorRect" parent="groundarraytest"]
+offset_left = 481.0
+offset_top = 596.0
+offset_right = 521.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell135" type="ColorRect" parent="groundarraytest"]
+offset_left = 494.0
+offset_top = 596.0
+offset_right = 534.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell136" type="ColorRect" parent="groundarraytest"]
+offset_left = 507.0
+offset_top = 596.0
+offset_right = 547.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell137" type="ColorRect" parent="groundarraytest"]
+offset_left = 520.0
+offset_top = 596.0
+offset_right = 560.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell138" type="ColorRect" parent="groundarraytest"]
+offset_left = 533.0
+offset_top = 596.0
+offset_right = 573.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell139" type="ColorRect" parent="groundarraytest"]
+offset_left = 546.0
+offset_top = 596.0
+offset_right = 586.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell140" type="ColorRect" parent="groundarraytest"]
+offset_left = 559.0
+offset_top = 596.0
+offset_right = 599.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell141" type="ColorRect" parent="groundarraytest"]
+offset_left = 572.0
+offset_top = 596.0
+offset_right = 612.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell142" type="ColorRect" parent="groundarraytest"]
+offset_left = 585.0
+offset_top = 596.0
+offset_right = 625.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell143" type="ColorRect" parent="groundarraytest"]
+offset_left = 598.0
+offset_top = 596.0
+offset_right = 638.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell144" type="ColorRect" parent="groundarraytest"]
+offset_left = 611.0
+offset_top = 596.0
+offset_right = 651.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell145" type="ColorRect" parent="groundarraytest"]
+offset_left = 416.0
+offset_top = 609.0
+offset_right = 456.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell146" type="ColorRect" parent="groundarraytest"]
+offset_left = 429.0
+offset_top = 609.0
+offset_right = 469.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell147" type="ColorRect" parent="groundarraytest"]
+offset_left = 442.0
+offset_top = 609.0
+offset_right = 482.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell148" type="ColorRect" parent="groundarraytest"]
+offset_left = 455.0
+offset_top = 609.0
+offset_right = 495.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell149" type="ColorRect" parent="groundarraytest"]
+offset_left = 468.0
+offset_top = 609.0
+offset_right = 508.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell150" type="ColorRect" parent="groundarraytest"]
+offset_left = 481.0
+offset_top = 609.0
+offset_right = 521.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell151" type="ColorRect" parent="groundarraytest"]
+offset_left = 494.0
+offset_top = 609.0
+offset_right = 534.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell152" type="ColorRect" parent="groundarraytest"]
+offset_left = 507.0
+offset_top = 609.0
+offset_right = 547.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell153" type="ColorRect" parent="groundarraytest"]
+offset_left = 520.0
+offset_top = 609.0
+offset_right = 560.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell154" type="ColorRect" parent="groundarraytest"]
+offset_left = 533.0
+offset_top = 609.0
+offset_right = 573.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell155" type="ColorRect" parent="groundarraytest"]
+offset_left = 546.0
+offset_top = 609.0
+offset_right = 586.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell156" type="ColorRect" parent="groundarraytest"]
+offset_left = 559.0
+offset_top = 609.0
+offset_right = 599.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell157" type="ColorRect" parent="groundarraytest"]
+offset_left = 572.0
+offset_top = 609.0
+offset_right = 612.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell158" type="ColorRect" parent="groundarraytest"]
+offset_left = 585.0
+offset_top = 609.0
+offset_right = 625.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell159" type="ColorRect" parent="groundarraytest"]
+offset_left = 598.0
+offset_top = 609.0
+offset_right = 638.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell160" type="ColorRect" parent="groundarraytest"]
+offset_left = 611.0
+offset_top = 609.0
+offset_right = 651.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell161" type="ColorRect" parent="groundarraytest"]
+offset_left = 416.0
+offset_top = 622.0
+offset_right = 456.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell162" type="ColorRect" parent="groundarraytest"]
+offset_left = 429.0
+offset_top = 622.0
+offset_right = 469.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell163" type="ColorRect" parent="groundarraytest"]
+offset_left = 442.0
+offset_top = 622.0
+offset_right = 482.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell164" type="ColorRect" parent="groundarraytest"]
+offset_left = 455.0
+offset_top = 622.0
+offset_right = 495.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell165" type="ColorRect" parent="groundarraytest"]
+offset_left = 468.0
+offset_top = 622.0
+offset_right = 508.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell166" type="ColorRect" parent="groundarraytest"]
+offset_left = 481.0
+offset_top = 622.0
+offset_right = 521.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell167" type="ColorRect" parent="groundarraytest"]
+offset_left = 494.0
+offset_top = 622.0
+offset_right = 534.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell168" type="ColorRect" parent="groundarraytest"]
+offset_left = 507.0
+offset_top = 622.0
+offset_right = 547.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell169" type="ColorRect" parent="groundarraytest"]
+offset_left = 520.0
+offset_top = 622.0
+offset_right = 560.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell170" type="ColorRect" parent="groundarraytest"]
+offset_left = 533.0
+offset_top = 622.0
+offset_right = 573.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell171" type="ColorRect" parent="groundarraytest"]
+offset_left = 546.0
+offset_top = 622.0
+offset_right = 586.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell172" type="ColorRect" parent="groundarraytest"]
+offset_left = 559.0
+offset_top = 622.0
+offset_right = 599.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell173" type="ColorRect" parent="groundarraytest"]
+offset_left = 572.0
+offset_top = 622.0
+offset_right = 612.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell174" type="ColorRect" parent="groundarraytest"]
+offset_left = 585.0
+offset_top = 622.0
+offset_right = 625.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell175" type="ColorRect" parent="groundarraytest"]
+offset_left = 598.0
+offset_top = 622.0
+offset_right = 638.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell176" type="ColorRect" parent="groundarraytest"]
+offset_left = 611.0
+offset_top = 622.0
+offset_right = 651.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell177" type="ColorRect" parent="groundarraytest"]
+offset_left = 416.0
+offset_top = 635.0
+offset_right = 456.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell178" type="ColorRect" parent="groundarraytest"]
+offset_left = 429.0
+offset_top = 635.0
+offset_right = 469.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell179" type="ColorRect" parent="groundarraytest"]
+offset_left = 442.0
+offset_top = 635.0
+offset_right = 482.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell180" type="ColorRect" parent="groundarraytest"]
+offset_left = 455.0
+offset_top = 635.0
+offset_right = 495.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell181" type="ColorRect" parent="groundarraytest"]
+offset_left = 468.0
+offset_top = 635.0
+offset_right = 508.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell182" type="ColorRect" parent="groundarraytest"]
+offset_left = 481.0
+offset_top = 635.0
+offset_right = 521.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell183" type="ColorRect" parent="groundarraytest"]
+offset_left = 494.0
+offset_top = 635.0
+offset_right = 534.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell184" type="ColorRect" parent="groundarraytest"]
+offset_left = 507.0
+offset_top = 635.0
+offset_right = 547.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell185" type="ColorRect" parent="groundarraytest"]
+offset_left = 520.0
+offset_top = 635.0
+offset_right = 560.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell186" type="ColorRect" parent="groundarraytest"]
+offset_left = 533.0
+offset_top = 635.0
+offset_right = 573.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell187" type="ColorRect" parent="groundarraytest"]
+offset_left = 546.0
+offset_top = 635.0
+offset_right = 586.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell188" type="ColorRect" parent="groundarraytest"]
+offset_left = 559.0
+offset_top = 635.0
+offset_right = 599.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell189" type="ColorRect" parent="groundarraytest"]
+offset_left = 572.0
+offset_top = 635.0
+offset_right = 612.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell190" type="ColorRect" parent="groundarraytest"]
+offset_left = 585.0
+offset_top = 635.0
+offset_right = 625.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell191" type="ColorRect" parent="groundarraytest"]
+offset_left = 598.0
+offset_top = 635.0
+offset_right = 638.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell192" type="ColorRect" parent="groundarraytest"]
+offset_left = 611.0
+offset_top = 635.0
+offset_right = 651.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell193" type="ColorRect" parent="groundarraytest"]
+offset_left = 624.0
+offset_top = 596.0
+offset_right = 664.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell194" type="ColorRect" parent="groundarraytest"]
+offset_left = 637.0
+offset_top = 596.0
+offset_right = 677.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell195" type="ColorRect" parent="groundarraytest"]
+offset_left = 650.0
+offset_top = 596.0
+offset_right = 690.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell196" type="ColorRect" parent="groundarraytest"]
+offset_left = 663.0
+offset_top = 596.0
+offset_right = 703.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell197" type="ColorRect" parent="groundarraytest"]
+offset_left = 676.0
+offset_top = 596.0
+offset_right = 716.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell198" type="ColorRect" parent="groundarraytest"]
+offset_left = 689.0
+offset_top = 596.0
+offset_right = 729.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell199" type="ColorRect" parent="groundarraytest"]
+offset_left = 702.0
+offset_top = 596.0
+offset_right = 742.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell200" type="ColorRect" parent="groundarraytest"]
+offset_left = 715.0
+offset_top = 596.0
+offset_right = 755.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell201" type="ColorRect" parent="groundarraytest"]
+offset_left = 728.0
+offset_top = 596.0
+offset_right = 768.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell202" type="ColorRect" parent="groundarraytest"]
+offset_left = 741.0
+offset_top = 596.0
+offset_right = 781.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell203" type="ColorRect" parent="groundarraytest"]
+offset_left = 754.0
+offset_top = 596.0
+offset_right = 794.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell204" type="ColorRect" parent="groundarraytest"]
+offset_left = 767.0
+offset_top = 596.0
+offset_right = 807.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell205" type="ColorRect" parent="groundarraytest"]
+offset_left = 780.0
+offset_top = 596.0
+offset_right = 820.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell206" type="ColorRect" parent="groundarraytest"]
+offset_left = 793.0
+offset_top = 596.0
+offset_right = 833.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell207" type="ColorRect" parent="groundarraytest"]
+offset_left = 806.0
+offset_top = 596.0
+offset_right = 846.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell208" type="ColorRect" parent="groundarraytest"]
+offset_left = 819.0
+offset_top = 596.0
+offset_right = 859.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell209" type="ColorRect" parent="groundarraytest"]
+offset_left = 624.0
+offset_top = 609.0
+offset_right = 664.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell210" type="ColorRect" parent="groundarraytest"]
+offset_left = 637.0
+offset_top = 609.0
+offset_right = 677.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell211" type="ColorRect" parent="groundarraytest"]
+offset_left = 650.0
+offset_top = 609.0
+offset_right = 690.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell212" type="ColorRect" parent="groundarraytest"]
+offset_left = 663.0
+offset_top = 609.0
+offset_right = 703.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell213" type="ColorRect" parent="groundarraytest"]
+offset_left = 676.0
+offset_top = 609.0
+offset_right = 716.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell214" type="ColorRect" parent="groundarraytest"]
+offset_left = 689.0
+offset_top = 609.0
+offset_right = 729.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell215" type="ColorRect" parent="groundarraytest"]
+offset_left = 702.0
+offset_top = 609.0
+offset_right = 742.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell216" type="ColorRect" parent="groundarraytest"]
+offset_left = 715.0
+offset_top = 609.0
+offset_right = 755.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell217" type="ColorRect" parent="groundarraytest"]
+offset_left = 728.0
+offset_top = 609.0
+offset_right = 768.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell218" type="ColorRect" parent="groundarraytest"]
+offset_left = 741.0
+offset_top = 609.0
+offset_right = 781.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell219" type="ColorRect" parent="groundarraytest"]
+offset_left = 754.0
+offset_top = 609.0
+offset_right = 794.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell220" type="ColorRect" parent="groundarraytest"]
+offset_left = 767.0
+offset_top = 609.0
+offset_right = 807.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell221" type="ColorRect" parent="groundarraytest"]
+offset_left = 780.0
+offset_top = 609.0
+offset_right = 820.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell222" type="ColorRect" parent="groundarraytest"]
+offset_left = 793.0
+offset_top = 609.0
+offset_right = 833.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell223" type="ColorRect" parent="groundarraytest"]
+offset_left = 806.0
+offset_top = 609.0
+offset_right = 846.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell224" type="ColorRect" parent="groundarraytest"]
+offset_left = 819.0
+offset_top = 609.0
+offset_right = 859.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell225" type="ColorRect" parent="groundarraytest"]
+offset_left = 624.0
+offset_top = 622.0
+offset_right = 664.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell226" type="ColorRect" parent="groundarraytest"]
+offset_left = 637.0
+offset_top = 622.0
+offset_right = 677.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell227" type="ColorRect" parent="groundarraytest"]
+offset_left = 650.0
+offset_top = 622.0
+offset_right = 690.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell228" type="ColorRect" parent="groundarraytest"]
+offset_left = 663.0
+offset_top = 622.0
+offset_right = 703.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell229" type="ColorRect" parent="groundarraytest"]
+offset_left = 676.0
+offset_top = 622.0
+offset_right = 716.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell230" type="ColorRect" parent="groundarraytest"]
+offset_left = 689.0
+offset_top = 622.0
+offset_right = 729.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell231" type="ColorRect" parent="groundarraytest"]
+offset_left = 702.0
+offset_top = 622.0
+offset_right = 742.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell232" type="ColorRect" parent="groundarraytest"]
+offset_left = 715.0
+offset_top = 622.0
+offset_right = 755.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell233" type="ColorRect" parent="groundarraytest"]
+offset_left = 728.0
+offset_top = 622.0
+offset_right = 768.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell234" type="ColorRect" parent="groundarraytest"]
+offset_left = 741.0
+offset_top = 622.0
+offset_right = 781.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell235" type="ColorRect" parent="groundarraytest"]
+offset_left = 754.0
+offset_top = 622.0
+offset_right = 794.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell236" type="ColorRect" parent="groundarraytest"]
+offset_left = 767.0
+offset_top = 622.0
+offset_right = 807.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell237" type="ColorRect" parent="groundarraytest"]
+offset_left = 780.0
+offset_top = 622.0
+offset_right = 820.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell238" type="ColorRect" parent="groundarraytest"]
+offset_left = 793.0
+offset_top = 622.0
+offset_right = 833.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell239" type="ColorRect" parent="groundarraytest"]
+offset_left = 806.0
+offset_top = 622.0
+offset_right = 846.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell240" type="ColorRect" parent="groundarraytest"]
+offset_left = 819.0
+offset_top = 622.0
+offset_right = 859.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell241" type="ColorRect" parent="groundarraytest"]
+offset_left = 624.0
+offset_top = 635.0
+offset_right = 664.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell242" type="ColorRect" parent="groundarraytest"]
+offset_left = 637.0
+offset_top = 635.0
+offset_right = 677.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell243" type="ColorRect" parent="groundarraytest"]
+offset_left = 650.0
+offset_top = 635.0
+offset_right = 690.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell244" type="ColorRect" parent="groundarraytest"]
+offset_left = 663.0
+offset_top = 635.0
+offset_right = 703.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell245" type="ColorRect" parent="groundarraytest"]
+offset_left = 676.0
+offset_top = 635.0
+offset_right = 716.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell246" type="ColorRect" parent="groundarraytest"]
+offset_left = 689.0
+offset_top = 635.0
+offset_right = 729.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell247" type="ColorRect" parent="groundarraytest"]
+offset_left = 702.0
+offset_top = 635.0
+offset_right = 742.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell248" type="ColorRect" parent="groundarraytest"]
+offset_left = 715.0
+offset_top = 635.0
+offset_right = 755.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell249" type="ColorRect" parent="groundarraytest"]
+offset_left = 728.0
+offset_top = 635.0
+offset_right = 768.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell250" type="ColorRect" parent="groundarraytest"]
+offset_left = 741.0
+offset_top = 635.0
+offset_right = 781.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell251" type="ColorRect" parent="groundarraytest"]
+offset_left = 754.0
+offset_top = 635.0
+offset_right = 794.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell252" type="ColorRect" parent="groundarraytest"]
+offset_left = 767.0
+offset_top = 635.0
+offset_right = 807.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell253" type="ColorRect" parent="groundarraytest"]
+offset_left = 780.0
+offset_top = 635.0
+offset_right = 820.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell254" type="ColorRect" parent="groundarraytest"]
+offset_left = 793.0
+offset_top = 635.0
+offset_right = 833.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell255" type="ColorRect" parent="groundarraytest"]
+offset_left = 806.0
+offset_top = 635.0
+offset_right = 846.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell256" type="ColorRect" parent="groundarraytest"]
+offset_left = 819.0
+offset_top = 635.0
+offset_right = 859.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell257" type="ColorRect" parent="groundarraytest"]
+offset_left = 832.0
+offset_top = 596.0
+offset_right = 872.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell258" type="ColorRect" parent="groundarraytest"]
+offset_left = 845.0
+offset_top = 596.0
+offset_right = 885.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell259" type="ColorRect" parent="groundarraytest"]
+offset_left = 858.0
+offset_top = 596.0
+offset_right = 898.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell260" type="ColorRect" parent="groundarraytest"]
+offset_left = 871.0
+offset_top = 596.0
+offset_right = 911.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell261" type="ColorRect" parent="groundarraytest"]
+offset_left = 884.0
+offset_top = 596.0
+offset_right = 924.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell262" type="ColorRect" parent="groundarraytest"]
+offset_left = 897.0
+offset_top = 596.0
+offset_right = 937.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell263" type="ColorRect" parent="groundarraytest"]
+offset_left = 910.0
+offset_top = 596.0
+offset_right = 950.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell264" type="ColorRect" parent="groundarraytest"]
+offset_left = 923.0
+offset_top = 596.0
+offset_right = 963.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell265" type="ColorRect" parent="groundarraytest"]
+offset_left = 936.0
+offset_top = 596.0
+offset_right = 976.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell266" type="ColorRect" parent="groundarraytest"]
+offset_left = 949.0
+offset_top = 596.0
+offset_right = 989.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell267" type="ColorRect" parent="groundarraytest"]
+offset_left = 962.0
+offset_top = 596.0
+offset_right = 1002.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell268" type="ColorRect" parent="groundarraytest"]
+offset_left = 975.0
+offset_top = 596.0
+offset_right = 1015.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell269" type="ColorRect" parent="groundarraytest"]
+offset_left = 988.0
+offset_top = 596.0
+offset_right = 1028.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell270" type="ColorRect" parent="groundarraytest"]
+offset_left = 1001.0
+offset_top = 596.0
+offset_right = 1041.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell271" type="ColorRect" parent="groundarraytest"]
+offset_left = 1014.0
+offset_top = 596.0
+offset_right = 1054.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell272" type="ColorRect" parent="groundarraytest"]
+offset_left = 1027.0
+offset_top = 596.0
+offset_right = 1067.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell273" type="ColorRect" parent="groundarraytest"]
+offset_left = 832.0
+offset_top = 609.0
+offset_right = 872.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell274" type="ColorRect" parent="groundarraytest"]
+offset_left = 845.0
+offset_top = 609.0
+offset_right = 885.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell275" type="ColorRect" parent="groundarraytest"]
+offset_left = 858.0
+offset_top = 609.0
+offset_right = 898.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell276" type="ColorRect" parent="groundarraytest"]
+offset_left = 871.0
+offset_top = 609.0
+offset_right = 911.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell277" type="ColorRect" parent="groundarraytest"]
+offset_left = 884.0
+offset_top = 609.0
+offset_right = 924.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell278" type="ColorRect" parent="groundarraytest"]
+offset_left = 897.0
+offset_top = 609.0
+offset_right = 937.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell279" type="ColorRect" parent="groundarraytest"]
+offset_left = 910.0
+offset_top = 609.0
+offset_right = 950.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell280" type="ColorRect" parent="groundarraytest"]
+offset_left = 923.0
+offset_top = 609.0
+offset_right = 963.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell281" type="ColorRect" parent="groundarraytest"]
+offset_left = 936.0
+offset_top = 609.0
+offset_right = 976.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell282" type="ColorRect" parent="groundarraytest"]
+offset_left = 949.0
+offset_top = 609.0
+offset_right = 989.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell283" type="ColorRect" parent="groundarraytest"]
+offset_left = 962.0
+offset_top = 609.0
+offset_right = 1002.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell284" type="ColorRect" parent="groundarraytest"]
+offset_left = 975.0
+offset_top = 609.0
+offset_right = 1015.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell285" type="ColorRect" parent="groundarraytest"]
+offset_left = 988.0
+offset_top = 609.0
+offset_right = 1028.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell286" type="ColorRect" parent="groundarraytest"]
+offset_left = 1001.0
+offset_top = 609.0
+offset_right = 1041.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell287" type="ColorRect" parent="groundarraytest"]
+offset_left = 1014.0
+offset_top = 609.0
+offset_right = 1054.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell288" type="ColorRect" parent="groundarraytest"]
+offset_left = 1027.0
+offset_top = 609.0
+offset_right = 1067.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell289" type="ColorRect" parent="groundarraytest"]
+offset_left = 832.0
+offset_top = 622.0
+offset_right = 872.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell290" type="ColorRect" parent="groundarraytest"]
+offset_left = 845.0
+offset_top = 622.0
+offset_right = 885.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell291" type="ColorRect" parent="groundarraytest"]
+offset_left = 858.0
+offset_top = 622.0
+offset_right = 898.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell292" type="ColorRect" parent="groundarraytest"]
+offset_left = 871.0
+offset_top = 622.0
+offset_right = 911.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell293" type="ColorRect" parent="groundarraytest"]
+offset_left = 884.0
+offset_top = 622.0
+offset_right = 924.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell294" type="ColorRect" parent="groundarraytest"]
+offset_left = 897.0
+offset_top = 622.0
+offset_right = 937.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell295" type="ColorRect" parent="groundarraytest"]
+offset_left = 910.0
+offset_top = 622.0
+offset_right = 950.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell296" type="ColorRect" parent="groundarraytest"]
+offset_left = 923.0
+offset_top = 622.0
+offset_right = 963.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell297" type="ColorRect" parent="groundarraytest"]
+offset_left = 936.0
+offset_top = 622.0
+offset_right = 976.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell298" type="ColorRect" parent="groundarraytest"]
+offset_left = 949.0
+offset_top = 622.0
+offset_right = 989.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell299" type="ColorRect" parent="groundarraytest"]
+offset_left = 962.0
+offset_top = 622.0
+offset_right = 1002.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell300" type="ColorRect" parent="groundarraytest"]
+offset_left = 975.0
+offset_top = 622.0
+offset_right = 1015.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell301" type="ColorRect" parent="groundarraytest"]
+offset_left = 988.0
+offset_top = 622.0
+offset_right = 1028.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell302" type="ColorRect" parent="groundarraytest"]
+offset_left = 1001.0
+offset_top = 622.0
+offset_right = 1041.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell303" type="ColorRect" parent="groundarraytest"]
+offset_left = 1014.0
+offset_top = 622.0
+offset_right = 1054.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell304" type="ColorRect" parent="groundarraytest"]
+offset_left = 1027.0
+offset_top = 622.0
+offset_right = 1067.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell305" type="ColorRect" parent="groundarraytest"]
+offset_left = 832.0
+offset_top = 635.0
+offset_right = 872.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell306" type="ColorRect" parent="groundarraytest"]
+offset_left = 845.0
+offset_top = 635.0
+offset_right = 885.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell307" type="ColorRect" parent="groundarraytest"]
+offset_left = 858.0
+offset_top = 635.0
+offset_right = 898.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell308" type="ColorRect" parent="groundarraytest"]
+offset_left = 871.0
+offset_top = 635.0
+offset_right = 911.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell309" type="ColorRect" parent="groundarraytest"]
+offset_left = 884.0
+offset_top = 635.0
+offset_right = 924.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell310" type="ColorRect" parent="groundarraytest"]
+offset_left = 897.0
+offset_top = 635.0
+offset_right = 937.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell311" type="ColorRect" parent="groundarraytest"]
+offset_left = 910.0
+offset_top = 635.0
+offset_right = 950.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell312" type="ColorRect" parent="groundarraytest"]
+offset_left = 923.0
+offset_top = 635.0
+offset_right = 963.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell313" type="ColorRect" parent="groundarraytest"]
+offset_left = 936.0
+offset_top = 635.0
+offset_right = 976.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell314" type="ColorRect" parent="groundarraytest"]
+offset_left = 949.0
+offset_top = 635.0
+offset_right = 989.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell315" type="ColorRect" parent="groundarraytest"]
+offset_left = 962.0
+offset_top = 635.0
+offset_right = 1002.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell316" type="ColorRect" parent="groundarraytest"]
+offset_left = 975.0
+offset_top = 635.0
+offset_right = 1015.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell317" type="ColorRect" parent="groundarraytest"]
+offset_left = 988.0
+offset_top = 635.0
+offset_right = 1028.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell318" type="ColorRect" parent="groundarraytest"]
+offset_left = 1001.0
+offset_top = 635.0
+offset_right = 1041.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell319" type="ColorRect" parent="groundarraytest"]
+offset_left = 1014.0
+offset_top = 635.0
+offset_right = 1054.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell320" type="ColorRect" parent="groundarraytest"]
+offset_left = 1027.0
+offset_top = 635.0
+offset_right = 1067.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell321" type="ColorRect" parent="groundarraytest"]
+offset_left = 1040.0
+offset_top = 596.0
+offset_right = 1080.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell322" type="ColorRect" parent="groundarraytest"]
+offset_left = 1053.0
+offset_top = 596.0
+offset_right = 1093.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell323" type="ColorRect" parent="groundarraytest"]
+offset_left = 1066.0
+offset_top = 596.0
+offset_right = 1106.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell324" type="ColorRect" parent="groundarraytest"]
+offset_left = 1079.0
+offset_top = 596.0
+offset_right = 1119.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell325" type="ColorRect" parent="groundarraytest"]
+offset_left = 1092.0
+offset_top = 596.0
+offset_right = 1132.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell326" type="ColorRect" parent="groundarraytest"]
+offset_left = 1105.0
+offset_top = 596.0
+offset_right = 1145.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell327" type="ColorRect" parent="groundarraytest"]
+offset_left = 1118.0
+offset_top = 596.0
+offset_right = 1158.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell328" type="ColorRect" parent="groundarraytest"]
+offset_left = 1131.0
+offset_top = 596.0
+offset_right = 1171.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell329" type="ColorRect" parent="groundarraytest"]
+offset_left = 1144.0
+offset_top = 596.0
+offset_right = 1184.0
+offset_bottom = 636.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell337" type="ColorRect" parent="groundarraytest"]
+offset_left = 1040.0
+offset_top = 609.0
+offset_right = 1080.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell338" type="ColorRect" parent="groundarraytest"]
+offset_left = 1053.0
+offset_top = 609.0
+offset_right = 1093.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell339" type="ColorRect" parent="groundarraytest"]
+offset_left = 1066.0
+offset_top = 609.0
+offset_right = 1106.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell340" type="ColorRect" parent="groundarraytest"]
+offset_left = 1079.0
+offset_top = 609.0
+offset_right = 1119.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell341" type="ColorRect" parent="groundarraytest"]
+offset_left = 1092.0
+offset_top = 609.0
+offset_right = 1132.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell342" type="ColorRect" parent="groundarraytest"]
+offset_left = 1105.0
+offset_top = 609.0
+offset_right = 1145.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell343" type="ColorRect" parent="groundarraytest"]
+offset_left = 1118.0
+offset_top = 609.0
+offset_right = 1158.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell344" type="ColorRect" parent="groundarraytest"]
+offset_left = 1131.0
+offset_top = 609.0
+offset_right = 1171.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell345" type="ColorRect" parent="groundarraytest"]
+offset_left = 1144.0
+offset_top = 609.0
+offset_right = 1184.0
+offset_bottom = 649.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell353" type="ColorRect" parent="groundarraytest"]
+offset_left = 1040.0
+offset_top = 622.0
+offset_right = 1080.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell354" type="ColorRect" parent="groundarraytest"]
+offset_left = 1053.0
+offset_top = 622.0
+offset_right = 1093.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell355" type="ColorRect" parent="groundarraytest"]
+offset_left = 1066.0
+offset_top = 622.0
+offset_right = 1106.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell356" type="ColorRect" parent="groundarraytest"]
+offset_left = 1079.0
+offset_top = 622.0
+offset_right = 1119.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell357" type="ColorRect" parent="groundarraytest"]
+offset_left = 1092.0
+offset_top = 622.0
+offset_right = 1132.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell358" type="ColorRect" parent="groundarraytest"]
+offset_left = 1105.0
+offset_top = 622.0
+offset_right = 1145.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell359" type="ColorRect" parent="groundarraytest"]
+offset_left = 1118.0
+offset_top = 622.0
+offset_right = 1158.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell360" type="ColorRect" parent="groundarraytest"]
+offset_left = 1131.0
+offset_top = 622.0
+offset_right = 1171.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell361" type="ColorRect" parent="groundarraytest"]
+offset_left = 1144.0
+offset_top = 622.0
+offset_right = 1184.0
+offset_bottom = 662.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell369" type="ColorRect" parent="groundarraytest"]
+offset_left = 1040.0
+offset_top = 635.0
+offset_right = 1080.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell370" type="ColorRect" parent="groundarraytest"]
+offset_left = 1053.0
+offset_top = 635.0
+offset_right = 1093.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell371" type="ColorRect" parent="groundarraytest"]
+offset_left = 1066.0
+offset_top = 635.0
+offset_right = 1106.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell372" type="ColorRect" parent="groundarraytest"]
+offset_left = 1079.0
+offset_top = 635.0
+offset_right = 1119.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell373" type="ColorRect" parent="groundarraytest"]
+offset_left = 1092.0
+offset_top = 635.0
+offset_right = 1132.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell374" type="ColorRect" parent="groundarraytest"]
+offset_left = 1105.0
+offset_top = 635.0
+offset_right = 1145.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell375" type="ColorRect" parent="groundarraytest"]
+offset_left = 1118.0
+offset_top = 635.0
+offset_right = 1158.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell376" type="ColorRect" parent="groundarraytest"]
+offset_left = 1131.0
+offset_top = 635.0
+offset_right = 1171.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
+
+[node name="groundcell377" type="ColorRect" parent="groundarraytest"]
+offset_left = 1144.0
+offset_top = 635.0
+offset_right = 1184.0
+offset_bottom = 675.0
+scale = Vector2(0.33, 0.33)
+metadata/_edit_use_anchors_ = true
