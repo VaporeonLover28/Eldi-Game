@@ -1,0 +1,14 @@
+[gd_scene load_steps=9 format=3 uid="uid://cgw6slkp4fcmn"]
+
+[ext_resource type="Script" path="res://Globals.gd" id="1_j1lyy"]
+[ext_resource type="Script" path="res://testupgraderesource.gd" id="2_mu0yi"]
+[ext_resource type="Resource" uid="uid://p2s0smceu65u" path="res://testitem1.tres" id="3_ntubr"]
+[ext_resource type="Resource" uid="uid://hbm2asdi6hik" path="res://testitem2.tres" id="4_3h27i"]
+[ext_resource type="Resource" uid="uid://c0wntn2fv1wak" path="res://testitem3.tres" id="5_f8djr"]
+[ext_resource type="Resource" uid="uid://d470e1h8c7jg" path="res://testitem4.tres" id="6_xwp2h"]
+[ext_resource type="Resource" uid="uid://b06ugvhyfglol" path="res://testitem5.tres" id="7_8oa1f"]
+[ext_resource type="Resource" uid="uid://g2bpp2511tfd" path="res://testitem6.tres" id="8_jhden"]
+
+[node name="Globals" type="Node2D"]
+script = ExtResource("1_j1lyy")
+testidleitemlist = Array[ExtResource("2_mu0yi")]([ExtResource("3_ntubr"), ExtResource("4_3h27i"), ExtResource("5_f8djr"), ExtResource("6_xwp2h"), ExtResource("7_8oa1f"), ExtResource("8_jhden")])
