@@ -1,17 +1,27 @@
-[gd_scene load_steps=8 format=3 uid="uid://bh8hmsjnmkj5f"]
+[gd_scene load_steps=16 format=3 uid="uid://bh8hmsjnmkj5f"]
 
 [ext_resource type="Script" path="res://testing.gd" id="1_s5jwy"]
 [ext_resource type="Script" path="res://groundarraytest.gd" id="1_xlb4c"]
+[ext_resource type="Script" path="res://testupgraderesource.gd" id="2_a0lal"]
 [ext_resource type="Script" path="res://gcal.gd" id="2_xc8hf"]
+[ext_resource type="Resource" uid="uid://p2s0smceu65u" path="res://testitem1.tres" id="3_nwgcm"]
 [ext_resource type="Script" path="res://cal.gd" id="3_uf03d"]
+[ext_resource type="Resource" uid="uid://hbm2asdi6hik" path="res://testitem2.tres" id="4_32nrm"]
 [ext_resource type="Script" path="res://cashmoola.gd" id="4_wyvfa"]
+[ext_resource type="Resource" uid="uid://c0wntn2fv1wak" path="res://testitem3.tres" id="5_avxn4"]
+[ext_resource type="Resource" uid="uid://d470e1h8c7jg" path="res://testitem4.tres" id="6_gg4xu"]
 [ext_resource type="Script" path="res://upgradebuytest.gd" id="6_xq3ea"]
+[ext_resource type="Resource" uid="uid://b06ugvhyfglol" path="res://testitem5.tres" id="7_mv4eq"]
+[ext_resource type="Resource" uid="uid://g2bpp2511tfd" path="res://testitem6.tres" id="8_v66gs"]
+[ext_resource type="Script" path="res://ai.gd" id="11_4qh4k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_csr81"]
 size = Vector2(800, 500)
 
 [node name="testing" type="Node2D"]
 script = ExtResource("1_s5jwy")
+testidleitemlist = Array[ExtResource("2_a0lal")]([ExtResource("3_nwgcm"), ExtResource("4_32nrm"), ExtResource("5_avxn4"), ExtResource("6_gg4xu"), ExtResource("7_mv4eq"), ExtResource("8_v66gs")])
+metadata/_edit_pinned_properties_ = [&"testidleitemlist"]
 
 [node name="groundarraytest" type="Node2D" parent="."]
 script = ExtResource("1_xlb4c")
@@ -2868,6 +2878,54 @@ offset_bottom = 545.0
 text = "Ground Cell Size:"
 script = ExtResource("2_xc8hf")
 
+[node name="ai1" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 77.0
+offset_right = 132.0
+offset_bottom = 100.0
+text = "X"
+script = ExtResource("11_4qh4k")
+
+[node name="ai2" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 136.0
+offset_right = 132.0
+offset_bottom = 159.0
+text = "X"
+script = ExtResource("11_4qh4k")
+
+[node name="ai3" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 196.0
+offset_right = 133.0
+offset_bottom = 219.0
+text = "X"
+script = ExtResource("11_4qh4k")
+
+[node name="ai4" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 255.0
+offset_right = 133.0
+offset_bottom = 278.0
+text = "X"
+script = ExtResource("11_4qh4k")
+
+[node name="ai5" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 315.0
+offset_right = 133.0
+offset_bottom = 338.0
+text = "X"
+script = ExtResource("11_4qh4k")
+
+[node name="ai6" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 374.0
+offset_right = 132.0
+offset_bottom = 397.0
+text = "X"
+script = ExtResource("11_4qh4k")
+
 [node name="cal" type="Label" parent="."]
 offset_left = 20.0
 offset_top = 548.0
@@ -2895,6 +2953,7 @@ offset_left = 17.0
 offset_top = 63.0
 offset_right = 192.0
 offset_bottom = 113.0
+text = "asdasd"
 script = ExtResource("6_xq3ea")
 
 [node name="1" type="Button" parent="."]
@@ -2902,6 +2961,7 @@ offset_left = 17.0
 offset_top = 123.0
 offset_right = 192.0
 offset_bottom = 173.0
+text = "asdasd"
 script = ExtResource("6_xq3ea")
 
 [node name="2" type="Button" parent="."]
@@ -2909,6 +2969,7 @@ offset_left = 17.0
 offset_top = 183.0
 offset_right = 192.0
 offset_bottom = 233.0
+text = "asdasd"
 script = ExtResource("6_xq3ea")
 
 [node name="3" type="Button" parent="."]
@@ -2916,6 +2977,7 @@ offset_left = 17.0
 offset_top = 243.0
 offset_right = 192.0
 offset_bottom = 293.0
+text = "asdasd"
 script = ExtResource("6_xq3ea")
 
 [node name="4" type="Button" parent="."]
@@ -2923,6 +2985,7 @@ offset_left = 17.0
 offset_top = 303.0
 offset_right = 192.0
 offset_bottom = 353.0
+text = "asdasd"
 script = ExtResource("6_xq3ea")
 
 [node name="5" type="Button" parent="."]
@@ -2930,6 +2993,13 @@ offset_left = 17.0
 offset_top = 363.0
 offset_right = 192.0
 offset_bottom = 413.0
+text = "asdasd"
 script = ExtResource("6_xq3ea")
 
 [connection signal="input_event" from="moneygen" to="." method="_on_moneygen_input_event"]
+[connection signal="pressed" from="0" to="0" method="_on_pressed"]
+[connection signal="pressed" from="1" to="1" method="_on_pressed"]
+[connection signal="pressed" from="2" to="2" method="_on_pressed"]
+[connection signal="pressed" from="3" to="3" method="_on_pressed"]
+[connection signal="pressed" from="4" to="4" method="_on_pressed"]
+[connection signal="pressed" from="5" to="5" method="_on_pressed"]
