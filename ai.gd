@@ -1,10 +1,6 @@
 extends Label
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+#shows how many of each upgrade player has (for testing)
 func _process(delta: float) -> void:
 	match name:
 		"ai1":
