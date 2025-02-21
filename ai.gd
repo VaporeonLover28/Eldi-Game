@@ -1,6 +1,7 @@
 extends Label
 
 #shows how many of each upgrade player has (for testing)
+#for testing, so just put the new item dumbass
 func _process(delta: float) -> void:
 	match name:
 		"ai1":

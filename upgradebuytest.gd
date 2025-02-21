@@ -15,6 +15,7 @@ func _on_pressed() -> void:
 		#update button text
 		$"..".assignbutton(self)
 		#adding one of the upgrade to $testing vars
+		#when adding item: match name to add 1 to var
 		match name:
 			"0":
 				$"..".amounttestitem1 += 1
