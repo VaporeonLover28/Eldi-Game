@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://d1x78jccoyxbr"]
+
+[ext_resource type="Script" path="res://camerapivot.gd" id="1_6cfe7"]
+[ext_resource type="Shader" uid="uid://c0l0c8megm0xq" path="res://watertest.tres" id="2_11pu4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hdot"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_dusyv"]
+sky_material = SubResource("ProceduralSkyMaterial_3hdot")
+
+[sub_resource type="Environment" id="Environment_kxy3a"]
+background_mode = 1
+background_color = Color(0.591656, 0.686722, 0.737903, 1)
+sky = SubResource("Sky_dusyv")
+tonemap_mode = 2
+fog_enabled = true
+fog_density = 0.03
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nahn0"]
+render_priority = 0
+shader = ExtResource("2_11pu4")
+shader_parameter/ColorParameter = Color(0.082353, 0.094118, 0.141176, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w64ug"]
+next_pass = SubResource("ShaderMaterial_nahn0")
+albedo_color = Color(0.0826, 0.0959934, 0.14, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5p4gp"]
+material = SubResource("StandardMaterial3D_w64ug")
+size = Vector2(15, 15)
+
+[node name="game" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kxy3a")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, -1.58574, 0)
+shadow_enabled = true
+
+[node name="camerapivot" type="Node3D" parent="."]
+script = ExtResource("1_6cfe7")
+
+[node name="camera" type="Camera3D" parent="camerapivot"]
+transform = Transform3D(1, 0, 0, 0, 0.939895, 0.341462, 0, -0.341462, 0.939895, 0, 2.58873, 4.93729)
+
+[node name="world" type="Node3D" parent="."]
+
+[node name="water" type="MeshInstance3D" parent="world"]
+mesh = SubResource("PlaneMesh_5p4gp")
+skeleton = NodePath("../../DirectionalLight3D")
