@@ -30,3 +30,6 @@ func _on_moneygen_input_event(viewport: Node, event: InputEvent, shape_idx: int)
 #makes the prices grows
 func upscaleprice(button):
 	testidleitemlist[str_to_var(button.name)].Price = round(testidleitemlist[str_to_var(button.name)].Price * 1.25 + 1)
+
+func _on_givemoney_timeout() -> void:
+	moneytest += 1 + (testidleitemlist[0].Income * amounttestitem1) + (testidleitemlist[1].Income * amounttestitem2) + (testidleitemlist[2].Income * amounttestitem3) + (testidleitemlist[3].Income * amounttestitem4) + (testidleitemlist[4].Income * amounttestitem5) + (testidleitemlist[5].Income * amounttestitem6)

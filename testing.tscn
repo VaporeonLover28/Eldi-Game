@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bh8hmsjnmkj5f"]
+[gd_scene load_steps=17 format=3 uid="uid://bh8hmsjnmkj5f"]
 
 [ext_resource type="Script" path="res://testing.gd" id="1_s5jwy"]
 [ext_resource type="Script" path="res://groundarraytest.gd" id="1_xlb4c"]
@@ -14,6 +14,7 @@
 [ext_resource type="Resource" uid="uid://b06ugvhyfglol" path="res://testitem5.tres" id="7_mv4eq"]
 [ext_resource type="Resource" uid="uid://g2bpp2511tfd" path="res://testitem6.tres" id="8_v66gs"]
 [ext_resource type="Script" path="res://ai.gd" id="11_4qh4k"]
+[ext_resource type="Script" path="res://income.gd" id="14_pyh3o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_csr81"]
 size = Vector2(800, 500)
@@ -22,6 +23,9 @@ size = Vector2(800, 500)
 script = ExtResource("1_s5jwy")
 testidleitemlist = Array[ExtResource("2_a0lal")]([ExtResource("3_nwgcm"), ExtResource("4_32nrm"), ExtResource("5_avxn4"), ExtResource("6_gg4xu"), ExtResource("7_mv4eq"), ExtResource("8_v66gs")])
 metadata/_edit_pinned_properties_ = [&"testidleitemlist"]
+
+[node name="givemoney" type="Timer" parent="."]
+autostart = true
 
 [node name="groundarraytest" type="Node2D" parent="."]
 script = ExtResource("1_xlb4c")
@@ -2942,6 +2946,14 @@ offset_bottom = 54.0
 text = "$"
 script = ExtResource("4_wyvfa")
 
+[node name="income" type="Label" parent="."]
+offset_left = 26.0
+offset_top = 11.0
+offset_right = 106.0
+offset_bottom = 34.0
+text = "$"
+script = ExtResource("14_pyh3o")
+
 [node name="moneygen" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="moneygen"]
@@ -2996,6 +3008,7 @@ offset_bottom = 413.0
 text = "asdasd"
 script = ExtResource("6_xq3ea")
 
+[connection signal="timeout" from="givemoney" to="." method="_on_givemoney_timeout"]
 [connection signal="input_event" from="moneygen" to="." method="_on_moneygen_input_event"]
 [connection signal="pressed" from="0" to="0" method="_on_pressed"]
 [connection signal="pressed" from="1" to="1" method="_on_pressed"]
