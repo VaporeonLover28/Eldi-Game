@@ -3,5 +3,5 @@ extends Resource; class_name Upgrade_resource;
 @export_category("Upgrade Data")
 @export_enum("Idle", "Click") var upgrade_type : int
 @export var Name : String
-@export var Price : float
-@export var Income : float
+@export var Price : int
+@export var Income : int

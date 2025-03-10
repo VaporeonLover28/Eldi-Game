@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Upgrade_resource" load_steps=2 format=3 uid="uid://p2s0smceu65u"]
 
-[ext_resource type="Script" path="res://testupgraderesource.gd" id="1_vu33m"]
+[ext_resource type="Script" uid="uid://bavthor0tqgnu" path="res://testupgraderesource.gd" id="1_vu33m"]
 
 [resource]
 script = ExtResource("1_vu33m")
 upgrade_type = 0
 Name = "TestItem1"
-Price = 1.0
-Income = 1.0
+Price = 50
+Income = 1

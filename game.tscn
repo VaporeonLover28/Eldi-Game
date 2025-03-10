@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://d1x78jccoyxbr"]
 
-[ext_resource type="Script" path="res://camerapivot.gd" id="1_6cfe7"]
+[ext_resource type="Script" uid="uid://btu2cbf0bhlyl" path="res://camerapivot.gd" id="1_6cfe7"]
 [ext_resource type="Shader" uid="uid://c0l0c8megm0xq" path="res://watertest.tres" id="2_11pu4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hdot"]
@@ -30,6 +30,8 @@ albedo_color = Color(0.0826, 0.0959934, 0.14, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_5p4gp"]
 material = SubResource("StandardMaterial3D_w64ug")
 size = Vector2(15, 15)
+subdivide_width = 30
+subdivide_depth = 30
 
 [node name="game" type="Node3D"]
 
