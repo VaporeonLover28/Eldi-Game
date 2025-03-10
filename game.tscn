@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://d1x78jccoyxbr"]
 
-[ext_resource type="Script" uid="uid://btu2cbf0bhlyl" path="res://camerapivot.gd" id="1_6cfe7"]
+[ext_resource type="Script" path="res://camerapivot.gd" id="1_6cfe7"]
 [ext_resource type="Shader" uid="uid://c0l0c8megm0xq" path="res://watertest.tres" id="2_11pu4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hdot"]
@@ -53,3 +53,5 @@ transform = Transform3D(1, 0, 0, 0, 0.939895, 0.341462, 0, -0.341462, 0.939895, 
 [node name="water" type="MeshInstance3D" parent="world"]
 mesh = SubResource("PlaneMesh_5p4gp")
 skeleton = NodePath("../../DirectionalLight3D")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
