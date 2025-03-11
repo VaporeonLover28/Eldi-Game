@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://co4janpyqr1ig"]
+[gd_scene load_steps=31 format=4 uid="uid://co4janpyqr1ig"]
 
 [ext_resource type="Script" path="res://scroll_container.gd" id="1_4lcrj"]
 
@@ -1285,7 +1285,7 @@ cache/0/14/0/glyphs/14/size = Vector2(10, 10)
 cache/0/14/0/glyphs/14/uv_rect = Rect2(221, 1, 10, 10)
 cache/0/14/0/glyphs/14/texture_idx = 0
 
-[sub_resource type="Image" id="Image_4jldf"]
+[sub_resource type="Image" id="Image_ty0ul"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///07+//6I/v/+rf7//q3+//6H/P/8Tf///wL///8A////AP///wD///8A////AP///wD///8A////Ff///5D+//6//v/+v/7//r/+//6//v/+v/7//r/+//6P////FP///wD///8A////AP///wD///8A////Av///5D+//6//v/+v/7//r/u8O7Ce31734aGhtz+//6//v/+v/7//o////8C////AP///wD///8A////AP///07+//6//v/+v/7//r/u8O7CdHV04lxcXOl9fn3f/v/+v/7//r/+//6//P/8TP///wD///8A////AP///wD+//6I/v/+v/7//r/u8O7CdHV04lxcXOlzdHPi8PHwwv7//r/+//6//v/+v////4X///8A////AP///wD///8A/v/+rf7//r/+//6/e31731xcXOlpamnl8PHwwv7//r/+//6//v/+v/7//r/+//6t////AP///wD///8A////AP7//q3+//6//v/+v3t9e99cXFzpaWpp5e7w7sL+//6//v/+v/7//r/+//6//v/+rP///wD///8A////AP///wD+//6H/v/+v/7//r/u8O7Cc3Rz4lxcXOlzdHPi7vDuwv7//r/+//6//v/+v////4X///8A////AP///wD///8A/P/8Tf7//r/+//6//v/+v+7w7sJzdHPiXFxc6X1+fd/+//6//v/+v/7//r////9L////AP///wD///8A////AP///wL+//6P/v/+v/7//r/+//6/7vDuwn1+fd+FhYXc/v/+v/7//r/+//6O////Av///wD///8A////AP///wD///8A////FP7//o/+//6//v/+v/7//r/+//6//v/+v/7//r/+//6O////E////wD///8A////AP///wD///8A////AP///wD///8C/P/8TP///4X+//6t/v/+rP///4X///9L////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1295,9 +1295,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_ehrec"]
-image = SubResource("Image_4jldf")
+image = SubResource("Image_ty0ul")
 
-[sub_resource type="Image" id="Image_f0br2"]
+[sub_resource type="Image" id="Image_07mdx"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///2j+//61/v/+5/7//uf+//60////Zv///wL///8A////AP///wD///8A////AP///wD///8A////G/7//sH+//7//v/+//7//v/+//7//v/+//7//v/+//6/////Gv///wD///8A////AP///wD///8A////Av7//sH+//7//v/+//7//v/s7ez/UFBQ/2BgYP/+//7//v/+//7//r////8C////AP///wD///8A////AP///2j+//7//v/+//7//v/s7ez/QkJC/xoaGv9RUVH//v/+//7//v/+//7/////Zf///wD///8A////AP///wD+//61/v/+//7//v/s7ez/QkJC/xoaGv9DQ0P/7e7t//7//v/+//7//v/+//7//rL///8A////AP///wD///8A/v/+5/7//v/+//7/UFBQ/xoaGv8wMDD/7e7t//7//v/+//7//v/+//7//v/+//7n////AP///wD///8A////AP7//uf+//7//v/+/1BQUP8aGhr/MDAw/+zt7P/+//7//v/+//7//v/+//7//v/+5v///wD///8A////AP///wD+//60/v/+//7//v/s7ez/Q0ND/xoaGv9DQ0P/7O3s//7//v/+//7//v/+//7//rL///8A////AP///wD///8A////Zv7//v/+//7//v/+/+zt7P9DQ0P/Ghoa/1FRUf/+//7//v/+//7//v////9k////AP///wD///8A////AP///wL+//6//v/+//7//v/+//7/7O3s/1FRUf9fX1///v/+//7//v/+//69////Av///wD///8A////AP///wD///8A////Gv7//r/+//7//v/+//7//v/+//7//v/+//7//v/+//69////Gf///wD///8A////AP///wD///8A////AP///wD///8C////Zf7//rL+//7n/v/+5v7//rL///9k////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1307,9 +1307,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_j1ntp"]
-image = SubResource("Image_f0br2")
+image = SubResource("Image_07mdx")
 
-[sub_resource type="Image" id="Image_6q5lw"]
+[sub_resource type="Image" id="Image_lqqtv"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wA="),
 "format": "RGBA8",
@@ -1319,9 +1319,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_er53m"]
-image = SubResource("Image_6q5lw")
+image = SubResource("Image_lqqtv")
 
-[sub_resource type="Image" id="Image_q1k84"]
+[sub_resource type="Image" id="Image_3diki"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///07+//6I/v/+rf7//q3+//6H/P/8Tf///wL///8A////AP///wD///8A////AP///wD///8A////Ff///5D+//6//v/+v/7//r/+//6//v/+v/7//r/+//6P////FP///wD///8A////AP///wD///8A////Av///5D+//6//v/+v4WFhdx7fXvf7vDuwv7//r/+//6//v/+v/7//o////8C////AP///wD///8A////AP///07+//6//v/+v/7//r97fXvfXFxc6XN0c+Lu8O7C/v/+v/7//r/+//6//P/8TP///wD///8A////AP///wD+//6I/v/+v/7//r/+//6/7vDuwnN0c+JcXFzpc3Rz4u7w7sL+//6//v/+v////4X///8A////AP///wD///8A/v/+rf7//r/+//6//v/+v/7//r/u8O7CaWlp5VxcXOl9fn3f/v/+v/7//r/+//6t////AP///wD///8A////AP7//q3+//6//v/+v/7//r/+//6/7vDuwmlpaeVcXFzpfX593/7//r/+//6//v/+rP///wD///8A////AP///wD+//6H/v/+v/7//r/+//6/7vDuwnR1dOJcXFzpc3Rz4vDx8ML+//6//v/+v////4X///8A////AP///wD///8A/P/8Tf7//r/+//6//v/+v3t9e99cXFzpc3Rz4vDx8ML+//6//v/+v/7//r////9L////AP///wD///8A////AP///wL+//6P/v/+v/7//r+GhobcfX593/Dx8ML+//6//v/+v/7//r/+//6O////Av///wD///8A////AP///wD///8A////FP7//o/+//6//v/+v/7//r/+//6//v/+v/7//r/+//6O////E////wD///8A////AP///wD///8A////AP///wD///8C/P/8TP///4X+//6t/v/+rP///4X///9L////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1331,9 +1331,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_10fh1"]
-image = SubResource("Image_q1k84")
+image = SubResource("Image_3diki")
 
-[sub_resource type="Image" id="Image_rjyae"]
+[sub_resource type="Image" id="Image_b5t18"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///2j+//61/v/+5/7//uf+//60////Zv///wL///8A////AP///wD///8A////AP///wD///8A////G/7//sH+//7//v/+//7//v/+//7//v/+//7//v/+//6/////Gv///wD///8A////AP///wD///8A////Av7//sH+//7//v/+/15eXv9QUFD/7O3s//7//v/+//7//v/+//7//r////8C////AP///wD///8A////AP///2j+//7//v/+//7//v9QUFD/Ghoa/0NDQ//s7ez//v/+//7//v/+//7/////Zf///wD///8A////AP///wD+//61/v/+//7//v/+//7/7O3s/0NDQ/8aGhr/Q0ND/+zt7P/+//7//v/+//7//rL///8A////AP///wD///8A/v/+5/7//v/+//7//v/+//7//v/s7ez/Ly8v/xoaGv9RUVH//v/+//7//v/+//7n////AP///wD///8A////AP7//uf+//7//v/+//7//v/+//7/7O3s/y8vL/8aGhr/UVFR//7//v/+//7//v/+5v///wD///8A////AP///wD+//60/v/+//7//v/+//7/7O3s/0JCQv8aGhr/Q0ND/+3u7f/+//7//v/+//7//rL///8A////AP///wD///8A////Zv7//v/+//7//v/+/1BQUP8aGhr/Q0ND/+3u7f/+//7//v/+//7//v////9k////AP///wD///8A////AP///wL+//6//v/+//7//v9gYGD/UVFR/+3u7f/+//7//v/+//7//v/+//69////Av///wD///8A////AP///wD///8A////Gv7//r/+//7//v/+//7//v/+//7//v/+//7//v/+//69////Gf///wD///8A////AP///wD///8A////AP///wD///8C////Zf7//rL+//7n/v/+5v7//rL///9k////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1343,9 +1343,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_i04bc"]
-image = SubResource("Image_rjyae")
+image = SubResource("Image_b5t18")
 
-[sub_resource type="Image" id="Image_tal2a"]
+[sub_resource type="Image" id="Image_1rc2m"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8AtbW1H7Ozs2Szs7NktbW1H////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs2SysrJzsrKyc7KysmP///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7NksrKyc7KysnOxsbFi////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7KysmOysrJjsLCwHf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7Ozs2Szs7NktbW1H////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs2SysrJzsrKyc7KysmP///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7NksrKyc7KysnOxsbFi////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7KysmOysrJjs7OzHv///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7Ozs2SysrJjs7OzHv///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs2SysrJzsrKyc7S0tGL///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7NksrKyc7KysnOxsbFi////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7KysmOysrJjs7OzHv///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1355,9 +1355,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_0ldi5"]
-image = SubResource("Image_tal2a")
+image = SubResource("Image_1rc2m")
 
-[sub_resource type="Image" id="Image_oewe3"]
+[sub_resource type="Image" id="Image_vg6xb"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8Atra2LbOzs5Czs7OQsLCwLf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs5CysrKmsrKyprOzs4////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7OQsrKyprKysqazs7ON////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AsLCwLbOzs4+zs7OPtbW1Kf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8Atra2LbOzs5Czs7OQsLCwLf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs5CysrKmsrKyprOzs4////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7OQsrKyprKysqazs7ON////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AsLCwLbOzs4+zs7OPsrKyK////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8Atra2LbOzs5Czs7OPsrKyK////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs5CysrKmsrKyprKyso7///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7OQsrKyprKysqazs7ON////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AsLCwLbOzs4+zs7OPsrKyK////wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1367,7 +1367,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_j55fr"]
-image = SubResource("Image_oewe3")
+image = SubResource("Image_vg6xb")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndpr6"]
 bg_color = Color(0.337255, 0.14902, 0.768627, 0.494118)
@@ -1470,22 +1470,6 @@ TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_7ay5w")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_00d0x")
 TabContainer/styles/tabbar_background = SubResource("StyleBoxEmpty_ot4wx")
 
-[sub_resource type="Animation" id="Animation_g4t3c"]
-resource_name = "teste_pica"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0333333, 0.3),
-"transitions": PackedFloat32Array(6.27667, 1.51572),
-"update": 0,
-"values": [Vector2(-165.87, 0), Vector2(0.645, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_a7euh"]
 length = 0.001
 tracks/0/type = "value"
@@ -1501,11 +1485,30 @@ tracks/0/keys = {
 "values": [Vector2(0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_g4t3c"]
+resource_name = "slidein"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(0.170755, 3.48221),
+"update": 0,
+"values": [Vector2(-165.87, 0), Vector2(0.645, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_83ic0"]
 _data = {
 "RESET": SubResource("Animation_a7euh"),
-"teste_pica": SubResource("Animation_g4t3c")
+"slidein": SubResource("Animation_g4t3c")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dihc2"]
+size = Vector2(46, 719.988)
 
 [node name="shoppanel" type="Control"]
 layout_mode = 3
@@ -1519,8 +1522,8 @@ size_flags_horizontal = 4
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 0
 offset_top = 40.0
-offset_right = 194.0
-offset_bottom = 605.0
+offset_right = 248.0
+offset_bottom = 684.0
 theme = SubResource("Theme_rec41")
 tab_alignment = 1
 current_tab = 0
@@ -1591,3 +1594,12 @@ metadata/_tab_index = 1
 libraries = {
 "": SubResource("AnimationLibrary_83ic0")
 }
+
+[node name="fadeinthresh" type="Area2D" parent="."]
+position = Vector2(35.355, 360)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fadeinthresh"]
+position = Vector2(-13.3546, -0.00616455)
+shape = SubResource("RectangleShape2D_dihc2")
+
+[node name="fadeoutthresh" type="Area2D" parent="."]
