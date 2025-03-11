@@ -33,7 +33,7 @@ size = Vector2(15, 15)
 subdivide_width = 30
 subdivide_depth = 30
 
-[node name="game" type="Node3D"]
+[node name="3dtestoutdated" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_kxy3a")
