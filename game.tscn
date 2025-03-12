@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmxso6vcak12c"]
+
+[ext_resource type="PackedScene" uid="uid://co4janpyqr1ig" path="res://shoppanel.tscn" id="1_sdcse"]
+[ext_resource type="PackedScene" uid="uid://dchgexw5a5lt8" path="res://cursor.tscn" id="2_tqrlg"]
+
+[node name="game" type="Node2D"]
+
+[node name="shoppanel" parent="." instance=ExtResource("1_sdcse")]
+
+[node name="cursor" parent="." instance=ExtResource("2_tqrlg")]
