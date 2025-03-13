@@ -20,7 +20,7 @@ var amounttestitem6 = 0
 
 func _ready() -> void:
 	if startmoneygiven == false:
-		moneytest = 50
+		moneytest = 5
 		startmoneygiven = true
 
 #changing the text of each button

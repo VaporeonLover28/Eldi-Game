@@ -1,10 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmxso6vcak12c"]
+[gd_scene load_steps=5 format=3 uid="uid://dvm7cd64fovya"]
 
-[ext_resource type="PackedScene" uid="uid://co4janpyqr1ig" path="res://shoppanel.tscn" id="1_sdcse"]
-[ext_resource type="PackedScene" uid="uid://dchgexw5a5lt8" path="res://cursor.tscn" id="2_tqrlg"]
+[ext_resource type="Script" path="res://game.gd" id="1_feb5d"]
+[ext_resource type="PackedScene" path="res://shoppanel.tscn" id="1_sdcse"]
+[ext_resource type="PackedScene" path="res://cursor.tscn" id="2_tqrlg"]
+[ext_resource type="Script" path="res://buy_upgrade.gd" id="4_fc0e3"]
 
 [node name="game" type="Node2D"]
+script = ExtResource("1_feb5d")
+idleitemlist = null
+clickitemlist = null
 
-[node name="shoppanel" parent="." instance=ExtResource("1_sdcse")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="cursor" parent="." instance=ExtResource("2_tqrlg")]
+[node name="shoppanel" parent="CanvasLayer" instance=ExtResource("1_sdcse")]
+
+[node name="cursor" parent="CanvasLayer" instance=ExtResource("2_tqrlg")]
+position = Vector2(640, 360)
+
+[node name="Buy_Upgrade" type="Button" parent="."]
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("4_fc0e3")

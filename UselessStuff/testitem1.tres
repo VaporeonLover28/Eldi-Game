@@ -6,5 +6,5 @@
 script = ExtResource("1_vu33m")
 upgrade_type = 0
 Name = "TestItem1"
-Price = 50
+Price = 5
 Income = 1

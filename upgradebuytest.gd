@@ -1,5 +1,8 @@
 extends Button
 
+@export var upgrade_name : String
+@export_enum("idle", "click") var upgrade_type : String
+
 #update the text (on $testing)
 func _ready() -> void:
 	$"..".assignbutton(self)

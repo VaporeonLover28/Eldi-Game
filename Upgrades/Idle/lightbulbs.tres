@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Upgrade_resource" load_steps=2 format=3 uid="uid://ccooy6umagt3y"]
+
+[ext_resource type="Script" path="res://upgrade_resource.gd" id="1_q5v2c"]
+
+[resource]
+script = ExtResource("1_q5v2c")
+upgrade_type = 0
+Name = "Lightbulbs"
+Price = 30
+Income = 2.0
+rating = 0.05
