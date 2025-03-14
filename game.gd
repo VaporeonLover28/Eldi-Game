@@ -28,11 +28,12 @@ func _ready() -> void:
 		startmoneygiven = true
 
 #changing the text of each button
-func assignbutton(button):
-	if button.upgrade_type == "idle":
-		button.text = ("$" + str(idleitemlist[button.upgrade_arraypos].price))
-	else:
-		button.text = ("$" + str(clickitemlist[button.upgrade_arraypos].price))
+func assignvalues(object, type):
+	if type == "button":
+		if object.upgrade_type == "idle":
+			object.text = ("$" + str(idleitemlist[object.upgrade_arraypos].price))
+		else:
+			object.text = ("$" + str(clickitemlist[object.upgrade_arraypos].price))
 
 ##giving money when area clicked with a probably uneccessarily long line
 ##when adding item: add a new operation with array index and amount var

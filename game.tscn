@@ -25,3 +25,5 @@ visible = false
 offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("4_fc0e3")
+
+[editable path="CanvasLayer/shoppanel"]

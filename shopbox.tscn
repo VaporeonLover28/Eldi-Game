@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://daepnurnptayh"]
+
+[ext_resource type="Script" uid="uid://ck6ds12ne8yel" path="res://label.gd" id="1_57je5"]
+[ext_resource type="Script" uid="uid://bh5kl8plpfkca" path="res://buy_upgrade.gd" id="2_q4e6g"]
+[ext_resource type="Texture2D" uid="uid://b6v4ufcf22637" path="res://Art/ButtonTest.png" id="2_r73hq"]
+
+[node name="0" type="HBoxContainer"]
+
+[node name="upgradevalues" type="Label" parent="."]
+layout_mode = 2
+text = "Name:
+Income:
+Rating:"
+script = ExtResource("1_57je5")
+
+[node name="buybutton" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = ExtResource("2_r73hq")
+script = ExtResource("2_q4e6g")

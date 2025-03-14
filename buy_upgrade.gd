@@ -10,7 +10,7 @@ extends Button; class_name UpgradeBuyer;
 
 ##update the text (on $testing)
 func _ready() -> void:
-	$game.assignbutton(self, upgrade_name, upgrade_type)
+	$game.assignbutton(self, "button")
 #
 ##when pressed
 #func _on_pressed() -> void:

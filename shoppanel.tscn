@@ -1,8 +1,8 @@
-[gd_scene load_steps=37 format=4 uid="uid://itwt77grqxjr"]
+[gd_scene load_steps=38 format=4 uid="uid://itwt77grqxjr"]
 
 [ext_resource type="Script" uid="uid://k2vk7qlpsmi3" path="res://shoppanel.gd" id="1_tn2k0"]
 [ext_resource type="Script" uid="uid://dhhk3mrw3fmnx" path="res://UselessStuff/testcursor.gd" id="2_nm41f"]
-[ext_resource type="Script" uid="uid://ck6ds12ne8yel" path="res://label.gd" id="3_mic4b"]
+[ext_resource type="PackedScene" uid="uid://daepnurnptayh" path="res://shopbox.tscn" id="2_tn2k0"]
 [ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="3_tn2k0"]
 
 [sub_resource type="Animation" id="Animation_a7euh"]
@@ -1420,7 +1420,7 @@ cache/0/14/0/glyphs/14/size = Vector2(10, 10)
 cache/0/14/0/glyphs/14/uv_rect = Rect2(221, 1, 10, 10)
 cache/0/14/0/glyphs/14/texture_idx = 0
 
-[sub_resource type="Image" id="Image_tn2k0"]
+[sub_resource type="Image" id="Image_mic4b"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///07+//6I/v/+rf7//q3+//6H/P/8Tf///wL///8A////AP///wD///8A////AP///wD///8A////Ff///5D+//6//v/+v/7//r/+//6//v/+v/7//r/+//6P////FP///wD///8A////AP///wD///8A////Av///5D+//6//v/+v/7//r/u8O7Ce31734aGhtz+//6//v/+v/7//o////8C////AP///wD///8A////AP///07+//6//v/+v/7//r/u8O7CdHV04lxcXOl9fn3f/v/+v/7//r/+//6//P/8TP///wD///8A////AP///wD+//6I/v/+v/7//r/u8O7CdHV04lxcXOlzdHPi8PHwwv7//r/+//6//v/+v////4X///8A////AP///wD///8A/v/+rf7//r/+//6/e31731xcXOlpamnl8PHwwv7//r/+//6//v/+v/7//r/+//6t////AP///wD///8A////AP7//q3+//6//v/+v3t9e99cXFzpaWpp5e7w7sL+//6//v/+v/7//r/+//6//v/+rP///wD///8A////AP///wD+//6H/v/+v/7//r/u8O7Cc3Rz4lxcXOlzdHPi7vDuwv7//r/+//6//v/+v////4X///8A////AP///wD///8A/P/8Tf7//r/+//6//v/+v+7w7sJzdHPiXFxc6X1+fd/+//6//v/+v/7//r////9L////AP///wD///8A////AP///wL+//6P/v/+v/7//r/+//6/7vDuwn1+fd+FhYXc/v/+v/7//r/+//6O////Av///wD///8A////AP///wD///8A////FP7//o/+//6//v/+v/7//r/+//6//v/+v/7//r/+//6O////E////wD///8A////AP///wD///8A////AP///wD///8C/P/8TP///4X+//6t/v/+rP///4X///9L////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1430,9 +1430,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_ehrec"]
-image = SubResource("Image_tn2k0")
+image = SubResource("Image_mic4b")
 
-[sub_resource type="Image" id="Image_mic4b"]
+[sub_resource type="Image" id="Image_uc7qr"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///2j+//61/v/+5/7//uf+//60////Zv///wL///8A////AP///wD///8A////AP///wD///8A////G/7//sH+//7//v/+//7//v/+//7//v/+//7//v/+//6/////Gv///wD///8A////AP///wD///8A////Av7//sH+//7//v/+//7//v/s7ez/UFBQ/2BgYP/+//7//v/+//7//r////8C////AP///wD///8A////AP///2j+//7//v/+//7//v/s7ez/QkJC/xoaGv9RUVH//v/+//7//v/+//7/////Zf///wD///8A////AP///wD+//61/v/+//7//v/s7ez/QkJC/xoaGv9DQ0P/7e7t//7//v/+//7//v/+//7//rL///8A////AP///wD///8A/v/+5/7//v/+//7/UFBQ/xoaGv8wMDD/7e7t//7//v/+//7//v/+//7//v/+//7n////AP///wD///8A////AP7//uf+//7//v/+/1BQUP8aGhr/MDAw/+zt7P/+//7//v/+//7//v/+//7//v/+5v///wD///8A////AP///wD+//60/v/+//7//v/s7ez/Q0ND/xoaGv9DQ0P/7O3s//7//v/+//7//v/+//7//rL///8A////AP///wD///8A////Zv7//v/+//7//v/+/+zt7P9DQ0P/Ghoa/1FRUf/+//7//v/+//7//v////9k////AP///wD///8A////AP///wL+//6//v/+//7//v/+//7/7O3s/1FRUf9fX1///v/+//7//v/+//69////Av///wD///8A////AP///wD///8A////Gv7//r/+//7//v/+//7//v/+//7//v/+//7//v/+//69////Gf///wD///8A////AP///wD///8A////AP///wD///8C////Zf7//rL+//7n/v/+5v7//rL///9k////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1442,9 +1442,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_j1ntp"]
-image = SubResource("Image_mic4b")
+image = SubResource("Image_uc7qr")
 
-[sub_resource type="Image" id="Image_uc7qr"]
+[sub_resource type="Image" id="Image_64cdf"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wA="),
 "format": "RGBA8",
@@ -1454,9 +1454,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_er53m"]
-image = SubResource("Image_uc7qr")
+image = SubResource("Image_64cdf")
 
-[sub_resource type="Image" id="Image_64cdf"]
+[sub_resource type="Image" id="Image_baf3l"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///07+//6I/v/+rf7//q3+//6H/P/8Tf///wL///8A////AP///wD///8A////AP///wD///8A////Ff///5D+//6//v/+v/7//r/+//6//v/+v/7//r/+//6P////FP///wD///8A////AP///wD///8A////Av///5D+//6//v/+v4WFhdx7fXvf7vDuwv7//r/+//6//v/+v/7//o////8C////AP///wD///8A////AP///07+//6//v/+v/7//r97fXvfXFxc6XN0c+Lu8O7C/v/+v/7//r/+//6//P/8TP///wD///8A////AP///wD+//6I/v/+v/7//r/+//6/7vDuwnN0c+JcXFzpc3Rz4u7w7sL+//6//v/+v////4X///8A////AP///wD///8A/v/+rf7//r/+//6//v/+v/7//r/u8O7CaWlp5VxcXOl9fn3f/v/+v/7//r/+//6t////AP///wD///8A////AP7//q3+//6//v/+v/7//r/+//6/7vDuwmlpaeVcXFzpfX593/7//r/+//6//v/+rP///wD///8A////AP///wD+//6H/v/+v/7//r/+//6/7vDuwnR1dOJcXFzpc3Rz4vDx8ML+//6//v/+v////4X///8A////AP///wD///8A/P/8Tf7//r/+//6//v/+v3t9e99cXFzpc3Rz4vDx8ML+//6//v/+v/7//r////9L////AP///wD///8A////AP///wL+//6P/v/+v/7//r+GhobcfX593/Dx8ML+//6//v/+v/7//r/+//6O////Av///wD///8A////AP///wD///8A////FP7//o/+//6//v/+v/7//r/+//6//v/+v/7//r/+//6O////E////wD///8A////AP///wD///8A////AP///wD///8C/P/8TP///4X+//6t/v/+rP///4X///9L////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1466,9 +1466,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_10fh1"]
-image = SubResource("Image_64cdf")
+image = SubResource("Image_baf3l")
 
-[sub_resource type="Image" id="Image_baf3l"]
+[sub_resource type="Image" id="Image_kqp8a"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///2j+//61/v/+5/7//uf+//60////Zv///wL///8A////AP///wD///8A////AP///wD///8A////G/7//sH+//7//v/+//7//v/+//7//v/+//7//v/+//6/////Gv///wD///8A////AP///wD///8A////Av7//sH+//7//v/+/15eXv9QUFD/7O3s//7//v/+//7//v/+//7//r////8C////AP///wD///8A////AP///2j+//7//v/+//7//v9QUFD/Ghoa/0NDQ//s7ez//v/+//7//v/+//7/////Zf///wD///8A////AP///wD+//61/v/+//7//v/+//7/7O3s/0NDQ/8aGhr/Q0ND/+zt7P/+//7//v/+//7//rL///8A////AP///wD///8A/v/+5/7//v/+//7//v/+//7//v/s7ez/Ly8v/xoaGv9RUVH//v/+//7//v/+//7n////AP///wD///8A////AP7//uf+//7//v/+//7//v/+//7/7O3s/y8vL/8aGhr/UVFR//7//v/+//7//v/+5v///wD///8A////AP///wD+//60/v/+//7//v/+//7/7O3s/0JCQv8aGhr/Q0ND/+3u7f/+//7//v/+//7//rL///8A////AP///wD///8A////Zv7//v/+//7//v/+/1BQUP8aGhr/Q0ND/+3u7f/+//7//v/+//7//v////9k////AP///wD///8A////AP///wL+//6//v/+//7//v9gYGD/UVFR/+3u7f/+//7//v/+//7//v/+//69////Av///wD///8A////AP///wD///8A////Gv7//r/+//7//v/+//7//v/+//7//v/+//7//v/+//69////Gf///wD///8A////AP///wD///8A////AP///wD///8C////Zf7//rL+//7n/v/+5v7//rL///9k////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1478,9 +1478,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_i04bc"]
-image = SubResource("Image_baf3l")
+image = SubResource("Image_kqp8a")
 
-[sub_resource type="Image" id="Image_kqp8a"]
+[sub_resource type="Image" id="Image_mmhqq"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8AtbW1H7Ozs2Szs7NktbW1H////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs2SysrJzsrKyc7KysmP///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7NksrKyc7KysnOxsbFi////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7KysmOysrJjsLCwHf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7Ozs2Szs7NktbW1H////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs2SysrJzsrKyc7KysmP///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7NksrKyc7KysnOxsbFi////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7KysmOysrJjs7OzHv///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7Ozs2SysrJjs7OzHv///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs2SysrJzsrKyc7S0tGL///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7NksrKyc7KysnOxsbFi////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7KysmOysrJjs7OzHv///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1490,9 +1490,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_0ldi5"]
-image = SubResource("Image_kqp8a")
+image = SubResource("Image_mmhqq")
 
-[sub_resource type="Image" id="Image_mmhqq"]
+[sub_resource type="Image" id="Image_wrxe8"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8Atra2LbOzs5Czs7OQsLCwLf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs5CysrKmsrKyprOzs4////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7OQsrKyprKysqazs7ON////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AsLCwLbOzs4+zs7OPtbW1Kf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8Atra2LbOzs5Czs7OQsLCwLf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs5CysrKmsrKyprOzs4////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7OQsrKyprKysqazs7ON////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AsLCwLbOzs4+zs7OPsrKyK////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8Atra2LbOzs5Czs7OPsrKyK////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs5CysrKmsrKyprKyso7///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7OQsrKyprKysqazs7ON////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AsLCwLbOzs4+zs7OPsrKyK////wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1502,7 +1502,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_j55fr"]
-image = SubResource("Image_mmhqq")
+image = SubResource("Image_wrxe8")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndpr6"]
 bg_color = Color(0.337255, 0.14902, 0.768627, 0.494118)
@@ -1605,6 +1605,8 @@ TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_7ay5w")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_00d0x")
 TabContainer/styles/tabbar_background = SubResource("StyleBoxEmpty_ot4wx")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tn2k0"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dihc2"]
 size = Vector2(251, 720)
 
@@ -1661,199 +1663,57 @@ size_flags_horizontal = 2
 size_flags_vertical = 4
 alignment = 1
 
-[node name="0" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
+[node name="shopbox" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("2_tn2k0")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/0"]
+[node name="VSeparator" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "Name:
-Income:
-Rating:"
-script = ExtResource("3_mic4b")
+theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
 
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/0"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="1" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
+[node name="shopbox2" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("2_tn2k0")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/1"]
+[node name="VSeparator3" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
+theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
 
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/1"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="2" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
+[node name="shopbox3" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("2_tn2k0")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/2"]
+[node name="VSeparator4" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
+theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
 
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/2"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="3" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
+[node name="shopbox4" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("2_tn2k0")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/3"]
+[node name="VSeparator5" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
+theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
 
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/3"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="4" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
+[node name="shopbox5" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("2_tn2k0")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/4"]
+[node name="VSeparator6" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
+theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
 
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/4"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="5" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
+[node name="shopbox6" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("2_tn2k0")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/5"]
+[node name="VSeparator7" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
+theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
 
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/5"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="6" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
+[node name="shopbox7" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("2_tn2k0")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/6"]
+[node name="VSeparator8" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
+theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
 
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/6"]
+[node name="shopbox8" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("2_tn2k0")]
 layout_mode = 2
-text = "asdasd"
-
-[node name="7" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/7"]
-layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
-
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/7"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="8" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/8"]
-layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
-
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/8"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="9" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/9"]
-layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
-
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/9"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="10" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/10"]
-layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
-
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/10"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="11" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/11"]
-layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
-
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/11"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="12" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/12"]
-layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
-
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/12"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="13" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/13"]
-layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
-
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/13"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="14" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/14"]
-layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
-
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/14"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="15" type="HBoxContainer" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/15"]
-layout_mode = 2
-text = "Buy for $:"
-script = ExtResource("3_mic4b")
-
-[node name="TextureButton" type="Button" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/15"]
-layout_mode = 2
-text = "asdasd"
 
 [node name="teste 2" type="TabBar" parent="TabContainer"]
 visible = false
