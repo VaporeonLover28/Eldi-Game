@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Upgrade_resource" load_steps=2 format=3 uid="uid://brqcaslvxr0ne"]
+
+[ext_resource type="Script" uid="uid://bkxlprgvipwpt" path="res://upgrade_resource.gd" id="1_a5k0r"]
+
+[resource]
+script = ExtResource("1_a5k0r")
+upgrade_type = 0
+Name = "FIlters"
+Price = 1600
+Income = 80.0
+rating = 0.6
+metadata/_custom_type_script = "uid://bkxlprgvipwpt"

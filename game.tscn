@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=8 format=3 uid="uid://dvm7cd64fovya"]
 
-[ext_resource type="Script" path="res://game.gd" id="1_feb5d"]
-[ext_resource type="PackedScene" path="res://shoppanel.tscn" id="1_sdcse"]
-[ext_resource type="PackedScene" path="res://cursor.tscn" id="2_tqrlg"]
-[ext_resource type="Script" path="res://buy_upgrade.gd" id="4_fc0e3"]
+[ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
+[ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
+[ext_resource type="Script" uid="uid://bkxlprgvipwpt" path="res://upgrade_resource.gd" id="2_7jktm"]
+[ext_resource type="PackedScene" uid="uid://dckqlr1wb13e1" path="res://cursor.tscn" id="2_tqrlg"]
+[ext_resource type="Resource" uid="uid://b2am8ylgpa7sb" path="res://Upgrades/Idle/posters.tres" id="3_eow3j"]
+[ext_resource type="Script" uid="uid://bh5kl8plpfkca" path="res://buy_upgrade.gd" id="4_fc0e3"]
+[ext_resource type="Resource" uid="uid://ccooy6umagt3y" path="res://Upgrades/Idle/lightbulbs.tres" id="4_j5wjh"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_feb5d")
-idleitemlist = null
-clickitemlist = null
+idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResource("4_j5wjh"), null, null])
+clickitemlist = Array[ExtResource("2_7jktm")]([null, null, null, null])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

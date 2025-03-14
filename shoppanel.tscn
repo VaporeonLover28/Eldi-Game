@@ -1,9 +1,123 @@
 [gd_scene load_steps=37 format=4 uid="uid://itwt77grqxjr"]
 
-[ext_resource type="Script" path="res://shoppanel.gd" id="1_tn2k0"]
-[ext_resource type="Script" path="res://testcursor.gd" id="2_nm41f"]
-[ext_resource type="Script" path="res://label.gd" id="3_mic4b"]
+[ext_resource type="Script" uid="uid://k2vk7qlpsmi3" path="res://shoppanel.gd" id="1_tn2k0"]
+[ext_resource type="Script" uid="uid://dhhk3mrw3fmnx" path="res://UselessStuff/testcursor.gd" id="2_nm41f"]
+[ext_resource type="Script" uid="uid://ck6ds12ne8yel" path="res://label.gd" id="3_mic4b"]
 [ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="3_tn2k0"]
+
+[sub_resource type="Animation" id="Animation_a7euh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fadeinthresh:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fadeoutthresh:monitoring")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_g4t3c"]
+resource_name = "shopslidein"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fadeinthresh:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(0.170755, 3.48221),
+"update": 0,
+"values": [Vector2(-165.87, 36), Vector2(0.645, 36)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fadeoutthresh:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_tn2k0"]
+resource_name = "shopslideout"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fadeinthresh:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TabContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(0.233259, 2.37841),
+"update": 0,
+"values": [Vector2(0.645, 36), Vector2(-165.87, 36)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fadeoutthresh:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_83ic0"]
+_data = {
+&"RESET": SubResource("Animation_a7euh"),
+&"shopslidein": SubResource("Animation_g4t3c"),
+&"shopslideout": SubResource("Animation_tn2k0")
+}
 
 [sub_resource type="Image" id="Image_slych"]
 data = {
@@ -1491,120 +1605,6 @@ TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_7ay5w")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_00d0x")
 TabContainer/styles/tabbar_background = SubResource("StyleBoxEmpty_ot4wx")
 
-[sub_resource type="Animation" id="Animation_a7euh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("fadeinthresh:monitoring")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("fadeoutthresh:monitoring")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_g4t3c"]
-resource_name = "slidein"
-length = 0.75
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("fadeinthresh:monitoring")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("TabContainer:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.75),
-"transitions": PackedFloat32Array(0.170755, 3.48221),
-"update": 0,
-"values": [Vector2(-165.87, 36), Vector2(0.645, 36)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("fadeoutthresh:monitoring")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_tn2k0"]
-resource_name = "slideout"
-length = 0.75
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("fadeinthresh:monitoring")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("TabContainer:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.75),
-"transitions": PackedFloat32Array(0.233259, 2.37841),
-"update": 0,
-"values": [Vector2(0.645, 36), Vector2(-165.87, 36)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("fadeoutthresh:monitoring")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_83ic0"]
-_data = {
-&"RESET": SubResource("Animation_a7euh"),
-&"slidein": SubResource("Animation_g4t3c"),
-&"slideout": SubResource("Animation_tn2k0")
-}
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dihc2"]
 size = Vector2(251, 720)
 
@@ -1623,6 +1623,11 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 script = ExtResource("1_tn2k0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_83ic0")
+}
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 0
@@ -1854,11 +1859,6 @@ text = "asdasd"
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_83ic0")
-}
 
 [node name="fadeinthresh" type="Area2D" parent="."]
 position = Vector2(35.355, 360)
