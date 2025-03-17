@@ -1,4 +1,4 @@
 extends Label
 
-func _ready() -> void:
-	$game.assignbutton(self, "label")
+#func _ready() -> void:
+	#$game.assignbutton(self, "label")

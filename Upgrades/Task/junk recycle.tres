@@ -6,7 +6,7 @@
 script = ExtResource("1_ymmxe")
 upgrade_type = 1
 Name = "Junk Recycle"
-Price = 300
-Income = 50.0
+Price = 700
+Income = 300.0
 rating = 0.5
 metadata/_custom_type_script = "uid://bkxlprgvipwpt"

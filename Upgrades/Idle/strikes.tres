@@ -7,6 +7,6 @@ script = ExtResource("1_v3k18")
 upgrade_type = 0
 Name = "Strikes"
 Price = 150
-Income = 5.0
+Income = 10.0
 rating = 0.3
 metadata/_custom_type_script = "uid://bkxlprgvipwpt"

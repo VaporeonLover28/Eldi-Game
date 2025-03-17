@@ -6,7 +6,7 @@
 script = ExtResource("1_1voxm")
 upgrade_type = 1
 Name = "Water Treat"
-Price = 1250
-Income = 300.0
+Price = 4000
+Income = 700.0
 rating = 3.0
 metadata/_custom_type_script = "uid://bkxlprgvipwpt"

@@ -1,4 +1,4 @@
-extends Button; class_name UpgradeBuyer;
+extends TextureButton; class_name UpgradeBuyer;
 
 #When adding button/item: Add it's name, then type
 #Add the .tres to the respective array
@@ -6,11 +6,11 @@ extends Button; class_name UpgradeBuyer;
 #Put the position in arraypos
 @export var upgrade_name : String
 @export var upgrade_arraypos : int
-@export_enum("idle", "click") var upgrade_type : String
+@export_enum("idle", "task") var upgrade_type : String
 
 ##update the text (on $testing)
-func _ready() -> void:
-	$game.assignbutton(self, "button")
+#func _ready() -> void:
+	#$game.assignbutton(self, "button")
 #
 ##when pressed
 #func _on_pressed() -> void:

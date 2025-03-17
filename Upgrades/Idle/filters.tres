@@ -7,6 +7,6 @@ script = ExtResource("1_a5k0r")
 upgrade_type = 0
 Name = "FIlters"
 Price = 1600
-Income = 80.0
+Income = 100.0
 rating = 0.6
 metadata/_custom_type_script = "uid://bkxlprgvipwpt"

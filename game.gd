@@ -8,7 +8,7 @@ var moneytest : int
 #declaring item shop
 #when adding item: click node and add new element with parameters
 @export var idleitemlist : Array[Upgrade_resource]
-@export var clickitemlist : Array[Upgrade_resource]
+@export var taskitemlist : Array[Upgrade_resource]
 
 #probably a shitty way to know how many of each upgrade player has
 #when adding item: add new variable with name
@@ -33,7 +33,7 @@ func assignvalues(object, type):
 		if object.upgrade_type == "idle":
 			object.text = ("$" + str(idleitemlist[object.upgrade_arraypos].price))
 		else:
-			object.text = ("$" + str(clickitemlist[object.upgrade_arraypos].price))
+			object.text = ("$" + str(taskitemlist[object.upgrade_arraypos].price))
 
 ##giving money when area clicked with a probably uneccessarily long line
 ##when adding item: add a new operation with array index and amount var

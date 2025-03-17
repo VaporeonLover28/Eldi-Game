@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=14 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -7,11 +7,17 @@
 [ext_resource type="Resource" uid="uid://b2am8ylgpa7sb" path="res://Upgrades/Idle/posters.tres" id="3_eow3j"]
 [ext_resource type="Script" uid="uid://bh5kl8plpfkca" path="res://buy_upgrade.gd" id="4_fc0e3"]
 [ext_resource type="Resource" uid="uid://ccooy6umagt3y" path="res://Upgrades/Idle/lightbulbs.tres" id="4_j5wjh"]
+[ext_resource type="Resource" uid="uid://3s1b4a8vckwk" path="res://Upgrades/Idle/strikes.tres" id="5_vef74"]
+[ext_resource type="Resource" uid="uid://brqcaslvxr0ne" path="res://Upgrades/Idle/filters.tres" id="6_hve3p"]
+[ext_resource type="Resource" uid="uid://cqx6nuat2ocgr" path="res://Upgrades/Task/collection.tres" id="7_lc2xo"]
+[ext_resource type="Resource" uid="uid://882nyma16sdp" path="res://Upgrades/Task/garbage men.tres" id="8_215e1"]
+[ext_resource type="Resource" uid="uid://c8dbayxlpar3v" path="res://Upgrades/Task/junk recycle.tres" id="9_7sc4i"]
+[ext_resource type="Resource" uid="uid://csff063odqyev" path="res://Upgrades/Task/water treat.tres" id="10_80cx4"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_feb5d")
-idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResource("4_j5wjh"), null, null])
-clickitemlist = Array[ExtResource("2_7jktm")]([null, null, null, null])
+idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResource("4_j5wjh"), ExtResource("5_vef74"), ExtResource("6_hve3p")])
+taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("7_lc2xo"), ExtResource("8_215e1"), ExtResource("9_7sc4i"), ExtResource("10_80cx4")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

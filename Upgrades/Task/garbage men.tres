@@ -6,7 +6,7 @@
 script = ExtResource("1_yi21r")
 upgrade_type = 1
 Name = "Garbage Men"
-Price = 75
-Income = 10.0
+Price = 125
+Income = 50.0
 rating = 0.1
 metadata/_custom_type_script = "uid://bkxlprgvipwpt"
