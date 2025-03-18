@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Eldi Game"
-run/main_scene="uid://bh8hmsjnmkj5f"
+run/main_scene="uid://dvm7cd64fovya"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

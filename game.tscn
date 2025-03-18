@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=13 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
 [ext_resource type="Script" uid="uid://bkxlprgvipwpt" path="res://upgrade_resource.gd" id="2_7jktm"]
 [ext_resource type="PackedScene" uid="uid://dckqlr1wb13e1" path="res://cursor.tscn" id="2_tqrlg"]
 [ext_resource type="Resource" uid="uid://b2am8ylgpa7sb" path="res://Upgrades/Idle/posters.tres" id="3_eow3j"]
-[ext_resource type="Script" uid="uid://bh5kl8plpfkca" path="res://buy_upgrade.gd" id="4_fc0e3"]
 [ext_resource type="Resource" uid="uid://ccooy6umagt3y" path="res://Upgrades/Idle/lightbulbs.tres" id="4_j5wjh"]
 [ext_resource type="Resource" uid="uid://3s1b4a8vckwk" path="res://Upgrades/Idle/strikes.tres" id="5_vef74"]
 [ext_resource type="Resource" uid="uid://brqcaslvxr0ne" path="res://Upgrades/Idle/filters.tres" id="6_hve3p"]
@@ -25,11 +24,3 @@ taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("7_lc2xo"), ExtResourc
 
 [node name="cursor" parent="CanvasLayer" instance=ExtResource("2_tqrlg")]
 position = Vector2(640, 360)
-
-[node name="Buy_Upgrade" type="Button" parent="."]
-visible = false
-offset_right = 8.0
-offset_bottom = 8.0
-script = ExtResource("4_fc0e3")
-
-[editable path="CanvasLayer/shoppanel"]

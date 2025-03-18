@@ -1,4 +1,4 @@
-extends TextureButton; class_name UpgradeBuyer;
+extends TextureButton
 
 #When adding button/item: Add it's name, then type
 #Add the .tres to the respective array
