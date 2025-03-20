@@ -32,8 +32,8 @@ func assignvalues(object, type):
 	if type == "button":
 		if object.upgrade_type == "idle":
 			object.text = ("$" + str(idleitemlist[object.upgrade_arraypos].price))
-		else:
-			object.text = ("$" + str(taskitemlist[object.upgrade_arraypos].price))
+	else:
+		object.text = (str(idleitemlist[object.upgrade_arraypos].Name) + "\n" + str(idleitemlist[object.upgrade_arraypos].Income) + "\n" + str(idleitemlist[object.upgrade_arraypos].rating))
 
 ##giving money when area clicked with a probably uneccessarily long line
 ##when adding item: add a new operation with array index and amount var

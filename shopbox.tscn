@@ -1,23 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://daepnurnptayh"]
+[gd_scene load_steps=5 format=3 uid="uid://daepnurnptayh"]
 
 [ext_resource type="Script" uid="uid://ck6ds12ne8yel" path="res://label.gd" id="1_57je5"]
+[ext_resource type="Script" uid="uid://b07pnb7gwwher" path="res://shopbox.gd" id="1_r73hq"]
 [ext_resource type="Texture2D" uid="uid://b6v4ufcf22637" path="res://Art/ButtonTest.png" id="2_r73hq"]
 
 [sub_resource type="GDScript" id="GDScript_iotsf"]
 script/source = "extends TextureButton
 
-#When adding button/item: Add it's name, then type
-#Add the .tres to the respective array
-#Find its position in the array 
-#Put the position in arraypos
-@export var upgrade_name : String
-@export var upgrade_arraypos : int
-@export_enum(\"idle\", \"task\") var upgrade_type : String
 
-##update the text (on $testing)
-#func _ready() -> void:
-	#$game.assignbutton(self, \"button\")
-#
+func _ready() -> void:
+	#function on the game node
+	#takes info from shopbox (resource values) that you set manually
+	#in the game node receives the info
+	#and sets the text here accordingly
+	#(yes its confusing bro i did this all wrong)
+	$\"../../../../../../../..\".assignvalues(self, \"button\")
+
 ##when pressed
 #func _on_pressed() -> void:
 	##if money > price (buyable)
@@ -45,7 +43,8 @@ script/source = "extends TextureButton
 				#$\"..\".amounttestitem6 += 1
 "
 
-[node name="0" type="HBoxContainer"]
+[node name="shopbox" type="HBoxContainer"]
+script = ExtResource("1_r73hq")
 
 [node name="upgradevalues" type="Label" parent="."]
 layout_mode = 2
@@ -58,3 +57,13 @@ script = ExtResource("1_57je5")
 layout_mode = 2
 texture_normal = ExtResource("2_r73hq")
 script = SubResource("GDScript_iotsf")
+
+[node name="upgradeprice" type="Label" parent="buybutton"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 22.0
+offset_right = 51.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0.84, 0.476, 0, 1)
+theme_override_font_sizes/font_size = 13
+text = "$XXXX"
