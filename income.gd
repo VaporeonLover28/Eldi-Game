@@ -1,4 +1,10 @@
 extends Label
 
-#func _process(delta: float) -> void:
-	#text = "Income/s: " + str(($"..".testidleitemlist[0].Income * $"..".amounttestitem1) + ($"..".testidleitemlist[1].Income * $"..".amounttestitem2) + ($"..".testidleitemlist[2].Income * $"..".amounttestitem3) + ($"..".testidleitemlist[3].Income * $"..".amounttestitem4) + ($"..".testidleitemlist[4].Income * $"..".amounttestitem5) + ($"..".testidleitemlist[5].Income * $"..".amounttestitem6))
+#when adding new item:
+#add new equation with its income
+func _process(delta: float) -> void:
+	text = "Income: $" + str(\
+	($"../../..".amountposters * $"../../..".idleitemlist[0].Income)\
+	 + ($"../../..".amountlightbulbs * $"../../..".idleitemlist[1].Income)\
+	 + ($"../../..".amountstrikes * $"../../..".idleitemlist[2].Income)\
+	 + ($"../../..".amountfilters * $"../../..".idleitemlist[3].Income)) + "/s"

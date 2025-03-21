@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_a5k0r")
 upgrade_type = 0
-Name = "FIlters"
+Name = "Filters"
 Price = 1600
 Income = 100.0
 rating = 0.6

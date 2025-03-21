@@ -1431,7 +1431,7 @@ data = {
 image = SubResource("Image_baf3l")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndpr6"]
-bg_color = Color(0.337255, 0.14902, 0.768627, 0.494118)
+bg_color = Color(0.337255, 0.14902, 0.768627, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cln0e"]
 content_margin_left = 10.0
@@ -1609,34 +1609,6 @@ layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
 
 [node name="shopbox4" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("2_tn2k0")]
-layout_mode = 2
-
-[node name="VSeparator5" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
-
-[node name="shopbox5" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("2_tn2k0")]
-layout_mode = 2
-
-[node name="VSeparator6" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
-
-[node name="shopbox6" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("2_tn2k0")]
-layout_mode = 2
-
-[node name="VSeparator7" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
-
-[node name="shopbox7" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("2_tn2k0")]
-layout_mode = 2
-
-[node name="VSeparator8" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
-
-[node name="shopbox8" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("2_tn2k0")]
 layout_mode = 2
 
 [node name="fadeinthresh" type="Area2D" parent="."]

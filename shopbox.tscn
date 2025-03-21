@@ -7,7 +7,6 @@
 [sub_resource type="GDScript" id="GDScript_iotsf"]
 script/source = "extends TextureButton
 
-
 func _ready() -> void:
 	#function on the game node
 	#takes info from shopbox (resource values) that you set manually
@@ -64,6 +63,7 @@ offset_left = 11.0
 offset_top = 22.0
 offset_right = 51.0
 offset_bottom = 45.0
-theme_override_colors/font_color = Color(0.84, 0.476, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 13
 text = "$XXXX"
+horizontal_alignment = 1

@@ -3,10 +3,12 @@ extends Node2D
 var startmoneygiven = false
 
 #variable for money system
-var moneytest : int
+var money : int
+var rating : float
 
 #declaring item shop
-#when adding item: click node and add new element with parameters
+#when adding item: click node on inspector
+#and add new element with parameters
 @export var idleitemlist : Array[Upgrade_resource]
 @export var taskitemlist : Array[Upgrade_resource]
 
@@ -17,31 +19,22 @@ var amountlightbulbs = 0
 var amountstrikes = 0
 var amountfilters = 0
 
-var amountcollection = 0
-var amountgarbagemen = 0
-var amountjunkrecycle = 0
-var amountwatertreat = 0
-
 func _ready() -> void:
 	if startmoneygiven == false:
-		moneytest = 5
+		money = 5
 		startmoneygiven = true
 
 #changing the text of each button
 func assignvalues(object, type):
 	if type == "button":
-		if object.upgrade_type == "idle":
-			object.text = ("$" + str(idleitemlist[object.upgrade_arraypos].price))
+		if object.get_parent().upgrade_type == "idle":
+			object.get_child(0).text = ("$" + str(idleitemlist[object.get_parent().upgrade_arraypos].Price))
 	else:
-		object.text = (str(idleitemlist[object.upgrade_arraypos].Name) + "\n" + str(idleitemlist[object.upgrade_arraypos].Income) + "\n" + str(idleitemlist[object.upgrade_arraypos].rating))
+		object.text = (str(idleitemlist[object.get_parent().upgrade_arraypos].Name)\
+		 + "\n $" + str(idleitemlist[object.get_parent().upgrade_arraypos].Income)\
+		 + "/s\nNR:" + str(idleitemlist[object.get_parent().upgrade_arraypos].rating))
 
-##giving money when area clicked with a probably uneccessarily long line
-##when adding item: add a new operation with array index and amount var
-#func _on_moneygen_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	#if event is InputEventMouseButton and event.pressed:
-		#if event.button_index == MOUSE_BUTTON_LEFT:
-			#moneytest += (testidleitemlist[0].Income * amounttestitem1) + (testidleitemlist[1].Income * amounttestitem2) + (testidleitemlist[2].Income * amounttestitem3) + (testidleitemlist[3].Income * amounttestitem4) + (testidleitemlist[4].Income * amounttestitem5) + (testidleitemlist[5].Income * amounttestitem6)
-#
+
 ##makes the prices grow
 #func upscaleprice(button):
 	#testidleitemlist[str_to_var(button.name)].Price = floor(testidleitemlist[str_to_var(button.name)].Price * 1.16666666666)

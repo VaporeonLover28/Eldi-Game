@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=17 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -12,15 +12,106 @@
 [ext_resource type="Resource" uid="uid://882nyma16sdp" path="res://Upgrades/Task/garbage men.tres" id="8_215e1"]
 [ext_resource type="Resource" uid="uid://c8dbayxlpar3v" path="res://Upgrades/Task/junk recycle.tres" id="9_7sc4i"]
 [ext_resource type="Resource" uid="uid://csff063odqyev" path="res://Upgrades/Task/water treat.tres" id="10_80cx4"]
+[ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
+[ext_resource type="Script" uid="uid://xvwkgpxois44" path="res://income.gd" id="12_215e1"]
+[ext_resource type="Script" uid="uid://dpfhykvpe0qab" path="res://naturelabel.gd" id="13_7sc4i"]
+[ext_resource type="PackedScene" uid="uid://c3ljn12cd7cx3" path="res://taskpanel.tscn" id="15_80cx4"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_feb5d")
 idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResource("4_j5wjh"), ExtResource("5_vef74"), ExtResource("6_hve3p")])
 taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("7_lc2xo"), ExtResource("8_215e1"), ExtResource("9_7sc4i"), ExtResource("10_80cx4")])
+metadata/_edit_vertical_guides_ = [640.0]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="toppanel" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 640.0
+offset_right = 680.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/toppanel"]
+layout_mode = 0
+offset_left = -320.0
+offset_right = 320.0
+offset_bottom = 40.0
+color = Color(0.337255, 0.14902, 0.67451, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/toppanel"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = -16.0
+offset_right = -280.0
+offset_bottom = 24.0
+rotation = 0.785398
+color = Color(0.337255, 0.14902, 0.67451, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer/toppanel"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = -16.0
+offset_right = 360.0
+offset_bottom = 24.0
+rotation = 0.785398
+color = Color(0.337255, 0.14902, 0.67451, 1)
+
+[node name="moneylabel" type="Label" parent="CanvasLayer/toppanel"]
+layout_mode = 0
+offset_left = -298.0
+offset_right = -165.0
+offset_bottom = 40.0
+text = "Money: $XXXXXX"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("11_lc2xo")
+
+[node name="incomelabel" type="Label" parent="CanvasLayer/toppanel"]
+layout_mode = 0
+offset_left = -74.5
+offset_right = 74.5
+offset_bottom = 40.0
+text = "Income: $XXXXXX/s"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("12_215e1")
+
+[node name="naturelabel" type="Label" parent="CanvasLayer/toppanel"]
+layout_mode = 0
+offset_left = 140.0
+offset_right = 289.0
+offset_bottom = 40.0
+text = "Nature Rating: XXX"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("13_7sc4i")
+
 [node name="shoppanel" parent="CanvasLayer" instance=ExtResource("1_sdcse")]
+
+[node name="shopbox" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="0"]
+upgrade_name = "Posters"
+upgrade_type = "idle"
+
+[node name="shopbox2" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="2"]
+upgrade_name = "Lightbulbs"
+upgrade_arraypos = 1
+upgrade_type = "idle"
+
+[node name="shopbox3" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="4"]
+upgrade_name = "Strikes"
+upgrade_arraypos = 2
+upgrade_type = "idle"
+
+[node name="shopbox4" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="6"]
+upgrade_name = "Filters"
+upgrade_arraypos = 3
+upgrade_type = "idle"
+
+[node name="taskpanel" parent="CanvasLayer" instance=ExtResource("15_80cx4")]
 
 [node name="cursor" parent="CanvasLayer" instance=ExtResource("2_tqrlg")]
 position = Vector2(640, 360)
+
+[editable path="CanvasLayer/shoppanel"]
+[editable path="CanvasLayer/taskpanel"]
