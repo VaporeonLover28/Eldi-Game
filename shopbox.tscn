@@ -15,31 +15,27 @@ func _ready() -> void:
 	#(yes its confusing bro i did this all wrong)
 	$\"../../../../../../../..\".assignvalues(self, \"button\")
 
-##when pressed
-#func _on_pressed() -> void:
-	##if money > price (buyable)
-	#if $\"..\".moneytest >= $\"..\".testidleitemlist[str_to_var(self.name)].Price:
-		##spend money
-		#$\"..\".moneytest -= $\"..\".testidleitemlist[str_to_var(self.name)].Price
-		##make price higher
-		#$\"..\".upscaleprice(self)
-		##update button text
-		#$\"..\".assignbutton(self)
-		##adding one of the upgrade to $testing vars
-		##when adding item: match name to add 1 to var
-		#match name:
-			#\"0\":
-				#$\"..\".amounttestitem1 += 1
-			#\"1\":
-				#$\"..\".amounttestitem2 += 1
-			#\"2\":
-				#$\"..\".amounttestitem3 += 1
-			#\"3\":
-				#$\"..\".amounttestitem4 += 1
-			#\"4\":
-				#$\"..\".amounttestitem5 += 1
-			#\"5\":
-				#$\"..\".amounttestitem6 += 1
+#when pressed
+func _on_pressed() -> void:
+	#if money > price (buyable)
+	if $\"../../../../../../../..\".money >= $\"../../../../../../../..\".idleitemlist[$\"..\".upgrade_arraypos].Price:
+		#spend money
+		$\"../../../../../../../..\".money -= $\"../../../../../../../..\".idleitemlist[$\"..\".upgrade_arraypos].Price
+		#make price higher
+		$\"../../../../../../../..\".upscaleprice(self)
+		#update button text
+		$\"../../../../../../../..\".assignvalues(self, \"button\")
+		#adding one of the upgrade to $testing vars
+		#when adding item: match name to add 1 to var
+		match $\"..\".upgrade_arraypos:
+			0:
+				$\"../../../../../../../..\".amountposters += 1
+			1:
+				$\"../../../../../../../..\".amountlightbulbs += 1
+			2:
+				$\"../../../../../../../..\".amountstrikes += 1
+			3:
+				$\"../../../../../../../..\".amountfilters += 1
 "
 
 [node name="shopbox" type="HBoxContainer"]
@@ -67,3 +63,5 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 13
 text = "$XXXX"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="buybutton" to="buybutton" method="_on_pressed"]

@@ -35,9 +35,16 @@ func assignvalues(object, type):
 		 + "/s\nNR:" + str(idleitemlist[object.get_parent().upgrade_arraypos].rating))
 
 
-##makes the prices grow
-#func upscaleprice(button):
-	#testidleitemlist[str_to_var(button.name)].Price = floor(testidleitemlist[str_to_var(button.name)].Price * 1.16666666666)
-#
-#func _on_givemoney_timeout() -> void:
-	#moneytest += (testidleitemlist[0].Income * amounttestitem1) + (testidleitemlist[1].Income * amounttestitem2) + (testidleitemlist[2].Income * amounttestitem3) + (testidleitemlist[3].Income * amounttestitem4) + (testidleitemlist[4].Income * amounttestitem5) + (testidleitemlist[5].Income * amounttestitem6)
+#makes the prices grow
+func upscaleprice(button):
+	idleitemlist[button.upgrade_arraypos].Price = floor(idleitemlist[button.upgrade_arraypos].Price * 1.16666666666)
+
+#when adding new item:
+#add new equation with item array pos 
+#item.moneyitgivesyou * item amount
+#repeat for all items
+func _on_givemoney_timeout() -> void:
+	money += (idleitemlist[0].Income * amountposters) + \
+	(idleitemlist[1].Income * amountlightbulbs) + \
+	(idleitemlist[2].Income * amountstrikes) + \
+	(idleitemlist[3].Income * amountfilters)

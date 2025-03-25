@@ -23,6 +23,9 @@ idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResourc
 taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("7_lc2xo"), ExtResource("8_215e1"), ExtResource("9_7sc4i"), ExtResource("10_80cx4")])
 metadata/_edit_vertical_guides_ = [640.0]
 
+[node name="givemoney" type="Timer" parent="."]
+autostart = true
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="toppanel" type="Control" parent="CanvasLayer"]
@@ -112,6 +115,8 @@ upgrade_type = "idle"
 
 [node name="cursor" parent="CanvasLayer" instance=ExtResource("2_tqrlg")]
 position = Vector2(640, 360)
+
+[connection signal="timeout" from="givemoney" to="." method="_on_givemoney_timeout"]
 
 [editable path="CanvasLayer/shoppanel"]
 [editable path="CanvasLayer/taskpanel"]
