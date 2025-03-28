@@ -1625,5 +1625,6 @@ position = Vector2(66, 360)
 shape = SubResource("RectangleShape2D_nm41f")
 debug_color = Color(0, 0.595, 0.7, 0.0745098)
 
+[connection signal="current_animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_current_animation_changed"]
 [connection signal="area_entered" from="fadeinthresh" to="." method="_on_fadeinthresh_area_entered"]
 [connection signal="area_exited" from="fadeoutthresh" to="." method="_on_fadeoutthresh_area_exited"]
