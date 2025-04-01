@@ -48,3 +48,7 @@ func _on_givemoney_timeout() -> void:
 	(idleitemlist[1].Income * amountlightbulbs) + \
 	(idleitemlist[2].Income * amountstrikes) + \
 	(idleitemlist[3].Income * amountfilters)
+	
+func Add_minigame():
+	pass
+	#passa o parametro do minigame
