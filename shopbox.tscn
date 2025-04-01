@@ -52,7 +52,6 @@ script = ExtResource("1_57je5")
 
 [node name="buybutton" type="TextureButton" parent="."]
 clip_children = 2
-z_index = 999
 layout_mode = 2
 texture_normal = ExtResource("2_r73hq")
 script = SubResource("GDScript_iotsf")

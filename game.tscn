@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=16 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -15,7 +15,6 @@
 [ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
 [ext_resource type="Script" uid="uid://xvwkgpxois44" path="res://income.gd" id="12_215e1"]
 [ext_resource type="Script" uid="uid://dpfhykvpe0qab" path="res://naturelabel.gd" id="13_7sc4i"]
-[ext_resource type="PackedScene" uid="uid://c3ljn12cd7cx3" path="res://taskpanel.tscn" id="15_80cx4"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_feb5d")
@@ -111,12 +110,9 @@ upgrade_name = "Filters"
 upgrade_arraypos = 3
 upgrade_type = "idle"
 
-[node name="taskpanel" parent="CanvasLayer" instance=ExtResource("15_80cx4")]
-
 [node name="cursor" parent="CanvasLayer" instance=ExtResource("2_tqrlg")]
 position = Vector2(640, 360)
 
 [connection signal="timeout" from="givemoney" to="." method="_on_givemoney_timeout"]
 
 [editable path="CanvasLayer/shoppanel"]
-[editable path="CanvasLayer/taskpanel"]
