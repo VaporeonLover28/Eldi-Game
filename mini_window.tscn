@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://sglk165co8i0" path="res://mini_window.gd" id="1_58v5c"]
 
-[node name="MiniWindow" type="Node2D"]
+[node name="MiniWindow" type="SubViewport"]
 script = ExtResource("1_58v5c")
