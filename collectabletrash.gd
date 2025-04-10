@@ -13,4 +13,5 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	$"..".collectedtrash += 1
+	$"../../../../../".money += $"../../".mini_income
 	queue_free()

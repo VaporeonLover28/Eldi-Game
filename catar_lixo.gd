@@ -8,10 +8,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
+	if collectedtrash == 15:
+		$"../".minigame_decider.emit(true)
 
 func _on_spawn_trash_timeout() -> void:
 	var lixo_inst = lixo.instantiate()
-	lixo_inst.position = Vector2(randf_range(0, 1280), randf_range(0, 720))
+	lixo_inst.position = Vector2(randf_range(0, 250), randf_range(0, 250))
 	add_child(lixo_inst)

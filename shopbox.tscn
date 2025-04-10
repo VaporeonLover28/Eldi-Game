@@ -17,27 +17,30 @@ func _ready() -> void:
 
 #when pressed
 func _on_pressed() -> void:
-	print(\"clicked\")
-	##if money > price (buyable)
-	#if $\"../../../../../../../..\".money >= $\"../../../../../../../..\".idleitemlist[$\"..\".upgrade_arraypos].Price:
-		#print(\"bought\")
-		##spend money
-		#$\"../../../../../../../..\".money -= $\"../../../../../../../..\".idleitemlist[$\"..\".upgrade_arraypos].Price
-		##make price higher
-		#$\"../../../../../../../..\".upscaleprice(self)
-		##update button text
-		#$\"../../../../../../../..\".assignvalues(self, \"button\")
-		##adding one of the upgrade to $testing vars
-		##when adding item: match name to add 1 to var
-		#match $\"..\".upgrade_arraypos:
-			#0:
-				#$\"../../../../../../../..\".amountposters += 1
-			#1:
-				#$\"../../../../../../../..\".amountlightbulbs += 1
-			#2:
-				#$\"../../../../../../../..\".amountstrikes += 1
-			#3:
-				#$\"../../../../../../../..\".amountfilters += 1
+	#if money > price (buyable)
+	if $\"../../../../../../../..\".money >= $\"../../../../../../../..\".idleitemlist[$\"..\".upgrade_arraypos].Price:
+		print(\"bought\")
+		#spend money
+		$\"../../../../../../../..\".money -= $\"../../../../../../../..\".idleitemlist[$\"..\".upgrade_arraypos].Price
+		#make price higher
+		$\"../../../../../../../..\".upscaleprice($\"..\")
+		#update button text
+		$\"../../../../../../../..\".assignvalues(self, \"button\")
+		#gives nature rating
+		$\"../../../../../../../..\".rating += $\"../../../../../../../..\".idleitemlist[$\"..\".upgrade_arraypos].rating
+		#removes the rating gained for buying another of the item
+		$\"../../../../../../../..\".idleitemlist[$\"..\".upgrade_arraypos].rating = 0
+		#gives the player the bought item
+		#when adding item: match name to add 1 to var
+		match $\"..\".upgrade_arraypos:
+			0:
+				$\"../../../../../../../..\".amountposters += 1
+			1:
+				$\"../../../../../../../..\".amountlightbulbs += 1
+			2:
+				$\"../../../../../../../..\".amountstrikes += 1
+			3:
+				$\"../../../../../../../..\".amountfilters += 1
 "
 
 [node name="shopbox" type="HBoxContainer"]

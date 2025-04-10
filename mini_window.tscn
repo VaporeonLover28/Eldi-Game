@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4ds3u4mx7g0x"]
+[gd_scene load_steps=3 format=3 uid="uid://d4ds3u4mx7g0x"]
 
 [ext_resource type="Script" uid="uid://sglk165co8i0" path="res://mini_window.gd" id="1_58v5c"]
+[ext_resource type="PackedScene" uid="uid://l7gvxopqtwoh" path="res://minigame_base.tscn" id="2_7o0ai"]
 
 [node name="MiniWindow" type="SubViewport"]
+size = Vector2i(500, 500)
+render_target_update_mode = 4
 script = ExtResource("1_58v5c")
+
+[node name="MinigameBase" parent="." instance=ExtResource("2_7o0ai")]
+
+[node name="Camera2D2" type="Camera2D" parent="MinigameBase"]

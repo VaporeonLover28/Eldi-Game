@@ -34,10 +34,9 @@ func assignvalues(object, type):
 		 + "\n $" + str(idleitemlist[object.get_parent().upgrade_arraypos].Income)\
 		 + "/s\nNR:" + str(idleitemlist[object.get_parent().upgrade_arraypos].rating))
 
-
 #makes the prices grow
-func upscaleprice(button):
-	idleitemlist[button.upgrade_arraypos].Price = floor(idleitemlist[button.upgrade_arraypos].Price * 1.16666666666)
+func upscaleprice(shopbox):
+	idleitemlist[shopbox.upgrade_arraypos].Price = round(idleitemlist[shopbox.upgrade_arraypos].Price * 1.16666666666)
 
 #when adding new item:
 #add new equation with item array pos 
