@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Upgrade_resource" load_steps=2 format=3 uid="uid://cqx6nuat2ocgr"]
+[gd_resource type="Resource" script_class="Upgrade_resource" load_steps=3 format=3 uid="uid://cqx6nuat2ocgr"]
 
-[ext_resource type="Script" uid="uid://bkxlprgvipwpt" path="res://upgrade_resource.gd" id="1_ks7p4"]
+[ext_resource type="Script" path="res://upgrade_resource.gd" id="1_ks7p4"]
+[ext_resource type="PackedScene" uid="uid://re103rywclgo" path="res://collection.tscn" id="1_ra0qi"]
 
 [resource]
 script = ExtResource("1_ks7p4")
@@ -9,4 +10,9 @@ Name = "Collection"
 Price = 10
 Income = 10.0
 rating = 0.05
+minigame_scene = ExtResource("1_ra0qi")
+minigame_id = 0
+minigame_time = 15.0
+minigame_step_income = 10
+minigame_win_income = 50
 metadata/_custom_type_script = "uid://bkxlprgvipwpt"

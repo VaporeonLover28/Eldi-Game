@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://dk7wt3rd2ba7t"]
 
-[ext_resource type="Script" uid="uid://ceihwygaake2v" path="res://UselessStuff/testing.gd" id="1_s5jwy"]
-[ext_resource type="Script" uid="uid://dd2drmwjhm5by" path="res://UselessStuff/groundarraytest.gd" id="1_xlb4c"]
-[ext_resource type="Script" uid="uid://bkxlprgvipwpt" path="res://upgrade_resource.gd" id="2_w078t"]
-[ext_resource type="Script" uid="uid://bm4y2co8gs5ht" path="res://UselessStuff/gcal.gd" id="2_xc8hf"]
-[ext_resource type="Script" uid="uid://cexckvyfx7ivx" path="res://UselessStuff/cal.gd" id="3_uf03d"]
-[ext_resource type="Script" uid="uid://ky41oovlv02n" path="res://UselessStuff/cashmoola.gd" id="4_wyvfa"]
-[ext_resource type="Script" uid="uid://bv1b2uj6rpy7u" path="res://upgradebuytest.gd" id="6_xq3ea"]
-[ext_resource type="Script" uid="uid://cg64kxw1ia4ky" path="res://UselessStuff/ai.gd" id="11_4qh4k"]
-[ext_resource type="Script" uid="uid://xvwkgpxois44" path="res://income.gd" id="14_pyh3o"]
+[ext_resource type="Script" path="res://UselessStuff/testing.gd" id="1_s5jwy"]
+[ext_resource type="Script" path="res://UselessStuff/groundarraytest.gd" id="1_xlb4c"]
+[ext_resource type="Script" path="res://upgrade_resource.gd" id="2_w078t"]
+[ext_resource type="Script" path="res://UselessStuff/gcal.gd" id="2_xc8hf"]
+[ext_resource type="Script" path="res://UselessStuff/cal.gd" id="3_uf03d"]
+[ext_resource type="Script" path="res://UselessStuff/cashmoola.gd" id="4_wyvfa"]
+[ext_resource type="Script" path="res://upgradebuytest.gd" id="6_xq3ea"]
+[ext_resource type="Script" path="res://UselessStuff/ai.gd" id="11_4qh4k"]
+[ext_resource type="Script" path="res://income.gd" id="14_pyh3o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_csr81"]
 size = Vector2(800, 500)

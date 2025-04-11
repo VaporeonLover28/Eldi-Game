@@ -1,24 +1,24 @@
 [gd_scene load_steps=14 format=3 uid="uid://dvm7cd64fovya"]
 
-[ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
+[ext_resource type="Script" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
-[ext_resource type="Script" uid="uid://bkxlprgvipwpt" path="res://upgrade_resource.gd" id="2_7jktm"]
+[ext_resource type="Script" path="res://upgrade_resource.gd" id="2_7jktm"]
 [ext_resource type="PackedScene" uid="uid://dckqlr1wb13e1" path="res://cursor.tscn" id="2_tqrlg"]
 [ext_resource type="Resource" uid="uid://b2am8ylgpa7sb" path="res://Upgrades/Idle/posters.tres" id="3_eow3j"]
 [ext_resource type="Resource" uid="uid://ccooy6umagt3y" path="res://Upgrades/Idle/lightbulbs.tres" id="4_j5wjh"]
 [ext_resource type="Resource" uid="uid://3s1b4a8vckwk" path="res://Upgrades/Idle/strikes.tres" id="5_vef74"]
 [ext_resource type="Resource" uid="uid://brqcaslvxr0ne" path="res://Upgrades/Idle/filters.tres" id="6_hve3p"]
-[ext_resource type="PackedScene" uid="uid://pklfuxgvwgc2" path="res://minigame_handler_trashtask.tscn" id="7_iotsf"]
-[ext_resource type="PackedScene" uid="uid://clw24atl122qq" path="res://minigame_1.tscn" id="8_lc2xo"]
-[ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
-[ext_resource type="Script" uid="uid://xvwkgpxois44" path="res://income.gd" id="12_215e1"]
-[ext_resource type="Script" uid="uid://dpfhykvpe0qab" path="res://naturelabel.gd" id="13_7sc4i"]
+[ext_resource type="Script" path="res://minigame_base.gd" id="8_lc2xo"]
+[ext_resource type="Script" path="res://moneylabel.gd" id="11_lc2xo"]
+[ext_resource type="Script" path="res://income.gd" id="12_215e1"]
+[ext_resource type="Resource" uid="uid://cqx6nuat2ocgr" path="res://Upgrades/Task/collection.tres" id="12_pyw6c"]
+[ext_resource type="Script" path="res://naturelabel.gd" id="13_7sc4i"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_feb5d")
 idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResource("4_j5wjh"), ExtResource("5_vef74"), ExtResource("6_hve3p")])
-taskitemlist = Array[PackedScene]([ExtResource("7_iotsf"), ExtResource("8_lc2xo")])
-metadata/_edit_vertical_guides_ = [640.0]
+metadata/_edit_vertical_guides_ = [640.0, 300.0]
+metadata/_edit_horizontal_guides_ = [41.0, -317.0]
 
 [node name="givemoney" type="Timer" parent="."]
 autostart = true
@@ -108,24 +108,19 @@ upgrade_name = "Filters"
 upgrade_arraypos = 3
 upgrade_type = "idle"
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
-offset_left = 639.0
-offset_top = 158.0
-offset_right = 1139.0
-offset_bottom = 658.0
-stretch = true
+[node name="MinigameHandler" type="Node2D" parent="CanvasLayer"]
+script = ExtResource("8_lc2xo")
+taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("12_pyw6c")])
 
-[node name="MiniWindow" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(500, 500)
-render_target_update_mode = 4
-
-[node name="MinigameHandler" parent="CanvasLayer/SubViewportContainer/MiniWindow" instance=ExtResource("7_iotsf")]
+[node name="MinigameAddTimer" type="Timer" parent="CanvasLayer/MinigameHandler"]
+wait_time = 300.0
 
 [node name="cursor" parent="CanvasLayer" instance=ExtResource("2_tqrlg")]
 z_index = 4
 position = Vector2(640, 360)
 
 [connection signal="timeout" from="givemoney" to="." method="_on_givemoney_timeout"]
+[connection signal="minigame_result" from="CanvasLayer/MinigameHandler" to="CanvasLayer/MinigameHandler" method="_on_minigame_result"]
+[connection signal="timeout" from="CanvasLayer/MinigameHandler/MinigameAddTimer" to="CanvasLayer/MinigameHandler" method="_add_minigame_window"]
 
 [editable path="CanvasLayer/shoppanel"]
