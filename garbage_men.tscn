@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dxi60q3o16meb"]
+
+[node name="GarbageMen" type="Node2D"]
+visible = false
+scale = Vector2(2, 2)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 500.0
+offset_bottom = 250.0
+color = Color(1, 0.5, 0, 1)
+
+[connection signal="timeout" from="Timer" to="." method="_on_spawn_trash_timeout"]

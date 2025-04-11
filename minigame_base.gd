@@ -1,30 +1,31 @@
 extends Node2D; class_name Minigame
 
-@export var id : int
-@export var minigame : PackedScene
-@export var mini_time : float
-@export var mini_income : int
-@onready var mini_state : bool
-@onready var mini_timer: Timer = $MinigameTimer
-@onready var catarLixo = preload("res://catar_lixo.tscn")
+@export var minigame_scene : PackedScene
+@export var minigame_id : int
+@export var minigame_time : float
+@export var minigame_step_income : int
+@export var minigame_win_income : int
+@onready var minigame_state : bool
+@onready var minigame_timer: Timer = $MinigameTimer
+signal minigame_result(mini_state: bool)
 
-signal minigame_decider(mini_state: bool)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	mini_timer.wait_time = mini_time
-	var minigame_inst = minigame.instantiate()
-	add_child(minigame_inst)
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func _on_minigame_timer_timeout() -> void:
-	minigame_decider.emit(false)
+	minigame_result.emit(false)
 
-func _on_minigame_decider(mini_state: Variant) -> void:
+func _on_minigame_result(mini_state: bool) -> void:
 	if mini_state == true:
-		$"../../../../".money += mini_income * 3
+		$"../../../../".money += minigame_win_income
 	else:
 		pass
 	$"../".queue_free()
+
+func choose_minigame(chosengame):
+	minigame_id = chosengame.array_pos

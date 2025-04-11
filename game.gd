@@ -1,16 +1,19 @@
 extends Node2D
 
 var startmoneygiven = false
+var rng = RandomNumberGenerator.new()
 
 #variable for money system
 var money : int
 var rating : float
 
+@onready var mini_window: SubViewport = $CanvasLayer/SubViewportContainer/MiniWindow
+
 #declaring item shop
 #when adding item: click node on inspector
 #and add new element with parameters
 @export var idleitemlist : Array[Upgrade_resource]
-@export var taskitemlist : Array[Upgrade_resource]
+@export var taskitemlist : Array[PackedScene]
 
 #probably a shitty way to know how many of each upgrade player has
 #when adding item: add new variable with name
@@ -49,5 +52,5 @@ func _on_givemoney_timeout() -> void:
 	(idleitemlist[3].Income * amountfilters)
 	
 func Add_minigame():
-	pass
-	#passa o parametro do minigame
+	var minigame_inst = taskitemlist[round(rng.randf_range(0, taskitemlist.size()))]
+	mini_window.add_child(minigame_inst)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://re103rywclgo"]
+
+[ext_resource type="Script" uid="uid://btnchlcahk6dx" path="res://catar_lixo.gd" id="1_op31q"]
+
+[node name="Collection" type="Node2D"]
+visible = false
+scale = Vector2(2, 2)
+script = ExtResource("1_op31q")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 500.0
+offset_bottom = 250.0
+color = Color(0, 1, 0.95, 1)
+
+[connection signal="timeout" from="Timer" to="." method="_on_spawn_trash_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=14 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -8,19 +8,16 @@
 [ext_resource type="Resource" uid="uid://ccooy6umagt3y" path="res://Upgrades/Idle/lightbulbs.tres" id="4_j5wjh"]
 [ext_resource type="Resource" uid="uid://3s1b4a8vckwk" path="res://Upgrades/Idle/strikes.tres" id="5_vef74"]
 [ext_resource type="Resource" uid="uid://brqcaslvxr0ne" path="res://Upgrades/Idle/filters.tres" id="6_hve3p"]
-[ext_resource type="Resource" uid="uid://cqx6nuat2ocgr" path="res://Upgrades/Task/collection.tres" id="7_lc2xo"]
-[ext_resource type="Resource" uid="uid://882nyma16sdp" path="res://Upgrades/Task/garbage men.tres" id="8_215e1"]
-[ext_resource type="Resource" uid="uid://c8dbayxlpar3v" path="res://Upgrades/Task/junk recycle.tres" id="9_7sc4i"]
-[ext_resource type="Resource" uid="uid://csff063odqyev" path="res://Upgrades/Task/water treat.tres" id="10_80cx4"]
+[ext_resource type="PackedScene" uid="uid://pklfuxgvwgc2" path="res://minigame_handler_trashtask.tscn" id="7_iotsf"]
+[ext_resource type="PackedScene" uid="uid://clw24atl122qq" path="res://minigame_1.tscn" id="8_lc2xo"]
 [ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
 [ext_resource type="Script" uid="uid://xvwkgpxois44" path="res://income.gd" id="12_215e1"]
 [ext_resource type="Script" uid="uid://dpfhykvpe0qab" path="res://naturelabel.gd" id="13_7sc4i"]
-[ext_resource type="PackedScene" uid="uid://d4ds3u4mx7g0x" path="res://mini_window.tscn" id="16_80cx4"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_feb5d")
 idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResource("4_j5wjh"), ExtResource("5_vef74"), ExtResource("6_hve3p")])
-taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("7_lc2xo"), ExtResource("8_215e1"), ExtResource("9_7sc4i"), ExtResource("10_80cx4")])
+taskitemlist = Array[PackedScene]([ExtResource("7_iotsf"), ExtResource("8_lc2xo")])
 metadata/_edit_vertical_guides_ = [640.0]
 
 [node name="givemoney" type="Timer" parent="."]
@@ -118,8 +115,12 @@ offset_right = 1139.0
 offset_bottom = 658.0
 stretch = true
 
-[node name="MiniWindow" parent="CanvasLayer/SubViewportContainer" instance=ExtResource("16_80cx4")]
+[node name="MiniWindow" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
 handle_input_locally = false
+size = Vector2i(500, 500)
+render_target_update_mode = 4
+
+[node name="MinigameHandler" parent="CanvasLayer/SubViewportContainer/MiniWindow" instance=ExtResource("7_iotsf")]
 
 [node name="cursor" parent="CanvasLayer" instance=ExtResource("2_tqrlg")]
 z_index = 4
