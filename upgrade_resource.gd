@@ -9,6 +9,7 @@ extends Resource; class_name Upgrade_resource;
 @export var rating : float
 #minigame related varibles
 @export var minigame_scene: PackedScene
+@export var minigame_window_size: Vector2
 @export var minigame_id : int
 @export var minigame_time : float
 @export var minigame_step_income : int

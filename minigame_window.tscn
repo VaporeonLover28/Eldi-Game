@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bvq48367x031g"]
 
 [node name="Minigame_window" type="SubViewportContainer"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 250.0
+offset_bottom = 250.0
 
 [node name="SubViewport" type="SubViewport" parent="."]
 handle_input_locally = false
-size = Vector2i(500, 500)
+size = Vector2i(250, 250)
 render_target_update_mode = 4

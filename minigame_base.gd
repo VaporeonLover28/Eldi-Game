@@ -9,6 +9,7 @@ signal minigame_result(minigame_state: bool, minigame_indentifier: Node2D)
 @onready var game_scene: Node2D = $"../.."
 @onready var minigame_window = preload("res://minigame_window.tscn")
 @onready var minigame_timeout = preload("res://minigame_timeout.tscn")
+@onready var minigame_camera = preload("res://minigame_camera.tscn")
 
 #getting the last minigame window and minigame reference on minigame manger
 var latest_minigame_window = get_child(-1)
@@ -40,13 +41,25 @@ func _add_minigame_window() -> void:
 	var minigame_chosen = taskitemlist.pick_random()
 	#adding the minigame window
 	var minigame_window_inst = minigame_window.instantiate()
-	minigame_window_inst.position = Vector2(rng.randf_range(300, 1280),rng.randf_range(41, 720))
+	minigame_window_inst.size = minigame_chosen.minigame_window_size
+	minigame_window_inst.get_child(0).size = minigame_chosen.minigame_window_size
+	if get_child(-1) is SubViewportContainer:
+		minigame_window_inst.z_index = get_child(-1).z_index + 1
+	else:
+		minigame_window_inst.z_index = 0
+	minigame_window_inst.position = Vector2(rng.randf_range(0, 100),rng.randf_range(100, 200))
 	add_child(minigame_window_inst)
 	#adding and setting minigame to the minigamewindow
 	var minigame_inst = minigame_chosen.minigame_scene.instantiate()
 	minigame_inst.minigame_step_income = minigame_chosen.minigame_step_income
 	minigame_inst.minigame_win_income = minigame_chosen.minigame_win_income
+	if minigame_inst.minigame_window_size != null:
+		#setting varible to minigame to check the minigame window size(optional)
+		minigame_inst.minigame_window_size = minigame_chosen.minigame_window_size
 	get_child(-1).get_child(0).add_child(minigame_inst)
+	#adding a camera to the mingame scene
+	var minigame_camera_inst = minigame_camera.instantiate()
+	get_child(-1).get_child(0).get_child(0).add_child(minigame_camera_inst)
 	#setting a timer for the minigame
 	var minigame_timeout_inst = minigame_timeout.instantiate()
 	minigame_timeout_inst.wait_time = minigame_chosen.minigame_time

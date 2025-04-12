@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bvgbs6o8pyxtf"]
+
+[node name="MinigameCamera" type="Camera2D"]
+zoom = Vector2(10, 10)
+limit_left = 0
+limit_top = 0

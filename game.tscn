@@ -1,18 +1,18 @@
 [gd_scene load_steps=14 format=3 uid="uid://dvm7cd64fovya"]
 
-[ext_resource type="Script" path="res://game.gd" id="1_feb5d"]
+[ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
-[ext_resource type="Script" path="res://upgrade_resource.gd" id="2_7jktm"]
+[ext_resource type="Script" uid="uid://bkxlprgvipwpt" path="res://upgrade_resource.gd" id="2_7jktm"]
 [ext_resource type="PackedScene" uid="uid://dckqlr1wb13e1" path="res://cursor.tscn" id="2_tqrlg"]
 [ext_resource type="Resource" uid="uid://b2am8ylgpa7sb" path="res://Upgrades/Idle/posters.tres" id="3_eow3j"]
 [ext_resource type="Resource" uid="uid://ccooy6umagt3y" path="res://Upgrades/Idle/lightbulbs.tres" id="4_j5wjh"]
 [ext_resource type="Resource" uid="uid://3s1b4a8vckwk" path="res://Upgrades/Idle/strikes.tres" id="5_vef74"]
 [ext_resource type="Resource" uid="uid://brqcaslvxr0ne" path="res://Upgrades/Idle/filters.tres" id="6_hve3p"]
-[ext_resource type="Script" path="res://minigame_base.gd" id="8_lc2xo"]
-[ext_resource type="Script" path="res://moneylabel.gd" id="11_lc2xo"]
-[ext_resource type="Script" path="res://income.gd" id="12_215e1"]
+[ext_resource type="Script" uid="uid://cdrgsp27wsugy" path="res://minigame_base.gd" id="8_lc2xo"]
+[ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
+[ext_resource type="Script" uid="uid://xvwkgpxois44" path="res://income.gd" id="12_215e1"]
 [ext_resource type="Resource" uid="uid://cqx6nuat2ocgr" path="res://Upgrades/Task/collection.tres" id="12_pyw6c"]
-[ext_resource type="Script" path="res://naturelabel.gd" id="13_7sc4i"]
+[ext_resource type="Script" uid="uid://dpfhykvpe0qab" path="res://naturelabel.gd" id="13_7sc4i"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_feb5d")
@@ -88,6 +88,7 @@ vertical_alignment = 1
 script = ExtResource("13_7sc4i")
 
 [node name="shoppanel" parent="CanvasLayer" instance=ExtResource("1_sdcse")]
+z_index = -1
 
 [node name="shopbox" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="0"]
 upgrade_name = "Posters"

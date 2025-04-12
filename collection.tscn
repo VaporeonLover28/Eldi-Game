@@ -1,14 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://re103rywclgo"]
 
-[ext_resource type="Script" path="res://catar_lixo.gd" id="1_op31q"]
+[ext_resource type="Script" uid="uid://btnchlcahk6dx" path="res://catar_lixo.gd" id="1_op31q"]
 
 [node name="Collection" type="Node2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_op31q")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(247.5, 135.5)
-scale = Vector2(0.5, 0.5)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2

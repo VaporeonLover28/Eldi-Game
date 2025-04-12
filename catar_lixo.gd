@@ -3,6 +3,7 @@ extends Node2D
 @onready var trashitem = preload("res://thrashitem.tscn")
 @onready var collectedtrash = 0
 @onready var minigame_handler = $"../../../"
+@onready var minigame_window_size : Vector2
 @onready var minigame_step_income : int
 @onready var minigame_win_income : int
 # Called when the node enters the scene tree for the first time.
@@ -17,5 +18,5 @@ func _process(delta: float) -> void:
 func _on_spawn_trash_timeout() -> void:
 	var lixo_inst = trashitem.instantiate()
 
-	lixo_inst.position = Vector2(randf_range(0, 250), randf_range(0, 250))
+	lixo_inst.position = Vector2(randf_range(0, minigame_window_size.x), randf_range(0, minigame_window_size.y))
 	add_child(lixo_inst)

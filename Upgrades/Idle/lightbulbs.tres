@@ -9,3 +9,7 @@ Name = "Lightbulbs"
 Price = 30
 Income = 4.0
 rating = 0.05
+minigame_id = 0
+minigame_time = 0.0
+minigame_step_income = 0
+minigame_win_income = 0

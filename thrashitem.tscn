@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://d1kwyqejlrafq"]
 
 [ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="1_f7cmv"]
-[ext_resource type="Script" path="res://collectabletrash.gd" id="2_gh0o4"]
+[ext_resource type="Script" uid="uid://d1s3prw7xhomc" path="res://collectabletrash.gd" id="2_gh0o4"]
 
 [node name="CollectableTrash" type="TextureButton"]
-scale = Vector2(0.3125, 0.3125)
+scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("1_f7cmv")
 script = ExtResource("2_gh0o4")
 
