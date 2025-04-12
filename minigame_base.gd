@@ -43,11 +43,6 @@ func _add_minigame_window() -> void:
 	var minigame_window_inst = minigame_window.instantiate()
 	minigame_window_inst.size = minigame_chosen.minigame_window_size
 	minigame_window_inst.get_child(0).size = minigame_chosen.minigame_window_size
-	if get_child(-1) is SubViewportContainer:
-		minigame_window_inst.z_index = get_child(-1).z_index + 1
-	else:
-		minigame_window_inst.z_index = 0
-	minigame_window_inst.position = Vector2(rng.randf_range(0, 100),rng.randf_range(100, 200))
 	add_child(minigame_window_inst)
 	#adding and setting minigame to the minigamewindow
 	var minigame_inst = minigame_chosen.minigame_scene.instantiate()
