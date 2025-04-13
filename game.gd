@@ -2,16 +2,15 @@ extends Node2D
 
 var startmoneygiven = false
 
-
 #variable for money system
 var money : int
 var rating : float
-
 
 #declaring item shop
 #when adding item: click node on inspector
 #and add new element with parameters
 @export var idleitemlist : Array[Upgrade_resource]
+@export var taskitemlist : Array[Upgrade_resource]
 
 #probably a shitty way to know how many of each upgrade player has
 #when adding item: add new variable with name

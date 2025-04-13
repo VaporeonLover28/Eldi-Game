@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=17 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -8,7 +8,10 @@
 [ext_resource type="Resource" uid="uid://ccooy6umagt3y" path="res://Upgrades/Idle/lightbulbs.tres" id="4_j5wjh"]
 [ext_resource type="Resource" uid="uid://3s1b4a8vckwk" path="res://Upgrades/Idle/strikes.tres" id="5_vef74"]
 [ext_resource type="Resource" uid="uid://brqcaslvxr0ne" path="res://Upgrades/Idle/filters.tres" id="6_hve3p"]
+[ext_resource type="Resource" uid="uid://882nyma16sdp" path="res://Upgrades/Task/garbage men.tres" id="8_80cx4"]
 [ext_resource type="Script" uid="uid://cdrgsp27wsugy" path="res://minigame_base.gd" id="8_lc2xo"]
+[ext_resource type="Resource" uid="uid://c8dbayxlpar3v" path="res://Upgrades/Task/junk recycle.tres" id="9_e8heu"]
+[ext_resource type="Resource" uid="uid://csff063odqyev" path="res://Upgrades/Task/water treat.tres" id="10_rvswv"]
 [ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
 [ext_resource type="Script" uid="uid://xvwkgpxois44" path="res://income.gd" id="12_215e1"]
 [ext_resource type="Resource" uid="uid://cqx6nuat2ocgr" path="res://Upgrades/Task/collection.tres" id="12_pyw6c"]
@@ -17,6 +20,7 @@
 [node name="game" type="Node2D"]
 script = ExtResource("1_feb5d")
 idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResource("4_j5wjh"), ExtResource("5_vef74"), ExtResource("6_hve3p")])
+taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("12_pyw6c"), ExtResource("8_80cx4"), ExtResource("9_e8heu"), ExtResource("10_rvswv")])
 metadata/_edit_vertical_guides_ = [640.0, 300.0]
 metadata/_edit_horizontal_guides_ = [41.0, -317.0]
 
@@ -88,6 +92,7 @@ vertical_alignment = 1
 script = ExtResource("13_7sc4i")
 
 [node name="shoppanel" parent="CanvasLayer" instance=ExtResource("1_sdcse")]
+visible = false
 
 [node name="shopbox" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="0"]
 upgrade_name = "Posters"
