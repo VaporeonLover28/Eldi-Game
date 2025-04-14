@@ -1,5 +1,7 @@
 extends Label
 
+@onready var game = $"../../.."
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	text = "Money: $" + str($"../../..".money)
+	text = "Money: $" + str(game.money)

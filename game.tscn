@@ -92,7 +92,6 @@ vertical_alignment = 1
 script = ExtResource("13_7sc4i")
 
 [node name="shoppanel" parent="CanvasLayer" instance=ExtResource("1_sdcse")]
-visible = false
 
 [node name="shopbox" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="0"]
 upgrade_name = "Posters"

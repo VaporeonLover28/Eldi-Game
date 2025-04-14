@@ -7,40 +7,43 @@
 [sub_resource type="GDScript" id="GDScript_iotsf"]
 script/source = "extends TextureButton
 
+@onready var game = $\"../../../../../../../..\"
+@onready var shopbox = $\"..\"
+
 func _ready() -> void:
 	#function on the game node
 	#takes info from shopbox (resource values) that you set manually
 	#in the game node receives the info
 	#and sets the text here accordingly
 	#(yes its confusing bro i did this all wrong)
-	$\"../../../../../../../..\".assignvalues(self, \"button\")
+	game.assignvalues(self, \"button\")
 
 #when pressed
 func _on_pressed() -> void:
 	#if money > price (buyable)
-	if $\"../../../../../../../..\".money >= $\"../../../../../../../..\".idleitemlist[$\"..\".upgrade_arraypos].Price:
+	if game.money >= game.idleitemlist[shopbox.upgrade_arraypos].Price:
 		print(\"bought\")
 		#spend money
-		$\"../../../../../../../..\".money -= $\"../../../../../../../..\".idleitemlist[$\"..\".upgrade_arraypos].Price
+		game.money -= game.idleitemlist[shopbox.upgrade_arraypos].Price
 		#make price higher
-		$\"../../../../../../../..\".upscaleprice($\"..\")
+		game.upscaleprice(shopbox)
 		#update button text
-		$\"../../../../../../../..\".assignvalues(self, \"button\")
+		game.assignvalues(self, \"button\")
 		#gives nature rating
-		$\"../../../../../../../..\".rating += $\"../../../../../../../..\".idleitemlist[$\"..\".upgrade_arraypos].rating
+		game.rating += game.idleitemlist[shopbox.upgrade_arraypos].rating
 		#removes the rating gained for buying another of the item
-		$\"../../../../../../../..\".idleitemlist[$\"..\".upgrade_arraypos].rating = 0
+		game.idleitemlist[shopbox.upgrade_arraypos].rating = 0
 		#gives the player the bought item
 		#when adding item: match name to add 1 to var
-		match $\"..\".upgrade_arraypos:
+		match shopbox.upgrade_arraypos:
 			0:
-				$\"../../../../../../../..\".amountposters += 1
+				game.amountposters += 1
 			1:
-				$\"../../../../../../../..\".amountlightbulbs += 1
+				game.amountlightbulbs += 1
 			2:
-				$\"../../../../../../../..\".amountstrikes += 1
+				game.amountstrikes += 1
 			3:
-				$\"../../../../../../../..\".amountfilters += 1
+				game.amountfilters += 1
 "
 
 [node name="shopbox" type="HBoxContainer"]
