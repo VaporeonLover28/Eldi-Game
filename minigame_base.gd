@@ -9,7 +9,6 @@ signal minigame_result(minigame_state: bool, minigame_indentifier: Node2D)
 @onready var game_scene: Node2D = $"../.."
 @onready var minigame_window = preload("res://minigame_window.tscn")
 @onready var minigame_timeout = preload("res://minigame_timeout.tscn")
-@onready var minigame_camera = preload("res://minigame_camera.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,18 +19,17 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("create minigame"):
 		_add_minigame_window()
 
-func _on_minigame_result(minigame_state: bool, minigame_identifier: Node2D) -> void:
+func _on_minigame_result(minigame_state: bool, minigame_window_identifier: Node) -> void:
 	#deciding the minigame was lost or not and removing from the game scene
 	#OBS: mingigame_state: true = won and false = losing,
-	#always put self when when calling this function
 	if minigame_state == true:
-		game_scene.money += minigame_identifier.minigame_win_income
+		game_scene.money += minigame_window_identifier.minigame_chosen.minigame_win_income
 	else:
 		pass
-	minigame_identifier.get_parent().get_parent().queue_free()
+	minigame_window_identifier.queue_free()
 
-func _minigame_timeout(minigame_identifier: Node):
-	_on_minigame_result(false, minigame_identifier.get_parent())
+func _minigame_timeout(timeout_identifier: Node):
+	_on_minigame_result(false, timeout_identifier.get_parent())
 
 func _add_minigame_window() -> void:
 	#randomizing minigame
@@ -41,22 +39,13 @@ func _add_minigame_window() -> void:
 	minigame_window_inst.position = Vector2(rng.randf_range(0, 500),rng.randf_range(100, 500))
 	minigame_window_inst.size = minigame_chosen.minigame_window_size
 	minigame_window_inst.get_child(0).size = minigame_chosen.minigame_window_size
+	minigame_window_inst.minigame_chosen = minigame_chosen
 	add_child(minigame_window_inst)
-	
-	#adding and setting minigame to the minigamewindow
-	var minigame_inst = minigame_chosen.minigame_scene.instantiate()
-	minigame_inst.minigame_step_income = minigame_chosen.minigame_step_income
-	minigame_inst.minigame_win_income = minigame_chosen.minigame_win_income
-	minigame_inst.minigame_window_size = minigame_chosen.minigame_window_size
-	get_child(-1).get_child(0).add_child(minigame_inst)
-	
-	#adding a camera to the minigame scene
-	var minigame_camera_inst = minigame_camera.instantiate()
-	get_child(-1).get_child(0).get_child(0).add_child(minigame_camera_inst)
-	
-	#setting a timer for the minigame
+	#setting a timer for the minigame window
 	var minigame_timeout_inst = minigame_timeout.instantiate()
 	minigame_timeout_inst.wait_time = minigame_chosen.minigame_time
 	print(minigame_chosen.minigame_time)
-	get_child(-1).get_child(0).get_child(0).add_child(minigame_timeout_inst)
-	get_child(-1).get_child(0).get_child(0).get_node("MinigameTimeout").connect("timeout", _minigame_timeout.bind(get_child(-1).get_child(0).get_child(0).get_node("MinigameTimeout")))
+	get_child(-1).add_child(minigame_timeout_inst)
+	get_child(-1).get_node("MinigameTimeout").\
+	connect("timeout", _minigame_timeout.bind(get_child(-1).\
+	get_node("MinigameTimeout")))

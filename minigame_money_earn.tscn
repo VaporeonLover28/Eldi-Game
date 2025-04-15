@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://db5fif27wfuuf"]
+
+[ext_resource type="Script" uid="uid://d4n04vtircvwx" path="res://minigame_money_earn.gd" id="1_ldch1"]
+
+[node name="minigame_money_earn" type="Label"]
+z_index = 5
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 0.764706, 0, 1)
+text = "+$XXXX"
+script = ExtResource("1_ldch1")
