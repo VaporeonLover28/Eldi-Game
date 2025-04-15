@@ -8,11 +8,6 @@ offset_right = 250.0
 offset_bottom = 250.0
 script = ExtResource("1_i82p6")
 
-[node name="SubViewport" type="SubViewport" parent="."]
-handle_input_locally = false
-size = Vector2i(250, 250)
-render_target_update_mode = 4
-
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 2
 texture_normal = ExtResource("2_40kx6")
