@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://byn6jc64nxijy"]
+[gd_scene format=3 uid="uid://dobgxwfvccqbk"]
 
 [node name="MinigameTimeout" type="Timer"]
 autostart = true

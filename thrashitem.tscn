@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d1s3prw7xhomc" path="res://collectabletrash.gd" id="2_gh0o4"]
 
 [node name="CollectableTrash" type="TextureButton"]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("1_f7cmv")
 script = ExtResource("2_gh0o4")
 

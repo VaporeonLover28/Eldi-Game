@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://btnchlcahk6dx" path="res://catar_lixo.gd" id="1_op31q"]
 
 [node name="Collection" type="Node2D"]
-scale = Vector2(2, 2)
 script = ExtResource("1_op31q")
 
 [node name="Timer" type="Timer" parent="."]

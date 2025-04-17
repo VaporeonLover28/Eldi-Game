@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bvgbs6o8pyxtf"]
+[gd_scene format=3 uid="uid://c7cabjxpdqexr"]
 
 [node name="MinigameCamera" type="Camera2D"]
 limit_left = 0
