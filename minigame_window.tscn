@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="2_40kx6"]
 
 [node name="MinigameWindow" type="SubViewportContainer"]
+scale = Vector2(0.66, 0.66)
 script = ExtResource("1_i82p6")
 
 [node name="TextureButton" type="TextureButton" parent="."]

@@ -5,7 +5,6 @@ extends SubViewportContainer
 @onready var minigame_chosen : Upgrade_resource
 @onready var texture_button = $TextureButton
 
-
 func _spawn_minigame():
 	texture_button.queue_free()
 	#configuring the subviewport
