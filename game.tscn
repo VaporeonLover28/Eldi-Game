@@ -21,7 +21,7 @@
 script = ExtResource("1_feb5d")
 idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResource("4_j5wjh"), ExtResource("5_vef74"), ExtResource("6_hve3p")])
 taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("12_pyw6c"), ExtResource("8_80cx4"), ExtResource("9_e8heu"), ExtResource("10_rvswv")])
-metadata/_edit_vertical_guides_ = [640.0, 300.0]
+metadata/_edit_vertical_guides_ = [640.0, 300.0, 300.0]
 metadata/_edit_horizontal_guides_ = [41.0, -317.0]
 
 [node name="givemoney" type="Timer" parent="."]
@@ -117,7 +117,8 @@ script = ExtResource("8_lc2xo")
 taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("12_pyw6c")])
 
 [node name="MinigameAddTimer" type="Timer" parent="CanvasLayer/MinigameHandler"]
-wait_time = 300.0
+wait_time = 15.0
+autostart = true
 
 [node name="cursor" parent="CanvasLayer" instance=ExtResource("2_tqrlg")]
 z_index = 4

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://daepnurnptayh"]
+[gd_scene load_steps=6 format=3 uid="uid://daepnurnptayh"]
 
 [ext_resource type="Script" uid="uid://ck6ds12ne8yel" path="res://label.gd" id="1_57je5"]
 [ext_resource type="Script" uid="uid://b07pnb7gwwher" path="res://shopbox.gd" id="1_r73hq"]
+[ext_resource type="PackedScene" uid="uid://7mf73t2xsrwt" path="res://amount.tscn" id="2_hnfxt"]
 [ext_resource type="Texture2D" uid="uid://b6v4ufcf22637" path="res://Art/ButtonTest.png" id="2_r73hq"]
 
 [sub_resource type="GDScript" id="GDScript_iotsf"]
@@ -48,6 +49,10 @@ func _on_pressed() -> void:
 
 [node name="shopbox" type="HBoxContainer"]
 script = ExtResource("1_r73hq")
+
+[node name="amount" parent="." instance=ExtResource("2_hnfxt")]
+layout_mode = 2
+text = "(X)"
 
 [node name="upgradevalues" type="Label" parent="."]
 layout_mode = 2

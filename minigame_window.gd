@@ -6,6 +6,8 @@ extends SubViewportContainer
 @onready var texture_button = $TextureButton
 
 func _spawn_minigame():
+	position.x -= 40
+	position.y -= 160
 	texture_button.queue_free()
 	#configuring the subviewport
 	var minigame_subviewport_inst = SubViewport.new()

@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 	if collectedtrash == 15:
 		var money_inst = money_popup.instantiate()
 		money_inst.scale = Vector2(4, 4)
-		money_inst.position = minigame_window.global_position - Vector2(0, 10)
+		money_inst.position = minigame_window.global_position - Vector2(0, 40)
 		money_inst.set_text2(minigame_window.minigame_chosen.minigame_win_income)
 		game.get_child(1).add_child(money_inst)
 		minigame_handler.minigame_result.emit(true, minigame_window)

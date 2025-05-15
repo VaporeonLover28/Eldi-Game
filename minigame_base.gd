@@ -8,10 +8,7 @@ signal minigame_result(minigame_state: bool, minigame_indentifier: Node2D)
 @onready var rng = RandomNumberGenerator.new()
 @onready var game_scene: Node2D = $"../.."
 @onready var minigame_window = preload("res://minigame_window.tscn")
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
+@onready var minigame_add_timer: Timer = $MinigameAddTimer
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -28,11 +25,12 @@ func _on_minigame_result(minigame_state: bool, minigame_window_identifier: Node)
 	minigame_window_identifier.queue_free()
 
 func _add_minigame_window() -> void:
+	minigame_add_timer.start(round(randf_range(40, 60)))
 	#randomizing minigame
 	var minigame_chosen = taskitemlist.pick_random()
 	#adding the minigame window and putting its varibles
 	var minigame_window_inst = minigame_window.instantiate()
-	minigame_window_inst.position = Vector2(rng.randf_range(0, 500),rng.randf_range(100, 500))
+	minigame_window_inst.position = Vector2(rng.randf_range(400 , 1100),rng.randf_range(300, 600))
 	minigame_window_inst.size = minigame_chosen.minigame_window_size
 	minigame_window_inst.find_child("TextureButton").size = minigame_chosen.minigame_window_size
 	minigame_window_inst.minigame_chosen = minigame_chosen
