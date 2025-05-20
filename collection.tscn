@@ -9,6 +9,11 @@ script = ExtResource("1_op31q")
 wait_time = 0.75
 autostart = true
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_right = 320.0
+offset_bottom = 320.0
+color = Color(0.979666, 0.880902, 7.70092e-07, 1)
+
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 250.0
 offset_bottom = 250.0

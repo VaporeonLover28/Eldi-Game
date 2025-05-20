@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=19 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -12,7 +12,9 @@
 [ext_resource type="Script" uid="uid://cdrgsp27wsugy" path="res://minigame_base.gd" id="8_lc2xo"]
 [ext_resource type="Resource" uid="uid://c8dbayxlpar3v" path="res://Upgrades/Task/junk recycle.tres" id="9_e8heu"]
 [ext_resource type="Resource" uid="uid://csff063odqyev" path="res://Upgrades/Task/water treat.tres" id="10_rvswv"]
+[ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="11_e8heu"]
 [ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
+[ext_resource type="Script" uid="uid://5pbde67ehq8x" path="res://factory.gd" id="11_rvswv"]
 [ext_resource type="Script" uid="uid://xvwkgpxois44" path="res://income.gd" id="12_215e1"]
 [ext_resource type="Resource" uid="uid://cqx6nuat2ocgr" path="res://Upgrades/Task/collection.tres" id="12_pyw6c"]
 [ext_resource type="Script" uid="uid://dpfhykvpe0qab" path="res://naturelabel.gd" id="13_7sc4i"]
@@ -23,6 +25,57 @@ idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResourc
 taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("12_pyw6c"), ExtResource("8_80cx4"), ExtResource("9_e8heu"), ExtResource("10_rvswv")])
 metadata/_edit_vertical_guides_ = [640.0, 300.0, 300.0]
 metadata/_edit_horizontal_guides_ = [41.0, -317.0]
+
+[node name="scene" type="Node2D" parent="."]
+
+[node name="factory" type="Node2D" parent="scene"]
+position = Vector2(640, 360)
+scale = Vector2(1.5, 0.96)
+script = ExtResource("11_rvswv")
+
+[node name="fabbrica" type="Sprite2D" parent="scene/factory"]
+rotation = 0.785398
+scale = Vector2(2.5, 2.521)
+texture = ExtResource("11_e8heu")
+
+[node name="chamine" type="Sprite2D" parent="scene/factory"]
+position = Vector2(-94.6667, -146.875)
+rotation = 0.785398
+scale = Vector2(0.655, 0.661)
+texture = ExtResource("11_e8heu")
+
+[node name="Label" type="Label" parent="scene/factory"]
+offset_left = -95.3333
+offset_top = -119.792
+offset_right = 110.667
+offset_bottom = -62.7917
+scale = Vector2(1, 1.5)
+theme_override_font_sizes/font_size = 41
+text = "fabbrica"
+
+[node name="poster1" type="Sprite2D" parent="scene/factory"]
+visible = false
+position = Vector2(-127.333, 66.6667)
+scale = Vector2(0.387097, 0.478261)
+texture = ExtResource("11_e8heu")
+
+[node name="poster2" type="Sprite2D" parent="scene/factory"]
+visible = false
+position = Vector2(88.6667, 129.167)
+scale = Vector2(0.387097, 0.478261)
+texture = ExtResource("11_e8heu")
+
+[node name="poster3" type="Sprite2D" parent="scene/factory"]
+visible = false
+position = Vector2(152.667, 17.7083)
+scale = Vector2(0.387097, 0.478261)
+texture = ExtResource("11_e8heu")
+
+[node name="poster4" type="Sprite2D" parent="scene/factory"]
+visible = false
+position = Vector2(-168, -36.4583)
+scale = Vector2(0.387097, 0.478261)
+texture = ExtResource("11_e8heu")
 
 [node name="givemoney" type="Timer" parent="."]
 autostart = true

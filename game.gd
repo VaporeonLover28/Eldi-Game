@@ -21,7 +21,7 @@ var amountfilters = 0
 
 func _ready() -> void:
 	if startmoneygiven == false:
-		money = 5
+		money = 50000
 		startmoneygiven = true
 
 #changing the text of each button

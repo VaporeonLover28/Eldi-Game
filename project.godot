@@ -15,6 +15,10 @@ run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PipePatterns="*res://Upgrades/Task/pipe_patterns.gd"
+
 [display]
 
 window/size/viewport_width=1280
