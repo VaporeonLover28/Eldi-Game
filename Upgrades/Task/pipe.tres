@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Upgrade_resource" load_steps=3 format=3 uid="uid://cbei1lcrsp1h1"]
+
+[ext_resource type="Script" uid="uid://bkxlprgvipwpt" path="res://upgrade_resource.gd" id="1_fh8i1"]
+[ext_resource type="PackedScene" uid="uid://bxi8wdb2huw0v" path="res://mini_game_pipe.tscn" id="1_n1k4r"]
+
+[resource]
+script = ExtResource("1_fh8i1")
+upgrade_type = 0
+Name = "pipes"
+Price = 100
+Income = 100.0
+rating = 100.0
+minigame_scene = ExtResource("1_n1k4r")
+minigame_window_size = Vector2(600, 600)
+minigame_id = 1
+minigame_time = 180.0
+minigame_step_income = 100
+minigame_win_income = 100
+metadata/_custom_type_script = "uid://bkxlprgvipwpt"

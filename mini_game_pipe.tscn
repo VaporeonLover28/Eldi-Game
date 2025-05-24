@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxi8wdb2huw0v"]
+
+[ext_resource type="Script" uid="uid://dj4ucw1xut5r4" path="res://mini_game_pipe.gd" id="1_5375g"]
+[ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="2_3x643"]
+[ext_resource type="Script" uid="uid://cquyt2cxd02n3" path="res://pipe.gd" id="3_3x643"]
+
+[node name="MiniGamePipe" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+script = ExtResource("1_5375g")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -196.0
+offset_right = 196.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="TextureButton2" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="TextureButton3" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="TextureButton4" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="TextureButton5" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="TextureButton6" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="TextureButton7" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="TextureButton8" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="TextureButton9" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[connection signal="pressed" from="GridContainer/TextureButton" to="GridContainer/TextureButton" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/TextureButton2" to="GridContainer/TextureButton2" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/TextureButton3" to="GridContainer/TextureButton3" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/TextureButton4" to="GridContainer/TextureButton4" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/TextureButton5" to="GridContainer/TextureButton5" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/TextureButton6" to="GridContainer/TextureButton6" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/TextureButton7" to="GridContainer/TextureButton7" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/TextureButton8" to="GridContainer/TextureButton8" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/TextureButton9" to="GridContainer/TextureButton9" method="_on_pipe_pressed"]
