@@ -16,7 +16,7 @@ custom_minimum_size = Vector2(124, 124)
 layout_mode = 1
 offset_right = 8.0
 offset_bottom = 8.0
-columns = 3
+columns = 4
 
 [node name="Control" type="Control" parent="GridContainer"]
 layout_mode = 2
@@ -58,9 +58,9 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="GridContainer/Control4"]
 layout_mode = 1
-offset_top = 124.0
-offset_right = 128.0
-offset_bottom = 252.0
+offset_left = 372.0
+offset_right = 500.0
+offset_bottom = 128.0
 pivot_offset = Vector2(65, 65)
 texture_normal = ExtResource("2_3x643")
 script = ExtResource("3_3x643")
@@ -70,9 +70,8 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="GridContainer/Control5"]
 layout_mode = 1
-offset_left = 124.0
 offset_top = 124.0
-offset_right = 252.0
+offset_right = 128.0
 offset_bottom = 252.0
 pivot_offset = Vector2(65, 65)
 texture_normal = ExtResource("2_3x643")
@@ -83,9 +82,9 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="GridContainer/Control6"]
 layout_mode = 1
-offset_left = 248.0
+offset_left = 124.0
 offset_top = 124.0
-offset_right = 376.0
+offset_right = 252.0
 offset_bottom = 252.0
 pivot_offset = Vector2(65, 65)
 texture_normal = ExtResource("2_3x643")
@@ -96,9 +95,10 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="GridContainer/Control7"]
 layout_mode = 1
-offset_top = 248.0
-offset_right = 128.0
-offset_bottom = 376.0
+offset_left = 248.0
+offset_top = 124.0
+offset_right = 376.0
+offset_bottom = 252.0
 pivot_offset = Vector2(65, 65)
 texture_normal = ExtResource("2_3x643")
 script = ExtResource("3_3x643")
@@ -108,10 +108,10 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="GridContainer/Control8"]
 layout_mode = 1
-offset_left = 124.0
-offset_top = 248.0
-offset_right = 252.0
-offset_bottom = 376.0
+offset_left = 372.0
+offset_top = 124.0
+offset_right = 500.0
+offset_bottom = 252.0
 pivot_offset = Vector2(65, 65)
 texture_normal = ExtResource("2_3x643")
 script = ExtResource("3_3x643")
@@ -121,10 +121,99 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="GridContainer/Control9"]
 layout_mode = 1
+offset_top = 248.0
+offset_right = 128.0
+offset_bottom = 376.0
+pivot_offset = Vector2(65, 65)
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="Control10" type="Control" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/Control10"]
+layout_mode = 1
+offset_left = 124.0
+offset_top = 248.0
+offset_right = 252.0
+offset_bottom = 376.0
+pivot_offset = Vector2(65, 65)
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="Control11" type="Control" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/Control11"]
+layout_mode = 1
 offset_left = 248.0
 offset_top = 248.0
 offset_right = 376.0
 offset_bottom = 376.0
+pivot_offset = Vector2(65, 65)
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="Control12" type="Control" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/Control12"]
+layout_mode = 1
+offset_left = 372.0
+offset_top = 248.0
+offset_right = 500.0
+offset_bottom = 376.0
+pivot_offset = Vector2(65, 65)
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="Control13" type="Control" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/Control13"]
+layout_mode = 1
+offset_top = 372.0
+offset_right = 128.0
+offset_bottom = 500.0
+pivot_offset = Vector2(65, 65)
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="Control14" type="Control" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/Control14"]
+layout_mode = 1
+offset_left = 124.0
+offset_top = 372.0
+offset_right = 252.0
+offset_bottom = 500.0
+pivot_offset = Vector2(65, 65)
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="Control15" type="Control" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/Control15"]
+layout_mode = 1
+offset_left = 248.0
+offset_top = 372.0
+offset_right = 376.0
+offset_bottom = 500.0
+pivot_offset = Vector2(65, 65)
+texture_normal = ExtResource("2_3x643")
+script = ExtResource("3_3x643")
+
+[node name="Control16" type="Control" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/Control16"]
+layout_mode = 1
+offset_left = 372.0
+offset_top = 372.0
+offset_right = 500.0
+offset_bottom = 500.0
 pivot_offset = Vector2(65, 65)
 texture_normal = ExtResource("2_3x643")
 script = ExtResource("3_3x643")
@@ -138,3 +227,10 @@ script = ExtResource("3_3x643")
 [connection signal="pressed" from="GridContainer/Control7/TextureButton" to="GridContainer/Control7/TextureButton" method="_on_pipe_pressed"]
 [connection signal="pressed" from="GridContainer/Control8/TextureButton" to="GridContainer/Control8/TextureButton" method="_on_pipe_pressed"]
 [connection signal="pressed" from="GridContainer/Control9/TextureButton" to="GridContainer/Control9/TextureButton" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/Control10/TextureButton" to="GridContainer/Control10/TextureButton" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/Control11/TextureButton" to="GridContainer/Control11/TextureButton" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/Control12/TextureButton" to="GridContainer/Control12/TextureButton" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/Control13/TextureButton" to="GridContainer/Control13/TextureButton" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/Control14/TextureButton" to="GridContainer/Control14/TextureButton" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/Control15/TextureButton" to="GridContainer/Control15/TextureButton" method="_on_pipe_pressed"]
+[connection signal="pressed" from="GridContainer/Control16/TextureButton" to="GridContainer/Control16/TextureButton" method="_on_pipe_pressed"]

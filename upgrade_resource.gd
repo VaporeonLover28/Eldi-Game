@@ -6,7 +6,7 @@ extends Resource; class_name Upgrade_resource;
 @export var Name : String
 @export var Price : int
 @export var Income : float
-@export var rating : float
+@export var rating : int
 #minigame related varibles
 @export var minigame_scene: PackedScene
 @export var minigame_window_size: Vector2
