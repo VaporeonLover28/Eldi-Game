@@ -168,7 +168,7 @@ upgrade_type = "idle"
 
 [node name="MinigameHandler" type="Node2D" parent="CanvasLayer"]
 script = ExtResource("8_lc2xo")
-taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("18_boyg6")])
+taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("12_pyw6c"), ExtResource("18_boyg6")])
 
 [node name="MinigameAddTimer" type="Timer" parent="CanvasLayer/MinigameHandler"]
 wait_time = 15.0

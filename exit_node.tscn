@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://chfferwn7uxtq"]
+
+[ext_resource type="Texture2D" uid="uid://udslv2oaobfp" path="res://canosaidaph.png" id="1_mnjny"]
+
+[node name="ExitNode" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="exit_pipe" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 64.0
+pivot_offset = Vector2(16, 32)
+texture = ExtResource("1_mnjny")

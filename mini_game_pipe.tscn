@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bxi8wdb2huw0v"]
 
 [ext_resource type="Script" uid="uid://dj4ucw1xut5r4" path="res://mini_game_pipe.gd" id="1_5375g"]
-[ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="2_3x643"]
-[ext_resource type="Script" uid="uid://cquyt2cxd02n3" path="res://pipe.gd" id="3_3x643"]
+[ext_resource type="PackedScene" uid="uid://b6l27lj8ewn6d" path="res://pipe_node.tscn" id="2_5375g"]
+[ext_resource type="PackedScene" uid="uid://chfferwn7uxtq" path="res://exit_node.tscn" id="3_3x643"]
 
 [node name="MiniGamePipe" type="Control"]
 layout_mode = 3
@@ -10,227 +10,208 @@ anchors_preset = 0
 size_flags_horizontal = 4
 size_flags_vertical = 6
 script = ExtResource("1_5375g")
+metadata/_edit_vertical_guides_ = [320.252]
+metadata/_edit_horizontal_guides_ = [320.316]
 
-[node name="GridContainer" type="GridContainer" parent="."]
-custom_minimum_size = Vector2(124, 124)
+[node name="pipe_grid" type="GridContainer" parent="."]
 layout_mode = 1
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 12.0
+offset_bottom = 12.0
 columns = 4
 
-[node name="Control" type="Control" parent="GridContainer"]
+[node name="PipeNode" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control"]
-layout_mode = 1
-offset_right = 128.0
-offset_bottom = 128.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode" index="0"]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 96.0
+offset_bottom = 96.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control2" type="Control" parent="GridContainer"]
+[node name="PipeNode2" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control2"]
-layout_mode = 1
-offset_left = 124.0
-offset_right = 252.0
-offset_bottom = 128.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode2" index="0"]
+offset_left = 92.0
+offset_top = 32.0
+offset_right = 156.0
+offset_bottom = 96.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control3" type="Control" parent="GridContainer"]
+[node name="PipeNode3" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control3"]
-layout_mode = 1
-offset_left = 248.0
-offset_right = 376.0
-offset_bottom = 128.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode3" index="0"]
+offset_left = 152.0
+offset_top = 32.0
+offset_right = 216.0
+offset_bottom = 96.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control4" type="Control" parent="GridContainer"]
+[node name="PipeNode4" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control4"]
-layout_mode = 1
-offset_left = 372.0
-offset_right = 500.0
-offset_bottom = 128.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode4" index="0"]
+offset_left = 212.0
+offset_top = 32.0
+offset_right = 276.0
+offset_bottom = 96.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control5" type="Control" parent="GridContainer"]
+[node name="PipeNode5" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control5"]
-layout_mode = 1
-offset_top = 124.0
-offset_right = 128.0
-offset_bottom = 252.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode5" index="0"]
+offset_left = 32.0
+offset_top = 92.0
+offset_right = 96.0
+offset_bottom = 156.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control6" type="Control" parent="GridContainer"]
+[node name="PipeNode6" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control6"]
-layout_mode = 1
-offset_left = 124.0
-offset_top = 124.0
-offset_right = 252.0
-offset_bottom = 252.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode6" index="0"]
+offset_left = 92.0
+offset_top = 92.0
+offset_right = 156.0
+offset_bottom = 156.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control7" type="Control" parent="GridContainer"]
+[node name="PipeNode7" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control7"]
-layout_mode = 1
-offset_left = 248.0
-offset_top = 124.0
-offset_right = 376.0
-offset_bottom = 252.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode7" index="0"]
+offset_left = 152.0
+offset_top = 92.0
+offset_right = 216.0
+offset_bottom = 156.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control8" type="Control" parent="GridContainer"]
+[node name="PipeNode8" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control8"]
-layout_mode = 1
-offset_left = 372.0
-offset_top = 124.0
-offset_right = 500.0
-offset_bottom = 252.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode8" index="0"]
+offset_left = 212.0
+offset_top = 92.0
+offset_right = 276.0
+offset_bottom = 156.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control9" type="Control" parent="GridContainer"]
+[node name="PipeNode9" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control9"]
-layout_mode = 1
-offset_top = 248.0
-offset_right = 128.0
-offset_bottom = 376.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode9" index="0"]
+offset_left = 32.0
+offset_top = 152.0
+offset_right = 96.0
+offset_bottom = 216.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control10" type="Control" parent="GridContainer"]
+[node name="PipeNode10" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control10"]
-layout_mode = 1
-offset_left = 124.0
-offset_top = 248.0
-offset_right = 252.0
-offset_bottom = 376.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode10" index="0"]
+offset_left = 92.0
+offset_top = 152.0
+offset_right = 156.0
+offset_bottom = 216.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control11" type="Control" parent="GridContainer"]
+[node name="PipeNode11" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control11"]
-layout_mode = 1
-offset_left = 248.0
-offset_top = 248.0
-offset_right = 376.0
-offset_bottom = 376.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode11" index="0"]
+offset_left = 152.0
+offset_top = 152.0
+offset_right = 216.0
+offset_bottom = 216.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control12" type="Control" parent="GridContainer"]
+[node name="PipeNode12" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control12"]
-layout_mode = 1
-offset_left = 372.0
-offset_top = 248.0
-offset_right = 500.0
-offset_bottom = 376.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode12" index="0"]
+offset_left = 212.0
+offset_top = 152.0
+offset_right = 276.0
+offset_bottom = 216.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control13" type="Control" parent="GridContainer"]
+[node name="PipeNode13" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control13"]
-layout_mode = 1
-offset_top = 372.0
-offset_right = 128.0
-offset_bottom = 500.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode13" index="0"]
+offset_left = 32.0
+offset_top = 212.0
+offset_right = 96.0
+offset_bottom = 276.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control14" type="Control" parent="GridContainer"]
+[node name="PipeNode14" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control14"]
-layout_mode = 1
-offset_left = 124.0
-offset_top = 372.0
-offset_right = 252.0
-offset_bottom = 500.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode14" index="0"]
+offset_left = 92.0
+offset_top = 212.0
+offset_right = 156.0
+offset_bottom = 276.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control15" type="Control" parent="GridContainer"]
+[node name="PipeNode15" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control15"]
-layout_mode = 1
-offset_left = 248.0
-offset_top = 372.0
-offset_right = 376.0
-offset_bottom = 500.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode15" index="0"]
+offset_left = 152.0
+offset_top = 212.0
+offset_right = 216.0
+offset_bottom = 276.0
+pivot_offset = Vector2(32, 32)
 
-[node name="Control16" type="Control" parent="GridContainer"]
+[node name="PipeNode16" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="GridContainer/Control16"]
-layout_mode = 1
-offset_left = 372.0
-offset_top = 372.0
-offset_right = 500.0
-offset_bottom = 500.0
-pivot_offset = Vector2(65, 65)
-texture_normal = ExtResource("2_3x643")
-script = ExtResource("3_3x643")
+[node name="pipe" parent="pipe_grid/PipeNode16" index="0"]
+offset_left = 212.0
+offset_top = 212.0
+offset_right = 276.0
+offset_bottom = 276.0
+pivot_offset = Vector2(32, 32)
 
-[connection signal="pressed" from="GridContainer/Control/TextureButton" to="GridContainer/Control/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control2/TextureButton" to="GridContainer/Control2/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control3/TextureButton" to="GridContainer/Control3/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control4/TextureButton" to="GridContainer/Control4/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control5/TextureButton" to="GridContainer/Control5/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control6/TextureButton" to="GridContainer/Control6/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control7/TextureButton" to="GridContainer/Control7/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control8/TextureButton" to="GridContainer/Control8/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control9/TextureButton" to="GridContainer/Control9/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control10/TextureButton" to="GridContainer/Control10/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control11/TextureButton" to="GridContainer/Control11/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control12/TextureButton" to="GridContainer/Control12/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control13/TextureButton" to="GridContainer/Control13/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control14/TextureButton" to="GridContainer/Control14/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control15/TextureButton" to="GridContainer/Control15/TextureButton" method="_on_pipe_pressed"]
-[connection signal="pressed" from="GridContainer/Control16/TextureButton" to="GridContainer/Control16/TextureButton" method="_on_pipe_pressed"]
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+columns = 4
+
+[node name="ExitNode" parent="." instance=ExtResource("3_3x643")]
+offset_left = 224.0
+offset_top = 32.0
+offset_right = 224.0
+offset_bottom = 32.0
+rotation = -1.5708
+
+[node name="ExitNode2" parent="." instance=ExtResource("3_3x643")]
+offset_left = 32.0
+offset_top = 96.0
+offset_right = 32.0
+offset_bottom = 96.0
+rotation = 3.14159
+
+[editable path="pipe_grid/PipeNode"]
+[editable path="pipe_grid/PipeNode2"]
+[editable path="pipe_grid/PipeNode3"]
+[editable path="pipe_grid/PipeNode4"]
+[editable path="pipe_grid/PipeNode5"]
+[editable path="pipe_grid/PipeNode6"]
+[editable path="pipe_grid/PipeNode7"]
+[editable path="pipe_grid/PipeNode8"]
+[editable path="pipe_grid/PipeNode9"]
+[editable path="pipe_grid/PipeNode10"]
+[editable path="pipe_grid/PipeNode11"]
+[editable path="pipe_grid/PipeNode12"]
+[editable path="pipe_grid/PipeNode13"]
+[editable path="pipe_grid/PipeNode14"]
+[editable path="pipe_grid/PipeNode15"]
+[editable path="pipe_grid/PipeNode16"]
+[editable path="ExitNode"]
+[editable path="ExitNode2"]

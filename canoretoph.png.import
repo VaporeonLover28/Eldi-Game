@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccd8wbyistquw"
-path="res://.godot/imported/Pipe-cartoon-vector-Metal-pipeline-conn-Graphics-41172428-1-1-580x387.jpg-7fedf9d9e7d210a3cfd1c696d3e184cb.ctex"
+uid="uid://b4qdbxk671g0p"
+path="res://.godot/imported/canoretoph.png-791cde13e8639e1add3977061a74b9df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pipe-cartoon-vector-Metal-pipeline-conn-Graphics-41172428-1-1-580x387.jpg"
-dest_files=["res://.godot/imported/Pipe-cartoon-vector-Metal-pipeline-conn-Graphics-41172428-1-1-580x387.jpg-7fedf9d9e7d210a3cfd1c696d3e184cb.ctex"]
+source_file="res://canoretoph.png"
+dest_files=["res://.godot/imported/canoretoph.png-791cde13e8639e1add3977061a74b9df.ctex"]
 
 [params]
 

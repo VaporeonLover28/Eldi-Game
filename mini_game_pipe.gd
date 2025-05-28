@@ -1,13 +1,18 @@
 extends Control
 
-@onready var grid_container: GridContainer = $GridContainer
+@onready var pipe_grid: GridContainer = $pipe_grid
 
 @onready var minigame_handler = $"../../../"
 @onready var minigame_window = $"../../"
 
-@onready var long_pipe_texture = preload("res://360_F_134590857_W1F1DVkYl8KnvXKqK4SCTKDcdxdLNqOj.jpg")
-@onready var curved_pipe_texture = preload("res://Pipe-cartoon-vector-Metal-pipeline-conn-Graphics-41172428-1-1-580x387.jpg")
-@onready var plus_pipe_texture = preload("res://teste tamanho 6464.png")
+@onready var long_pipe_texture = preload("res://canoretoph.png")
+@onready var curved_pipe_texture = preload("res://canocurvoph.png")
+@onready var plus_pipe_texture = preload("res://canoplusph.png")
+@onready var exit_pipe_texture = preload("res://canosaidaph.png")
+
+@onready var exit_node: Control = $ExitNode
+@onready var exit_node_2: Control = $ExitNode2
+
 
 @onready var correct_response_list: Array = [
 	#first element:
@@ -19,36 +24,69 @@ extends Control
 	#or put the degree that it need to be for the answer 
 	#if your response is for a "CR", you have to put 0 or 90 as the possible response
 	#make sure that any other solution are impossible as they will not count any
-	[["CC", null], ["CR", null], ["CC", 0], ["CC", 180], \
+	[
+	["CC", null], ["CR", null], ["CC", 0], ["CC", 180], \
 	["CC", null], ["CR", null], ["CC", 270], ["CC", 90], \
 	["CC", 0], ["CR", 0], ["CR", 0], ["CC", 180], \
-	["CC", 270], ["CR", 0], ["CR", 0], ["CR", 0]]
-	
-	#[[XX, xx], [XX, xx], [XX, xx], [XX, xx], \
-	#[XX, xx], [XX, xx], [XX, xx], [XX, xx], \
-	#[XX, xx], [XX, xx], [XX, xx], [XX, xx], \
-	#[XX, xx], [XX, xx], [XX, xx], [XX, xx],
+	["CC", 270], ["CR", 0], ["CR", 0], ["CR", 0]
 	]
-@onready var current_correct_response: Array = correct_response_list.pick_random()
+]
+
+@onready var exit_list: Array = [
+	#decides where exits are
+	#begins at up-left
+	#spins clockwise
+	#match exit array position with answer array position
+	[
+	false, false, false, true, \
+	false, false, false, true, \
+	false, false, false, false, \
+	false, false, false, false
+	]
+]
+
+@onready var correct_response_picker: int = randf_range(0, correct_response_list.size())
+@onready var current_correct_response: Array = correct_response_list[correct_response_picker]
+@onready var current_exit: Array = exit_list[correct_response_picker]
 
 func _ready() -> void:
+	print(correct_response_picker)
+	print(current_correct_response)
+	print(current_exit)
 	#for loop to decide
-	for item in grid_container.get_child_count():
+	for item in pipe_grid.get_child_count():
 		match current_correct_response.get(item).get(0):
 			"CR":
-				grid_container.get_child(item).get_child(0).texture_normal = long_pipe_texture
+				pipe_grid.get_child(item).get_child(0).texture_normal = long_pipe_texture
 			"CC":
-				grid_container.get_child(item).get_child(0).texture_normal = curved_pipe_texture
+				pipe_grid.get_child(item).get_child(0).texture_normal = curved_pipe_texture
 			"CM":
-				grid_container.get_child(item).get_child(0).texture_normal = plus_pipe_texture
-		grid_container.get_child(item).get_child(0).minigame_start()
+				pipe_grid.get_child(item).get_child(0).texture_normal = plus_pipe_texture
+		pipe_grid.get_child(item).get_child(0).minigame_start()
+	
+	var exit_1 = null
+	var exit_2 = null
+	
+	for exits in current_exit.size():
+		if current_exit.get(exits) == true:
+			if exit_1 != null:
+				exit_1 = exits
+				print("exit 1 = " + exit_1)
+			else:
+				exit_2 = exits
+				print("exit 2 = " + exit_2)
+	
+	#match exit_1:
+		
+	
+
 func _physics_process(delta: float) -> void:
 	
 	#for loop that check every frame for the correct answer decide by 
-	for item in range(grid_container.get_child_count()):
+	for item in range(pipe_grid.get_child_count()):
 		if(current_correct_response.get(item).get(1) == null or  \
 		(current_correct_response.get(item).get(1) == \
-		grid_container.get_child(item).get_child(0).rotation_degrees)):
+		pipe_grid.get_child(item).get_child(0).rotation_degrees)):
 			pass
 		else:
 			return

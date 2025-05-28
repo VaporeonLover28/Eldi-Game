@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3575evx7n0"
-path="res://.godot/imported/istockphoto-1247703323-612x612.jpg-340b1eca235335abe674b40aa65b7895.ctex"
+uid="uid://udslv2oaobfp"
+path="res://.godot/imported/canosaidaph.png-eb617c9b1ebd76957592ce4ff7f58725.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://istockphoto-1247703323-612x612.jpg"
-dest_files=["res://.godot/imported/istockphoto-1247703323-612x612.jpg-340b1eca235335abe674b40aa65b7895.ctex"]
+source_file="res://canosaidaph.png"
+dest_files=["res://.godot/imported/canosaidaph.png-eb617c9b1ebd76957592ce4ff7f58725.ctex"]
 
 [params]
 

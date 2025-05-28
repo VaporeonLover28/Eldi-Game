@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b605l17kwkgyx"
-path="res://.godot/imported/360_F_134590857_W1F1DVkYl8KnvXKqK4SCTKDcdxdLNqOj.jpg-9bc37c79c7671595f62a04584ad8d77c.ctex"
+uid="uid://ct28pjanxy4ss"
+path="res://.godot/imported/canocurvoph.png-a8c431e59264dc872d237253ceba8d7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://360_F_134590857_W1F1DVkYl8KnvXKqK4SCTKDcdxdLNqOj.jpg"
-dest_files=["res://.godot/imported/360_F_134590857_W1F1DVkYl8KnvXKqK4SCTKDcdxdLNqOj.jpg-9bc37c79c7671595f62a04584ad8d77c.ctex"]
+source_file="res://canocurvoph.png"
+dest_files=["res://.godot/imported/canocurvoph.png-a8c431e59264dc872d237253ceba8d7e.ctex"]
 
 [params]
 
