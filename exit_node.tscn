@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://chfferwn7uxtq"]
 
-[ext_resource type="Texture2D" uid="uid://udslv2oaobfp" path="res://canosaidaph.png" id="1_mnjny"]
+[ext_resource type="Texture2D" uid="uid://7krelhofoh0m" path="res://Art/canoentrada.png" id="1_mnjny"]
 
 [node name="ExitNode" type="Control"]
 layout_mode = 3

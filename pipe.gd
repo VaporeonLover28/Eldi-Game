@@ -2,8 +2,8 @@ extends TextureButton
 
 enum { zero, nine_zero, one_eight_zero, two_seven_zero}
 var rotation_state = zero
-var cano_reto_path = "res://canoretoph.png"
-var cano_curvo_path = "res://canocurvoph.png"
+var cano_reto_path = "res://Art/canoreto.png"
+var cano_curvo_path = "res://Art/canocurvo.png"
 
 func minigame_start() -> void:
 	var enum_translation = [zero, nine_zero, one_eight_zero, two_seven_zero]

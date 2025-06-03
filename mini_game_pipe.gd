@@ -5,14 +5,15 @@ extends Control
 @onready var minigame_handler = $"../../../"
 @onready var minigame_window = $"../../"
 
-@onready var long_pipe_texture = preload("res://canoretoph.png")
-@onready var curved_pipe_texture = preload("res://canocurvoph.png")
-@onready var plus_pipe_texture = preload("res://canoplusph.png")
-@onready var exit_pipe_texture = preload("res://canosaidaph.png")
+@onready var long_pipe_texture = preload("res://Art/canoreto.png")
+@onready var curved_pipe_texture = preload("res://Art/canocurvo.png")
+@onready var plus_pipe_texture = preload("res://Art/canoplus.png")
+@onready var exit_pipe_texture = preload("res://Art/canoentrada.png")
 
 @onready var exit_node: Control = $ExitNode
+@onready var pipe_sprite: TextureRect = $ExitNode/exit_pipe
 @onready var exit_node_2: Control = $ExitNode2
-
+@onready var pipe_sprite2: TextureRect = $ExitNode2/exit_pipe
 
 @onready var correct_response_list: Array = [
 	#first element:
@@ -69,16 +70,112 @@ func _ready() -> void:
 	
 	for exits in current_exit.size():
 		if current_exit.get(exits) == true:
-			if exit_1 != null:
+			if exit_1 == null:
 				exit_1 = exits
-				print("exit 1 = " + exit_1)
+				print("exit 1 = " + str(exit_1))
 			else:
 				exit_2 = exits
-				print("exit 2 = " + exit_2)
+				print("exit 2 = " + str(exit_2))
 	
-	#match exit_1:
-		
+	match exit_1:
+		0:
+			pipe_sprite.position = Vector2(0, -192)
+			pipe_sprite.rotation = deg_to_rad(0)
+		1:
+			pipe_sprite.position = Vector2(0, -128)
+			pipe_sprite.rotation = deg_to_rad(0)
+		2:
+			pipe_sprite.position = Vector2(0, -64)
+			pipe_sprite.rotation = deg_to_rad(0)
+		3:
+			pipe_sprite.position = Vector2(0, -0)
+			pipe_sprite.rotation = deg_to_rad(0)
+		4:
+			pipe_sprite.position = Vector2(-48, 48)
+			pipe_sprite.rotation = deg_to_rad(90)
+		5:
+			pipe_sprite.position = Vector2(-112, 48)
+			pipe_sprite.rotation = deg_to_rad(90)
+		6:
+			pipe_sprite.position = Vector2(-176, 48)
+			pipe_sprite.rotation = deg_to_rad(90)
+		7:
+			pipe_sprite.position = Vector2(-240, 48)
+			pipe_sprite.rotation = deg_to_rad(90)
+		8:
+			pipe_sprite.position = Vector2(-288, 0)
+			pipe_sprite.rotation = deg_to_rad(180)
+		9:
+			pipe_sprite.position = Vector2(-288, -64)
+			pipe_sprite.rotation = deg_to_rad(180)
+		10:
+			pipe_sprite.position = Vector2(-288, -128)
+			pipe_sprite.rotation = deg_to_rad(180)
+		11:
+			pipe_sprite.position = Vector2(-288, -192)
+			pipe_sprite.rotation = deg_to_rad(180)
+		12:
+			pipe_sprite.position = Vector2(-240, -240)
+			pipe_sprite.rotation = deg_to_rad(270)
+		13:
+			pipe_sprite.position = Vector2(-176, -240)
+			pipe_sprite.rotation = deg_to_rad(270)
+		14:
+			pipe_sprite.position = Vector2(-112, -240)
+			pipe_sprite.rotation = deg_to_rad(270)
+		15:
+			pipe_sprite.position = Vector2(-48, -240)
+			pipe_sprite.rotation = deg_to_rad(270)
 	
+	match exit_2:
+		0:
+			pipe_sprite2.position = Vector2(0, -192)
+			pipe_sprite2.rotation = deg_to_rad(0)
+		1:
+			pipe_sprite2.position = Vector2(0, -128)
+			pipe_sprite2.rotation = deg_to_rad(0)
+		2:
+			pipe_sprite2.position = Vector2(0, -64)
+			pipe_sprite2.rotation = deg_to_rad(0)
+		3:
+			pipe_sprite2.position = Vector2(0, -0)
+			pipe_sprite2.rotation = deg_to_rad(0)
+		4:
+			pipe_sprite2.position = Vector2(-48, 48)
+			pipe_sprite2.rotation = deg_to_rad(90)
+		5:
+			pipe_sprite2.position = Vector2(-112, 48)
+			pipe_sprite2.rotation = deg_to_rad(90)
+		6:
+			pipe_sprite2.position = Vector2(-176, 48)
+			pipe_sprite2.rotation = deg_to_rad(90)
+		7:
+			pipe_sprite2.position = Vector2(-240, 48)
+			pipe_sprite2.rotation = deg_to_rad(90)
+		8:
+			pipe_sprite2.position = Vector2(-288, 0)
+			pipe_sprite2.rotation = deg_to_rad(180)
+		9:
+			pipe_sprite2.position = Vector2(-288, -64)
+			pipe_sprite2.rotation = deg_to_rad(180)
+		10:
+			pipe_sprite2.position = Vector2(-288, -128)
+			pipe_sprite2.rotation = deg_to_rad(180)
+		11:
+			pipe_sprite2.position = Vector2(-288, -192)
+			pipe_sprite2.rotation = deg_to_rad(180)
+		12:
+			pipe_sprite2.position = Vector2(-240, -240)
+			pipe_sprite2.rotation = deg_to_rad(270)
+		13:
+			pipe_sprite2.position = Vector2(-176, -240)
+			pipe_sprite2.rotation = deg_to_rad(270)
+		14:
+			pipe_sprite2.position = Vector2(-112, -240)
+			pipe_sprite2.rotation = deg_to_rad(270)
+		15:
+			pipe_sprite2.position = Vector2(-48, -240)
+			pipe_sprite2.rotation = deg_to_rad(270)
 
 func _physics_process(delta: float) -> void:
 	
