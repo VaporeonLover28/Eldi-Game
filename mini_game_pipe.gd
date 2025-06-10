@@ -15,22 +15,65 @@ extends Control
 @onready var exit_node_2: Control = $ExitNode2
 @onready var pipe_sprite2: TextureRect = $ExitNode2/exit_pipe
 
+var rng = RandomNumberGenerator.new()
+
 @onready var correct_response_list: Array = [
 	#first element:
 	#CR = Cano reto,
 	#CC = Cano curvo,
 	#CM = Cano mais
+	
 	#second element:
 	#null is not important for the answer,
 	#or put the degree that it need to be for the answer 
 	#if your response is for a "CR", you have to put 0 or 90 as the possible response
 	#make sure that any other solution are impossible as they will not count any
+	
+	#0 = J
+	#90 = L
+	#180 = r
+	#270 = 7
 	[
-	["CC", null], ["CR", null], ["CC", 0], ["CC", 180], \
-	["CC", null], ["CR", null], ["CC", 270], ["CC", 90], \
-	["CC", 0], ["CR", 0], ["CR", 0], ["CC", 180], \
-	["CC", 270], ["CR", 0], ["CR", 0], ["CR", 0]
-	]
+	["CC", null], ["CR", null], ["CC", 180], ["CC", 0], \
+	["CC", null], ["CR", null], ["CC", 90], ["CC", 270], \
+	["CC", 180], ["CR", 0], ["CR", 0], ["CC", 0], \
+	["CC", 90], ["CR", 0], ["CR", 0], ["CR", 0]
+	],
+	
+	[
+	["CC", 180], ["CR", 0], ["CR", 0], ["CR", 0], \
+	["CC", 90], ["CC", 270], ["CC", null], ["CC", null], \
+	["CC", null], ["CR", 90], ["CR", null], ["CC", null], \
+	["CC", null], ["CC", 90], ["CR", 0], ["CR", 0]
+	],
+	
+	[
+	["CC", 180], ["CR", 0], ["CR", 0], ["CC", 270], \
+	["CC", 0], ["CC", 180], ["CC", 270], ["CR", 90], \
+	["CC", 180], ["CC", 0], ["CC", 90], ["CC", 0], \
+	["CC", 0], ["CR", null], ["CR", null], ["CC", null]
+	],
+	
+	[
+	["CC", 90], ["CC", 270], ["CR", null], ["CC", 180], \
+	["CC", 180], ["CC", 0], ["CC", 180], ["CC", 0], \
+	["CC", 90], ["CC", 270], ["CC", 90], ["CC", 270], \
+	["CC", null], ["CC", 90], ["CR", 0], ["CC", 0]
+	],
+	
+	[
+	["CC", 180], ["CC", 270], ["CR", null], ["CC", null], \
+	["CR", 90], ["CC", 90], ["CC", 270], ["CC", null], \
+	["CR", 90], ["CC", null], ["CC", 90], ["CC", 270], \
+	["CR", 90], ["CR", null], ["CC", 180], ["CC", 0]
+	],
+	
+	[
+	["CR", 0], ["CR", 0], ["CR", 0], ["CC", 270], \
+	["CC", 180], ["CR", 0], ["CR", 0], ["CC", 0], \
+	["CC", 90], ["CR", 0], ["CR", 0], ["CC", 270], \
+	["CR", 0], ["CR", 0], ["CR", 0], ["CC", 0]
+	],
 ]
 
 @onready var exit_list: Array = [
@@ -43,17 +86,53 @@ extends Control
 	false, false, false, true, \
 	false, false, false, false, \
 	false, false, false, false
-	]
+	],
+	
+	[
+	false, false, false, false, \
+	true, false, false, true, \
+	false, false, false, false, \
+	false, false, false, false
+	],
+	
+	[
+	false, false, false, false, \
+	false, false, false, false, \
+	false, false, false, false, \
+	true, false, true, false
+	],
+	
+	[
+	true, false, false, false, \
+	true, false, false, false, \
+	false, false, false, false, \
+	false, false, false, false
+	],
+	
+	[
+	false, false, false, false, \
+	false, false, false, false, \
+	false, true, false, true, \
+	false, false, false, false
+	],
+	
+	[
+	false, false, false, false, \
+	false, false, false, false, \
+	false, false, false, false, \
+	true, false, false, true
+	],
 ]
 
-@onready var correct_response_picker: int = randf_range(0, correct_response_list.size())
-@onready var current_correct_response: Array = correct_response_list[correct_response_picker]
-@onready var current_exit: Array = exit_list[correct_response_picker]
+var correct_response_picker : int
+var current_correct_response : Array
+var current_exit: Array 
 
 func _ready() -> void:
-	print(correct_response_picker)
-	print(current_correct_response)
-	print(current_exit)
+	correct_response_picker = rng.randi_range(0, correct_response_list.size() - 1)
+	print("crp: " + str(correct_response_picker))
+	current_correct_response = correct_response_list[correct_response_picker]
+	current_exit = exit_list[correct_response_picker]
 	#for loop to decide
 	for item in pipe_grid.get_child_count():
 		match current_correct_response.get(item).get(0):

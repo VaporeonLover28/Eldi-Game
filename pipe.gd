@@ -13,7 +13,7 @@ func minigame_start() -> void:
 	if self.texture_normal.resource_path == cano_curvo_path:
 		var initial_rot_for_enum = randf_range(0, 3)
 		rotation_state = enum_translation[initial_rot_for_enum]
-	print(rotation_state)
+	#print(rotation_state)
 	_on_pipe_pressed()
 
 func _on_pipe_pressed() -> void:
