@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://coxl6w5x2r26p"]
+
+[ext_resource type="Script" uid="uid://cxewhs5yrqe1p" path="res://smash_trash.gd" id="1_2s5ef"]
+
+[node name="SmashTrash" type="Node2D"]
+script = ExtResource("1_2s5ef")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Animation_wait_time" type="Timer" parent="."]
