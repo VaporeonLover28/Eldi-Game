@@ -32,7 +32,6 @@ func _process(delta: float) -> void:
 	label.text = str(timer_smash_trash.time_left)
 	
 	if Input.is_action_just_pressed("click"):
-		print("au")
 		_on_timed_smash()
 	
 
@@ -40,15 +39,19 @@ func _on_timed_smash():
 	times_smashed += 1
 	animation_wait_time.start()
 	print(times_smashed)
+	if times_smashed == times_to_smash:
+		if times_smashed_correctly == times_to_smash:
+			minigame_handler.minigame_result.emit(true, minigame_window)
+		else:
+			minigame_handler.minigame_result.emit(false, minigame_window)
+			
 	if timer_smash_trash.time_left - threshhold < critical_time:
 		timer_smash_trash.start(critical_points_chosen[times_smashed])
 		print("acertou")
 	else:
 		timer_smash_trash.start(critical_points_chosen[times_smashed])
 		print("errou")
+	
 	await animation_wait_time.timeout
-	if times_smashed == times_to_smash:
-		if times_smashed_correctly == times_to_smash:
-			minigame_handler.minigame_result.emit(true, minigame_window)
-		else:
-			minigame_handler.minigame_result.emit(false, minigame_window)
+	
+	

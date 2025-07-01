@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://7fkb0eymomm5"]
+
+[ext_resource type="Script" uid="uid://bp8xahnygh8dx" path="res://launch_trash.gd" id="1_81lsq"]
+
+[node name="Launch Trash" type="Node2D"]
+script = ExtResource("1_81lsq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+fill_mode = 2
