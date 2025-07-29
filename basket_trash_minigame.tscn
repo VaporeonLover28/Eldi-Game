@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://b55fnwsmsmfaf"]
+
+[ext_resource type="Script" uid="uid://d3u7pdgo25vt0" path="res://basket_trash_minigame.gd" id="1_so3n6"]
+[ext_resource type="PackedScene" uid="uid://bxmssj0v0vab0" path="res://throwable_trash.tscn" id="2_no2ab"]
+[ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="3_no2ab"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lo54s"]
+size = Vector2(10, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_no2ab"]
+size = Vector2(388, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idksv"]
+size = Vector2(20, 820)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5687"]
+size = Vector2(17, 823.25)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_no2ab"]
+
+[node name="BasketTrash Minigame" type="Node2D"]
+position = Vector2(651, 218)
+script = ExtResource("1_so3n6")
+
+[node name="Throwable Trash" parent="." instance=ExtResource("2_no2ab")]
+position = Vector2(55, 248)
+
+[node name="Winning Detection Area" type="Area2D" parent="."]
+position = Vector2(316, 72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Winning Detection Area"]
+shape = SubResource("RectangleShape2D_lo54s")
+
+[node name="Sprite2D" type="Sprite2D" parent="Winning Detection Area"]
+position = Vector2(-3.57628e-07, 0.499999)
+scale = Vector2(0.09375, 0.570313)
+texture = ExtResource("3_no2ab")
+
+[node name="Dead Zone 1" type="Area2D" parent="."]
+position = Vector2(150, 347)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dead Zone 1"]
+shape = SubResource("RectangleShape2D_no2ab")
+
+[node name="Dead Zone 2" type="Area2D" parent="."]
+position = Vector2(353, -55)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dead Zone 2"]
+shape = SubResource("RectangleShape2D_idksv")
+
+[node name="Dead Zone 3" type="Area2D" parent="."]
+position = Vector2(-54, -55)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dead Zone 3"]
+shape = SubResource("RectangleShape2D_b5687")
+
+[node name="Arc" type="Line2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 320.0
+offset_bottom = 320.0
+color = Color(1, 0, 0, 1)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_no2ab")
+
+[connection signal="body_entered" from="Winning Detection Area" to="." method="_dead_zone_hit"]
+[connection signal="body_entered" from="Dead Zone 1" to="." method="_on_dead_zone_1_body_entered"]
+[connection signal="body_entered" from="Dead Zone 2" to="." method="_on_dead_zone_body_entered"]
+[connection signal="body_entered" from="Dead Zone 3" to="." method="_on_dead_zone_body_entered"]
