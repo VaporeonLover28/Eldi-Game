@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b55fnwsmsmfaf"]
+[gd_scene load_steps=8 format=3 uid="uid://b55fnwsmsmfaf"]
 
 [ext_resource type="Script" uid="uid://d3u7pdgo25vt0" path="res://basket_trash_minigame.gd" id="1_so3n6"]
 [ext_resource type="PackedScene" uid="uid://bxmssj0v0vab0" path="res://throwable_trash.tscn" id="2_no2ab"]
@@ -16,13 +16,14 @@ size = Vector2(20, 820)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b5687"]
 size = Vector2(17, 823.25)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_no2ab"]
-
 [node name="BasketTrash Minigame" type="Node2D"]
 script = ExtResource("1_so3n6")
 
 [node name="Throwable Trash" parent="." instance=ExtResource("2_no2ab")]
 position = Vector2(55, 248)
+disable_mode = 0
+sleeping = true
+freeze = true
 
 [node name="Winning Detection Area" type="Area2D" parent="."]
 position = Vector2(316, 72)
@@ -61,12 +62,7 @@ offset_right = 320.0
 offset_bottom = 320.0
 color = Color(1, 0, 0, 1)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource("CircleShape2D_no2ab")
-
-[connection signal="body_entered" from="Winning Detection Area" to="." method="_dead_zone_hit"]
-[connection signal="body_entered" from="Dead Zone 1" to="." method="_on_dead_zone_1_body_entered"]
+[connection signal="body_entered" from="Winning Detection Area" to="." method="_on_winning_detection_area_body_entered"]
+[connection signal="body_entered" from="Dead Zone 1" to="." method="_on_dead_zone_body_entered"]
 [connection signal="body_entered" from="Dead Zone 2" to="." method="_on_dead_zone_body_entered"]
 [connection signal="body_entered" from="Dead Zone 3" to="." method="_on_dead_zone_body_entered"]
