@@ -19,9 +19,10 @@ size = Vector2(17, 823.25)
 [node name="BasketTrash Minigame" type="Node2D"]
 script = ExtResource("1_so3n6")
 
+[node name="Arc" type="Line2D" parent="."]
+
 [node name="Throwable Trash" parent="." instance=ExtResource("2_no2ab")]
 position = Vector2(55, 248)
-disable_mode = 0
 sleeping = true
 freeze = true
 
@@ -53,8 +54,6 @@ position = Vector2(-54, -55)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dead Zone 3"]
 shape = SubResource("RectangleShape2D_b5687")
-
-[node name="Arc" type="Line2D" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
