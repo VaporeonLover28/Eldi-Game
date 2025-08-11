@@ -1,7 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://dckqlr1wb13e1"]
+[gd_scene load_steps=6 format=3 uid="uid://dckqlr1wb13e1"]
 
-[ext_resource type="Script" path="res://cursor.gd" id="1_1sw8g"]
-[ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="2_v7ti1"]
+[ext_resource type="Script" uid="uid://bttttqjhmjuwv" path="res://cursor.gd" id="1_1sw8g"]
+[ext_resource type="Texture2D" uid="uid://floa88p36kjg" path="res://Art/cursortest.png" id="2_5l68f"]
+[ext_resource type="Texture2D" uid="uid://cmtpuddmvxcbo" path="res://Art/cursortest_sprite02(temporario).png" id="2_e4vdg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qf7gk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e4vdg")
+}],
+"loop": true,
+"name": &"Clicking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5l68f")
+}],
+"loop": true,
+"name": &"Not_clicking",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fbg2n"]
 radius = 19.4581
@@ -9,10 +29,11 @@ radius = 19.4581
 [node name="cursor" type="Node2D"]
 script = ExtResource("1_1sw8g")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="cursor_anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(50, 50)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("2_v7ti1")
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_qf7gk")
+animation = &"Not_clicking"
 
 [node name="mouseclick" type="Area2D" parent="."]
 monitoring = false

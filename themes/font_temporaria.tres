@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://i3hmq0x7yqxh"]
+
+[ext_resource type="FontFile" uid="uid://daob7tcao7krl" path="res://RevMiniPixel.ttf" id="1_boijs"]
+
+[resource]
+default_font = ExtResource("1_boijs")
+Label/fonts/font = ExtResource("1_boijs")
