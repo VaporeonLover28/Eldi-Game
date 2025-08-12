@@ -3,8 +3,8 @@ extends Node2D
 var startmoneygiven = false
 
 #variable for money system
-var money : int
-var rating : float
+var money : int = 5
+var rating : float = 0
 
 #declaring item shop
 #when adding item: click node on inspector

@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Upgrade_resource" load_steps=2 format=3 uid="uid://882nyma16sdp"]
+[gd_resource type="Resource" script_class="Upgrade_resource" load_steps=3 format=3 uid="uid://882nyma16sdp"]
 
+[ext_resource type="PackedScene" uid="uid://b55fnwsmsmfaf" path="res://basket_trash_minigame.tscn" id="1_i2d4o"]
 [ext_resource type="Script" uid="uid://bkxlprgvipwpt" path="res://upgrade_resource.gd" id="1_yi21r"]
 
 [resource]
@@ -9,6 +10,8 @@ Name = "Garbage Men"
 Price = 125
 Income = 50.0
 rating = 0.1
+minigame_scene = ExtResource("1_i2d4o")
+minigame_window_size = Vector2(320, 320)
 minigame_id = 0
 minigame_time = 0.0
 minigame_step_income = 0

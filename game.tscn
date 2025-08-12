@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=20 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -8,10 +8,7 @@
 [ext_resource type="Resource" uid="uid://ccooy6umagt3y" path="res://Upgrades/Idle/lightbulbs.tres" id="4_j5wjh"]
 [ext_resource type="Resource" uid="uid://3s1b4a8vckwk" path="res://Upgrades/Idle/strikes.tres" id="5_vef74"]
 [ext_resource type="Resource" uid="uid://brqcaslvxr0ne" path="res://Upgrades/Idle/filters.tres" id="6_hve3p"]
-[ext_resource type="Resource" uid="uid://882nyma16sdp" path="res://Upgrades/Task/garbage men.tres" id="8_80cx4"]
 [ext_resource type="Script" uid="uid://cdrgsp27wsugy" path="res://minigame_base.gd" id="8_lc2xo"]
-[ext_resource type="Resource" uid="uid://c8dbayxlpar3v" path="res://Upgrades/Task/junk recycle.tres" id="9_e8heu"]
-[ext_resource type="Resource" uid="uid://csff063odqyev" path="res://Upgrades/Task/water treat.tres" id="10_rvswv"]
 [ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="11_e8heu"]
 [ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
 [ext_resource type="Script" uid="uid://5pbde67ehq8x" path="res://factory.gd" id="11_rvswv"]
@@ -20,12 +17,27 @@
 [ext_resource type="Script" uid="uid://dpfhykvpe0qab" path="res://naturelabel.gd" id="13_7sc4i"]
 [ext_resource type="Theme" uid="uid://i3hmq0x7yqxh" path="res://themes/font_temporaria.tres" id="13_e36ub"]
 [ext_resource type="Texture2D" uid="uid://l42f2qbpmtuh" path="res://Art/top_panel_sprite.png" id="13_hb5m1"]
-[ext_resource type="Resource" uid="uid://cbei1lcrsp1h1" path="res://Upgrades/Task/pipe.tres" id="18_boyg6"]
+[ext_resource type="PackedScene" uid="uid://bxi8wdb2huw0v" path="res://mini_game_pipe.tscn" id="17_rvswv"]
+
+[sub_resource type="Resource" id="Resource_boyg6"]
+script = ExtResource("2_7jktm")
+upgrade_type = 0
+Name = "pipes"
+Price = 100
+Income = 100.0
+rating = 0
+minigame_scene = ExtResource("17_rvswv")
+minigame_window_size = Vector2(320, 320)
+minigame_id = 1
+minigame_time = 180.0
+minigame_step_income = 100
+minigame_win_income = 100
+metadata/_custom_type_script = "uid://bkxlprgvipwpt"
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_feb5d")
 idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResource("4_j5wjh"), ExtResource("5_vef74"), ExtResource("6_hve3p")])
-taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("12_pyw6c"), ExtResource("8_80cx4"), ExtResource("9_e8heu"), ExtResource("10_rvswv")])
+taskitemlist = Array[ExtResource("2_7jktm")]([null])
 metadata/_edit_vertical_guides_ = [640.0, 300.0, 300.0]
 metadata/_edit_horizontal_guides_ = [41.0, -317.0]
 
@@ -184,7 +196,7 @@ upgrade_type = "idle"
 
 [node name="MinigameHandler" type="Node2D" parent="CanvasLayer"]
 script = ExtResource("8_lc2xo")
-taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("12_pyw6c"), ExtResource("18_boyg6")])
+taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("12_pyw6c"), SubResource("Resource_boyg6")])
 
 [node name="MinigameAddTimer" type="Timer" parent="CanvasLayer/MinigameHandler"]
 wait_time = 15.0

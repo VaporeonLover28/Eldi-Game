@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci2ac05wfwb3i"]
+
+[ext_resource type="Texture2D" uid="uid://c8e0r7ni6ax14" path="res://Art/lixo2s.png" id="1_74fhu"]
+[ext_resource type="Script" uid="uid://b8cal062r82hb" path="res://trashthrash.gd" id="1_xct4q"]
+
+[node name="rec_trash_crushed" type="CharacterBody2D"]
+script = ExtResource("1_xct4q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(14, 20)
+texture = ExtResource("1_74fhu")

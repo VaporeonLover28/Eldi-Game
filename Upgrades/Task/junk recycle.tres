@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Upgrade_resource" load_steps=2 format=3 uid="uid://c8dbayxlpar3v"]
+[gd_resource type="Resource" script_class="Upgrade_resource" load_steps=3 format=3 uid="uid://c8dbayxlpar3v"]
 
+[ext_resource type="PackedScene" uid="uid://coxl6w5x2r26p" path="res://smash_trash.tscn" id="1_w73ak"]
 [ext_resource type="Script" uid="uid://bkxlprgvipwpt" path="res://upgrade_resource.gd" id="1_ymmxe"]
 
 [resource]
@@ -9,6 +10,8 @@ Name = "Junk Recycle"
 Price = 700
 Income = 300.0
 rating = 0.5
+minigame_scene = ExtResource("1_w73ak")
+minigame_window_size = Vector2(320, 320)
 minigame_id = 0
 minigame_time = 0.0
 minigame_step_income = 0
