@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://dr7aj4g1wsbes"]
+
+[ext_resource type="Script" uid="uid://c12d8mb5shkj6" path="res://smash_trash_2.gd" id="1_ttfuk"]
+[ext_resource type="Texture2D" uid="uid://ha7ntqbn74su" path="res://Art/fabbre.jpg" id="2_4qijt"]
+[ext_resource type="Texture2D" uid="uid://dsl6chdysks06" path="res://Art/recycle/conveyor.png" id="3_sic7b"]
+[ext_resource type="Texture2D" uid="uid://b45feywwvxcme" path="res://Art/recycle/homem.png" id="4_o6gxi"]
+[ext_resource type="Texture2D" uid="uid://c1cpivj4momht" path="res://Art/recycle/caxola.png" id="5_wbois"]
+[ext_resource type="Texture2D" uid="uid://bc5tmjtjkcuo8" path="res://Art/recycle/caixa.png" id="6_i55mp"]
+[ext_resource type="Texture2D" uid="uid://csii6fsn4760w" path="res://Art/recycle/prensa.png" id="7_xyccj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dd4ic"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_xyccj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="smash trash 2" type="Node2D"]
+script = ExtResource("1_ttfuk")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Animation_wait_time" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="fundo" type="TextureRect" parent="."]
+modulate = Color(100, 100, 2.27, 1)
+offset_right = 320.0
+offset_bottom = 320.0
+texture = ExtResource("2_4qijt")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 336.0
+offset_top = 56.0
+offset_right = 376.0
+offset_bottom = 79.0
+
+[node name="coisanatela" type="Node2D" parent="."]
+
+[node name="conveyor" type="Sprite2D" parent="coisanatela"]
+position = Vector2(160, 160)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_sic7b")
+
+[node name="robericarodrigovaldo" type="Sprite2D" parent="coisanatela"]
+position = Vector2(160, 160)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_o6gxi")
+
+[node name="caxaverde" type="Sprite2D" parent="coisanatela"]
+position = Vector2(160, 160)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_wbois")
+
+[node name="caxabege" type="Sprite2D" parent="coisanatela"]
+position = Vector2(160, 160)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_i55mp")
+
+[node name="prensa" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="prensa"]
+position = Vector2(160, 160)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_dd4ic")
+autoplay = "default"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
