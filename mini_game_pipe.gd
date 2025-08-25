@@ -2,6 +2,7 @@ extends Control
 
 @onready var pipe_grid: GridContainer = $pipe_grid
 
+@onready var game = $"../../../../../"
 @onready var minigame_handler = $"../../../"
 @onready var minigame_window = $"../../"
 
@@ -129,6 +130,8 @@ var current_correct_response : Array
 var current_exit: Array 
 
 func _ready() -> void:
+	if !game.minigame_started:
+		game.minigame_started = true
 	correct_response_picker = rng.randi_range(0, correct_response_list.size() - 1)
 	print("crp: " + str(correct_response_picker))
 	current_correct_response = correct_response_list[correct_response_picker]

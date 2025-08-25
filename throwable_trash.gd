@@ -4,17 +4,18 @@ extends RigidBody2D
 @onready var mouse_position
 var pulling_distance
 var was_throwed : bool = false
+var game_started := true
 
 func _ready() -> void:
-	pass
+	await get_tree().create_timer(0.2).timeout
+	game_started = true
 	
 func _physics_process(delta: float) -> void:
-	if Input.is_action_pressed("click") and was_throwed == false:
+	if Input.is_action_pressed("click") and was_throwed == false and game_started:
 		_calculating_throw(delta)
 		
-	if Input.is_action_just_released("click") and was_throwed == false:
+	if Input.is_action_just_released("click") and was_throwed == false and game_started:
 		_throw()
-
 
 func _calculating_throw(delta):
 	pulling_distance = get_viewport().get_mouse_position() - self.global_position

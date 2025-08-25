@@ -1,7 +1,5 @@
 extends Node2D;
 
-@export var taskitemlist : Array[Upgrade_resource]
-
 @warning_ignore("unused_signal")
 signal minigame_result(minigame_state: bool, minigame_indentifier: Node2D)
 
@@ -22,22 +20,25 @@ func _on_minigame_result(minigame_state: bool, minigame_window_identifier: Node)
 		game_scene.money += minigame_window_identifier.minigame_chosen.minigame_win_income
 	else:
 		pass
+	if game_scene.minigame_started and get_child_count() < 2:
+		game_scene.minigame_started = false
 	minigame_window_identifier.queue_free()
 
 func _add_minigame_window() -> void:
-	minigame_add_timer.start(round(randf_range(40, 60)))
-	#randomizing minigame
-	var minigame_chosen = taskitemlist.pick_random()
-	#adding the minigame window and putting its varibles
-	var minigame_window_inst = minigame_window.instantiate()
-	minigame_window_inst.position = Vector2(rng.randf_range(400 , 1100),rng.randf_range(300, 600))
-	minigame_window_inst.size = minigame_chosen.minigame_window_size
-	minigame_window_inst.find_child("TextureButton").size = minigame_chosen.minigame_window_size
-	minigame_window_inst.minigame_chosen = minigame_chosen
-	#configuring the timer of the window
-	minigame_window_inst.find_child("MinigameTimeout").wait_time = minigame_chosen.minigame_time
-	minigame_window_inst.find_child("MinigameTimeout").\
-	connect("timeout", _on_minigame_result.bind(false, minigame_window_inst))
-	#adding the minigame window proprely to the root
-	add_child(minigame_window_inst)
-	print(minigame_chosen.minigame_time)
+	minigame_add_timer.start(randi_range(40, 60))
+	if game_scene.unlocked_tasks.size() > 0:
+		#randomizing minigame
+		var minigame_chosen = game_scene.unlocked_tasks.pick_random()
+		#adding the minigame window and putting its varibles
+		var minigame_window_inst = minigame_window.instantiate()
+		minigame_window_inst.position = Vector2(rng.randf_range(400 , 1100),rng.randf_range(300, 600))
+		minigame_window_inst.size = minigame_chosen.minigame_window_size
+		minigame_window_inst.find_child("TextureButton").size = minigame_chosen.minigame_window_size
+		minigame_window_inst.minigame_chosen = minigame_chosen
+		#configuring the timer of the window
+		minigame_window_inst.find_child("MinigameTimeout").wait_time = minigame_chosen.minigame_time
+		minigame_window_inst.find_child("MinigameTimeout").\
+		connect("timeout", _on_minigame_result.bind(false, minigame_window_inst))
+		#adding the minigame window proprely to the root
+		add_child(minigame_window_inst)
+		#print(minigame_chosen.minigame_time)

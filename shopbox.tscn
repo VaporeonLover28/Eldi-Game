@@ -10,7 +10,7 @@
 script/source = "extends TextureButton
 
 @onready var game = $\"../../../../../../../..\"
-@onready var shopbox = $\"..\"
+@onready var shopbox = $\"../\"
 
 func _ready() -> void:
 	#function on the game node
@@ -24,17 +24,16 @@ func _ready() -> void:
 func _on_pressed() -> void:
 	#if money > price (buyable)
 	if game.money >= game.idleitemlist[shopbox.upgrade_arraypos].Price:
-		print(\"bought\")
 		#spend money
 		game.money -= game.idleitemlist[shopbox.upgrade_arraypos].Price
+		#gives nature rating
+		game.rating += game.idleitemlist[shopbox.upgrade_arraypos].rating
 		#make price higher
 		game.upscaleprice(shopbox)
 		#update button text
 		game.assignvalues(self, \"button\")
-		#gives nature rating
-		game.rating += game.idleitemlist[shopbox.upgrade_arraypos].rating
 		#removes the rating gained for buying another of the item
-		game.idleitemlist[shopbox.upgrade_arraypos].rating = 0
+		#game.idleitemlist[shopbox.upgrade_arraypos].rating = 0
 		#gives the player the bought item
 		#when adding item: match name to add 1 to var
 		match shopbox.upgrade_arraypos:
@@ -71,14 +70,18 @@ texture_normal = ExtResource("5_pvkrx")
 script = SubResource("GDScript_iotsf")
 
 [node name="upgradeprice" type="Label" parent="buybutton"]
+texture_filter = 1
 layout_mode = 0
-offset_left = 11.0
-offset_top = 22.0
-offset_right = 51.0
-offset_bottom = 45.0
+offset_left = 10.0
+offset_top = 24.0
+offset_right = 42.0
+offset_bottom = 36.0
+scale = Vector2(1.445, 1.445)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 13
+theme_override_fonts/font = ExtResource("3_pvkrx")
+theme_override_font_sizes/font_size = 8
 text = "$XXXX"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="buybutton" to="buybutton" method="_on_pressed"]

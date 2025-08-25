@@ -8,7 +8,8 @@ extends Node2D
 @onready var minigame_window = $"../../"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	if !game.minigame_started:
+		game.minigame_started = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -17,7 +18,7 @@ func _process(delta: float) -> void:
 		money_inst.scale = Vector2(4, 4)
 		money_inst.position = minigame_window.global_position - Vector2(0, 40)
 		money_inst.set_text2(minigame_window.minigame_chosen.minigame_win_income)
-		game.get_child(1).add_child(money_inst)
+		game.get_child(2).add_child(money_inst)
 		minigame_handler.minigame_result.emit(true, minigame_window)
 
 func _on_spawn_trash_timeout() -> void:

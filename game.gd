@@ -1,16 +1,24 @@
 extends Node2D
 
 var startmoneygiven = false
+var minigame_started := false
 
 #variable for money system
 var money : int = 5
-var rating : float = 0
+var rating : float = 0.0:
+	set(value):
+		if value > 100: 
+			rating = 100
+		else:
+			rating = value
+		update_rating()
 
 #declaring item shop
 #when adding item: click node on inspector
 #and add new element with parameters
 @export var idleitemlist : Array[Upgrade_resource]
 @export var taskitemlist : Array[Upgrade_resource]
+@export var unlocked_tasks : Array[Upgrade_resource]
 
 #probably a shitty way to know how many of each upgrade player has
 #when adding item: add new variable with name
@@ -18,11 +26,6 @@ var amountposters = 0
 var amountlightbulbs = 0
 var amountstrikes = 0
 var amountfilters = 0
-
-func _ready() -> void:
-	if startmoneygiven == false:
-		money = 5
-		startmoneygiven = true
 
 #changing the text of each button
 func assignvalues(object, type):
@@ -37,6 +40,16 @@ func assignvalues(object, type):
 #makes the prices grow
 func upscaleprice(shopbox):
 	idleitemlist[shopbox.upgrade_arraypos].Price = round(idleitemlist[shopbox.upgrade_arraypos].Price * 1.16666666666)
+
+func update_rating():
+	if rating > 1 and unlocked_tasks.size() < 1:
+		unlocked_tasks.append(load("res://Upgrades/Task/collection.tres"))
+	if rating > 15 and unlocked_tasks.size() < 2:
+		unlocked_tasks.append(load("res://Upgrades/Task/garbage men.tres"))
+	if rating > 40 and unlocked_tasks.size() < 3:
+		unlocked_tasks.append(load("res://Upgrades/Task/junk recycle.tres"))
+	if rating > 60 and unlocked_tasks.size() < 4:
+		unlocked_tasks.append(load("res://Upgrades/Task/water treat.tres"))
 
 #when adding new item:
 #add new equation with item array pos 

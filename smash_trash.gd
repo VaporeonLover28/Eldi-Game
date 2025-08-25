@@ -1,4 +1,6 @@
 extends Node2D
+
+@onready var game = $"../../../../../"
 @onready var minigame_handler = $"../../../"
 @onready var minigame_window = $"../../"
 @onready var timer_smash_trash: Timer = $Timer
@@ -24,6 +26,8 @@ var trash_in_area : Array
 var can_crush := true
 
 func _ready() -> void:
+	if !game.minigame_started:
+		game.minigame_started = true
 	print(critical_points_chosen)
 	timer_smash_trash.start(15)
 	for time in critical_points_chosen:

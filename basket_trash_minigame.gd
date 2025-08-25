@@ -7,8 +7,9 @@ extends Node2D
 @onready var winning_detection_area: Area2D = $"Winning Detection Area"
 @onready var number_of_tries : int = 3
 
-
 func _ready() -> void:
+	if !game.minigame_started:
+		game.minigame_started = true
 	winning_detection_area.position = Vector2(316, randi_range(0 , 250))
 
 func _on_winning_detection_area_body_entered(body: Node2D) -> void:

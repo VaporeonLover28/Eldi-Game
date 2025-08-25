@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=25 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -21,39 +21,41 @@
 [ext_resource type="Script" uid="uid://dpfhykvpe0qab" path="res://naturelabel.gd" id="13_7sc4i"]
 [ext_resource type="Theme" uid="uid://i3hmq0x7yqxh" path="res://themes/font_temporaria.tres" id="13_e36ub"]
 [ext_resource type="Texture2D" uid="uid://l42f2qbpmtuh" path="res://Art/top_panel_sprite.png" id="13_hb5m1"]
-[ext_resource type="Texture2D" uid="uid://diuhml2kn68qv" path="res://Art/LixeiraEldi_semlixo.png" id="16_i2p71"]
 [ext_resource type="Resource" uid="uid://882nyma16sdp" path="res://Upgrades/Task/garbage men.tres" id="17_e36ub"]
-[ext_resource type="Texture2D" uid="uid://c5lcx7ol0xd" path="res://Art/LixeiraEldi_comlixo.png" id="17_xa8c5"]
 [ext_resource type="Resource" uid="uid://c8dbayxlpar3v" path="res://Upgrades/Task/junk recycle.tres" id="18_hb5m1"]
 [ext_resource type="Resource" uid="uid://csff063odqyev" path="res://Upgrades/Task/water treat.tres" id="19_x5p1p"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_feb5d")
 idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResource("4_j5wjh"), ExtResource("5_vef74"), ExtResource("6_hve3p")])
-taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("12_pyw6c"), ExtResource("17_e36ub"), ExtResource("18_hb5m1"), ExtResource("19_x5p1p")])
+taskitemlist = Array[ExtResource("2_7jktm")]([null])
 metadata/_edit_vertical_guides_ = [640.0, 300.0, 300.0]
 metadata/_edit_horizontal_guides_ = [41.0, -317.0]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+script = ExtResource("7_f1jbl")
+
 [node name="scene" type="Node2D" parent="."]
 
-[node name="factory_placeholder" type="Node2D" parent="scene"]
+[node name="factory_placeh" type="Node2D" parent="scene"]
 visible = false
 position = Vector2(640, 360)
 scale = Vector2(1.5, 0.96)
 script = ExtResource("11_rvswv")
 
-[node name="fabbrica" type="Sprite2D" parent="scene/factory_placeholder"]
+[node name="fabbrica" type="Sprite2D" parent="scene/factory_placeh"]
 rotation = 0.785398
 scale = Vector2(2.5, 2.521)
 texture = ExtResource("11_e8heu")
 
-[node name="chamine" type="Sprite2D" parent="scene/factory_placeholder"]
+[node name="chamine" type="Sprite2D" parent="scene/factory_placeh"]
 position = Vector2(-94.6667, -146.875)
 rotation = 0.785398
 scale = Vector2(0.655, 0.661)
 texture = ExtResource("11_e8heu")
 
-[node name="Label" type="Label" parent="scene/factory_placeholder"]
+[node name="Label" type="Label" parent="scene/factory_placeh"]
 offset_left = -95.3333
 offset_top = -119.792
 offset_right = 110.667
@@ -62,25 +64,25 @@ scale = Vector2(1, 1.5)
 theme_override_font_sizes/font_size = 41
 text = "fabbrica"
 
-[node name="poster1" type="Sprite2D" parent="scene/factory_placeholder"]
+[node name="poster1" type="Sprite2D" parent="scene/factory_placeh"]
 visible = false
 position = Vector2(-127.333, 66.6667)
 scale = Vector2(0.387097, 0.478261)
 texture = ExtResource("11_e8heu")
 
-[node name="poster2" type="Sprite2D" parent="scene/factory_placeholder"]
+[node name="poster2" type="Sprite2D" parent="scene/factory_placeh"]
 visible = false
 position = Vector2(88.6667, 129.167)
 scale = Vector2(0.387097, 0.478261)
 texture = ExtResource("11_e8heu")
 
-[node name="poster3" type="Sprite2D" parent="scene/factory_placeholder"]
+[node name="poster3" type="Sprite2D" parent="scene/factory_placeh"]
 visible = false
 position = Vector2(152.667, 17.7083)
 scale = Vector2(0.387097, 0.478261)
 texture = ExtResource("11_e8heu")
 
-[node name="poster4" type="Sprite2D" parent="scene/factory_placeholder"]
+[node name="poster4" type="Sprite2D" parent="scene/factory_placeh"]
 visible = false
 position = Vector2(-168, -36.4583)
 scale = Vector2(0.387097, 0.478261)
@@ -113,17 +115,6 @@ flip_h = true
 position = Vector2(-378, -135)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("11_vaj68")
-flip_h = true
-
-[node name="LixeiraEldiSemlixo" type="Sprite2D" parent="scene"]
-position = Vector2(761, 454)
-scale = Vector2(0.333, 0.333)
-texture = ExtResource("16_i2p71")
-
-[node name="LixeiraEldiSemlixo2" type="Sprite2D" parent="scene"]
-position = Vector2(208, 288)
-scale = Vector2(0.333, 0.333)
-texture = ExtResource("17_xa8c5")
 flip_h = true
 
 [node name="givemoney" type="Timer" parent="."]
@@ -230,6 +221,7 @@ upgrade_type = "idle"
 
 [node name="MinigameHandler" type="Node2D" parent="CanvasLayer"]
 script = ExtResource("8_lc2xo")
+taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("12_pyw6c"), ExtResource("17_e36ub"), ExtResource("18_hb5m1"), ExtResource("19_x5p1p")])
 
 [node name="MinigameAddTimer" type="Timer" parent="CanvasLayer/MinigameHandler"]
 wait_time = 15.0
@@ -238,10 +230,6 @@ autostart = true
 [node name="cursor" parent="CanvasLayer" instance=ExtResource("2_tqrlg")]
 z_index = 4
 position = Vector2(640, 360)
-
-[node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
-position = Vector2(640, 360)
-script = ExtResource("7_f1jbl")
 
 [connection signal="timeout" from="givemoney" to="." method="_on_givemoney_timeout"]
 [connection signal="minigame_result" from="CanvasLayer/MinigameHandler" to="CanvasLayer/MinigameHandler" method="_on_minigame_result"]
