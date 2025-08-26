@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=32 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -14,18 +14,37 @@
 [ext_resource type="Texture2D" uid="uid://bv763pvvtp66n" path="res://Art/FabricaPT2.png" id="10_f1jbl"]
 [ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="11_e8heu"]
 [ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
-[ext_resource type="Script" uid="uid://5pbde67ehq8x" path="res://factory.gd" id="11_rvswv"]
 [ext_resource type="Texture2D" uid="uid://d2hexy7tgtp2m" path="res://Art/FabricaPT3.png" id="11_vaj68"]
 [ext_resource type="Script" uid="uid://xvwkgpxois44" path="res://income.gd" id="12_215e1"]
 [ext_resource type="Resource" uid="uid://cqx6nuat2ocgr" path="res://Upgrades/Task/collection.tres" id="12_pyw6c"]
 [ext_resource type="Script" uid="uid://dpfhykvpe0qab" path="res://naturelabel.gd" id="13_7sc4i"]
 [ext_resource type="Theme" uid="uid://i3hmq0x7yqxh" path="res://themes/font_temporaria.tres" id="13_e36ub"]
 [ext_resource type="Texture2D" uid="uid://l42f2qbpmtuh" path="res://Art/top_panel_sprite.png" id="13_hb5m1"]
+[ext_resource type="Texture2D" uid="uid://btr5ndoewcgli" path="res://Art/poster.png" id="16_5b14r"]
+[ext_resource type="Script" uid="uid://dwmhyxeqm0iqf" path="res://object.gd" id="16_bnpwn"]
 [ext_resource type="Texture2D" uid="uid://diuhml2kn68qv" path="res://Art/LixeiraEldi_semlixo.png" id="16_i2p71"]
+[ext_resource type="Texture2D" uid="uid://d31wb1100pgo4" path="res://Art/lixo1s.png" id="16_xa8c5"]
 [ext_resource type="Resource" uid="uid://882nyma16sdp" path="res://Upgrades/Task/garbage men.tres" id="17_e36ub"]
 [ext_resource type="Texture2D" uid="uid://c5lcx7ol0xd" path="res://Art/LixeiraEldi_comlixo.png" id="17_xa8c5"]
 [ext_resource type="Resource" uid="uid://c8dbayxlpar3v" path="res://Upgrades/Task/junk recycle.tres" id="18_hb5m1"]
 [ext_resource type="Resource" uid="uid://csff063odqyev" path="res://Upgrades/Task/water treat.tres" id="19_x5p1p"]
+
+[sub_resource type="Gradient" id="Gradient_xa8c5"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.241156, 0.241156, 0.241156, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5b14r"]
+gradient = SubResource("Gradient_xa8c5")
+width = 32
+height = 32
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xa8c5"]
+particle_flag_disable_z = true
+direction = Vector3(-1, -1, 0)
+spread = 10.0
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+gravity = Vector3(-2, -1, 0)
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_feb5d")
@@ -40,7 +59,6 @@ metadata/_edit_horizontal_guides_ = [41.0, -317.0]
 visible = false
 position = Vector2(640, 360)
 scale = Vector2(1.5, 0.96)
-script = ExtResource("11_rvswv")
 
 [node name="fabbrica" type="Sprite2D" parent="scene/factory_placeholder"]
 rotation = 0.785398
@@ -114,6 +132,61 @@ position = Vector2(-378, -135)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("11_vaj68")
 flip_h = true
+
+[node name="poster1" type="Sprite2D" parent="scene/factory"]
+position = Vector2(227, -98)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("16_5b14r")
+script = ExtResource("16_bnpwn")
+
+[node name="poster2" type="Sprite2D" parent="scene/factory"]
+visible = false
+position = Vector2(359, -163)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("16_5b14r")
+script = ExtResource("16_bnpwn")
+
+[node name="poster3" type="Sprite2D" parent="scene/factory"]
+visible = false
+modulate = Color(0, 0.643137, 0.643137, 0.580392)
+position = Vector2(137, -60)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("16_5b14r")
+script = ExtResource("16_bnpwn")
+
+[node name="poster4" type="Sprite2D" parent="scene/factory"]
+visible = false
+position = Vector2(-93, -28)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("16_5b14r")
+flip_h = true
+script = ExtResource("16_bnpwn")
+
+[node name="poster5" type="Sprite2D" parent="scene/factory"]
+visible = false
+position = Vector2(-222, -95)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("16_5b14r")
+flip_h = true
+script = ExtResource("16_bnpwn")
+
+[node name="chimney" type="Sprite2D" parent="scene/factory"]
+modulate = Color(46.409, 13.259, 11.05, 1)
+position = Vector2(-133, -180)
+scale = Vector2(2.08853, 3.54945)
+texture = ExtResource("16_xa8c5")
+
+[node name="smoke" type="GPUParticles2D" parent="scene/factory"]
+position = Vector2(-181, -321)
+scale = Vector2(2.08853, 3.54945)
+amount = 20
+texture = SubResource("GradientTexture2D_5b14r")
+lifetime = 20.0
+speed_scale = 0.45
+process_material = SubResource("ParticleProcessMaterial_xa8c5")
+
+[node name="Sprite2D" type="Sprite2D" parent="scene/factory"]
+position = Vector2(223, -107)
 
 [node name="LixeiraEldiSemlixo" type="Sprite2D" parent="scene"]
 position = Vector2(761, 454)

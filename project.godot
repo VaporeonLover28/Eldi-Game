@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Eldi Game"
-run/main_scene="res://game.tscn"
+run/main_scene="uid://yov2v5tjkvlc"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -23,7 +23,7 @@ PipePatterns="*res://pipe_patterns.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=2
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [input]

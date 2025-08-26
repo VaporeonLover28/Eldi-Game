@@ -1,10 +1,17 @@
 extends Node2D
 
+@onready var smoke: GPUParticles2D = $scene/factory/smoke
+@onready var poster_1: Sprite2D = $scene/factory/poster1
+@onready var poster_2: Sprite2D = $scene/factory/poster2
+@onready var poster_3: Sprite2D = $scene/factory/poster3
+@onready var poster_4: Sprite2D = $scene/factory/poster4
+@onready var poster_5: Sprite2D = $scene/factory/poster5
+
 var startmoneygiven = false
 var minigame_started := false
 
 #variable for money system
-var money : int = 5
+var money : int = 500000
 var rating : float = 0.0:
 	set(value):
 		if value > 100: 
@@ -22,10 +29,30 @@ var rating : float = 0.0:
 
 #probably a shitty way to know how many of each upgrade player has
 #when adding item: add new variable with name
-var amountposters = 0
+var amountposters = 0:
+	set(value):
+		amountposters = value
+		if value > 0 and !poster_1.visible:
+			poster_1.appear()
+		if value > 1 and !poster_2.visible:
+			poster_2.appear()
+		if value > 2 and !poster_3.visible:
+			poster_3.appear()
+		if value > 3 and !poster_4.visible:
+			poster_4.appear()
+		if value > 4 and !poster_5.visible:
+			poster_5.appear()
 var amountlightbulbs = 0
 var amountstrikes = 0
-var amountfilters = 0
+var amountfilters = 0:
+	set(value):
+		amountfilters = value
+		var array = PackedColorArray()
+		var color_value = clamp(value / 5.0, 0.0, 1.0)
+		var result_color = Color(0.241 + (1.0 - 0.241) * color_value, 0.241 + (1.0 - 0.241) * color_value, 0.241 + (1.0 - 0.241) * color_value)
+		#print(result_color)
+		array.append(result_color)
+		smoke.texture.gradient.colors = array
 
 #changing the text of each button
 func assignvalues(object, type):

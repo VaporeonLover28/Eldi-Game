@@ -70,16 +70,13 @@ texture_normal = ExtResource("5_pvkrx")
 script = SubResource("GDScript_iotsf")
 
 [node name="upgradeprice" type="Label" parent="buybutton"]
-texture_filter = 1
 layout_mode = 0
-offset_left = 10.0
-offset_top = 24.0
-offset_right = 42.0
-offset_bottom = 36.0
-scale = Vector2(1.445, 1.445)
+offset_left = 9.0
+offset_top = 22.0
+offset_right = 52.0
+offset_bottom = 42.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_pvkrx")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 14
 text = "$XXXX"
 horizontal_alignment = 1
 vertical_alignment = 1

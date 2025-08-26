@@ -4,11 +4,13 @@ extends SubViewportContainer
 @onready var minigame_handler = $"../"
 @onready var minigame_chosen : Upgrade_resource
 @onready var texture_button = $TextureButton
+@onready var color_rect: ColorRect = $Control/ColorRect
 
 func _spawn_minigame():
 	position.x -= 60
 	position.y -= 200
 	texture_button.queue_free()
+	await get_tree().create_timer(0.5).timeout
 	#configuring the subviewport
 	var minigame_subviewport_inst = SubViewport.new()
 	minigame_subviewport_inst.size = minigame_chosen.minigame_window_size
