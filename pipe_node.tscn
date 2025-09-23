@@ -1,17 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6l27lj8ewn6d"]
 
-[ext_resource type="Texture2D" uid="uid://b4qdbxk671g0p" path="res://canoretoph.png" id="1_4o7s6"]
+[ext_resource type="Texture2D" uid="uid://d1n2kxt8ysino" path="res://Art/canoreto.png" id="1_4o7s6"]
 [ext_resource type="Script" uid="uid://cquyt2cxd02n3" path="res://pipe.gd" id="2_j1fo0"]
 
 [node name="PipeNode" type="Control"]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 3
 anchors_preset = 0
 
 [node name="pipe" type="TextureButton" parent="."]
 layout_mode = 1
-offset_right = 64.0
-offset_bottom = 64.0
-pivot_offset = Vector2(65, 65)
+offset_right = 50.0
+offset_bottom = 50.0
 texture_normal = ExtResource("1_4o7s6")
 script = ExtResource("2_j1fo0")
 
