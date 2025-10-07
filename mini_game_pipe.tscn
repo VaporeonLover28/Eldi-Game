@@ -25,115 +25,191 @@ texture = ExtResource("2_6i5ju")
 
 [node name="pipe_grid" type="GridContainer" parent="."]
 layout_mode = 1
-offset_left = 29.999998
-offset_top = 23.0
-offset_right = 242.0
-offset_bottom = 235.0
-scale = Vector2(1.23, 1.28)
+offset_right = 12.0
+offset_bottom = 12.0
 columns = 4
 
 [node name="PipeNode" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 96.0
+offset_bottom = 96.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode2" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode2" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 92.0
+offset_top = 32.0
+offset_right = 156.0
+offset_bottom = 96.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode3" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode3" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 152.0
+offset_top = 32.0
+offset_right = 216.0
+offset_bottom = 96.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode4" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode4" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 212.0
+offset_top = 32.0
+offset_right = 276.0
+offset_bottom = 96.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode5" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode5" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 32.0
+offset_top = 92.0
+offset_right = 96.0
+offset_bottom = 156.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode6" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode6" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 92.0
+offset_top = 92.0
+offset_right = 156.0
+offset_bottom = 156.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode7" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode7" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 152.0
+offset_top = 92.0
+offset_right = 216.0
+offset_bottom = 156.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode8" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode8" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 212.0
+offset_top = 92.0
+offset_right = 276.0
+offset_bottom = 156.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode9" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode9" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 32.0
+offset_top = 152.0
+offset_right = 96.0
+offset_bottom = 216.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode10" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode10" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 92.0
+offset_top = 152.0
+offset_right = 156.0
+offset_bottom = 216.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode11" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode11" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 152.0
+offset_top = 152.0
+offset_right = 216.0
+offset_bottom = 216.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode12" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode12" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 212.0
+offset_top = 152.0
+offset_right = 276.0
+offset_bottom = 216.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode13" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode13" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 32.0
+offset_top = 212.0
+offset_right = 96.0
+offset_bottom = 276.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode14" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode14" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 92.0
+offset_top = 212.0
+offset_right = 156.0
+offset_bottom = 276.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode15" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode15" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 152.0
+offset_top = 212.0
+offset_right = 216.0
+offset_bottom = 276.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="PipeNode16" parent="pipe_grid" instance=ExtResource("2_5375g")]
 layout_mode = 2
 
 [node name="pipe" parent="pipe_grid/PipeNode16" index="0"]
-pivot_offset = Vector2(25, 25)
+offset_left = 212.0
+offset_top = 212.0
+offset_right = 276.0
+offset_bottom = 276.0
+scale = Vector2(1.28, 1.28)
+pivot_offset = Vector2(32, 32)
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0
 columns = 4
 
 [node name="ExitNode" parent="." instance=ExtResource("3_3x643")]
-layout_mode = 0
 offset_left = 224.0
 offset_top = 32.0
 offset_right = 224.0
@@ -141,7 +217,6 @@ offset_bottom = 32.0
 rotation = -1.5708
 
 [node name="ExitNode2" parent="." instance=ExtResource("3_3x643")]
-layout_mode = 0
 offset_left = 224.0
 offset_top = 32.0
 offset_right = 224.0

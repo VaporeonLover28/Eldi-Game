@@ -20,8 +20,6 @@ var rating : float = 0.0:
 			rating = value
 		update_rating()
 
-var moneypers : int
-
 #declaring item shop
 #when adding item: click node on inspector
 #and add new element with parameters
