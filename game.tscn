@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=33 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -15,15 +15,16 @@
 [ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="11_e8heu"]
 [ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
 [ext_resource type="Texture2D" uid="uid://d2hexy7tgtp2m" path="res://Art/FabricaPT3.png" id="11_vaj68"]
-[ext_resource type="Script" uid="uid://xvwkgpxois44" path="res://income.gd" id="12_215e1"]
 [ext_resource type="Resource" uid="uid://cqx6nuat2ocgr" path="res://Upgrades/Task/collection.tres" id="12_pyw6c"]
 [ext_resource type="Script" uid="uid://dpfhykvpe0qab" path="res://naturelabel.gd" id="13_7sc4i"]
 [ext_resource type="Theme" uid="uid://i3hmq0x7yqxh" path="res://themes/font_temporaria.tres" id="13_e36ub"]
 [ext_resource type="Texture2D" uid="uid://l42f2qbpmtuh" path="res://Art/top_panel_sprite.png" id="13_hb5m1"]
+[ext_resource type="Texture2D" uid="uid://cf8aku8efxt3q" path="res://Art/FabricaPT4.png" id="15_36jdj"]
 [ext_resource type="Texture2D" uid="uid://btr5ndoewcgli" path="res://Art/poster.png" id="16_5b14r"]
-[ext_resource type="Script" path="res://object.gd" id="16_bnpwn"]
+[ext_resource type="Script" uid="uid://dwmhyxeqm0iqf" path="res://object.gd" id="16_bnpwn"]
 [ext_resource type="Texture2D" uid="uid://diuhml2kn68qv" path="res://Art/LixeiraEldi_semlixo.png" id="16_i2p71"]
 [ext_resource type="Texture2D" uid="uid://d31wb1100pgo4" path="res://Art/lixo1s.png" id="16_xa8c5"]
+[ext_resource type="Texture2D" uid="uid://dvyfd2x3q71iv" path="res://Art/FabricaPT5.png" id="16_xfvwf"]
 [ext_resource type="Resource" uid="uid://882nyma16sdp" path="res://Upgrades/Task/garbage men.tres" id="17_e36ub"]
 [ext_resource type="Texture2D" uid="uid://c5lcx7ol0xd" path="res://Art/LixeiraEldi_comlixo.png" id="17_xa8c5"]
 [ext_resource type="Resource" uid="uid://c8dbayxlpar3v" path="res://Upgrades/Task/junk recycle.tres" id="18_hb5m1"]
@@ -122,16 +123,14 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("11_vaj68")
 
 [node name="FabricaPt4" type="Sprite2D" parent="scene/factory"]
-position = Vector2(-189, -69)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("10_f1jbl")
-flip_h = true
+position = Vector2(-189.5, -52.1)
+scale = Vector2(0.586, 0.586)
+texture = ExtResource("15_36jdj")
 
 [node name="FabricaPt5" type="Sprite2D" parent="scene/factory"]
-position = Vector2(-378, -135)
+position = Vector2(-136, -172)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_vaj68")
-flip_h = true
+texture = ExtResource("16_xfvwf")
 
 [node name="poster1" type="Sprite2D" parent="scene/factory"]
 visible = false
@@ -173,12 +172,12 @@ script = ExtResource("16_bnpwn")
 
 [node name="chimney" type="Sprite2D" parent="scene/factory"]
 modulate = Color(46.409, 13.259, 11.05, 1)
-position = Vector2(-133, -180)
+position = Vector2(-12.458786, -132.022)
 scale = Vector2(2.08853, 3.54945)
 texture = ExtResource("16_xa8c5")
 
 [node name="smoke" type="GPUParticles2D" parent="scene/factory"]
-position = Vector2(-181, -321)
+position = Vector2(-60.458786, -273.022)
 scale = Vector2(2.08853, 3.54945)
 amount = 20
 texture = SubResource("GradientTexture2D_5b14r")
@@ -195,7 +194,7 @@ scale = Vector2(0.45, 0.45)
 texture = ExtResource("16_i2p71")
 
 [node name="LixeiraEldiSemlixo2" type="Sprite2D" parent="scene"]
-position = Vector2(208, 288)
+position = Vector2(365, 380.99997)
 scale = Vector2(0.333, 0.333)
 texture = ExtResource("17_xa8c5")
 flip_h = true
@@ -265,10 +264,9 @@ offset_left = -74.5
 offset_right = 91.5
 offset_bottom = 40.0
 theme = ExtResource("13_e36ub")
-text = "Income: $XXXXXX/s"
+text = "Income: $0/s"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("12_215e1")
 
 [node name="naturelabel" type="Label" parent="CanvasLayer/toppanel"]
 layout_mode = 0

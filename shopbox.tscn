@@ -45,6 +45,7 @@ func _on_pressed() -> void:
 				game.amountstrikes += 1
 			3:
 				game.amountfilters += 1
+		game.calculate_moneypers()
 "
 
 [node name="shopbox" type="HBoxContainer"]

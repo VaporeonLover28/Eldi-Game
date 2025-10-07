@@ -2,12 +2,12 @@ extends RigidBody2D
 
 @onready var arc_line: Line2D = $"../Arc"
 @onready var mouse_position
-var pulling_distance
+var pulling_distance = Vector2.ZERO
 var was_throwed : bool = false
 var game_started := true
+var times_thrown : int = 0
 
 func _ready() -> void:
-	await get_tree().create_timer(0.2).timeout
 	game_started = true
 	
 func _physics_process(delta: float) -> void:
@@ -33,4 +33,6 @@ func _throw():
 	was_throwed = true
 	self.freeze = false
 	self.sleeping = false
-	self.apply_impulse(pulling_distance * 6)
+	if times_thrown != 0:
+		self.apply_impulse(pulling_distance * 6)
+		times_thrown += 1

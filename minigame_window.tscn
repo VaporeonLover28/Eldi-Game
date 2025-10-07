@@ -4,8 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://joyy7arijyjv" path="res://Art/exclamation.png" id="2_40kx6"]
 
 [node name="MinigameWindow" type="SubViewportContainer"]
+offset_right = 320.0
+offset_bottom = 320.0
 scale = Vector2(0.66, 0.66)
-size_flags_horizontal = 6
+size_flags_horizontal = 4
 script = ExtResource("1_i82p6")
 
 [node name="Control" type="Control" parent="."]
@@ -13,7 +15,7 @@ visible = false
 layout_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
-layout_mode = 2
+layout_mode = 0
 offset_left = -6.06061
 offset_top = -6.06061
 offset_right = 133.939

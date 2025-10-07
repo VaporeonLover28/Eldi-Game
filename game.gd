@@ -11,7 +11,7 @@ var startmoneygiven = false
 var minigame_started := false
 
 #variable for money system
-var money : int = 500000
+var money : int = 5000000
 var rating : float = 0.0:
 	set(value):
 		if value > 100: 
@@ -56,6 +56,13 @@ var amountfilters = 0:
 		array.append(result_color)
 		smoke.texture.gradient.colors = array
 
+func calculate_moneypers():
+	moneypers = (idleitemlist[0].Income * amountposters) + \
+	(idleitemlist[1].Income * amountlightbulbs) + \
+	(idleitemlist[2].Income * amountstrikes) + \
+	(idleitemlist[3].Income * amountfilters)
+	$CanvasLayer/toppanel/incomelabel.text = "Income: $" + str(moneypers) + "/s"
+
 #changing the text of each button
 func assignvalues(object, type):
 	if type == "button":
@@ -85,7 +92,4 @@ func update_rating():
 #item.moneyitgivesyou * item amount
 #repeat for all items
 func _on_givemoney_timeout() -> void:
-	money += (idleitemlist[0].Income * amountposters) + \
-	(idleitemlist[1].Income * amountlightbulbs) + \
-	(idleitemlist[2].Income * amountstrikes) + \
-	(idleitemlist[3].Income * amountfilters)
+	money += moneypers

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1cpivj4momht"
-path="res://.godot/imported/caxola.png-f167a000c7827659d1d06befe0651609.ctex"
+uid="uid://cf8aku8efxt3q"
+path="res://.godot/imported/FabricaPT4.png-4102d89426cc83d752c9d9d1735b7da5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/recycle/caxola.png"
-dest_files=["res://.godot/imported/caxola.png-f167a000c7827659d1d06befe0651609.ctex"]
+source_file="res://Art/FabricaPT4.png"
+dest_files=["res://.godot/imported/FabricaPT4.png-4102d89426cc83d752c9d9d1735b7da5.ctex"]
 
 [params]
 
