@@ -17,7 +17,11 @@ func _on_pressed() -> void:
 	minigame.collectedtrash += 1
 	game.money += minigame_window.minigame_chosen.minigame_step_income
 	var money_inst = money_popup.instantiate()
-	money_inst.position = game.get_child(-1).get_child(-1).position
+	money_inst.position = self.position + get_parent().get_parent().get_parent().position - Vector2(20, 20)
 	money_inst.set_text2(minigame_window.minigame_chosen.minigame_step_income)
-	game.get_child(1).add_child(money_inst)
+	game.get_child(2).add_child(money_inst)
+	print(game)
+	print(money_inst)
+	print(self.position)
+	print("trash collected")
 	queue_free()

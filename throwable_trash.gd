@@ -4,10 +4,11 @@ extends RigidBody2D
 @onready var mouse_position
 var pulling_distance = Vector2.ZERO
 var was_throwed : bool = false
-var game_started := true
+@onready var game_started := false
 var times_thrown : int = 0
 
 func _ready() -> void:
+	await get_tree().create_timer(0.2).timeout
 	game_started = true
 	
 func _physics_process(delta: float) -> void:
@@ -24,7 +25,7 @@ func _calculating_throw(delta):
 	var inicial_point = self.global_position
 	for item in 500:
 		arc_line.add_point(inicial_point)
-		calculated_velocity.y += 10 * delta
+		calculated_velocity.y += 9.8 * delta
 		inicial_point += calculated_velocity * delta
 		if inicial_point.x > 340 or inicial_point.y > 340:
 			break
@@ -33,6 +34,5 @@ func _throw():
 	was_throwed = true
 	self.freeze = false
 	self.sleeping = false
-	if times_thrown != 0:
-		self.apply_impulse(pulling_distance * 6)
-		times_thrown += 1
+	self.apply_impulse(pulling_distance * 6)
+	times_thrown += 1

@@ -31,7 +31,6 @@ func _spawn_minigame():
 	tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_BACK)
-	tween.tween_callback(func():print(minigame_subviewport_inst ,minigame_chosen.minigame_window_size))
 	tween.set_parallel()
 	tween.tween_property(self, "position", position - Vector2(80, 80), 1)
 	tween.tween_property(minigame_subviewport_inst, "size", minigame_chosen.minigame_window_size, 1)

@@ -14,7 +14,7 @@ func _init() -> void:
 func _save_game():
 	print("save")
 	new_config.set_value("Globalvaribles", "money", game.money)
-	new_config.new_config.set_value("Globalvaribles", "rating", game.rating)
+	new_config.set_value("Globalvaribles", "rating", game.rating)
 	new_config.set_value("Globalvaribles", "upgrades", [game.amountposters,\
 	game.amountlightbulbs,\
 	game.amountstrikes,\

@@ -61,7 +61,7 @@ func _ready() -> void:
 	var load_data = SaveScript.new_config.load("user://SaveFile.cfg")
 	if load_data == OK and SaveScript.new_config.get_value("Globalvaribles", "last_date") != 0:
 		money = SaveScript.new_config.get_value("Globalvaribles", "money")
-		rating = SaveScript.new_config.new_config.get_value("Globalvaribles", "rating")
+		rating = SaveScript.new_config.get_value("Globalvaribles", "rating")
 		amountposters = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[0]
 		amountlightbulbs = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[1]
 		amountstrikes = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[2]
@@ -78,7 +78,7 @@ func _ready() -> void:
 		
 	elif load_data == OK and SaveScript.new_config.get_value("Globalvaribles", "last_date") == 0:
 		money = SaveScript.new_config.get_value("Globalvaribles", "money")
-		rating = SaveScript.new_config.new_config.get_value("Globalvaribles", "rating")
+		rating = SaveScript.new_config.get_value("Globalvaribles", "rating")
 		amountposters = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[0]
 		amountlightbulbs = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[1]
 		amountstrikes = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[2]

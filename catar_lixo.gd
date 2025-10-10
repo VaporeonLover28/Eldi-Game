@@ -1,6 +1,5 @@
 extends Node2D
 
-@onready var money_popup = preload("res://minigame_money_earn.tscn")
 @onready var trashitem = preload("res://thrashitem.tscn")
 @onready var collectedtrash = 0
 @onready var game = $"../../../../../"
@@ -14,11 +13,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if collectedtrash == 15:
-		var money_inst = money_popup.instantiate()
-		money_inst.scale = Vector2(4, 4)
-		money_inst.position = minigame_window.global_position - Vector2(0, 40)
-		money_inst.set_text2(minigame_window.minigame_chosen.minigame_win_income)
-		game.get_child(2).add_child(money_inst)
 		minigame_handler.minigame_result.emit(true, minigame_window)
 
 func _on_spawn_trash_timeout() -> void:

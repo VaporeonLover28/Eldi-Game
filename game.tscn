@@ -289,26 +289,43 @@ tabs_rearrange_group = 1
 [node name="ScrollContainer" parent="CanvasLayer/shoppanel/TabContainer/teste 1" index="0"]
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 247.87
-offset_bottom = 646.0
+offset_left = 18.869995
+offset_top = 39.0
+offset_right = 266.74
+offset_bottom = 685.0
 
-[node name="shopbox" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="0"]
+[node name="Label" type="Label" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="0"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("31_dhpj7")
+theme_override_font_sizes/font_size = 42
+text = "Shop"
+
+[node name="shopbox" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="1"]
 upgrade_name = "Posters"
 upgrade_type = "idle"
 
-[node name="shopbox2" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="2"]
+[node name="VSeparator" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="2"]
+custom_minimum_size = Vector2(0, 20)
+
+[node name="shopbox2" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="3"]
 upgrade_name = "Lightbulbs"
 upgrade_arraypos = 1
 upgrade_type = "idle"
 
-[node name="shopbox3" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="4"]
+[node name="VSeparator3" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="4"]
+custom_minimum_size = Vector2(0, 20)
+
+[node name="shopbox3" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="5"]
 upgrade_name = "Strikes"
 upgrade_arraypos = 2
 upgrade_type = "idle"
 
-[node name="shopbox4" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="6"]
+[node name="VSeparator4" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="6"]
+custom_minimum_size = Vector2(0, 20)
+
+[node name="shopbox4" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="7"]
 upgrade_name = "Filters"
 upgrade_arraypos = 3
 upgrade_type = "idle"
@@ -334,13 +351,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -243.00003
-offset_top = -156.99997
-offset_right = -150.00003
-offset_bottom = -65.99997
+offset_left = -191.0
+offset_top = -155.0
+offset_right = -98.0
+offset_bottom = -111.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(5, 5)
+scale = Vector2(4, 4)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
@@ -373,9 +390,50 @@ theme_override_fonts/font = ExtResource("31_dhpj7")
 theme_override_font_sizes/font_size = 8
 text = "Proceed"
 
+[node name="Minigame Progress Panel" parent="CanvasLayer" instance=ExtResource("1_sdcse")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_right = 0.0
+grow_horizontal = 0
+grow_vertical = 1
+scale = Vector2(-1, 1)
+
+[node name="TabContainer" parent="CanvasLayer/Minigame Progress Panel" index="1"]
+tabs_rearrange_group = 1
+
+[node name="ScrollContainer" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1" index="0"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 230.0
+offset_top = 40.0
+offset_right = 477.87
+offset_bottom = 686.0
+scale = Vector2(-1, 1)
+
+[node name="shopbox" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="0"]
+upgrade_name = "Posters"
+upgrade_type = "idle"
+
+[node name="shopbox2" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="2"]
+upgrade_name = "Lightbulbs"
+upgrade_arraypos = 1
+upgrade_type = "idle"
+
+[node name="shopbox3" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="4"]
+upgrade_name = "Strikes"
+upgrade_arraypos = 2
+upgrade_type = "idle"
+
+[node name="shopbox4" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="6"]
+upgrade_name = "Filters"
+upgrade_arraypos = 3
+upgrade_type = "idle"
+
 [connection signal="timeout" from="givemoney" to="." method="_on_givemoney_timeout"]
 [connection signal="minigame_result" from="CanvasLayer/MinigameHandler" to="CanvasLayer/MinigameHandler" method="_on_minigame_result"]
 [connection signal="timeout" from="CanvasLayer/MinigameHandler/MinigameAddTimer" to="CanvasLayer/MinigameHandler" method="_add_minigame_window"]
 [connection signal="pressed" from="CanvasLayer/Comeback_popup/TextureButton" to="." method="_hide_comeback_popup"]
 
 [editable path="CanvasLayer/shoppanel"]
+[editable path="CanvasLayer/Minigame Progress Panel"]

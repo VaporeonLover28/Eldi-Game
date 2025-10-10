@@ -12,6 +12,10 @@ script/source = "extends TextureButton
 @onready var game = $\"../../../../../../../..\"
 @onready var shopbox = $\"../\"
 
+@onready var tween : Tween
+@onready var sub_tween: Tween
+@onready var sub_sub_tween: Tween
+
 func _ready() -> void:
 	#function on the game node
 	#takes info from shopbox (resource values) that you set manually
@@ -19,6 +23,7 @@ func _ready() -> void:
 	#and sets the text here accordingly
 	#(yes its confusing bro i did this all wrong)
 	game.assignvalues(self, \"button\")
+	self.pivot_offset = Vector2(32,16)
 
 #when pressed
 func _on_pressed() -> void:
@@ -46,6 +51,25 @@ func _on_pressed() -> void:
 			3:
 				game.amountfilters += 1
 		game.calculate_moneypers()
+		
+		tween = create_tween()
+		tween.set_parallel(true)
+		tween.tween_subtween(sub_tween)
+		tween.tween_subtween(sub_sub_tween)
+		tween.set_parallel(false)
+		tween.tween_interval(0.6)
+		tween.tween_property(self, \"rotation\", deg_to_rad(0), 0.075).set_ease(Tween.EASE_OUT_IN)
+		tween.tween_property(self, \"scale\", Vector2(1,1), 0.075).set_ease(Tween.EASE_OUT_IN)
+		
+		sub_tween = create_tween()
+		sub_tween.set_loops(2)
+		sub_tween.tween_property(self, \"rotation\", deg_to_rad(30), 0.15).set_ease(Tween.EASE_OUT_IN)
+		sub_tween.tween_property(self, \"rotation\", deg_to_rad(-30), 0.15).set_ease(Tween.EASE_OUT_IN)
+		
+		sub_sub_tween = create_tween()
+		sub_tween.set_loops(2)
+		sub_sub_tween.tween_property(self, \"scale\", Vector2(1.5,1.5), 0.15).set_ease(Tween.EASE_OUT_IN)
+		sub_sub_tween.tween_property(self, \"scale\", Vector2(1,1), 0.15).set_ease(Tween.EASE_OUT_IN)
 "
 
 [node name="shopbox" type="HBoxContainer"]
@@ -63,6 +87,10 @@ text = "Name:
 Income:
 Rating:"
 script = ExtResource("1_57je5")
+
+[node name="VSeparator" type="VSeparator" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
 
 [node name="buybutton" type="TextureButton" parent="."]
 clip_children = 2
