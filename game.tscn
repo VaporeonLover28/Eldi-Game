@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=35 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -29,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://c5lcx7ol0xd" path="res://Art/LixeiraEldi_comlixo.png" id="17_xa8c5"]
 [ext_resource type="Resource" uid="uid://c8dbayxlpar3v" path="res://Upgrades/Task/junk recycle.tres" id="18_hb5m1"]
 [ext_resource type="Resource" uid="uid://csff063odqyev" path="res://Upgrades/Task/water treat.tres" id="19_x5p1p"]
+[ext_resource type="Texture2D" uid="uid://bme3k6vikbwrp" path="res://Art/eldi_game_button_sprite.png" id="30_xfvwf"]
+[ext_resource type="FontFile" uid="uid://daob7tcao7krl" path="res://RevMiniPixel.ttf" id="31_dhpj7"]
 
 [sub_resource type="Gradient" id="Gradient_xa8c5"]
 offsets = PackedFloat32Array(0)
@@ -326,8 +328,54 @@ position = Vector2(640, 360)
 position = Vector2(640, 360)
 script = ExtResource("7_f1jbl")
 
+[node name="Comeback_popup" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.00003
+offset_top = -156.99997
+offset_right = -150.00003
+offset_bottom = -65.99997
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Comeback_popup"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("31_dhpj7")
+theme_override_font_sizes/font_size = 8
+text = "aaaaaaaaaa"
+autowrap_mode = 3
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Comeback_popup"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("30_xfvwf")
+
+[node name="Label" type="Label" parent="CanvasLayer/Comeback_popup/TextureButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.5
+offset_top = -4.899996
+offset_right = 17.5
+offset_bottom = 4.899996
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("31_dhpj7")
+theme_override_font_sizes/font_size = 8
+text = "Proceed"
+
 [connection signal="timeout" from="givemoney" to="." method="_on_givemoney_timeout"]
 [connection signal="minigame_result" from="CanvasLayer/MinigameHandler" to="CanvasLayer/MinigameHandler" method="_on_minigame_result"]
 [connection signal="timeout" from="CanvasLayer/MinigameHandler/MinigameAddTimer" to="CanvasLayer/MinigameHandler" method="_add_minigame_window"]
+[connection signal="pressed" from="CanvasLayer/Comeback_popup/TextureButton" to="." method="_hide_comeback_popup"]
 
 [editable path="CanvasLayer/shoppanel"]

@@ -11,7 +11,8 @@ var startmoneygiven = false
 var minigame_started := false
 
 #variable for money system
-var money : int = 5000000
+@onready var money : int = 5000000
+@onready var money_stacked: int = 0
 var rating : float = 0.0:
 	set(value):
 		if value > 100: 
@@ -56,6 +57,48 @@ var amountfilters = 0:
 		array.append(result_color)
 		smoke.texture.gradient.colors = array
 
+func _ready() -> void:
+	var load_data = SaveScript.new_config.load("user://SaveFile.cfg")
+	if load_data == OK and SaveScript.new_config.get_value("Globalvaribles", "last_date") != 0:
+		money = SaveScript.new_config.get_value("Globalvaribles", "money")
+		rating = SaveScript.new_config.new_config.get_value("Globalvaribles", "rating")
+		amountposters = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[0]
+		amountlightbulbs = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[1]
+		amountstrikes = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[2]
+		amountfilters = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[3]
+		calculate_moneypers()
+		update_rating()
+		var time_diference = (Time.get_unix_time_from_system() - SaveScript.new_config.get_value("Globalvaribles", "last_date"))
+		money_stacked = time_diference * moneypers
+		$CanvasLayer/Comeback_popup.visible = true
+		$CanvasLayer/Comeback_popup/Label.text = "You got back! Last time you played was " +  str(snappedf(time_diference/3600, 0.01))\
+		+ " hours ago. You have generated " + str(money_stacked) + " money."
+		SaveScript.new_config.set_value("Globalvaribles", "last_date", 0)
+		SaveScript.new_config.save("user://SaveFile.cfg")
+		
+	elif load_data == OK and SaveScript.new_config.get_value("Globalvaribles", "last_date") == 0:
+		money = SaveScript.new_config.get_value("Globalvaribles", "money")
+		rating = SaveScript.new_config.new_config.get_value("Globalvaribles", "rating")
+		amountposters = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[0]
+		amountlightbulbs = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[1]
+		amountstrikes = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[2]
+		amountfilters = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[3]
+		calculate_moneypers()
+		update_rating()
+		$CanvasLayer/Comeback_popup.visible = true
+		$CanvasLayer/Comeback_popup/Label.text = "Oooppss! You didn't see to have saved last time you played. Be more careful nextime."
+		SaveScript.new_config.set_value("Globalvaribles", "last_date", 0)
+		SaveScript.new_config.save("user://SaveFile.cfg")
+		
+	else:
+		print("save has failed")
+	
+func _hide_comeback_popup():
+	print(str(money_stacked))
+	money += money_stacked
+	money_stacked = 0
+	$CanvasLayer/Comeback_popup.visible = false
+	
 func calculate_moneypers():
 	moneypers = (idleitemlist[0].Income * amountposters) + \
 	(idleitemlist[1].Income * amountlightbulbs) + \
@@ -93,3 +136,7 @@ func update_rating():
 #repeat for all items
 func _on_givemoney_timeout() -> void:
 	money += moneypers
+
+func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("create minigame"):
+		SaveScript.save_signal.emit()
