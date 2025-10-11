@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://vflt3ic3xfoi"]
+[gd_scene load_steps=2 format=3 uid="uid://vflt3ic3xfoi"]
+
+[ext_resource type="Script" uid="uid://bubu2gsgxbfu3" path="res://progress_minigame_bar.gd" id="1_g0s37"]
 
 [node name="Progress Container" type="VBoxContainer"]
 offset_right = 40.0
@@ -12,5 +14,6 @@ text = "Name:"
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="Progress Minigame Bar" type="ProgressBar" parent="."]
 layout_mode = 2
+script = ExtResource("1_g0s37")

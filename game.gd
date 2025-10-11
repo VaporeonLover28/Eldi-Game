@@ -6,6 +6,8 @@ extends Node2D
 @onready var poster_3: Sprite2D = $scene/factory/poster3
 @onready var poster_4: Sprite2D = $scene/factory/poster4
 @onready var poster_5: Sprite2D = $scene/factory/poster5
+@onready var minigame_progress_panel: Control = $"CanvasLayer/Minigame Progress Panel"
+
 
 var startmoneygiven = false
 var minigame_started := false
@@ -68,6 +70,11 @@ func _ready() -> void:
 		amountfilters = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[3]
 		calculate_moneypers()
 		update_rating()
+		var loop_count: int = 0
+		for item in minigame_progress_panel.v_box_container.get_children():
+			if item is VBoxContainer:
+				item.get_node("Progress Minigame Bar").value = SaveScript.new_config.get_value("Globalvaribles", "minigame_progress")[loop_count]
+				loop_count += 1
 		var time_diference = (Time.get_unix_time_from_system() - SaveScript.new_config.get_value("Globalvaribles", "last_date"))
 		money_stacked = time_diference * moneypers
 		$CanvasLayer/Comeback_popup.visible = true
@@ -85,6 +92,11 @@ func _ready() -> void:
 		amountfilters = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[3]
 		calculate_moneypers()
 		update_rating()
+		var loop_count: int = 0
+		for item in minigame_progress_panel.v_box_container.get_children():
+			if item is VBoxContainer:
+				item.get_node("Progress Minigame Bar").value = SaveScript.new_config.get_value("Globalvaribles", "minigame_progress")[loop_count]
+				loop_count += 1
 		$CanvasLayer/Comeback_popup.visible = true
 		$CanvasLayer/Comeback_popup/Label.text = "Oooppss! You didn't see to have saved last time you played. Be more careful nextime."
 		SaveScript.new_config.set_value("Globalvaribles", "last_date", 0)
