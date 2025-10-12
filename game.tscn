@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=41 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -32,7 +32,9 @@
 [ext_resource type="Texture2D" uid="uid://bme3k6vikbwrp" path="res://Art/eldi_game_button_sprite.png" id="30_xfvwf"]
 [ext_resource type="Texture2D" uid="uid://dgasg0n8738b5" path="res://Art/shop_panel_teste.png" id="31_7knny"]
 [ext_resource type="FontFile" uid="uid://daob7tcao7krl" path="res://RevMiniPixel.ttf" id="31_dhpj7"]
+[ext_resource type="Script" uid="uid://c38aqtop87a4s" path="res://comeback_popup.gd" id="32_082n1"]
 [ext_resource type="PackedScene" uid="uid://dt1e4j4tetvkb" path="res://minigame_progress_panel.tscn" id="32_dhpj7"]
+[ext_resource type="Texture2D" uid="uid://cxuavbxvq0rgy" path="res://Art/eldi_game_button_concept.png" id="35_xex6t"]
 
 [sub_resource type="Gradient" id="Gradient_xa8c5"]
 offsets = PackedFloat32Array(0)
@@ -363,55 +365,102 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -191.0
-offset_top = -156.0
-offset_right = -98.0
-offset_bottom = -106.0
+offset_left = -260.0
+offset_top = 600.0
+offset_right = 242.0
+offset_bottom = 1023.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(4, 4)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource("Theme_xex6t")
+script = ExtResource("32_082n1")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Comeback_popup"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Comeback_popup"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Comeback_popup/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Comeback_popup/VBoxContainer"]
-custom_minimum_size = Vector2(83, 0)
+[node name="Label" type="Label" parent="CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(83, 240)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("31_dhpj7")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 38
 text = "aaaaaaaaaa"
 autowrap_mode = 3
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Comeback_popup/VBoxContainer"]
+[node name="Control" type="Control" parent="CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(256, 128)
 layout_mode = 2
 size_flags_horizontal = 4
-texture_normal = ExtResource("30_xfvwf")
 
-[node name="Label" type="Label" parent="CanvasLayer/Comeback_popup/VBoxContainer/TextureButton"]
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer/Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -17.5
-offset_top = -4.899996
-offset_right = 17.5
-offset_bottom = 4.899996
+offset_left = -128.0
+offset_top = -64.0
+offset_right = -64.0
+offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(4, 4)
+size_flags_horizontal = 4
+texture_normal = ExtResource("30_xfvwf")
+
+[node name="Label" type="Label" parent="CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer/Control/TextureButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.75
+offset_top = -5.75
+offset_right = 162.25
+offset_bottom = 37.25
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
 theme_override_fonts/font = ExtResource("31_dhpj7")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 42
 text = "Proceed"
 
 [node name="Minigame Progress Panel" parent="CanvasLayer" instance=ExtResource("32_dhpj7")]
 
+[node name="Main Menu Button" type="TextureButton" parent="CanvasLayer"]
+offset_right = 64.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("35_xex6t")
+
+[node name="Label" type="Label" parent="CanvasLayer/Main Menu Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("31_dhpj7")
+text = "X"
+horizontal_alignment = 1
+
 [connection signal="timeout" from="givemoney" to="." method="_on_givemoney_timeout"]
 [connection signal="minigame_result" from="CanvasLayer/MinigameHandler" to="CanvasLayer/MinigameHandler" method="_on_minigame_result"]
 [connection signal="timeout" from="CanvasLayer/MinigameHandler/MinigameAddTimer" to="CanvasLayer/MinigameHandler" method="_add_minigame_window"]
-[connection signal="pressed" from="CanvasLayer/Comeback_popup/VBoxContainer/TextureButton" to="." method="_hide_comeback_popup"]
+[connection signal="pressed" from="CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer/Control/TextureButton" to="CanvasLayer/Comeback_popup" method="_hide_comeback_popup"]
+[connection signal="pressed" from="CanvasLayer/Main Menu Button" to="." method="_on_main_menu_button_pressed"]
 
 [editable path="CanvasLayer/shoppanel"]

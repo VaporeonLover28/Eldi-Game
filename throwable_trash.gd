@@ -25,7 +25,7 @@ func _calculating_throw(delta):
 	var inicial_point = self.global_position
 	for item in 500:
 		arc_line.add_point(inicial_point)
-		calculated_velocity.y += 9.8 * delta
+		calculated_velocity.y += 16 * delta
 		inicial_point += calculated_velocity * delta
 		if inicial_point.x > 340 or inicial_point.y > 340:
 			break

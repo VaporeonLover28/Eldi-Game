@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var main_menu = "uid://yov2v5tjkvlc"
 @onready var smoke: GPUParticles2D = $scene/factory/smoke
 @onready var poster_1: Sprite2D = $scene/factory/poster1
 @onready var poster_2: Sprite2D = $scene/factory/poster2
@@ -72,7 +73,7 @@ func _ready() -> void:
 		var time_diference = (Time.get_unix_time_from_system() - SaveScript.new_config.get_value("Globalvaribles", "last_date"))
 		money_stacked = time_diference * moneypers
 		$CanvasLayer/Comeback_popup.visible = true
-		$CanvasLayer/Comeback_popup/VBoxContainer/Label.text = "You got back! Last time you played was " +  str(snappedf(time_diference/3600, 0.01))\
+		$CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer/Label.text = "You got back! Last time you played was " +  str(snappedf(time_diference/3600, 0.01))\
 		+ " hours ago. You have generated " + str(money_stacked) + " money."
 		SaveScript.new_config.set_value("Globalvaribles", "last_date", 0)
 		SaveScript.new_config.save("user://SaveFile.cfg")
@@ -87,18 +88,14 @@ func _ready() -> void:
 		calculate_moneypers()
 		update_rating()
 		$CanvasLayer/Comeback_popup.visible = true
-		$CanvasLayer/Comeback_popup/VBoxContainer/Label.text = "It looks like the game didn't save the last time you played. Game will resume as if no time has passed."
+		$CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer/Label.text = "It looks like the game didn't save the last time you played. Game will resume as if no time has passed."
 		SaveScript.new_config.set_value("Globalvaribles", "last_date", 0)
 		SaveScript.new_config.save("user://SaveFile.cfg")
 		
 	else:
 		print("save has failed")
 	
-func _hide_comeback_popup():
-	print(str(money_stacked))
-	money += money_stacked
-	money_stacked = 0
-	$CanvasLayer/Comeback_popup.visible = false
+
 	
 func calculate_moneypers():
 	moneypers = (idleitemlist[0].Income * amountposters) + \
@@ -143,3 +140,9 @@ func _on_givemoney_timeout() -> void:
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("create minigame"):
 		SaveScript.save_signal.emit()
+
+
+func _on_main_menu_button_pressed() -> void:
+	SaveScript.save_signal.emit()
+	await get_tree().create_timer(0.1).timeout
+	get_tree().change_scene_to_file(main_menu)

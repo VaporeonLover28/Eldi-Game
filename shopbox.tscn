@@ -67,9 +67,8 @@ func _on_pressed() -> void:
 		sub_tween.tween_property(self, \"rotation\", deg_to_rad(-30), 0.22).set_ease(Tween.EASE_OUT_IN)
 		
 		sub_sub_tween = create_tween()
-		sub_tween.set_loops(2)
-		sub_sub_tween.tween_property(self, \"scale\", Vector2(1.5,1.5), 0.22).set_ease(Tween.EASE_OUT_IN)
-		sub_sub_tween.tween_property(self, \"scale\", Vector2(1,1), 0.22).set_ease(Tween.EASE_OUT_IN)
+		sub_sub_tween.tween_property(self, \"scale\", Vector2(1.5,1.5), 0.44).set_ease(Tween.EASE_OUT_IN)
+		sub_sub_tween.tween_property(self, \"scale\", Vector2(1,1), 0.44).set_ease(Tween.EASE_OUT_IN)
 "
 
 [node name="shopbox" type="HBoxContainer"]

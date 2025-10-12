@@ -19,11 +19,15 @@ func _save_game():
 	game.amountlightbulbs,\
 	game.amountstrikes,\
 	game.amountfilters])
-	#var progress_numbers: Array
-	#for item in game.minigame_progress_panel.v_box_container.get_children(true):
-		#if item is VBoxContainer:
-				#progress_numbers.append(item.get_node("Progress Minigame Bar").value)
-	#new_config.set_value("Globalvaribles", "minigame_progress", progress_numbers)
+	var progress_numbers: Array
+	for item in game.minigame_progress_panel.v_box_container.get_children(true):
+		if item is VBoxContainer:
+				progress_numbers.append(item.get_node("Progress Minigame Bar").value)
+	new_config.set_value("Globalvaribles", "minigame_progress", progress_numbers)
 	new_config.set_value("Globalvaribles", "last_date", Time.get_unix_time_from_system())
 	new_config.save("user://SaveFile.cfg")
+	
+func _notification(what):
+	if what == NOTIFICATION_WM_CLOSE_REQUEST and get_parent().get_node_or_null("game") != null:
+		_save_game()
 	
