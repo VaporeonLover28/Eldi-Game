@@ -8,7 +8,6 @@ extends Node2D
 @onready var poster_5: Sprite2D = $scene/factory/poster5
 @onready var minigame_progress_panel: Control = $"CanvasLayer/Minigame Progress Panel"
 
-
 var startmoneygiven = false
 var minigame_started := false
 
@@ -70,15 +69,10 @@ func _ready() -> void:
 		amountfilters = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[3]
 		calculate_moneypers()
 		update_rating()
-		var loop_count: int = 0
-		for item in minigame_progress_panel.v_box_container.get_children():
-			if item is VBoxContainer:
-				item.get_node("Progress Minigame Bar").value = SaveScript.new_config.get_value("Globalvaribles", "minigame_progress")[loop_count]
-				loop_count += 1
 		var time_diference = (Time.get_unix_time_from_system() - SaveScript.new_config.get_value("Globalvaribles", "last_date"))
 		money_stacked = time_diference * moneypers
 		$CanvasLayer/Comeback_popup.visible = true
-		$CanvasLayer/Comeback_popup/Label.text = "You got back! Last time you played was " +  str(snappedf(time_diference/3600, 0.01))\
+		$CanvasLayer/Comeback_popup/VBoxContainer/Label.text = "You got back! Last time you played was " +  str(snappedf(time_diference/3600, 0.01))\
 		+ " hours ago. You have generated " + str(money_stacked) + " money."
 		SaveScript.new_config.set_value("Globalvaribles", "last_date", 0)
 		SaveScript.new_config.save("user://SaveFile.cfg")
@@ -92,13 +86,8 @@ func _ready() -> void:
 		amountfilters = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[3]
 		calculate_moneypers()
 		update_rating()
-		var loop_count: int = 0
-		for item in minigame_progress_panel.v_box_container.get_children():
-			if item is VBoxContainer:
-				item.get_node("Progress Minigame Bar").value = SaveScript.new_config.get_value("Globalvaribles", "minigame_progress")[loop_count]
-				loop_count += 1
 		$CanvasLayer/Comeback_popup.visible = true
-		$CanvasLayer/Comeback_popup/Label.text = "Oooppss! You didn't see to have saved last time you played. Be more careful nextime."
+		$CanvasLayer/Comeback_popup/VBoxContainer/Label.text = "It looks like the game didn't save the last time you played. Game will resume as if no time has passed."
 		SaveScript.new_config.set_value("Globalvaribles", "last_date", 0)
 		SaveScript.new_config.save("user://SaveFile.cfg")
 		
@@ -133,14 +122,16 @@ func upscaleprice(shopbox):
 	idleitemlist[shopbox.upgrade_arraypos].Price = round(idleitemlist[shopbox.upgrade_arraypos].Price * 1.16666666666)
 
 func update_rating():
-	if rating > 1 and unlocked_tasks.size() < 1:
+	if rating >= 1 and unlocked_tasks.size() < 1:
 		unlocked_tasks.append(load("res://Upgrades/Task/collection.tres"))
-	if rating > 15 and unlocked_tasks.size() < 2:
+	if rating >= 15 and unlocked_tasks.size() < 2:
 		unlocked_tasks.append(load("res://Upgrades/Task/garbage men.tres"))
-	if rating > 40 and unlocked_tasks.size() < 3:
+	if rating >= 40 and unlocked_tasks.size() < 3:
 		unlocked_tasks.append(load("res://Upgrades/Task/junk recycle.tres"))
-	if rating > 60 and unlocked_tasks.size() < 4:
+	if rating >= 60 and unlocked_tasks.size() < 4:
 		unlocked_tasks.append(load("res://Upgrades/Task/water treat.tres"))
+	
+	minigame_progress_panel.update_bars()
 
 #when adding new item:
 #add new equation with item array pos 

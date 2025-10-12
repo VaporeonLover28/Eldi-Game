@@ -1,7 +1,17 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://i3hmq0x7yqxh"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://i3hmq0x7yqxh"]
 
 [ext_resource type="FontFile" uid="uid://daob7tcao7krl" path="res://RevMiniPixel.ttf" id="1_boijs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boijs"]
+bg_color = Color(0.10813881, 0.07079638, 0.017507963, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyqre"]
+content_margin_top = 20.0
+content_margin_bottom = 5.0
+bg_color = Color(0.27416182, 0.61115885, 0.18004203, 1)
 
 [resource]
 default_font = ExtResource("1_boijs")
 Label/fonts/font = ExtResource("1_boijs")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_boijs")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_fyqre")

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dgasg0n8738b5" path="res://Art/shop_panel_teste.png" id="2_avp20"]
 [ext_resource type="FontFile" uid="uid://daob7tcao7krl" path="res://RevMiniPixel.ttf" id="3_600i2"]
 [ext_resource type="PackedScene" uid="uid://vflt3ic3xfoi" path="res://progress_container.tscn" id="3_avp20"]
+[ext_resource type="Theme" uid="uid://i3hmq0x7yqxh" path="res://themes/font_temporaria.tres" id="5_600i2"]
 
 [sub_resource type="Animation" id="Animation_a7euh"]
 length = 0.001
@@ -1348,7 +1349,7 @@ cache/0/14/0/glyphs/14/size = Vector2(10, 10)
 cache/0/14/0/glyphs/14/uv_rect = Rect2(221, 1, 10, 10)
 cache/0/14/0/glyphs/14/texture_idx = 0
 
-[sub_resource type="Image" id="Image_600i2"]
+[sub_resource type="Image" id="Image_b67ba"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///07+//6I/v/+rf7//q3+//6H/P/8Tf///wL///8A////AP///wD///8A////AP///wD///8A////Ff///5D+//6//v/+v/7//r/+//6//v/+v/7//r/+//6P////FP///wD///8A////AP///wD///8A////Av///5D+//6//v/+v/7//r/u8O7Ce31734aGhtz+//6//v/+v/7//o////8C////AP///wD///8A////AP///07+//6//v/+v/7//r/u8O7CdHV04lxcXOl9fn3f/v/+v/7//r/+//6//P/8TP///wD///8A////AP///wD+//6I/v/+v/7//r/u8O7CdHV04lxcXOlzdHPi8PHwwv7//r/+//6//v/+v////4X///8A////AP///wD///8A/v/+rf7//r/+//6/e31731xcXOlpamnl8PHwwv7//r/+//6//v/+v/7//r/+//6t////AP///wD///8A////AP7//q3+//6//v/+v3t9e99cXFzpaWpp5e7w7sL+//6//v/+v/7//r/+//6//v/+rP///wD///8A////AP///wD+//6H/v/+v/7//r/u8O7Cc3Rz4lxcXOlzdHPi7vDuwv7//r/+//6//v/+v////4X///8A////AP///wD///8A/P/8Tf7//r/+//6//v/+v+7w7sJzdHPiXFxc6X1+fd/+//6//v/+v/7//r////9L////AP///wD///8A////AP///wL+//6P/v/+v/7//r/+//6/7vDuwn1+fd+FhYXc/v/+v/7//r/+//6O////Av///wD///8A////AP///wD///8A////FP7//o/+//6//v/+v/7//r/+//6//v/+v/7//r/+//6O////E////wD///8A////AP///wD///8A////AP///wD///8C/P/8TP///4X+//6t/v/+rP///4X///9L////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1358,9 +1359,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_ehrec"]
-image = SubResource("Image_600i2")
+image = SubResource("Image_b67ba")
 
-[sub_resource type="Image" id="Image_b67ba"]
+[sub_resource type="Image" id="Image_uyh0m"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///2j+//61/v/+5/7//uf+//60////Zv///wL///8A////AP///wD///8A////AP///wD///8A////G/7//sH+//7//v/+//7//v/+//7//v/+//7//v/+//6/////Gv///wD///8A////AP///wD///8A////Av7//sH+//7//v/+//7//v/s7ez/UFBQ/2BgYP/+//7//v/+//7//r////8C////AP///wD///8A////AP///2j+//7//v/+//7//v/s7ez/QkJC/xoaGv9RUVH//v/+//7//v/+//7/////Zf///wD///8A////AP///wD+//61/v/+//7//v/s7ez/QkJC/xoaGv9DQ0P/7e7t//7//v/+//7//v/+//7//rL///8A////AP///wD///8A/v/+5/7//v/+//7/UFBQ/xoaGv8wMDD/7e7t//7//v/+//7//v/+//7//v/+//7n////AP///wD///8A////AP7//uf+//7//v/+/1BQUP8aGhr/MDAw/+zt7P/+//7//v/+//7//v/+//7//v/+5v///wD///8A////AP///wD+//60/v/+//7//v/s7ez/Q0ND/xoaGv9DQ0P/7O3s//7//v/+//7//v/+//7//rL///8A////AP///wD///8A////Zv7//v/+//7//v/+/+zt7P9DQ0P/Ghoa/1FRUf/+//7//v/+//7//v////9k////AP///wD///8A////AP///wL+//6//v/+//7//v/+//7/7O3s/1FRUf9fX1///v/+//7//v/+//69////Av///wD///8A////AP///wD///8A////Gv7//r/+//7//v/+//7//v/+//7//v/+//7//v/+//69////Gf///wD///8A////AP///wD///8A////AP///wD///8C////Zf7//rL+//7n/v/+5v7//rL///9k////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1370,9 +1371,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_j1ntp"]
-image = SubResource("Image_b67ba")
+image = SubResource("Image_uyh0m")
 
-[sub_resource type="Image" id="Image_uyh0m"]
+[sub_resource type="Image" id="Image_l1kkr"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wA="),
 "format": "RGBA8",
@@ -1382,9 +1383,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_er53m"]
-image = SubResource("Image_uyh0m")
+image = SubResource("Image_l1kkr")
 
-[sub_resource type="Image" id="Image_l1kkr"]
+[sub_resource type="Image" id="Image_dohyg"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///07+//6I/v/+rf7//q3+//6H/P/8Tf///wL///8A////AP///wD///8A////AP///wD///8A////Ff///5D+//6//v/+v/7//r/+//6//v/+v/7//r/+//6P////FP///wD///8A////AP///wD///8A////Av///5D+//6//v/+v4WFhdx7fXvf7vDuwv7//r/+//6//v/+v/7//o////8C////AP///wD///8A////AP///07+//6//v/+v/7//r97fXvfXFxc6XN0c+Lu8O7C/v/+v/7//r/+//6//P/8TP///wD///8A////AP///wD+//6I/v/+v/7//r/+//6/7vDuwnN0c+JcXFzpc3Rz4u7w7sL+//6//v/+v////4X///8A////AP///wD///8A/v/+rf7//r/+//6//v/+v/7//r/u8O7CaWlp5VxcXOl9fn3f/v/+v/7//r/+//6t////AP///wD///8A////AP7//q3+//6//v/+v/7//r/+//6/7vDuwmlpaeVcXFzpfX593/7//r/+//6//v/+rP///wD///8A////AP///wD+//6H/v/+v/7//r/+//6/7vDuwnR1dOJcXFzpc3Rz4vDx8ML+//6//v/+v////4X///8A////AP///wD///8A/P/8Tf7//r/+//6//v/+v3t9e99cXFzpc3Rz4vDx8ML+//6//v/+v/7//r////9L////AP///wD///8A////AP///wL+//6P/v/+v/7//r+GhobcfX593/Dx8ML+//6//v/+v/7//r/+//6O////Av///wD///8A////AP///wD///8A////FP7//o/+//6//v/+v/7//r/+//6//v/+v/7//r/+//6O////E////wD///8A////AP///wD///8A////AP///wD///8C/P/8TP///4X+//6t/v/+rP///4X///9L////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1394,9 +1395,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_10fh1"]
-image = SubResource("Image_l1kkr")
+image = SubResource("Image_dohyg")
 
-[sub_resource type="Image" id="Image_dohyg"]
+[sub_resource type="Image" id="Image_lmosa"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///2j+//61/v/+5/7//uf+//60////Zv///wL///8A////AP///wD///8A////AP///wD///8A////G/7//sH+//7//v/+//7//v/+//7//v/+//7//v/+//6/////Gv///wD///8A////AP///wD///8A////Av7//sH+//7//v/+/15eXv9QUFD/7O3s//7//v/+//7//v/+//7//r////8C////AP///wD///8A////AP///2j+//7//v/+//7//v9QUFD/Ghoa/0NDQ//s7ez//v/+//7//v/+//7/////Zf///wD///8A////AP///wD+//61/v/+//7//v/+//7/7O3s/0NDQ/8aGhr/Q0ND/+zt7P/+//7//v/+//7//rL///8A////AP///wD///8A/v/+5/7//v/+//7//v/+//7//v/s7ez/Ly8v/xoaGv9RUVH//v/+//7//v/+//7n////AP///wD///8A////AP7//uf+//7//v/+//7//v/+//7/7O3s/y8vL/8aGhr/UVFR//7//v/+//7//v/+5v///wD///8A////AP///wD+//60/v/+//7//v/+//7/7O3s/0JCQv8aGhr/Q0ND/+3u7f/+//7//v/+//7//rL///8A////AP///wD///8A////Zv7//v/+//7//v/+/1BQUP8aGhr/Q0ND/+3u7f/+//7//v/+//7//v////9k////AP///wD///8A////AP///wL+//6//v/+//7//v9gYGD/UVFR/+3u7f/+//7//v/+//7//v/+//69////Av///wD///8A////AP///wD///8A////Gv7//r/+//7//v/+//7//v/+//7//v/+//7//v/+//69////Gf///wD///8A////AP///wD///8A////AP///wD///8C////Zf7//rL+//7n/v/+5v7//rL///9k////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1406,9 +1407,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_i04bc"]
-image = SubResource("Image_dohyg")
+image = SubResource("Image_lmosa")
 
-[sub_resource type="Image" id="Image_lmosa"]
+[sub_resource type="Image" id="Image_nvxt8"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8AtbW1H7Ozs2Szs7NktbW1H////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs2SysrJzsrKyc7KysmP///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7NksrKyc7KysnOxsbFi////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7KysmOysrJjsLCwHf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7Ozs2Szs7NktbW1H////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs2SysrJzsrKyc7KysmP///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7NksrKyc7KysnOxsbFi////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7KysmOysrJjs7OzHv///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7Ozs2SysrJjs7OzHv///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs2SysrJzsrKyc7S0tGL///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7NksrKyc7KysnOxsbFi////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7KysmOysrJjs7OzHv///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1418,9 +1419,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_0ldi5"]
-image = SubResource("Image_lmosa")
+image = SubResource("Image_nvxt8")
 
-[sub_resource type="Image" id="Image_nvxt8"]
+[sub_resource type="Image" id="Image_4gdw4"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8Atra2LbOzs5Czs7OQsLCwLf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs5CysrKmsrKyprOzs4////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7OQsrKyprKysqazs7ON////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AsLCwLbOzs4+zs7OPtbW1Kf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8Atra2LbOzs5Czs7OQsLCwLf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs5CysrKmsrKyprOzs4////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7OQsrKyprKysqazs7ON////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AsLCwLbOzs4+zs7OPsrKyK////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8Atra2LbOzs5Czs7OPsrKyK////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs5CysrKmsrKyprKyso7///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7OQsrKyprKysqazs7ON////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AsLCwLbOzs4+zs7OPsrKyK////wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -1430,7 +1431,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_j55fr"]
-image = SubResource("Image_nvxt8")
+image = SubResource("Image_4gdw4")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nm41f"]
 texture = ExtResource("2_avp20")
@@ -1533,8 +1534,6 @@ TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_7ay5w")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_00d0x")
 TabContainer/styles/tabbar_background = SubResource("StyleBoxEmpty_ot4wx")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tn2k0"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0c0u6"]
 size = Vector2(251, 720)
 
@@ -1588,15 +1587,27 @@ custom_minimum_size = Vector2(220, 0)
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 4
+theme_override_constants/separation = 30
 alignment = 1
 
 [node name="Label" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(220, 120)
+custom_minimum_size = Vector2(200, 15.08)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("3_600i2")
 theme_override_font_sizes/font_size = 42
-text = "Unlock Progress"
+text = "Tasks"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="desc" type="Label" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+theme = ExtResource("5_600i2")
+text = "Up your Nature Rating to unlock minigames!"
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Progress Container" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("3_avp20")]
@@ -1606,9 +1617,9 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_600i2")
 text = "Collection"
 
-[node name="VSeparator" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
+[node name="Progress Minigame Bar" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container" index="1"]
+theme = ExtResource("5_600i2")
+max_value = 1.0
 
 [node name="Progress Container2" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("3_avp20")]
 layout_mode = 2
@@ -1617,12 +1628,9 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_600i2")
 text = "Garbage man"
 
-[node name="Progress Minigame Bar" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container2" index="2"]
-upgrade_progress_level = 15.0
-
-[node name="VSeparator3" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
+[node name="Progress Minigame Bar" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container2" index="1"]
+theme = ExtResource("5_600i2")
+max_value = 15.0
 
 [node name="Progress Container3" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("3_avp20")]
 layout_mode = 2
@@ -1631,12 +1639,9 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_600i2")
 text = "Junk recycle"
 
-[node name="Progress Minigame Bar" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container3" index="2"]
-upgrade_progress_level = 40.0
-
-[node name="VSeparator4" type="VSeparator" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxEmpty_tn2k0")
+[node name="Progress Minigame Bar" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container3" index="1"]
+theme = ExtResource("5_600i2")
+max_value = 40.0
 
 [node name="Progress Container4" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer" instance=ExtResource("3_avp20")]
 layout_mode = 2
@@ -1645,8 +1650,9 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_600i2")
 text = "Water treat"
 
-[node name="Progress Minigame Bar" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container4" index="2"]
-upgrade_progress_level = 60.0
+[node name="Progress Minigame Bar" parent="TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container4" index="1"]
+theme = ExtResource("5_600i2")
+max_value = 60.0
 
 [node name="fadeinthresh" type="Area2D" parent="."]
 position = Vector2(-42, 360)
