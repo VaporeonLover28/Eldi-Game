@@ -297,18 +297,6 @@ script = ExtResource("13_7sc4i")
 
 [node name="shoppanel" parent="CanvasLayer" instance=ExtResource("1_sdcse")]
 
-[node name="Label" type="Label" parent="CanvasLayer/shoppanel"]
-custom_minimum_size = Vector2(0, 52)
-layout_mode = 0
-offset_left = -117.0
-offset_top = 75.0
-offset_right = -12.0
-offset_bottom = 127.0
-size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("31_dhpj7")
-theme_override_font_sizes/font_size = 42
-text = "Shop"
-
 [node name="MinigameHandler" type="Node2D" parent="CanvasLayer"]
 script = ExtResource("8_lc2xo")
 

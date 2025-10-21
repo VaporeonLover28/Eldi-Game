@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://itwt77grqxjr"]
+[gd_scene load_steps=15 format=3 uid="uid://itwt77grqxjr"]
 
 [ext_resource type="Script" uid="uid://k2vk7qlpsmi3" path="res://shoppanel.gd" id="1_tn2k0"]
 [ext_resource type="Texture2D" uid="uid://dgasg0n8738b5" path="res://Art/shop_panel_teste.png" id="2_nm41f"]
 [ext_resource type="FontFile" uid="uid://daob7tcao7krl" path="res://RevMiniPixel.ttf" id="2_tn2k0"]
 [ext_resource type="FontFile" uid="uid://cfkt1yxhxnphn" path="res://themes/Jersey10-Regular.ttf" id="4_mic4b"]
+[ext_resource type="Texture2D" uid="uid://bme3k6vikbwrp" path="res://Art/eldi_game_button_sprite.png" id="5_mic4b"]
 
 [sub_resource type="Animation" id="Animation_a7euh"]
 length = 0.001
@@ -123,6 +124,31 @@ theme_override_colors/font_color = Color(0, 0.69803923, 0, 1)
 theme_override_fonts/font = ExtResource("4_mic4b")
 theme_override_font_sizes/font_size = 19
 text = "1 NR"
+
+[node name="Control" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer/shopbox2"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/shopbox2/Control"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 27.0
+offset_right = 165.0
+offset_bottom = 67.0
+texture_normal = ExtResource("5_mic4b")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/shopbox2/Control/TextureRect"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 70.0
+offset_bottom = 26.5
+scale = Vector2(0.775, 0.775)
+theme_override_colors/font_color = Color(0.3256826, 0.10036365, 2.4065375e-08, 1)
+text = "$XXXX"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="fadeinthresh" type="Area2D" parent="."]
 position = Vector2(-42, 360)
