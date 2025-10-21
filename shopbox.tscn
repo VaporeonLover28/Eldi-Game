@@ -72,6 +72,7 @@ func _on_pressed() -> void:
 "
 
 [node name="shopbox" type="HBoxContainer"]
+theme_override_constants/separation = 10
 script = ExtResource("1_r73hq")
 
 [node name="amount" parent="." instance=ExtResource("2_hnfxt")]
@@ -87,10 +88,6 @@ Income:
 Rating:"
 script = ExtResource("1_57je5")
 
-[node name="VSeparator" type="VSeparator" parent="."]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-
 [node name="buybutton" type="TextureButton" parent="."]
 clip_children = 2
 layout_mode = 2
@@ -101,12 +98,14 @@ script = SubResource("GDScript_iotsf")
 
 [node name="upgradeprice" type="Label" parent="buybutton"]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 4.0
-offset_right = 54.0
-offset_bottom = 24.0
+offset_left = -12.0
+offset_top = 2.0
+offset_right = 48.0
+offset_bottom = 22.0
+scale = Vector2(1.5, 1.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
+theme_override_fonts/font = ExtResource("3_pvkrx")
+theme_override_font_sizes/font_size = 8
 text = "$XXXX"
 horizontal_alignment = 1
 vertical_alignment = 1

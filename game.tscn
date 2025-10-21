@@ -297,52 +297,17 @@ script = ExtResource("13_7sc4i")
 
 [node name="shoppanel" parent="CanvasLayer" instance=ExtResource("1_sdcse")]
 
-[node name="TabContainer" parent="CanvasLayer/shoppanel" index="1"]
-tabs_rearrange_group = 1
-
-[node name="ScrollContainer" parent="CanvasLayer/shoppanel/TabContainer/teste 1" index="0"]
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 18.869995
-offset_top = 39.0
-offset_right = 266.74
-offset_bottom = 685.0
-
-[node name="Label" type="Label" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="0"]
+[node name="Label" type="Label" parent="CanvasLayer/shoppanel"]
 custom_minimum_size = Vector2(0, 52)
-layout_mode = 2
+layout_mode = 0
+offset_left = -117.0
+offset_top = 75.0
+offset_right = -12.0
+offset_bottom = 127.0
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("31_dhpj7")
 theme_override_font_sizes/font_size = 42
 text = "Shop"
-
-[node name="shopbox" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="1"]
-upgrade_name = "Posters"
-upgrade_type = "idle"
-
-[node name="VSeparator" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="2"]
-custom_minimum_size = Vector2(0, 20)
-
-[node name="shopbox2" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="3"]
-upgrade_name = "Lightbulbs"
-upgrade_arraypos = 1
-upgrade_type = "idle"
-
-[node name="VSeparator3" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="4"]
-custom_minimum_size = Vector2(0, 20)
-
-[node name="shopbox3" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="5"]
-upgrade_name = "Strikes"
-upgrade_arraypos = 2
-upgrade_type = "idle"
-
-[node name="VSeparator4" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="6"]
-custom_minimum_size = Vector2(0, 20)
-
-[node name="shopbox4" parent="CanvasLayer/shoppanel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="7"]
-upgrade_name = "Filters"
-upgrade_arraypos = 3
-upgrade_type = "idle"
 
 [node name="MinigameHandler" type="Node2D" parent="CanvasLayer"]
 script = ExtResource("8_lc2xo")
@@ -454,7 +419,7 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("31_dhpj7")
-text = "X"
+text = "Quit"
 horizontal_alignment = 1
 
 [connection signal="timeout" from="givemoney" to="." method="_on_givemoney_timeout"]
@@ -462,5 +427,3 @@ horizontal_alignment = 1
 [connection signal="timeout" from="CanvasLayer/MinigameHandler/MinigameAddTimer" to="CanvasLayer/MinigameHandler" method="_add_minigame_window"]
 [connection signal="pressed" from="CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer/Control/TextureButton" to="CanvasLayer/Comeback_popup" method="_hide_comeback_popup"]
 [connection signal="pressed" from="CanvasLayer/Main Menu Button" to="." method="_on_main_menu_button_pressed"]
-
-[editable path="CanvasLayer/shoppanel"]
