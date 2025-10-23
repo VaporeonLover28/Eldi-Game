@@ -14,3 +14,4 @@ extends Resource; class_name Upgrade_resource;
 @export var minigame_time : float
 @export var minigame_step_income : int
 @export var minigame_win_income : int
+@export var description : String

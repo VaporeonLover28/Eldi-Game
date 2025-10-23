@@ -1,113 +1,93 @@
-[gd_scene load_steps=7 format=3 uid="uid://daepnurnptayh"]
+[gd_scene load_steps=7 format=3 uid="uid://bbe46crkb64as"]
 
-[ext_resource type="Script" uid="uid://ck6ds12ne8yel" path="res://label.gd" id="1_57je5"]
-[ext_resource type="Script" uid="uid://b07pnb7gwwher" path="res://shopbox.gd" id="1_r73hq"]
-[ext_resource type="PackedScene" uid="uid://7mf73t2xsrwt" path="res://amount.tscn" id="2_hnfxt"]
-[ext_resource type="FontFile" uid="uid://daob7tcao7krl" path="res://RevMiniPixel.ttf" id="3_pvkrx"]
+[ext_resource type="FontFile" uid="uid://cfkt1yxhxnphn" path="res://themes/Jersey10-Regular.ttf" id="1_q4e6g"]
+[ext_resource type="Theme" uid="uid://i3hmq0x7yqxh" path="res://themes/font_temporaria.tres" id="1_r73hq"]
+[ext_resource type="Script" uid="uid://b07pnb7gwwher" path="res://shopbox.gd" id="2_hnfxt"]
 [ext_resource type="Texture2D" uid="uid://bme3k6vikbwrp" path="res://Art/eldi_game_button_sprite.png" id="5_pvkrx"]
 
-[sub_resource type="GDScript" id="GDScript_iotsf"]
-script/source = "extends TextureButton
+[sub_resource type="Theme" id="Theme_baf3l"]
 
-@onready var game = $\"../../../../../../../..\"
-@onready var shopbox = $\"../\"
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvkrx"]
+size = Vector2(173, 69)
 
-@onready var tween : Tween
-@onready var sub_tween: Tween
-@onready var sub_sub_tween: Tween
+[node name="shopbox" type="Control"]
+custom_minimum_size = Vector2(190, 100)
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_r73hq")
+script = ExtResource("2_hnfxt")
 
-func _ready() -> void:
-	#function on the game node
-	#takes info from shopbox (resource values) that you set manually
-	#in the game node receives the info
-	#and sets the text here accordingly
-	#(yes its confusing bro i did this all wrong)
-	game.assignvalues(self, \"button\")
-	self.pivot_offset = Vector2(32,16)
-
-#when pressed
-func _on_pressed() -> void:
-	#if money > price (buyable)
-	if game.money >= game.idleitemlist[shopbox.upgrade_arraypos].Price:
-		#spend money
-		game.money -= game.idleitemlist[shopbox.upgrade_arraypos].Price
-		#gives nature rating
-		game.rating += game.idleitemlist[shopbox.upgrade_arraypos].rating
-		#make price higher
-		game.upscaleprice(shopbox)
-		#update button text
-		game.assignvalues(self, \"button\")
-		#removes the rating gained for buying another of the item
-		#game.idleitemlist[shopbox.upgrade_arraypos].rating = 0
-		#gives the player the bought item
-		#when adding item: match name to add 1 to var
-		match shopbox.upgrade_arraypos:
-			0:
-				game.amountposters += 1
-			1:
-				game.amountlightbulbs += 1
-			2:
-				game.amountstrikes += 1
-			3:
-				game.amountfilters += 1
-		game.calculate_moneypers()
-		
-		tween = create_tween()
-		tween.set_parallel(true)
-		tween.tween_subtween(sub_tween)
-		tween.tween_subtween(sub_sub_tween)
-		tween.set_parallel(false)
-		tween.tween_interval(0.88)
-		tween.tween_property(self, \"rotation\", deg_to_rad(0), 0.11).set_ease(Tween.EASE_OUT_IN)
-		tween.tween_property(self, \"scale\", Vector2(1,1), 0.11).set_ease(Tween.EASE_OUT_IN)
-		
-		sub_tween = create_tween()
-		sub_tween.set_loops(2)
-		sub_tween.tween_property(self, \"rotation\", deg_to_rad(30), 0.22).set_ease(Tween.EASE_OUT_IN)
-		sub_tween.tween_property(self, \"rotation\", deg_to_rad(-30), 0.22).set_ease(Tween.EASE_OUT_IN)
-		
-		sub_sub_tween = create_tween()
-		sub_sub_tween.tween_property(self, \"scale\", Vector2(1.5,1.5), 0.44).set_ease(Tween.EASE_OUT_IN)
-		sub_sub_tween.tween_property(self, \"scale\", Vector2(1,1), 0.44).set_ease(Tween.EASE_OUT_IN)
-"
-
-[node name="shopbox" type="HBoxContainer"]
-theme_override_constants/separation = 10
-script = ExtResource("1_r73hq")
-
-[node name="amount" parent="." instance=ExtResource("2_hnfxt")]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_pvkrx")
-text = "(X)"
-
-[node name="upgradevalues" type="Label" parent="."]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_pvkrx")
-text = "Name:
-Income:
-Rating:"
-script = ExtResource("1_57je5")
-
-[node name="buybutton" type="TextureButton" parent="."]
-clip_children = 2
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("5_pvkrx")
-script = SubResource("GDScript_iotsf")
-
-[node name="upgradeprice" type="Label" parent="buybutton"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = -12.0
-offset_top = 2.0
-offset_right = 48.0
-offset_bottom = 22.0
-scale = Vector2(1.5, 1.5)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_pvkrx")
-theme_override_font_sizes/font_size = 8
+offset_top = 23.0
+offset_right = 91.0
+offset_bottom = 73.00001
+theme = SubResource("Theme_baf3l")
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "(X)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Name"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="income" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8235294, 0, 1)
+theme_override_fonts/font = ExtResource("1_q4e6g")
+theme_override_font_sizes/font_size = 19
+text = "$X/s"
+
+[node name="rating" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.69803923, 0, 1)
+theme_override_fonts/font = ExtResource("1_q4e6g")
+theme_override_font_sizes/font_size = 19
+text = "1 NR"
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 27.0
+offset_right = 165.0
+offset_bottom = 67.0
+texture_normal = ExtResource("5_pvkrx")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Control/TextureRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 14.0
+offset_right = 69.0
+offset_bottom = 30.5
+scale = Vector2(0.775, 0.775)
+theme_override_colors/font_color = Color(0.3256826, 0.10036365, 2.4065375e-08, 1)
 text = "$XXXX"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="buybutton" to="buybutton" method="_on_pressed"]
+[node name="mouserecon" type="Area2D" parent="."]
+position = Vector2(95, 50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouserecon"]
+position = Vector2(-8.5, -3.5)
+shape = SubResource("RectangleShape2D_pvkrx")
+
+[connection signal="area_entered" from="mouserecon" to="." method="_on_mouserecon_area_entered"]
+[connection signal="area_exited" from="mouserecon" to="." method="_on_mouserecon_area_exited"]

@@ -9,11 +9,10 @@ extends Node2D
 @onready var poster_5: Sprite2D = $scene/factory/poster5
 @onready var minigame_progress_panel: Control = $"CanvasLayer/Minigame Progress Panel"
 
-var startmoneygiven = false
 var minigame_started := false
 
 #variable for money system
-@onready var money : int = 5000000
+@onready var money : int = 5
 @onready var money_stacked: int = 0
 var rating : float = 0.0:
 	set(value):
@@ -58,6 +57,8 @@ var amountfilters = 0:
 		#print(result_color)
 		array.append(result_color)
 		smoke.texture.gradient.colors = array
+		
+
 
 func _ready() -> void:
 	var load_data = SaveScript.new_config.load("user://SaveFile.cfg")
@@ -94,9 +95,7 @@ func _ready() -> void:
 		
 	else:
 		print("save has failed")
-	
 
-	
 func calculate_moneypers():
 	moneypers = (idleitemlist[0].Income * amountposters) + \
 	(idleitemlist[1].Income * amountlightbulbs) + \
