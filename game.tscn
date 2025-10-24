@@ -41,6 +41,7 @@
 [ext_resource type="Script" uid="uid://c38aqtop87a4s" path="res://comeback_popup.gd" id="32_082n1"]
 [ext_resource type="PackedScene" uid="uid://dt1e4j4tetvkb" path="res://minigame_progress_panel.tscn" id="32_dhpj7"]
 [ext_resource type="Texture2D" uid="uid://cxuavbxvq0rgy" path="res://Art/eldi_game_button_concept.png" id="35_xex6t"]
+[ext_resource type="PackedScene" uid="uid://bnois5tnuorrb" path="res://introduction.tscn" id="36_aa0lp"]
 
 [sub_resource type="Gradient" id="Gradient_xa8c5"]
 offsets = PackedFloat32Array(0)
@@ -496,6 +497,9 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("31_dhpj7")
 text = "Quit"
 horizontal_alignment = 1
+
+[node name="introduction" parent="." instance=ExtResource("36_aa0lp")]
+visible = false
 
 [connection signal="timeout" from="givemoney" to="." method="_on_givemoney_timeout"]
 [connection signal="minigame_result" from="CanvasLayer/MinigameHandler" to="CanvasLayer/MinigameHandler" method="_on_minigame_result"]
