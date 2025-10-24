@@ -4,14 +4,9 @@
 
 [resource]
 script = ExtResource("1_a5k0r")
-upgrade_type = 0
 Name = "Filters"
 Price = 1600
 Income = 100.0
 rating = 30.0
-minigame_window_size = Vector2(0, 0)
-minigame_id = 0
-minigame_time = 0.0
-minigame_step_income = 0
-minigame_win_income = 0
+description = "Buy air filters for the factories' exaust pipes."
 metadata/_custom_type_script = "uid://bkxlprgvipwpt"

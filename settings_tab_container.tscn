@@ -1,8 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cyu16iwu520g7"]
+[gd_scene load_steps=2 format=3 uid="uid://cyu16iwu520g7"]
 
-[ext_resource type="PackedScene" uid="uid://iad2yh6e4mev" path="res://hotkey_rebind_button.tscn" id="1_r7kqg"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8tp0b"]
+[ext_resource type="Script" uid="uid://cdmtfcbfikic1" path="res://audio_slider.gd" id="1_vsd10"]
 
 [node name="Settings_Tab_Container" type="Control"]
 layout_mode = 3
@@ -24,7 +22,7 @@ offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 2
+current_tab = 1
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
 visible = false
@@ -45,31 +43,78 @@ theme_override_constants/margin_bottom = 24
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 64
-alignment = 1
+theme_override_constants/separation = 10
 
-[node name="Label" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
+[node name="AudioSlider" type="HBoxContainer" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "S1"
+script = ExtResource("1_vsd10")
 
-[node name="Label2" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
+[node name="Bus_name" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider"]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-text = "S2"
+text = "Master Volume"
 
-[node name="Label3" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
+[node name="HSlider" type="HSlider" parent="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider"]
+custom_minimum_size = Vector2(200, 32)
 layout_mode = 2
-text = "S3"
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.001
+value = 1.0
 
-[node name="Label4" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
+[node name="Percent" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider"]
+custom_minimum_size = Vector2(56.295, 0)
 layout_mode = 2
-text = "S4"
+text = "100%"
+horizontal_alignment = 2
 
-[node name="Label5" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
+[node name="AudioSlider2" type="HBoxContainer" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "S5"
+script = ExtResource("1_vsd10")
+
+[node name="Bus_name" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider2"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Master Volume"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider2"]
+custom_minimum_size = Vector2(200, 32)
+layout_mode = 2
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="Percent" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider2"]
+custom_minimum_size = Vector2(56.295, 0)
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 2
+
+[node name="AudioSlider3" type="HBoxContainer" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_vsd10")
+
+[node name="Bus_name" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider3"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Master Volume"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider3"]
+custom_minimum_size = Vector2(200, 32)
+layout_mode = 2
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="Percent" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider3"]
+custom_minimum_size = Vector2(56.295, 0)
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 2
 
 [node name="Graphics" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -80,119 +125,59 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
+theme_override_constants/margin_left = 69
+theme_override_constants/margin_top = 69
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Graphics/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 64
-alignment = 1
 
-[node name="Label" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
+[node name="Window_Mode" type="HBoxContainer" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "G1"
+theme_override_constants/separation = 85
 
-[node name="Label2" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer/Window_Mode"]
+custom_minimum_size = Vector2(131, 0)
 layout_mode = 2
-text = "G2"
+text = "Window Mode"
+horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
+[node name="window_mode" type="OptionButton" parent="TabContainer/Graphics/MarginContainer/VBoxContainer/Window_Mode"]
 layout_mode = 2
-text = "G3"
+selected = 0
+item_count = 4
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+popup/item_2/text = "Borderless Windowed"
+popup/item_2/id = 2
+popup/item_3/text = "Borderless Fullscreen"
+popup/item_3/id = 3
 
-[node name="Label4" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
+[node name="Res_Mode" type="HBoxContainer" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "G4"
+theme_override_constants/separation = 85
 
-[node name="Label5" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer/Res_Mode"]
+custom_minimum_size = Vector2(131, 0)
 layout_mode = 2
-text = "G5"
+text = "Resolution Mode"
+horizontal_alignment = 1
 
-[node name="Controls" type="TabBar" parent="TabContainer"]
+[node name="resolution" type="OptionButton" parent="TabContainer/Graphics/MarginContainer/VBoxContainer/Res_Mode"]
 layout_mode = 2
-metadata/_tab_index = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "1152 x 648"
+popup/item_0/id = 0
+popup/item_1/text = "1280 x 720"
+popup/item_1/id = 1
+popup/item_2/text = "1920 x 1080"
+popup/item_2/id = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controls"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
-
-[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Controls/MarginContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Controls/MarginContainer/ScrollContainer"]
-layout_mode = 2
-theme_override_constants/separation = 64
-
-[node name="HSeparator" type="HSeparator" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 12
-theme_override_styles/separator = SubResource("StyleBoxEmpty_8tp0b")
-
-[node name="Hotkey_Rebind_Button" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_r7kqg")]
-layout_mode = 2
-script = null
-
-[node name="Hotkey_Rebind_Button2" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_r7kqg")]
-layout_mode = 2
-script = null
-
-[node name="Hotkey_Rebind_Button3" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_r7kqg")]
-layout_mode = 2
-script = null
-
-[node name="HSeparator2" type="HSeparator" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 12
-theme_override_styles/separator = SubResource("StyleBoxEmpty_8tp0b")
-
-[node name="Acessibility" type="TabBar" parent="TabContainer"]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 3
-
-[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Acessibility"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Acessibility/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 64
-alignment = 1
-
-[node name="Label" type="Label" parent="TabContainer/Acessibility/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "A1"
-
-[node name="Label2" type="Label" parent="TabContainer/Acessibility/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "A2"
-
-[node name="Label3" type="Label" parent="TabContainer/Acessibility/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "A3"
-
-[node name="Label4" type="Label" parent="TabContainer/Acessibility/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "A4"
-
-[node name="Label5" type="Label" parent="TabContainer/Acessibility/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "A5"
+[connection signal="value_changed" from="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider/HSlider" to="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider2/HSlider" to="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider2" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider3/HSlider" to="TabContainer/Sound/MarginContainer/VBoxContainer/AudioSlider3" method="_on_h_slider_value_changed"]

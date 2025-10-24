@@ -4,14 +4,9 @@
 
 [resource]
 script = ExtResource("1_v3k18")
-upgrade_type = 0
 Name = "Strikes"
 Price = 150
 Income = 10.0
 rating = 7.0
-minigame_window_size = Vector2(0, 0)
-minigame_id = 0
-minigame_time = 0.0
-minigame_step_income = 0
-minigame_win_income = 0
+description = "Organize worker strikes! Protest the filth in the streets!"
 metadata/_custom_type_script = "uid://bkxlprgvipwpt"

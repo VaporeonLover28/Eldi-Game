@@ -8,7 +8,7 @@
 [sub_resource type="Theme" id="Theme_baf3l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvkrx"]
-size = Vector2(173, 69)
+size = Vector2(221, 69)
 
 [node name="shopbox" type="Control"]
 custom_minimum_size = Vector2(190, 100)
@@ -24,7 +24,9 @@ offset_right = 91.0
 offset_bottom = 73.00001
 theme = SubResource("Theme_baf3l")
 
-[node name="Label" type="Label" parent="HBoxContainer"]
+[node name="amount" type="Label" parent="HBoxContainer"]
+visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "(X)"
@@ -63,10 +65,10 @@ offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureButton" parent="Control"]
 layout_mode = 0
-offset_left = 101.0
-offset_top = 27.0
-offset_right = 165.0
-offset_bottom = 67.0
+offset_left = 144.0
+offset_top = 26.0
+offset_right = 208.0
+offset_bottom = 66.0
 texture_normal = ExtResource("5_pvkrx")
 stretch_mode = 5
 
@@ -86,7 +88,7 @@ vertical_alignment = 1
 position = Vector2(95, 50)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mouserecon"]
-position = Vector2(-8.5, -3.5)
+position = Vector2(15.5, -3.5)
 shape = SubResource("RectangleShape2D_pvkrx")
 
 [connection signal="area_entered" from="mouserecon" to="." method="_on_mouserecon_area_entered"]

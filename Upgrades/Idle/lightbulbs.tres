@@ -4,13 +4,8 @@
 
 [resource]
 script = ExtResource("1_q5v2c")
-upgrade_type = 0
 Name = "Lightbulbs"
 Price = 30
 Income = 4.0
 rating = 1.0
-minigame_window_size = Vector2(0, 0)
-minigame_id = 0
-minigame_time = 0.0
-minigame_step_income = 0
-minigame_win_income = 0
+description = "Change lightbulb models to be more environmentally friendly."

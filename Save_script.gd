@@ -25,8 +25,7 @@ func _save_game():
 	new_config.set_value("Globalvaribles", "last_date", Time.get_unix_time_from_system())
 	new_config.save("user://SaveFile.cfg")
 	print("save")
-	
+
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		_save_game()
-	

@@ -89,12 +89,13 @@ func _ready() -> void:
 		calculate_moneypers()
 		update_rating()
 		$CanvasLayer/Comeback_popup.visible = true
-		$CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer/Label.text = "It looks like the game didn't save the last time you played. Game will resume as if no time has passed."
+		$CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer/Label.text = "We weren't able to find the last time you played. No idle income was gained."
 		SaveScript.new_config.set_value("Globalvaribles", "last_date", 0)
 		SaveScript.new_config.save("user://SaveFile.cfg")
 		
 	else:
 		print("save has failed")
+		get_tree().quit()
 
 func calculate_moneypers():
 	moneypers = (idleitemlist[0].Income * amountposters) + \
@@ -139,7 +140,6 @@ func _on_givemoney_timeout() -> void:
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("create minigame"):
 		SaveScript.save_signal.emit()
-
 
 func _on_main_menu_button_pressed() -> void:
 	SaveScript.save_signal.emit()

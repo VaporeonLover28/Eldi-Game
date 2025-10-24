@@ -296,6 +296,19 @@ vertical_alignment = 1
 script = ExtResource("13_7sc4i")
 
 [node name="shoppanel" parent="CanvasLayer" instance=ExtResource("1_sdcse")]
+offset_top = 42.0
+
+[node name="PanelContainer" parent="CanvasLayer/shoppanel" index="0"]
+offset_bottom = 638.0
+
+[node name="Label" parent="CanvasLayer/shoppanel/PanelContainer/MarginContainer/VBoxContainer" index="0"]
+text = " Shop"
+
+[node name="fadeinthresh" parent="CanvasLayer/shoppanel" index="1"]
+position = Vector2(-42, 318)
+
+[node name="fadeoutthresh" parent="CanvasLayer/shoppanel" index="2"]
+position = Vector2(66, 318)
 
 [node name="MinigameHandler" type="Node2D" parent="CanvasLayer"]
 script = ExtResource("8_lc2xo")
@@ -387,6 +400,9 @@ text = "Proceed"
 
 [node name="Minigame Progress Panel" parent="CanvasLayer" instance=ExtResource("32_dhpj7")]
 
+[node name="Label" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="0"]
+theme_override_font_sizes/font_size = 32
+
 [node name="Main Menu Button" type="TextureButton" parent="CanvasLayer"]
 offset_right = 64.0
 offset_bottom = 40.0
@@ -415,3 +431,10 @@ horizontal_alignment = 1
 [connection signal="timeout" from="CanvasLayer/MinigameHandler/MinigameAddTimer" to="CanvasLayer/MinigameHandler" method="_add_minigame_window"]
 [connection signal="pressed" from="CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer/Control/TextureButton" to="CanvasLayer/Comeback_popup" method="_hide_comeback_popup"]
 [connection signal="pressed" from="CanvasLayer/Main Menu Button" to="." method="_on_main_menu_button_pressed"]
+
+[editable path="CanvasLayer/shoppanel"]
+[editable path="CanvasLayer/Minigame Progress Panel"]
+[editable path="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container"]
+[editable path="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container2"]
+[editable path="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container3"]
+[editable path="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container4"]
