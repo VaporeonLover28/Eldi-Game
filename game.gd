@@ -78,7 +78,7 @@ func _ready() -> void:
 		+ " hours ago. You have generated " + str(money_stacked) + " money."
 		SaveScript.new_config.set_value("Globalvaribles", "last_date", 0)
 		SaveScript.new_config.save("user://SaveFile.cfg")
-		
+	
 	elif load_data == OK and SaveScript.new_config.get_value("Globalvaribles", "last_date") == 0:
 		money = SaveScript.new_config.get_value("Globalvaribles", "money")
 		rating = SaveScript.new_config.get_value("Globalvaribles", "rating")
@@ -92,10 +92,11 @@ func _ready() -> void:
 		$CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer/Label.text = "We weren't able to find the last time you played. No idle income was gained."
 		SaveScript.new_config.set_value("Globalvaribles", "last_date", 0)
 		SaveScript.new_config.save("user://SaveFile.cfg")
-		
-	else:
-		print("save has failed")
-		get_tree().quit()
+	##No save file, first playthrough
+	#else:
+		#"Welcome to Eldi Game! What you are about to see is a previous player's savefile.\n\n"+\
+		#"His goal was to make as much money as possible, but doing so completely destroyed the environment.\n"+\
+		#"It's your job to restore the life of the city."
 
 func calculate_moneypers():
 	moneypers = (idleitemlist[0].Income * amountposters) + \

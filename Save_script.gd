@@ -27,5 +27,5 @@ func _save_game():
 	print("save")
 
 func _notification(what):
-	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST and get_parent().get_node_or_null("game") != null:
 		_save_game()
