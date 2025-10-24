@@ -26,6 +26,13 @@ func _save_game():
 	new_config.save("user://SaveFile.cfg")
 	print("save")
 
+func _delete_save():
+	print("try to delete")
+	print(DirAccess.dir_exists_absolute("user://SaveFile.cfg"))
+	if DirAccess.dir_exists_absolute("user://SaveFile.cfg") != null:
+		print("delete")
+		DirAccess.remove_absolute("user://SaveFile.cfg")
+
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST and get_parent().get_node_or_null("game") != null:
 		_save_game()

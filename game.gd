@@ -57,8 +57,6 @@ var amountfilters = 0:
 		#print(result_color)
 		array.append(result_color)
 		smoke.texture.gradient.colors = array
-		
-
 
 func _ready() -> void:
 	var load_data = SaveScript.new_config.load("user://SaveFile.cfg")
@@ -92,11 +90,10 @@ func _ready() -> void:
 		$CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer/Label.text = "We weren't able to find the last time you played. No idle income was gained."
 		SaveScript.new_config.set_value("Globalvaribles", "last_date", 0)
 		SaveScript.new_config.save("user://SaveFile.cfg")
-	##No save file, first playthrough
-	#else:
-		#"Welcome to Eldi Game! What you are about to see is a previous player's savefile.\n\n"+\
-		#"His goal was to make as much money as possible, but doing so completely destroyed the environment.\n"+\
-		#"It's your job to restore the life of the city."
+	##no save file
+	else:
+		$CanvasLayer/Comeback_popup.visible = false
+		$introduction.visible = true
 
 func calculate_moneypers():
 	moneypers = (idleitemlist[0].Income * amountposters) + \
@@ -105,19 +102,22 @@ func calculate_moneypers():
 	(idleitemlist[3].Income * amountfilters)
 	$CanvasLayer/toppanel/incomelabel.text = "Income: $" + str(moneypers) + "/s"
 
-#changing the text of each button
-func assignvalues(object, type):
-	if type == "button":
-		if object.get_parent().upgrade_type == "idle":
-			object.get_child(0).text = ("$" + str(idleitemlist[object.get_parent().upgrade_arraypos].Price))
-	else:
-		object.text = (str(idleitemlist[object.get_parent().upgrade_arraypos].Name)\
-		 + "\n $" + str(idleitemlist[object.get_parent().upgrade_arraypos].Income)\
-		 + "/s\nNR:" + str(idleitemlist[object.get_parent().upgrade_arraypos].rating))
-
-#makes the prices grow
-func upscaleprice(shopbox):
-	idleitemlist[shopbox.upgrade_arraypos].Price = round(idleitemlist[shopbox.upgrade_arraypos].Price * 1.16666666666)
+func buy(item:Resource):
+	if item.Price <= money:
+		print(item.Name)
+		match item.Name:
+			"Posters":
+				amountposters += 1
+			"Lightbulbs":
+				amountlightbulbs += 1
+			"Strikes":
+				amountstrikes += 1
+			"Filters":
+				amountfilters += 1
+		money -= item.Price
+		rating += item.rating
+		item.Price = round(item.Price * 1.16666666666)
+		calculate_moneypers()
 
 func update_rating():
 	if rating >= 1 and unlocked_tasks.size() < 1:
@@ -131,10 +131,6 @@ func update_rating():
 	
 	minigame_progress_panel.update_bars()
 
-#when adding new item:
-#add new equation with item array pos 
-#item.moneyitgivesyou * item amount
-#repeat for all items
 func _on_givemoney_timeout() -> void:
 	money += moneypers
 

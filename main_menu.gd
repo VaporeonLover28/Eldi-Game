@@ -43,3 +43,6 @@ func _on_resolution_item_selected(index: int) -> void:
 			DisplayServer.window_set_size(Vector2i(1280, 720))
 		2:
 			DisplayServer.window_set_size(Vector2i(1920, 1080))
+
+func _on_delete_button_up() -> void:
+	SaveScript._delete_save()
