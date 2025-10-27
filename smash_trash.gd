@@ -21,7 +21,6 @@ signal clicked_moused
 @onready var critical_points_chosen: Array = critical_points_array.pick_random()
 var times_smashed_correctly : int = 0
 @onready var times_to_smash : int = critical_points_chosen.size()
-var trash_in_area : Array
 
 var can_crush := true
 
@@ -43,26 +42,10 @@ func _process(delta: float) -> void:
 func crush():
 	can_crush = false
 	var tween = create_tween()
-	tween.set_ease(Tween.EASE_OUT_IN)
-	tween.set_trans(Tween.TRANS_EXPO)
-	tween.tween_property(prensa, "position", Vector2.ZERO, 1)
-	tween.tween_callback(func():for trash in trash_in_area:
-		var crushed = cru_trash.instantiate()
-		times_smashed_correctly += 1
-		add_child(crushed)
-		crushed.global_position = trash.global_position
-		trash.queue_free())
+	tween.tween_property(prensa, "position", Vector2.ZERO, 0.75).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_EXPO)
 	tween.tween_callback(func():animation_wait_time.start(1))
-	tween.set_ease(Tween.EASE_IN)
-	tween.set_trans(Tween.TRANS_LINEAR)
-	tween.tween_property(prensa, "position", Vector2(0, -170), 1)
+	tween.tween_property(prensa, "position", Vector2(0, -170), 1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_LINEAR)
 	tween.tween_callback(func():can_crush = true)
-
-func _on_trash_detection_body_entered(body: Node2D) -> void:
-	trash_in_area.append(body)
-
-func _on_trash_detection_body_exited(body: Node2D) -> void:
-	trash_in_area.erase(body)
 
 func _on_timer_timeout() -> void:
 	if times_smashed_correctly == times_to_smash:
@@ -72,3 +55,10 @@ func _on_timer_timeout() -> void:
 
 func _on_clicked_moused() -> void:
 	get_tree().quit()
+
+func _on_collision_body_entered(body: Node2D) -> void:
+	var crushed = cru_trash.instantiate()
+	times_smashed_correctly += 1
+	add_child(crushed)
+	crushed.global_position = body.global_position
+	body.queue_free()

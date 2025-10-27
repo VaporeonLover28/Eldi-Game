@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://re103rywclgo"]
+[gd_scene load_steps=5 format=3 uid="uid://re103rywclgo"]
 
 [ext_resource type="Script" uid="uid://btnchlcahk6dx" path="res://catar_lixo.gd" id="1_op31q"]
+[ext_resource type="Texture2D" uid="uid://kditrbr4nq8j" path="res://Art/CalçadaCidadePT1.png" id="2_pv8s0"]
+[ext_resource type="Texture2D" uid="uid://b8fc3f4jip07t" path="res://Art/CalçadaBueiro.png" id="3_0vg2g"]
+[ext_resource type="Texture2D" uid="uid://c5lcx7ol0xd" path="res://Art/LixeiraEldi_comlixo.png" id="4_0vg2g"]
 
 [node name="Collection" type="Node2D"]
 script = ExtResource("1_op31q")
@@ -9,9 +12,56 @@ script = ExtResource("1_op31q")
 wait_time = 0.75
 autostart = true
 
+[node name="CalçadaCidadePt1" type="Sprite2D" parent="."]
+position = Vector2(130, 130)
+texture = ExtResource("2_pv8s0")
+
+[node name="CalçadaBueiro" type="Sprite2D" parent="."]
+position = Vector2(141, 139)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_0vg2g")
+
+[node name="CalçadaCidadePt2" type="Sprite2D" parent="."]
+position = Vector2(16, 201.4)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_pv8s0")
+
+[node name="CalçadaCidadePt3" type="Sprite2D" parent="."]
+position = Vector2(274.00003, 72)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_pv8s0")
+
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 320.0
-offset_bottom = 320.0
-color = Color(0, 1, 0.95, 1)
+offset_left = 216.0
+offset_top = 148.0
+offset_right = 222.0
+offset_bottom = 154.0
+color = Color(0.08235294, 0.101960786, 0.12156863, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 309.0
+offset_top = 128.0
+offset_right = 359.0
+offset_bottom = 628.0
+color = Color(0.08235294, 0.101960786, 0.12156863, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = -59.0
+offset_top = 298.0
+offset_right = 441.0
+offset_bottom = 398.0
+color = Color(0.08235294, 0.101960786, 0.12156863, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = -59.0
+offset_top = 298.0
+offset_right = 441.0
+offset_bottom = 398.0
+color = Color(0.08235294, 0.101960786, 0.12156863, 1)
+
+[node name="LixeiraEldiComlixo" type="Sprite2D" parent="."]
+position = Vector2(259, 6)
+scale = Vector2(0.395, 0.395)
+texture = ExtResource("4_0vg2g")
 
 [connection signal="timeout" from="Timer" to="." method="_on_spawn_trash_timeout"]

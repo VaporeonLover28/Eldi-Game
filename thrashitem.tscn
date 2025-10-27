@@ -1,11 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://d1kwyqejlrafq"]
 
-[ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="1_f7cmv"]
+[ext_resource type="Texture2D" uid="uid://5vqjvti80tfy" path="res://Art/lixo_minigame.png" id="1_ktkhe"]
 [ext_resource type="Script" uid="uid://d1s3prw7xhomc" path="res://collectabletrash.gd" id="2_gh0o4"]
 
 [node name="CollectableTrash" type="TextureButton"]
-scale = Vector2(0.3, 0.3)
-texture_normal = ExtResource("1_f7cmv")
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+scale = Vector2(2, 2)
 script = ExtResource("2_gh0o4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ktkhe")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

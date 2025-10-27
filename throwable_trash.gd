@@ -12,11 +12,12 @@ func _ready() -> void:
 	game_started = true
 	
 func _physics_process(delta: float) -> void:
-	if Input.is_action_pressed("click") and was_throwed == false and game_started:
-		_calculating_throw(delta)
+	if !was_throwed and game_started:
+		if Input.is_action_pressed("click"):
+			_calculating_throw(delta)
 		
-	if Input.is_action_just_released("click") and was_throwed == false and game_started:
-		_throw()
+		if Input.is_action_just_released("click"):
+			_throw()
 
 func _calculating_throw(delta):
 	pulling_distance = get_viewport().get_mouse_position() - self.global_position
@@ -31,6 +32,7 @@ func _calculating_throw(delta):
 			break
 
 func _throw():
+	visible = true
 	was_throwed = true
 	self.freeze = false
 	self.sleeping = false

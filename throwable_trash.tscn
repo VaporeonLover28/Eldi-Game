@@ -6,6 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_6fqbt"]
 
 [node name="Throwable Trash" type="RigidBody2D"]
+visible = false
 disable_mode = 1
 script = ExtResource("1_ut35g")
 

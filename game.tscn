@@ -12,7 +12,6 @@
 [ext_resource type="Script" uid="uid://cdrgsp27wsugy" path="res://minigame_base.gd" id="8_lc2xo"]
 [ext_resource type="Texture2D" uid="uid://b3t8rlvy2j5ku" path="res://Art/FabricaPT1.png" id="9_qhcbd"]
 [ext_resource type="Texture2D" uid="uid://bv763pvvtp66n" path="res://Art/FabricaPT2.png" id="10_f1jbl"]
-[ext_resource type="Texture2D" uid="uid://6b403w8c32nb" path="res://icon.svg" id="11_e8heu"]
 [ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
 [ext_resource type="Texture2D" uid="uid://d2hexy7tgtp2m" path="res://Art/FabricaPT3.png" id="11_vaj68"]
 [ext_resource type="Resource" uid="uid://cqx6nuat2ocgr" path="res://Upgrades/Task/collection.tres" id="12_pyw6c"]
@@ -78,55 +77,6 @@ metadata/_edit_vertical_guides_ = [640.0, 300.0, 300.0]
 metadata/_edit_horizontal_guides_ = [41.0, -317.0]
 
 [node name="scene" type="Node2D" parent="."]
-
-[node name="factory_placeholder" type="Node2D" parent="scene"]
-visible = false
-position = Vector2(640, 360)
-scale = Vector2(1.5, 0.96)
-
-[node name="fabbrica" type="Sprite2D" parent="scene/factory_placeholder"]
-rotation = 0.785398
-scale = Vector2(2.5, 2.521)
-texture = ExtResource("11_e8heu")
-
-[node name="chamine" type="Sprite2D" parent="scene/factory_placeholder"]
-position = Vector2(-94.6667, -146.875)
-rotation = 0.785398
-scale = Vector2(0.655, 0.661)
-texture = ExtResource("11_e8heu")
-
-[node name="Label" type="Label" parent="scene/factory_placeholder"]
-offset_left = -95.3333
-offset_top = -119.792
-offset_right = 110.667
-offset_bottom = -62.7917
-scale = Vector2(1, 1.5)
-theme_override_font_sizes/font_size = 41
-text = "fabbrica"
-
-[node name="poster1" type="Sprite2D" parent="scene/factory_placeholder"]
-visible = false
-position = Vector2(-127.333, 66.6667)
-scale = Vector2(0.387097, 0.478261)
-texture = ExtResource("11_e8heu")
-
-[node name="poster2" type="Sprite2D" parent="scene/factory_placeholder"]
-visible = false
-position = Vector2(88.6667, 129.167)
-scale = Vector2(0.387097, 0.478261)
-texture = ExtResource("11_e8heu")
-
-[node name="poster3" type="Sprite2D" parent="scene/factory_placeholder"]
-visible = false
-position = Vector2(152.667, 17.7083)
-scale = Vector2(0.387097, 0.478261)
-texture = ExtResource("11_e8heu")
-
-[node name="poster4" type="Sprite2D" parent="scene/factory_placeholder"]
-visible = false
-position = Vector2(-168, -36.4583)
-scale = Vector2(0.387097, 0.478261)
-texture = ExtResource("11_e8heu")
 
 [node name="factory" type="Node2D" parent="scene"]
 position = Vector2(642, 440)
@@ -474,6 +424,32 @@ text = "Proceed"
 
 [node name="Label" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="0"]
 theme_override_font_sizes/font_size = 32
+
+[node name="desc" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="1"]
+text = "Up your Nature Rating to unlock minigames!
+
+Play minigames to get money!"
+
+[node name="Label" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container" index="0"]
+text = "Trash Collection"
+
+[node name="Label" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container2" index="0"]
+text = "Work as a Garbage Man"
+
+[node name="Label" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container3" index="0"]
+text = "Trash Crush!"
+
+[node name="Label" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer/Progress Container4" index="0"]
+text = "Fix sewage systems"
+
+[node name="desc2" type="Label" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="6"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+theme = ExtResource("13_e36ub")
+text = "The progress bar shows how far along you are in unlocking the minigame."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Main Menu Button" type="TextureButton" parent="CanvasLayer"]
 offset_right = 64.0

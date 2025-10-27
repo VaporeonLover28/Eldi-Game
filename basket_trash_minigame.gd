@@ -10,7 +10,9 @@ extends Node2D
 func _ready() -> void:
 	if !game.minigame_started:
 		game.minigame_started = true
-	winning_detection_area.position = Vector2(316, randi_range(0 , 250))
+	winning_detection_area.position = Vector2(360 + randf_range(0, 30), 72)
+	$"Throwable Trash".position.x += randf_range(-15, 10)
+	$gari.position.x = $"Throwable Trash".position.x - 15
 
 func _on_winning_detection_area_body_entered(body: Node2D) -> void:
 	minigame_handler.minigame_result.emit(true, minigame_window)

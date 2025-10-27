@@ -19,5 +19,5 @@ func _on_spawn_trash_timeout() -> void:
 	var lixo_inst = trashitem.instantiate()
 	#lixo_inst.position = Vector2(randf_range(0, minigame_window_size.x), randf_range(0, minigame_window_size.y))
 	#print(lixo_inst.position)
-	lixo_inst.position = Vector2(randf_range(10, minigame_window.size.x -30), randf_range(10, minigame_window.size.y -30))
+	lixo_inst.position = Vector2(randf_range(10, minigame_window.size.x -82), randf_range(10, minigame_window.size.y -82))
 	add_child(lixo_inst)

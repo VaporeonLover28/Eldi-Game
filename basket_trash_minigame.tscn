@@ -1,11 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://b55fnwsmsmfaf"]
+[gd_scene load_steps=10 format=3 uid="uid://b55fnwsmsmfaf"]
 
 [ext_resource type="Script" uid="uid://d3u7pdgo25vt0" path="res://basket_trash_minigame.gd" id="1_so3n6"]
 [ext_resource type="PackedScene" uid="uid://bxmssj0v0vab0" path="res://throwable_trash.tscn" id="2_no2ab"]
 [ext_resource type="Texture2D" uid="uid://bj5td3akpck7r" path="res://Art/Caminhao sem lixo PNG (1).png" id="3_no2ab"]
+[ext_resource type="Texture2D" uid="uid://cuqisrc54rhg2" path="res://Art/Gari PNG.png" id="4_lo54s"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lo54s"]
-size = Vector2(114, 187)
+[sub_resource type="SpriteFrames" id="SpriteFrames_idksv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lo54s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_no2ab"]
+a = Vector2(18, -43)
+b = Vector2(-50, 42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_no2ab"]
 size = Vector2(388, 20)
@@ -20,22 +33,30 @@ size = Vector2(17, 823.25)
 script = ExtResource("1_so3n6")
 
 [node name="Arc" type="Line2D" parent="."]
+default_color = Color(0.34978858, 0, 0.014074695, 1)
+
+[node name="gari" type="AnimatedSprite2D" parent="."]
+position = Vector2(53, 251)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_idksv")
+autoplay = "default"
 
 [node name="Throwable Trash" parent="." instance=ExtResource("2_no2ab")]
-position = Vector2(55, 248)
+position = Vector2(67, 253)
 sleeping = true
 freeze = true
 
 [node name="Winning Detection Area" type="Area2D" parent="."]
 position = Vector2(316, 72)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Winning Detection Area"]
-position = Vector2(-129, 113.5)
-shape = SubResource("RectangleShape2D_lo54s")
-
 [node name="Sprite2D" type="Sprite2D" parent="Winning Detection Area"]
-position = Vector2(-121, 124)
+position = Vector2(-58, 150)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_no2ab")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Winning Detection Area"]
+position = Vector2(-43, 145)
+shape = SubResource("SegmentShape2D_no2ab")
 
 [node name="Dead Zone 1" type="Area2D" parent="."]
 position = Vector2(150, 347)
@@ -57,12 +78,9 @@ shape = SubResource("RectangleShape2D_b5687")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_right = 320.0
-offset_bottom = 320.0
-color = Color(1, 0, 0, 1)
-
-[node name="GariPng" type="Sprite2D" parent="."]
-position = Vector2(31, 230)
+offset_right = 435.0
+offset_bottom = 397.0
+color = Color(0.20374647, 0.587848, 0.6949305, 1)
 
 [connection signal="body_entered" from="Winning Detection Area" to="." method="_on_winning_detection_area_body_entered"]
 [connection signal="body_entered" from="Dead Zone 1" to="." method="_on_dead_zone_body_entered"]
