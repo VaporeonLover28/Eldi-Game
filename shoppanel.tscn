@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://itwt77grqxjr"]
+[gd_scene load_steps=14 format=3 uid="uid://itwt77grqxjr"]
 
 [ext_resource type="Script" uid="uid://k2vk7qlpsmi3" path="res://shoppanel.gd" id="1_tn2k0"]
 [ext_resource type="Texture2D" uid="uid://dgasg0n8738b5" path="res://Art/shop_panel_teste.png" id="2_nm41f"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bbe46crkb64as" path="res://shopbox.tscn" id="4_tn2k0"]
 [ext_resource type="Resource" uid="uid://b2am8ylgpa7sb" path="res://Upgrades/Idle/posters.tres" id="5_baf3l"]
 [ext_resource type="Resource" uid="uid://ccooy6umagt3y" path="res://Upgrades/Idle/lightbulbs.tres" id="6_kqp8a"]
+[ext_resource type="Resource" uid="uid://dc30bmhknmap8" path="res://Upgrades/Idle/plants.tres" id="7_kqp8a"]
 [ext_resource type="Resource" uid="uid://3s1b4a8vckwk" path="res://Upgrades/Idle/strikes.tres" id="7_mmhqq"]
 [ext_resource type="Resource" uid="uid://brqcaslvxr0ne" path="res://Upgrades/Idle/filters.tres" id="8_wrxe8"]
 
@@ -67,6 +68,10 @@ item = ExtResource("5_baf3l")
 [node name="shopbox2" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_tn2k0")]
 layout_mode = 2
 item = ExtResource("6_kqp8a")
+
+[node name="shopbox5" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_tn2k0")]
+layout_mode = 2
+item = ExtResource("7_kqp8a")
 
 [node name="shopbox3" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_tn2k0")]
 layout_mode = 2

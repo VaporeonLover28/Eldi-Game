@@ -57,6 +57,7 @@ var amountfilters = 0:
 		#print(result_color)
 		array.append(result_color)
 		smoke.texture.gradient.colors = array
+var amountplants = 0
 
 func _ready() -> void:
 	var load_data = SaveScript.new_config.load("user://SaveFile.cfg")
@@ -67,6 +68,7 @@ func _ready() -> void:
 		amountlightbulbs = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[1]
 		amountstrikes = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[2]
 		amountfilters = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[3]
+		amountplants = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[4]
 		calculate_moneypers()
 		update_rating()
 		var time_diference = (Time.get_unix_time_from_system() - SaveScript.new_config.get_value("Globalvaribles", "last_date"))
@@ -84,6 +86,7 @@ func _ready() -> void:
 		amountlightbulbs = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[1]
 		amountstrikes = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[2]
 		amountfilters = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[3]
+		amountplants = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[4]
 		calculate_moneypers()
 		update_rating()
 		$CanvasLayer/Comeback_popup.visible = true
@@ -99,12 +102,12 @@ func calculate_moneypers():
 	moneypers = (idleitemlist[0].Income * amountposters) + \
 	(idleitemlist[1].Income * amountlightbulbs) + \
 	(idleitemlist[2].Income * amountstrikes) + \
-	(idleitemlist[3].Income * amountfilters)
+	(idleitemlist[3].Income * amountfilters) + \
+	(idleitemlist[4].Income * amountplants)
 	$CanvasLayer/toppanel/incomelabel.text = "Income: $" + str(moneypers) + "/s"
 
 func buy(item:Resource):
 	if item.Price <= money:
-		print(item.Name)
 		match item.Name:
 			"Posters":
 				amountposters += 1
@@ -114,6 +117,8 @@ func buy(item:Resource):
 				amountstrikes += 1
 			"Filters":
 				amountfilters += 1
+			"Plants":
+				amountplants += 1
 		money -= item.Price
 		rating += item.rating
 		item.Price = round(item.Price * 1.16666666666)

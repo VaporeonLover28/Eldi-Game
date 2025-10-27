@@ -34,4 +34,4 @@ func _spawn_minigame():
 	tween.set_parallel()
 	tween.tween_property(self, "position", position - Vector2(80, 80), 1)
 	tween.tween_property(minigame_subviewport_inst, "size", minigame_chosen.minigame_window_size, 1)
-	tween.tween_callback(func():print(minigame_subviewport_inst.size))
+	#tween.tween_callback(func():print(minigame_subviewport_inst.size))

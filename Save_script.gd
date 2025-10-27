@@ -16,7 +16,8 @@ func _save_game():
 	new_config.set_value("Globalvaribles", "upgrades", [get_parent().get_node("game").amountposters,\
 	get_parent().get_node("game").amountlightbulbs,\
 	get_parent().get_node("game").amountstrikes,\
-	get_parent().get_node("game").amountfilters])
+	get_parent().get_node("game").amountfilters,\
+	get_parent().get_node("game").amountplants])
 	var progress_numbers: Array
 	for item in get_parent().get_node("game").minigame_progress_panel.v_box_container.get_children(true):
 		if item is VBoxContainer:

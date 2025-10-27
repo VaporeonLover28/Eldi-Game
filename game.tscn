@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=48 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://ccooy6umagt3y" path="res://Upgrades/Idle/lightbulbs.tres" id="4_j5wjh"]
 [ext_resource type="Resource" uid="uid://3s1b4a8vckwk" path="res://Upgrades/Idle/strikes.tres" id="5_vef74"]
 [ext_resource type="Resource" uid="uid://brqcaslvxr0ne" path="res://Upgrades/Idle/filters.tres" id="6_hve3p"]
+[ext_resource type="Resource" uid="uid://dc30bmhknmap8" path="res://Upgrades/Idle/plants.tres" id="7_eu6ph"]
 [ext_resource type="Script" uid="uid://cfhw3rjapta3l" path="res://camera_2d.gd" id="7_f1jbl"]
 [ext_resource type="Script" uid="uid://cdrgsp27wsugy" path="res://minigame_base.gd" id="8_lc2xo"]
 [ext_resource type="Texture2D" uid="uid://b3t8rlvy2j5ku" path="res://Art/FabricaPT1.png" id="9_qhcbd"]
@@ -71,7 +72,7 @@ PanelContainer/styles/panel = SubResource("StyleBoxTexture_082n1")
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_feb5d")
-idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResource("4_j5wjh"), ExtResource("5_vef74"), ExtResource("6_hve3p")])
+idleitemlist = Array[ExtResource("2_7jktm")]([ExtResource("3_eow3j"), ExtResource("4_j5wjh"), ExtResource("5_vef74"), ExtResource("6_hve3p"), ExtResource("7_eu6ph")])
 taskitemlist = Array[ExtResource("2_7jktm")]([ExtResource("12_pyw6c"), ExtResource("17_e36ub"), ExtResource("18_hb5m1"), ExtResource("19_x5p1p")])
 metadata/_edit_vertical_guides_ = [640.0, 300.0, 300.0]
 metadata/_edit_horizontal_guides_ = [41.0, -317.0]

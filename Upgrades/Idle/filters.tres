@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource("1_a5k0r")
 Name = "Filters"
-Price = 1600
-Income = 100.0
+Price = 3200
+Income = 150.0
 rating = 30.0
 description = "Buy air filters for the factories' exaust pipes."
 metadata/_custom_type_script = "uid://bkxlprgvipwpt"

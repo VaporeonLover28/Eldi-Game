@@ -27,7 +27,7 @@ var can_crush := true
 func _ready() -> void:
 	if !game.minigame_started:
 		game.minigame_started = true
-	print(critical_points_chosen)
+	#print(critical_points_chosen)
 	timer_smash_trash.start(15)
 	for time in critical_points_chosen:
 		var inst = nor_trash.instantiate()

@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 func set_text2(step_money):
 	text = "+$" + str(step_money)
-	print(text)
+	#print(text)

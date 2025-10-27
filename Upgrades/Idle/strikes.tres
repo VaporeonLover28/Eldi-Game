@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource("1_v3k18")
 Name = "Strikes"
-Price = 150
-Income = 10.0
-rating = 7.0
+Price = 600
+Income = 60.0
+rating = 10.0
 description = "Organize worker strikes! Protest the filth in the streets!"
 metadata/_custom_type_script = "uid://bkxlprgvipwpt"
