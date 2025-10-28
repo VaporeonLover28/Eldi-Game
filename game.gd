@@ -125,6 +125,8 @@ func buy(item:Resource):
 		calculate_moneypers()
 
 func update_rating():
+	$CanvasLayer/toppanel/naturelabel.text = "Nature Rating: " + str(rating) + "%"
+	
 	if rating >= 1 and unlocked_tasks.size() < 1:
 		unlocked_tasks.append(load("res://Upgrades/Task/collection.tres"))
 	if rating >= 15 and unlocked_tasks.size() < 2:
