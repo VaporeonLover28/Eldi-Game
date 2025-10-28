@@ -1,26 +1,24 @@
-[gd_scene load_steps=10 format=3 uid="uid://yov2v5tjkvlc"]
+[gd_scene load_steps=12 format=3 uid="uid://yov2v5tjkvlc"]
 
 [ext_resource type="Script" uid="uid://bft3605fmdykp" path="res://main_menu.gd" id="1_iwwwm"]
 [ext_resource type="Texture2D" uid="uid://be385l13umh5e" path="res://Art/eldi_game_menu_concept.png" id="2_fu7sn"]
 [ext_resource type="FontFile" uid="uid://cfkt1yxhxnphn" path="res://themes/Jersey10-Regular.ttf" id="3_glbon"]
 [ext_resource type="Texture2D" uid="uid://bme3k6vikbwrp" path="res://Art/eldi_game_button_sprite.png" id="4_nlkkf"]
+[ext_resource type="Theme" uid="uid://ctr86ut8pj7uu" path="res://btn.tres" id="4_qe12f"]
+[ext_resource type="Theme" uid="uid://bikx44dko5wb4" path="res://main_menu.tres" id="5_8qtwp"]
 [ext_resource type="Script" uid="uid://cdmtfcbfikic1" path="res://audio_slider.gd" id="5_qe12f"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8qtwp"]
-texture = ExtResource("4_nlkkf")
+[ext_resource type="Texture2D" uid="uid://ct45mhtqyg0g" path="res://Logo_temp_ELDI.png" id="8_8qtwp"]
 
 [sub_resource type="Theme" id="Theme_dy7ct"]
-Button/styles/focus = SubResource("StyleBoxTexture_8qtwp")
-Button/styles/hover = SubResource("StyleBoxTexture_8qtwp")
-Button/styles/normal = SubResource("StyleBoxTexture_8qtwp")
-Button/styles/pressed = SubResource("StyleBoxTexture_8qtwp")
 
-[sub_resource type="SystemFont" id="SystemFont_mko6x"]
-font_names = PackedStringArray("Impact")
+[sub_resource type="Theme" id="Theme_w44g7"]
 
-[sub_resource type="SystemFont" id="SystemFont_7p58c"]
-font_names = PackedStringArray("Impact")
-subpixel_positioning = 0
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cm266"]
+texture = ExtResource("4_nlkkf")
+expand_margin_left = 30.0
+expand_margin_top = 10.0
+expand_margin_right = 30.0
+expand_margin_bottom = 10.0
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -60,7 +58,8 @@ theme_override_constants/separation = 35
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 24
 theme_override_fonts/font = ExtResource("3_glbon")
 theme_override_font_sizes/font_size = 80
@@ -72,6 +71,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("4_qe12f")
 theme_override_constants/separation = -3
 alignment = 1
 
@@ -79,24 +79,16 @@ alignment = 1
 custom_minimum_size = Vector2(200, 90)
 layout_mode = 2
 theme = SubResource("Theme_dy7ct")
-theme_override_fonts/font = SubResource("SystemFont_mko6x")
-theme_override_font_sizes/font_size = 24
 text = "Start Game"
 
 [node name="Options_Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 90)
 layout_mode = 2
-theme = SubResource("Theme_dy7ct")
-theme_override_fonts/font = SubResource("SystemFont_mko6x")
-theme_override_font_sizes/font_size = 24
 text = "Options"
 
 [node name="Exit_Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 90)
 layout_mode = 2
-theme = SubResource("Theme_dy7ct")
-theme_override_fonts/font = SubResource("SystemFont_mko6x")
-theme_override_font_sizes/font_size = 24
 text = "Exit Game"
 
 [node name="Options_Menu" type="Control" parent="."]
@@ -115,6 +107,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("5_8qtwp")
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
@@ -122,14 +115,16 @@ theme_override_constants/margin_bottom = 12
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Options_Menu/MarginContainer"]
 layout_mode = 2
+theme = SubResource("Theme_w44g7")
 theme_override_constants/separation = -48
 
 [node name="Label" type="Label" parent="Options_Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-theme_override_fonts/font = SubResource("SystemFont_7p58c")
-theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.71594864, 0.40755868, 0.29041284, 1)
+theme_override_colors/font_outline_color = Color(0.37870604, 0.19470242, 0.124242134, 1)
+theme_override_constants/outline_size = 24
+theme_override_fonts/font = ExtResource("3_glbon")
+theme_override_font_sizes/font_size = 67
 text = "Options"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -149,11 +144,11 @@ offset_right = -100.0
 offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("5_8qtwp")
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 
 [node name="Sound" type="TabBar" parent="Options_Menu/MarginContainer/VBoxContainer/Settings_Tab_Container/TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -243,6 +238,7 @@ text = "100%"
 horizontal_alignment = 2
 
 [node name="Graphics" type="TabBar" parent="Options_Menu/MarginContainer/VBoxContainer/Settings_Tab_Container/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -308,7 +304,12 @@ popup/item_2/id = 2
 
 [node name="Button" type="Button" parent="Options_Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_glbon")
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxTexture_cm266")
 text = "Exit"
 
 [node name="Delete" type="Button" parent="."]
@@ -319,10 +320,19 @@ offset_top = 667.0
 offset_right = 203.0
 offset_bottom = 757.0
 scale = Vector2(0.535, 0.535)
-theme = SubResource("Theme_dy7ct")
-theme_override_fonts/font = SubResource("SystemFont_mko6x")
-theme_override_font_sizes/font_size = 24
+theme = ExtResource("4_qe12f")
+theme_override_fonts/font = ExtResource("3_glbon")
+theme_override_font_sizes/font_size = 37
 text = "Delete Save"
+
+[node name="TESTE_TITULO" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 207.00002
+offset_top = 82.0
+offset_right = 335.0
+offset_bottom = 107.0
+scale = Vector2(7, 7)
+texture = ExtResource("8_8qtwp")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Start_Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Options_Button" to="." method="_on_options_button_pressed"]

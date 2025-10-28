@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://ctr86ut8pj7uu"]
+
+[ext_resource type="FontFile" uid="uid://cfkt1yxhxnphn" path="res://themes/Jersey10-Regular.ttf" id="1_d6y4s"]
+[ext_resource type="Texture2D" uid="uid://bme3k6vikbwrp" path="res://Art/eldi_game_button_sprite.png" id="2_0rhcr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tdstw"]
+texture = ExtResource("2_0rhcr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f6evx"]
+texture = ExtResource("2_0rhcr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xonx3"]
+texture = ExtResource("2_0rhcr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qbew4"]
+texture = ExtResource("2_0rhcr")
+
+[resource]
+Button/font_sizes/font_size = 36
+Button/fonts/font = ExtResource("1_d6y4s")
+Button/styles/focus = SubResource("StyleBoxTexture_tdstw")
+Button/styles/hover = SubResource("StyleBoxTexture_f6evx")
+Button/styles/normal = SubResource("StyleBoxTexture_xonx3")
+Button/styles/pressed = SubResource("StyleBoxTexture_qbew4")
