@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var main_menu = "uid://yov2v5tjkvlc"
-@onready var smoke: GPUParticles2D = $scene/factory/smoke
+@onready var smoke: GPUParticles2D = $scene/factory/CanoFabricaPt1/CanoFabricaPt2/smoke
 @onready var poster_1: Sprite2D = $scene/factory/poster1
 @onready var poster_2: Sprite2D = $scene/factory/poster2
 @onready var poster_3: Sprite2D = $scene/factory/poster3
@@ -51,12 +51,15 @@ var amountstrikes = 0
 var amountfilters = 0:
 	set(value):
 		amountfilters = value
-		var array = PackedColorArray()
-		var color_value = clamp(value / 5.0, 0.0, 1.0)
-		var result_color = Color(0.241 + (1.0 - 0.241) * color_value, 0.241 + (1.0 - 0.241) * color_value, 0.241 + (1.0 - 0.241) * color_value)
-		#print(result_color)
-		array.append(result_color)
-		smoke.texture.gradient.colors = array
+		match value:
+			0:
+				smoke.texture = load("res://Art/smoke.png")
+			1:
+				smoke.texture = load("res://Art/smoke2.png")
+			2:
+				smoke.texture = load("res://Art/smoke3.png")
+			_:
+				smoke.texture = load("res://Art/smoke4.png")
 var amountplants = 0
 
 func _ready() -> void:

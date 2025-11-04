@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=39 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -11,28 +11,21 @@
 [ext_resource type="Resource" uid="uid://dc30bmhknmap8" path="res://Upgrades/Idle/plants.tres" id="7_eu6ph"]
 [ext_resource type="Script" uid="uid://cfhw3rjapta3l" path="res://camera_2d.gd" id="7_f1jbl"]
 [ext_resource type="Script" uid="uid://cdrgsp27wsugy" path="res://minigame_base.gd" id="8_lc2xo"]
-[ext_resource type="Texture2D" uid="uid://b3t8rlvy2j5ku" path="res://Art/FabricaPT1.png" id="9_qhcbd"]
-[ext_resource type="Texture2D" uid="uid://bv763pvvtp66n" path="res://Art/FabricaPT2.png" id="10_f1jbl"]
 [ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
-[ext_resource type="Texture2D" uid="uid://d2hexy7tgtp2m" path="res://Art/FabricaPT3.png" id="11_vaj68"]
 [ext_resource type="Texture2D" uid="uid://dlbwdhpphbi4w" path="res://Art/fundo_base_cidade.png" id="12_eu6ph"]
 [ext_resource type="Resource" uid="uid://cqx6nuat2ocgr" path="res://Upgrades/Task/collection.tres" id="12_pyw6c"]
 [ext_resource type="Theme" uid="uid://i3hmq0x7yqxh" path="res://themes/font_temporaria.tres" id="13_e36ub"]
 [ext_resource type="Texture2D" uid="uid://l42f2qbpmtuh" path="res://Art/top_panel_sprite.png" id="13_hb5m1"]
-[ext_resource type="Texture2D" uid="uid://cf8aku8efxt3q" path="res://Art/FabricaPT4.png" id="15_36jdj"]
+[ext_resource type="Texture2D" uid="uid://7cb5nuqpnml" path="res://Art/Predio_montado.png" id="15_082n1"]
+[ext_resource type="Texture2D" uid="uid://dud8ees4vlstk" path="res://Art/smoke.png" id="15_xex6t"]
 [ext_resource type="Texture2D" uid="uid://btr5ndoewcgli" path="res://Art/poster.png" id="16_5b14r"]
 [ext_resource type="Script" uid="uid://dwmhyxeqm0iqf" path="res://object.gd" id="16_bnpwn"]
 [ext_resource type="Texture2D" uid="uid://diuhml2kn68qv" path="res://Art/LixeiraEldi_semlixo.png" id="16_i2p71"]
-[ext_resource type="Texture2D" uid="uid://d31wb1100pgo4" path="res://Art/lixo1s.png" id="16_xa8c5"]
-[ext_resource type="Texture2D" uid="uid://dvyfd2x3q71iv" path="res://Art/FabricaPT5.png" id="16_xfvwf"]
+[ext_resource type="Texture2D" uid="uid://dm1fx84dy83td" path="res://Art/Fabrica_montada.png" id="16_xex6t"]
 [ext_resource type="Resource" uid="uid://882nyma16sdp" path="res://Upgrades/Task/garbage men.tres" id="17_e36ub"]
-[ext_resource type="Texture2D" uid="uid://ce5ewx6hqhfyx" path="res://Art/FabricaPT6.png" id="17_klri6"]
 [ext_resource type="Texture2D" uid="uid://c5lcx7ol0xd" path="res://Art/LixeiraEldi_comlixo.png" id="17_xa8c5"]
-[ext_resource type="Texture2D" uid="uid://ce0neigoa4me6" path="res://Art/fabricaPT7 (1).png" id="18_eu6ph"]
 [ext_resource type="Resource" uid="uid://c8dbayxlpar3v" path="res://Upgrades/Task/junk recycle.tres" id="18_hb5m1"]
-[ext_resource type="Texture2D" uid="uid://bwii04exf0am8" path="res://Art/FabricaPT8 (1).png" id="19_edr7y"]
 [ext_resource type="Resource" uid="uid://csff063odqyev" path="res://Upgrades/Task/water treat.tres" id="19_x5p1p"]
-[ext_resource type="Texture2D" uid="uid://faxaoqd06pux" path="res://Art/improviso-export.png" id="20_kq12w"]
 [ext_resource type="Texture2D" uid="uid://ceu5i3gowigma" path="res://Art/CanoFabricaPT1.png" id="21_t46w6"]
 [ext_resource type="Texture2D" uid="uid://bvuubbefv5i5j" path="res://Art/CanoFabricaPT2.png" id="22_m28ev"]
 [ext_resource type="Texture2D" uid="uid://bme3k6vikbwrp" path="res://Art/eldi_game_button_sprite.png" id="30_xfvwf"]
@@ -43,21 +36,16 @@
 [ext_resource type="Texture2D" uid="uid://cxuavbxvq0rgy" path="res://Art/eldi_game_button_concept.png" id="35_xex6t"]
 [ext_resource type="PackedScene" uid="uid://bnois5tnuorrb" path="res://introduction.tscn" id="36_aa0lp"]
 
-[sub_resource type="Gradient" id="Gradient_xa8c5"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.241156, 0.241156, 0.241156, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_5b14r"]
-gradient = SubResource("Gradient_xa8c5")
-width = 32
-height = 32
-
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xa8c5"]
 particle_flag_disable_z = true
+angle_min = -179.99998
+angle_max = 180.00002
 direction = Vector3(-1, -1, 0)
-spread = 10.0
-initial_velocity_min = 5.0
-initial_velocity_max = 5.0
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+angular_velocity_min = 9.999984
+angular_velocity_max = 44.999985
 gravity = Vector3(-2, -1, 0)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_082n1"]
@@ -82,79 +70,74 @@ metadata/_edit_horizontal_guides_ = [41.0, -317.0]
 [node name="factory" type="Node2D" parent="scene"]
 position = Vector2(642, 440)
 
-[node name="FundoBaseCidade" type="Sprite2D" parent="scene/factory"]
-position = Vector2(-43, -137)
+[node name="Parallax2D" type="Parallax2D" parent="scene/factory"]
+scroll_offset = Vector2(-816, -726)
+repeat_size = Vector2(1944, 1187.5)
+repeat_times = 5
+
+[node name="FundoBaseCidade" type="Sprite2D" parent="scene/factory/Parallax2D"]
+z_index = -100
+position = Vector2(-43, -136.5)
 texture = ExtResource("12_eu6ph")
 
-[node name="FabricaPt1" type="Sprite2D" parent="scene/factory"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("9_qhcbd")
-
-[node name="FabricaPt2" type="Sprite2D" parent="scene/factory"]
-position = Vector2(250, -105)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("10_f1jbl")
-
-[node name="FabricaPt7" type="Sprite2D" parent="scene/factory"]
-position = Vector2(192, -75)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("10_f1jbl")
-
-[node name="FabricaPt3" type="Sprite2D" parent="scene/factory"]
-position = Vector2(381, -141)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_vaj68")
-
-[node name="FabricaPt4" type="Sprite2D" parent="scene/factory"]
-position = Vector2(-189.5, -52.1)
-scale = Vector2(0.586, 0.586)
-texture = ExtResource("15_36jdj")
-
-[node name="FabricaPt5" type="Sprite2D" parent="scene/factory"]
-position = Vector2(-136, -172)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("16_xfvwf")
-
-[node name="FabricaPt6" type="Sprite2D" parent="scene/factory"]
-position = Vector2(81, -346)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("17_klri6")
-
-[node name="FabricaPt7(1)2" type="Sprite2D" parent="scene/factory"]
-position = Vector2(246, -339)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("18_eu6ph")
-
-[node name="FabricaPt7(1)" type="Sprite2D" parent="scene/factory"]
-position = Vector2(306, -309)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("18_eu6ph")
-
-[node name="FabricaPt8(1)" type="Sprite2D" parent="scene/factory"]
-position = Vector2(230, -269)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("19_edr7y")
-
-[node name="ImprovisoExport3" type="Sprite2D" parent="scene/factory"]
-position = Vector2(69, -201)
-rotation = 1.35263
-scale = Vector2(4.315, 4.315)
-texture = ExtResource("20_kq12w")
-
-[node name="ImprovisoExport4" type="Sprite2D" parent="scene/factory"]
-position = Vector2(21, -169)
-scale = Vector2(4.95, 4.65)
-texture = ExtResource("20_kq12w")
-
 [node name="CanoFabricaPt1" type="Sprite2D" parent="scene/factory"]
-position = Vector2(-19.000002, -269)
-scale = Vector2(0.4, 0.4)
+position = Vector2(-117, -301)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("21_t46w6")
 
-[node name="CanoFabricaPt2" type="Sprite2D" parent="scene/factory"]
-position = Vector2(-19, -181.00002)
-scale = Vector2(0.4, 0.4)
+[node name="CanoFabricaPt2" type="Sprite2D" parent="scene/factory/CanoFabricaPt1"]
+position = Vector2(0, 219.99997)
+scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("22_m28ev")
+
+[node name="smoke" type="GPUParticles2D" parent="scene/factory/CanoFabricaPt1/CanoFabricaPt2"]
+position = Vector2(-8, -392.00003)
+amount = 20
+texture = ExtResource("15_xex6t")
+lifetime = 20.0
+speed_scale = 0.45
+process_material = SubResource("ParticleProcessMaterial_xa8c5")
+
+[node name="CanoFabricaPt3" type="Sprite2D" parent="scene/factory/CanoFabricaPt1"]
+position = Vector2(0, 515)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("22_m28ev")
+
+[node name="PredioMontado" type="Sprite2D" parent="scene/factory"]
+position = Vector2(718.00006, -199.99997)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado2" type="Sprite2D" parent="scene/factory"]
+position = Vector2(-737, -108)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado3" type="Sprite2D" parent="scene/factory"]
+z_index = -45
+position = Vector2(-635, -483)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado4" type="Sprite2D" parent="scene/factory"]
+z_index = -46
+position = Vector2(-144.5, -729)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado5" type="Sprite2D" parent="scene/factory"]
+z_index = -45
+position = Vector2(487, -660)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+
+[node name="fabrica" type="Sprite2D" parent="scene/factory"]
+position = Vector2(25, -118.5)
+scale = Vector2(3, 3)
+texture = ExtResource("16_xex6t")
 
 [node name="poster1" type="Sprite2D" parent="scene/factory"]
 visible = false
@@ -193,43 +176,6 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("16_5b14r")
 flip_h = true
 script = ExtResource("16_bnpwn")
-
-[node name="chimney" type="Sprite2D" parent="scene/factory"]
-visible = false
-modulate = Color(46.409, 13.259, 11.05, 1)
-position = Vector2(-12.458786, -132.022)
-scale = Vector2(2.08853, 3.54945)
-texture = ExtResource("16_xa8c5")
-
-[node name="smoke" type="GPUParticles2D" parent="scene/factory"]
-position = Vector2(-21.99998, -327)
-scale = Vector2(2.08853, 3.54945)
-amount = 20
-texture = SubResource("GradientTexture2D_5b14r")
-lifetime = 20.0
-speed_scale = 0.45
-process_material = SubResource("ParticleProcessMaterial_xa8c5")
-
-[node name="Sprite2D" type="Sprite2D" parent="scene/factory"]
-position = Vector2(223, -107)
-
-[node name="ImprovisoExport" type="Sprite2D" parent="scene/factory"]
-position = Vector2(250, -224)
-rotation = 2.6668632
-scale = Vector2(2.28, 2.28)
-texture = ExtResource("20_kq12w")
-
-[node name="ImprovisoExport5" type="Sprite2D" parent="scene/factory"]
-position = Vector2(299, -227)
-rotation = 3.0560715
-scale = Vector2(2.945, 0.2)
-texture = ExtResource("20_kq12w")
-
-[node name="ImprovisoExport2" type="Sprite2D" parent="scene/factory"]
-position = Vector2(160, -229)
-rotation = -5.448918
-scale = Vector2(4.315, 4.315)
-texture = ExtResource("20_kq12w")
 
 [node name="LixeiraEldiSemlixo" type="Sprite2D" parent="scene"]
 position = Vector2(761, 454)
@@ -350,6 +296,10 @@ position = Vector2(640, 360)
 [node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
 position = Vector2(640, 360)
 script = ExtResource("7_f1jbl")
+settable_limit_left = -1200
+settable_limit_right = 3000
+settable_limit_top = -1200
+settable_limit_bottom = 1800
 
 [node name="Comeback_popup" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 8
