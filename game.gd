@@ -68,7 +68,7 @@ func _ready() -> void:
 		amountlightbulbs = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[1]
 		amountstrikes = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[2]
 		amountfilters = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[3]
-		amountplants = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[4]
+#		amountplants = SaveScript.new_config.get_value("Globalvaribles", "upgrades")[4]
 		calculate_moneypers()
 		update_rating()
 		var time_diference = (Time.get_unix_time_from_system() - SaveScript.new_config.get_value("Globalvaribles", "last_date"))

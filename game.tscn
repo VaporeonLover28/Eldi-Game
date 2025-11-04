@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=48 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bv763pvvtp66n" path="res://Art/FabricaPT2.png" id="10_f1jbl"]
 [ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
 [ext_resource type="Texture2D" uid="uid://d2hexy7tgtp2m" path="res://Art/FabricaPT3.png" id="11_vaj68"]
+[ext_resource type="Texture2D" uid="uid://dlbwdhpphbi4w" path="res://Art/fundo_base_cidade.png" id="12_eu6ph"]
 [ext_resource type="Resource" uid="uid://cqx6nuat2ocgr" path="res://Upgrades/Task/collection.tres" id="12_pyw6c"]
 [ext_resource type="Theme" uid="uid://i3hmq0x7yqxh" path="res://themes/font_temporaria.tres" id="13_e36ub"]
 [ext_resource type="Texture2D" uid="uid://l42f2qbpmtuh" path="res://Art/top_panel_sprite.png" id="13_hb5m1"]
@@ -80,6 +81,10 @@ metadata/_edit_horizontal_guides_ = [41.0, -317.0]
 
 [node name="factory" type="Node2D" parent="scene"]
 position = Vector2(642, 440)
+
+[node name="FundoBaseCidade" type="Sprite2D" parent="scene/factory"]
+position = Vector2(-43, -137)
+texture = ExtResource("12_eu6ph")
 
 [node name="FabricaPt1" type="Sprite2D" parent="scene/factory"]
 scale = Vector2(0.5, 0.5)
