@@ -1,12 +1,7 @@
 extends Node2D
 
 @onready var main_menu = "uid://yov2v5tjkvlc"
-@onready var smoke: GPUParticles2D = $scene/factory/CanoFabricaPt1/CanoFabricaPt2/smoke
-@onready var poster_1: Sprite2D = $scene/factory/poster1
-@onready var poster_2: Sprite2D = $scene/factory/poster2
-@onready var poster_3: Sprite2D = $scene/factory/poster3
-@onready var poster_4: Sprite2D = $scene/factory/poster4
-@onready var poster_5: Sprite2D = $scene/factory/poster5
+@onready var smoke: Filters = $scene/factory/smoke
 @onready var minigame_progress_panel: Control = $"CanvasLayer/Minigame Progress Panel"
 
 var minigame_started := false
@@ -36,13 +31,13 @@ var moneypers : int
 var amountposters = 0:
 	set(value):
 		amountposters = value
-		for child in find_children("*", "Posters", true, true):
-			child.get_child(0).update()
+		update_items("Posters")
 var amountlightbulbs = 0
 var amountstrikes = 0
 var amountfilters = 0:
 	set(value):
 		amountfilters = value
+		update_items("Filters")
 		match value:
 			0:
 				smoke.texture = load("res://Art/smoke.png")
@@ -133,10 +128,25 @@ func update_rating():
 	
 	minigame_progress_panel.update_bars()
 
+func update_items(item : String):
+	for child in find_children("*", item, true, true):
+		for particles in child.get_children():
+			if particles is GPUParticles2D:
+				particles.update()
+
 func get_item_amount(item):
-	match item.name:
-		"coco":
-			pass
+	var item_achado = idleitemlist[item]
+	match item_achado.Name:
+		"Posters":
+			return amountposters
+		"Lightbulbs":
+			return amountlightbulbs
+		"Strikes":
+			return amountstrikes
+		"Filters":
+			return amountfilters
+		"Plants":
+			return amountplants
 
 func _on_givemoney_timeout() -> void:
 	money += moneypers

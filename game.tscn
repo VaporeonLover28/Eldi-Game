@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=43 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dud8ees4vlstk" path="res://Art/smoke.png" id="15_xex6t"]
 [ext_resource type="Texture2D" uid="uid://btr5ndoewcgli" path="res://Art/poster.png" id="16_5b14r"]
 [ext_resource type="Texture2D" uid="uid://diuhml2kn68qv" path="res://Art/LixeiraEldi_semlixo.png" id="16_i2p71"]
+[ext_resource type="Script" uid="uid://ccfpbhjfg76uy" path="res://smoke.gd" id="16_l1i01"]
 [ext_resource type="Texture2D" uid="uid://dm1fx84dy83td" path="res://Art/Fabrica_montada.png" id="16_xex6t"]
 [ext_resource type="Resource" uid="uid://882nyma16sdp" path="res://Upgrades/Task/garbage men.tres" id="17_e36ub"]
 [ext_resource type="Texture2D" uid="uid://c5lcx7ol0xd" path="res://Art/LixeiraEldi_comlixo.png" id="17_xa8c5"]
@@ -88,23 +89,43 @@ position = Vector2(-108.40802, -445)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("21_t46w6")
 
-[node name="CanoFabricaPt2" type="Sprite2D" parent="scene/factory/CanoFabricaPt1"]
-position = Vector2(0, 219.99997)
-scale = Vector2(0.99999994, 0.99999994)
+[node name="CanoFabricaPt2" type="Sprite2D" parent="scene/factory"]
+position = Vector2(-108.40802, -390)
+scale = Vector2(0.24999999, 0.24999999)
 texture = ExtResource("22_m28ev")
 
-[node name="smoke" type="GPUParticles2D" parent="scene/factory/CanoFabricaPt1/CanoFabricaPt2"]
-position = Vector2(-8, -392.00003)
+[node name="CanoFabricaPt3" type="Sprite2D" parent="scene/factory"]
+position = Vector2(-108.40802, -316.25)
+scale = Vector2(0.24999999, 0.24999999)
+texture = ExtResource("22_m28ev")
+
+[node name="smoke" type="GPUParticles2D" parent="scene/factory"]
+position = Vector2(-110.40802, -488)
+scale = Vector2(0.24999999, 0.24999999)
 amount = 20
 texture = ExtResource("15_xex6t")
 lifetime = 20.0
 speed_scale = 0.45
 process_material = SubResource("ParticleProcessMaterial_xa8c5")
+script = ExtResource("16_l1i01")
 
-[node name="CanoFabricaPt3" type="Sprite2D" parent="scene/factory/CanoFabricaPt1"]
-position = Vector2(0, 515)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("22_m28ev")
+[node name="UpgradeParticle" parent="scene/factory/smoke" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 3
+required_amount = 1
+
+[node name="UpgradeParticle2" parent="scene/factory/smoke" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 3
+required_amount = 2
+
+[node name="UpgradeParticle3" parent="scene/factory/smoke" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 3
+required_amount = 3
 
 [node name="PredioMontado" type="Sprite2D" parent="scene/factory"]
 z_index = 1
@@ -279,14 +300,14 @@ scale = Vector2(3.02, 3.02)
 texture = ExtResource("15_082n1")
 
 [node name="PredioMontado33" type="Sprite2D" parent="scene/factory"]
-z_index = 2
-position = Vector2(-3516, -699)
+z_index = -1
+position = Vector2(-3602.9998, -440.99997)
 scale = Vector2(3.02, 3.02)
 texture = ExtResource("15_082n1")
 
 [node name="PredioMontado34" type="Sprite2D" parent="scene/factory"]
-z_index = 2
-position = Vector2(-3171, -508)
+z_index = -1
+position = Vector2(-3282.9998, -291.99997)
 scale = Vector2(3.02, 3.02)
 texture = ExtResource("15_082n1")
 
@@ -341,18 +362,6 @@ position = Vector2(-1823.0001, 585)
 scale = Vector2(3, 3)
 texture = ExtResource("15_082n1")
 flip_h = true
-
-[node name="PredioMontado47" type="Sprite2D" parent="scene/factory"]
-z_index = 2
-position = Vector2(-3516, -699)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado48" type="Sprite2D" parent="scene/factory"]
-z_index = 2
-position = Vector2(-3171, -508)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
 
 [node name="PredioMontado49" type="Sprite2D" parent="scene/factory"]
 z_index = -2
@@ -487,7 +496,7 @@ req_item = 0
 required_amount = 1
 
 [node name="poster2" type="Sprite2D" parent="scene/factory"]
-position = Vector2(574, -535)
+position = Vector2(-166, -56)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("16_5b14r")
 flip_h = true
@@ -514,7 +523,7 @@ req_item = 0
 required_amount = 3
 
 [node name="poster4" type="Sprite2D" parent="scene/factory"]
-position = Vector2(-166, -56)
+position = Vector2(574, -539)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("16_5b14r")
 flip_h = true
@@ -615,6 +624,28 @@ offset_bottom = 40.0
 mouse_filter = 0
 texture = ExtResource("13_hb5m1")
 
+[node name="top_panel_texture2" type="TextureRect" parent="CanvasLayer/toppanel"]
+layout_mode = 0
+offset_left = -355.0
+offset_top = 680.0
+offset_right = 365.0
+offset_bottom = 720.0
+mouse_filter = 0
+texture = ExtResource("13_hb5m1")
+flip_v = true
+
+[node name="Label" type="Label" parent="CanvasLayer/toppanel/top_panel_texture2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 5.0
+offset_right = 709.0
+offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("31_dhpj7")
+theme_override_font_sizes/font_size = 22
+text = "Click and drag the left mouse button to navigate the city!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="moneylabel" type="Label" parent="CanvasLayer/toppanel"]
 layout_mode = 0
 offset_left = -298.0
@@ -642,7 +673,8 @@ offset_left = 140.0
 offset_right = 296.0
 offset_bottom = 40.0
 theme = ExtResource("13_e36ub")
-text = "Nature Rating: XXX"
+text = "Nature Rating: 0.0%
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 

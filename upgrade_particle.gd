@@ -12,7 +12,7 @@ func update():
 		##condition is item
 		if condition == 0:
 			##if enough of item
-			if required_amount == game.idleitemlist[req_item]:
+			if required_amount == game.get_item_amount(req_item):
 				##animate
 				emitting = true
 				get_parent().animate()
