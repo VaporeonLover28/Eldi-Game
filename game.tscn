@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=42 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -19,12 +19,13 @@
 [ext_resource type="Texture2D" uid="uid://7cb5nuqpnml" path="res://Art/Predio_montado.png" id="15_082n1"]
 [ext_resource type="Texture2D" uid="uid://dud8ees4vlstk" path="res://Art/smoke.png" id="15_xex6t"]
 [ext_resource type="Texture2D" uid="uid://btr5ndoewcgli" path="res://Art/poster.png" id="16_5b14r"]
-[ext_resource type="Script" uid="uid://dwmhyxeqm0iqf" path="res://object.gd" id="16_bnpwn"]
 [ext_resource type="Texture2D" uid="uid://diuhml2kn68qv" path="res://Art/LixeiraEldi_semlixo.png" id="16_i2p71"]
 [ext_resource type="Texture2D" uid="uid://dm1fx84dy83td" path="res://Art/Fabrica_montada.png" id="16_xex6t"]
 [ext_resource type="Resource" uid="uid://882nyma16sdp" path="res://Upgrades/Task/garbage men.tres" id="17_e36ub"]
 [ext_resource type="Texture2D" uid="uid://c5lcx7ol0xd" path="res://Art/LixeiraEldi_comlixo.png" id="17_xa8c5"]
 [ext_resource type="Resource" uid="uid://c8dbayxlpar3v" path="res://Upgrades/Task/junk recycle.tres" id="18_hb5m1"]
+[ext_resource type="Script" uid="uid://ydtnb661ia1k" path="res://poster.gd" id="19_4v2jo"]
+[ext_resource type="PackedScene" uid="uid://j2ln786eg5mx" path="res://upgrade_particle.tscn" id="19_iu0sx"]
 [ext_resource type="Resource" uid="uid://csff063odqyev" path="res://Upgrades/Task/water treat.tres" id="19_x5p1p"]
 [ext_resource type="Texture2D" uid="uid://ccqjlqfpujg6f" path="res://Art/rua_menos_improvisada_2.png" id="20_aa0lp"]
 [ext_resource type="Texture2D" uid="uid://d2meyvvjqp0v2" path="res://Art/rua_menos_improvisada_.png" id="21_iu0sx"]
@@ -473,42 +474,73 @@ scale = Vector2(3.5, 3.5)
 texture = ExtResource("16_xex6t")
 
 [node name="poster1" type="Sprite2D" parent="scene/factory"]
-visible = false
-position = Vector2(227, -98)
+position = Vector2(212, -149)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("16_5b14r")
-script = ExtResource("16_bnpwn")
+script = ExtResource("19_4v2jo")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/poster1" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 0
+required_amount = 1
 
 [node name="poster2" type="Sprite2D" parent="scene/factory"]
-visible = false
-position = Vector2(359, -163)
+position = Vector2(574, -535)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("16_5b14r")
-script = ExtResource("16_bnpwn")
+flip_h = true
+script = ExtResource("19_4v2jo")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/poster2" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 0
+required_amount = 2
 
 [node name="poster3" type="Sprite2D" parent="scene/factory"]
-visible = false
-modulate = Color(0, 0.643137, 0.643137, 0.580392)
-position = Vector2(137, -60)
+position = Vector2(-549, -460)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("16_5b14r")
-script = ExtResource("16_bnpwn")
+script = ExtResource("19_4v2jo")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/poster3" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 0
+required_amount = 3
 
 [node name="poster4" type="Sprite2D" parent="scene/factory"]
-visible = false
-position = Vector2(-93, -28)
+position = Vector2(-166, -56)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("16_5b14r")
 flip_h = true
-script = ExtResource("16_bnpwn")
+script = ExtResource("19_4v2jo")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/poster4" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 0
+required_amount = 4
 
 [node name="poster5" type="Sprite2D" parent="scene/factory"]
-visible = false
-position = Vector2(-222, -95)
+z_index = 15
+position = Vector2(574.99994, 331.99997)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("16_5b14r")
 flip_h = true
-script = ExtResource("16_bnpwn")
+script = ExtResource("19_4v2jo")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/poster5" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 0
+required_amount = 5
 
 [node name="Parallax2D2" type="Parallax2D" parent="scene/factory"]
 repeat_size = Vector2(1727.975, 864.025)
@@ -643,10 +675,10 @@ position = Vector2(640, 360)
 [node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
 position = Vector2(640, 360)
 script = ExtResource("7_f1jbl")
-settable_limit_left = -1200
+settable_limit_left = -1500
 settable_limit_right = 3000
 settable_limit_top = -1200
-settable_limit_bottom = 1800
+settable_limit_bottom = 1300
 
 [node name="Comeback_popup" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 8

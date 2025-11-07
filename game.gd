@@ -36,16 +36,8 @@ var moneypers : int
 var amountposters = 0:
 	set(value):
 		amountposters = value
-		if value > 0 and !poster_1.visible:
-			poster_1.appear()
-		if value > 1 and !poster_2.visible:
-			poster_2.appear()
-		if value > 2 and !poster_3.visible:
-			poster_3.appear()
-		if value > 3 and !poster_4.visible:
-			poster_4.appear()
-		if value > 4 and !poster_5.visible:
-			poster_5.appear()
+		for child in find_children("*", "Posters", true, true):
+			child.get_child(0).update()
 var amountlightbulbs = 0
 var amountstrikes = 0
 var amountfilters = 0:
@@ -140,6 +132,11 @@ func update_rating():
 		unlocked_tasks.append(load("res://Upgrades/Task/water treat.tres"))
 	
 	minigame_progress_panel.update_bars()
+
+func get_item_amount(item):
+	match item.name:
+		"coco":
+			pass
 
 func _on_givemoney_timeout() -> void:
 	money += moneypers
