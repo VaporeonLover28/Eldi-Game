@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbi2eua8v81h8"
-path="res://.godot/imported/rua_improvisada.png-8e01de1c2b1bbf43cda629cb4264a745.ctex"
+uid="uid://ccqjlqfpujg6f"
+path="res://.godot/imported/rua_menos_improvisada_2.png-ae254f388fdfb509511afebf61ad9920.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/rua_improvisada.png"
-dest_files=["res://.godot/imported/rua_improvisada.png-8e01de1c2b1bbf43cda629cb4264a745.ctex"]
+source_file="res://Art/rua_menos_improvisada_2.png"
+dest_files=["res://.godot/imported/rua_menos_improvisada_2.png-ae254f388fdfb509511afebf61ad9920.ctex"]
 
 [params]
 
