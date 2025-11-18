@@ -53,6 +53,7 @@ var amountplants = 0:
 		update_items("Arbustos")
 
 func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	var load_data = SaveScript.new_config.load("user://SaveFile.cfg")
 	if load_data == OK and SaveScript.new_config.get_value("Globalvaribles", "last_date") != 0:
 		money = SaveScript.new_config.get_value("Globalvaribles", "money")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=50 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://b0gdp31ntto40" path="res://moneylabel.gd" id="11_lc2xo"]
 [ext_resource type="Texture2D" uid="uid://dlbwdhpphbi4w" path="res://Art/fundo_base_cidade.png" id="12_eu6ph"]
 [ext_resource type="Resource" uid="uid://cqx6nuat2ocgr" path="res://Upgrades/Task/collection.tres" id="12_pyw6c"]
+[ext_resource type="Texture2D" uid="uid://c2u84ei3io1hf" path="res://Art/prediocompleto.png" id="12_t46w6"]
 [ext_resource type="Theme" uid="uid://i3hmq0x7yqxh" path="res://themes/font_temporaria.tres" id="13_e36ub"]
 [ext_resource type="Texture2D" uid="uid://l42f2qbpmtuh" path="res://Art/top_panel_sprite.png" id="13_hb5m1"]
 [ext_resource type="Texture2D" uid="uid://7cb5nuqpnml" path="res://Art/Predio_montado.png" id="15_082n1"]
@@ -86,15 +87,9 @@ position = Vector2(642, 440)
 
 [node name="PredioMontado" type="Sprite2D" parent="scene/factory/predios"]
 z_index = 1
-position = Vector2(719, -17)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado6" type="Sprite2D" parent="scene/factory/predios"]
-z_index = 1
-position = Vector2(1064, 174)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
+position = Vector2(881, -110)
+scale = Vector2(2, 2)
+texture = ExtResource("12_t46w6")
 
 [node name="PredioMontado19" type="Sprite2D" parent="scene/factory/predios"]
 z_index = -1
@@ -166,20 +161,6 @@ flip_h = true
 [node name="PredioMontado28" type="Sprite2D" parent="scene/factory/predios"]
 z_index = 2
 position = Vector2(-98, 1447)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado29" type="Sprite2D" parent="scene/factory/predios"]
-z_index = 1
-position = Vector2(-1514.0001, 414)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado30" type="Sprite2D" parent="scene/factory/predios"]
-z_index = 1
-position = Vector2(-1823.0001, 585)
 scale = Vector2(3, 3)
 texture = ExtResource("15_082n1")
 flip_h = true
@@ -306,19 +287,11 @@ scale = Vector2(3, 3)
 texture = ExtResource("15_082n1")
 flip_h = true
 
-[node name="PredioMontado45" type="Sprite2D" parent="scene/factory/predios"]
-z_index = 1
-position = Vector2(-1514.0001, 414)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
 [node name="PredioMontado46" type="Sprite2D" parent="scene/factory/predios"]
 z_index = 1
-position = Vector2(-1823.0001, 585)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
+position = Vector2(-1774, 349)
+scale = Vector2(2, 2)
+texture = ExtResource("12_t46w6")
 
 [node name="PredioMontado49" type="Sprite2D" parent="scene/factory/predios"]
 z_index = -2
@@ -360,17 +333,9 @@ flip_h = true
 
 [node name="PredioMontado55" type="Sprite2D" parent="scene/factory/predios"]
 z_index = -3
-position = Vector2(1912, -1306)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado56" type="Sprite2D" parent="scene/factory/predios"]
-z_index = -3
-position = Vector2(1603, -1135)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
+position = Vector2(1698, -1375)
+scale = Vector2(2, 2)
+texture = ExtResource("12_t46w6")
 
 [node name="PredioMontado57" type="Sprite2D" parent="scene/factory/predios"]
 z_index = -4
@@ -804,6 +769,7 @@ condition = 1
 required_amount = 90
 
 [node name="Arbusto" type="Sprite2D" parent="scene/factory"]
+z_index = 2
 position = Vector2(36, 3)
 scale = Vector2(0.333, 0.333)
 texture = ExtResource("26_eu6ph")
@@ -1145,9 +1111,6 @@ settable_limit_right = 3000
 settable_limit_top = -1200
 settable_limit_bottom = 1300
 
-[node name="cursor" parent="CanvasLayer" instance=ExtResource("2_tqrlg")]
-position = Vector2(640, 360)
-
 [node name="Comeback_popup" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
@@ -1221,6 +1184,29 @@ theme_override_fonts/font = ExtResource("31_dhpj7")
 theme_override_font_sizes/font_size = 42
 text = "Proceed"
 
+[node name="Main Menu Button" type="TextureButton" parent="CanvasLayer"]
+offset_right = 64.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("35_xex6t")
+
+[node name="Label" type="Label" parent="CanvasLayer/Main Menu Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("31_dhpj7")
+text = "Quit"
+horizontal_alignment = 1
+
 [node name="Minigame Progress Panel" parent="CanvasLayer" instance=ExtResource("32_dhpj7")]
 
 [node name="TabContainer" parent="CanvasLayer/Minigame Progress Panel" index="0"]
@@ -1256,28 +1242,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Main Menu Button" type="TextureButton" parent="CanvasLayer"]
-offset_right = 64.0
-offset_bottom = 40.0
-size_flags_horizontal = 0
-texture_normal = ExtResource("35_xex6t")
-
-[node name="Label" type="Label" parent="CanvasLayer/Main Menu Button"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("31_dhpj7")
-text = "Quit"
-horizontal_alignment = 1
+[node name="cursor" parent="CanvasLayer" instance=ExtResource("2_tqrlg")]
+position = Vector2(640, 360)
 
 [node name="introduction" parent="." instance=ExtResource("36_aa0lp")]
 visible = false

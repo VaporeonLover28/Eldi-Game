@@ -24,23 +24,22 @@ func _ready():
 	set_limit(SIDE_BOTTOM, settable_limit_bottom)
 
 func _unhandled_input(event: InputEvent):
-	if !game.minigame_started:
-		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-			_dragging = event.pressed
-			if _dragging:
-				_previous_position = event.position
-				_velocity = Vector2.ZERO  # Reset velocity when starting new drag
-			else:
-				_target_position = position
-			get_tree().root.set_input_as_handled()
-		elif event is InputEventMouseMotion and _dragging:
-			var current_position = event.position
-			var movement = (_previous_position - current_position) * zoom * drag_sensitivity
-			position += movement
-			# Update velocity based on movement for inertia
-			_velocity = movement / get_process_delta_time()
-			_previous_position = current_position
-			get_tree().root.set_input_as_handled()
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		_dragging = event.pressed
+		if _dragging:
+			_previous_position = event.position
+			_velocity = Vector2.ZERO  # Reset velocity when starting new drag
+		else:
+			_target_position = position
+		get_tree().root.set_input_as_handled()
+	elif event is InputEventMouseMotion and _dragging:
+		var current_position = event.position
+		var movement = (_previous_position - current_position) * zoom * drag_sensitivity
+		position += movement
+		# Update velocity based on movement for inertia
+		_velocity = movement / get_process_delta_time()
+		_previous_position = current_position
+		get_tree().root.set_input_as_handled()
 
 func _process(delta):
 	if not _dragging and inertia_enabled and _velocity.length() > 0:
