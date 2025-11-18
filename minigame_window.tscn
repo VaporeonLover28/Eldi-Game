@@ -1,32 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvq48367x031g"]
+[gd_scene load_steps=2 format=3 uid="uid://bvq48367x031g"]
 
 [ext_resource type="Script" uid="uid://w27pwtb8rsjm" path="res://minigame_window.gd" id="1_i82p6"]
-[ext_resource type="Texture2D" uid="uid://joyy7arijyjv" path="res://Art/exclamation.png" id="2_40kx6"]
 
 [node name="MinigameWindow" type="SubViewportContainer"]
 offset_right = 320.0
 offset_bottom = 320.0
-scale = Vector2(0.66, 0.66)
+scale = Vector2(0.95, 0.95)
 size_flags_horizontal = 4
 script = ExtResource("1_i82p6")
-
-[node name="Control" type="Control" parent="."]
-visible = false
-layout_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="Control"]
-layout_mode = 0
-offset_left = -6.06061
-offset_top = -6.06061
-offset_right = 133.939
-offset_bottom = 133.939
-color = Color(0, 0.713726, 0, 1)
-
-[node name="TextureButton" type="TextureButton" parent="."]
-layout_mode = 2
-texture_normal = ExtResource("2_40kx6")
-
-[node name="MinigameTimeout" type="Timer" parent="."]
-autostart = true
-
-[connection signal="pressed" from="TextureButton" to="." method="_spawn_minigame"]

@@ -1,8 +1,8 @@
 extends Node2D
 
 @onready var game = $"../../../../../"
-@onready var minigame_handler = $"../../../"
-@onready var minigame_window = $"../../"
+@onready var minigame_handler = $"../../../../"
+@onready var minigame_window = $"../../../"
 @onready var timer_smash_trash: Timer = $Timer
 @onready var animation_wait_time: Timer = $Animation_wait_time
 @onready var label: Label = $Label

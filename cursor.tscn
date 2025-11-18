@@ -25,8 +25,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fbg2n"]
-radius = 19.4581
+[sub_resource type="CircleShape2D" id="CircleShape2D_76ls5"]
+radius = 19.46
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oua8b"]
 texture = ExtResource("4_76ls5")
@@ -45,10 +45,9 @@ sprite_frames = SubResource("SpriteFrames_qf7gk")
 animation = &"Not_clicking"
 
 [node name="mouseclick" type="Area2D" parent="."]
-monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mouseclick"]
-shape = SubResource("CircleShape2D_fbg2n")
+shape = SubResource("CircleShape2D_76ls5")
 
 [node name="desc" type="PanelContainer" parent="."]
 visible = false

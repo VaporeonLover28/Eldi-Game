@@ -3,8 +3,8 @@ extends Control
 @onready var pipe_grid: GridContainer = $pipe_grid
 
 @onready var game = $"../../../../../"
-@onready var minigame_handler = $"../../../"
-@onready var minigame_window = $"../../"
+@onready var minigame_handler = $"../../../../"
+@onready var minigame_window = $"../../../"
 
 @onready var long_pipe_texture = preload("res://Art/canoreto.png")
 @onready var curved_pipe_texture = preload("res://Art/canocurvo.png")

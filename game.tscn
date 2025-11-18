@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dvm7cd64fovya"]
+[gd_scene load_steps=49 format=3 uid="uid://dvm7cd64fovya"]
 
 [ext_resource type="Script" uid="uid://dfpnpny8dhsye" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://itwt77grqxjr" path="res://shoppanel.tscn" id="1_sdcse"]
@@ -32,9 +32,14 @@
 [ext_resource type="Texture2D" uid="uid://d2meyvvjqp0v2" path="res://Art/rua_menos_improvisada_.png" id="21_iu0sx"]
 [ext_resource type="Texture2D" uid="uid://ceu5i3gowigma" path="res://Art/CanoFabricaPT1.png" id="21_t46w6"]
 [ext_resource type="Texture2D" uid="uid://bvuubbefv5i5j" path="res://Art/CanoFabricaPT2.png" id="22_m28ev"]
+[ext_resource type="Texture2D" uid="uid://7ommukahqs6w" path="res://Art/arvore.png" id="24_klri6"]
+[ext_resource type="Script" uid="uid://bvu65pmkop6dk" path="res://arvore.gd" id="25_eu6ph"]
+[ext_resource type="Texture2D" uid="uid://k6y73j54bu3q" path="res://Art/arbusto .png" id="26_eu6ph"]
+[ext_resource type="Script" uid="uid://oaabi0gh57xm" path="res://arbusto.gd" id="27_edr7y"]
 [ext_resource type="Texture2D" uid="uid://bme3k6vikbwrp" path="res://Art/eldi_game_button_sprite.png" id="30_xfvwf"]
 [ext_resource type="Texture2D" uid="uid://dgasg0n8738b5" path="res://Art/shop_panel_teste.png" id="31_7knny"]
 [ext_resource type="FontFile" uid="uid://daob7tcao7krl" path="res://RevMiniPixel.ttf" id="31_dhpj7"]
+[ext_resource type="Script" uid="uid://dklka4rsq32hx" path="res://mousecol.gd" id="31_kq12w"]
 [ext_resource type="Script" uid="uid://c38aqtop87a4s" path="res://comeback_popup.gd" id="32_082n1"]
 [ext_resource type="PackedScene" uid="uid://dt1e4j4tetvkb" path="res://minigame_progress_panel.tscn" id="32_dhpj7"]
 [ext_resource type="Texture2D" uid="uid://cxuavbxvq0rgy" path="res://Art/eldi_game_button_concept.png" id="35_xex6t"]
@@ -51,6 +56,9 @@ initial_velocity_max = 10.0
 angular_velocity_min = 9.999984
 angular_velocity_max = 44.999985
 gravity = Vector3(-2, -1, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t46w6"]
+radius = 19.4581
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_082n1"]
 content_margin_left = 5.0
@@ -73,6 +81,358 @@ metadata/_edit_horizontal_guides_ = [41.0, -317.0]
 
 [node name="factory" type="Node2D" parent="scene"]
 position = Vector2(642, 440)
+
+[node name="predios" type="Node2D" parent="scene/factory"]
+
+[node name="PredioMontado" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 1
+position = Vector2(719, -17)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado6" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 1
+position = Vector2(1064, 174)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado19" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -1
+position = Vector2(-995, -873.26)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado20" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -1
+position = Vector2(-693, -719)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado3" type="Sprite2D" parent="scene/factory/predios"]
+position = Vector2(-1493, -441)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado8" type="Sprite2D" parent="scene/factory/predios"]
+position = Vector2(-1847, -289)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado11" type="Sprite2D" parent="scene/factory/predios"]
+position = Vector2(1972, 420)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado12" type="Sprite2D" parent="scene/factory/predios"]
+position = Vector2(1618, 572)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado2" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 2
+position = Vector2(-1066.0002, 850.0001)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado14" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 2
+position = Vector2(-721.00024, 1041.0001)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado25" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -1
+position = Vector2(-2746, 12.73999)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado26" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -1
+position = Vector2(-2444, 167)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado27" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 2
+position = Vector2(222, 1273)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado28" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 2
+position = Vector2(-98, 1447)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado29" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 1
+position = Vector2(-1514.0001, 414)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado30" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 1
+position = Vector2(-1823.0001, 585)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado17" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 1
+position = Vector2(208, 439)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado18" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 1
+position = Vector2(-106, 594)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado5" type="Sprite2D" parent="scene/factory/predios"]
+position = Vector2(-1012, -13)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado10" type="Sprite2D" parent="scene/factory/predios"]
+position = Vector2(-705, 144)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado15" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 1
+position = Vector2(746, 875)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado16" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 1
+position = Vector2(1056, 1032)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado4" type="Sprite2D" parent="scene/factory/predios"]
+position = Vector2(237, -1311)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado9" type="Sprite2D" parent="scene/factory/predios"]
+position = Vector2(-85, -1145)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado21" type="Sprite2D" parent="scene/factory/predios"]
+position = Vector2(1942, -450)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado22" type="Sprite2D" parent="scene/factory/predios"]
+position = Vector2(1625, -298)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado31" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -2
+position = Vector2(-1911, -1325.26)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado32" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -2
+position = Vector2(-1566, -1134.26)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado33" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -1
+position = Vector2(-3602.9998, -440.99997)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado34" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -1
+position = Vector2(-3282.9998, -291.99997)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado39" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 2
+position = Vector2(-1066.0002, 850.0001)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado40" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 2
+position = Vector2(-721.00024, 1041.0001)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado41" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -1
+position = Vector2(-2746, 12.73999)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado42" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -1
+position = Vector2(-2444, 167)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado43" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 2
+position = Vector2(222, 1273)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado44" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 2
+position = Vector2(-98, 1447)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado45" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 1
+position = Vector2(-1514.0001, 414)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado46" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 1
+position = Vector2(-1823.0001, 585)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado49" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -2
+position = Vector2(2449, -875.99994)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado50" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -2
+position = Vector2(2776, -708)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado51" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -3
+position = Vector2(748, -1735.26)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado52" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -3
+position = Vector2(1050, -1581)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado53" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -1
+position = Vector2(3738, -433)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado54" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -1
+position = Vector2(3418, -259)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado55" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -3
+position = Vector2(1912, -1306)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado56" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -3
+position = Vector2(1603, -1135)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado57" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -4
+position = Vector2(-183, -2210.26)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado58" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -4
+position = Vector2(162, -2019.26)
+scale = Vector2(3.02, 3.02)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado35" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -2
+position = Vector2(-2398, -869)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado36" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -2
+position = Vector2(-2712, -714)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado37" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -3
+position = Vector2(-653, -1734)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado38" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -3
+position = Vector2(-970, -1582)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+flip_h = true
+
+[node name="PredioMontado7" type="Sprite2D" parent="scene/factory/predios"]
+position = Vector2(717, -879.00006)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado13" type="Sprite2D" parent="scene/factory/predios"]
+position = Vector2(1018, -719)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado23" type="Sprite2D" parent="scene/factory/predios"]
+z_index = -1
+position = Vector2(2529, 27)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
+
+[node name="PredioMontado24" type="Sprite2D" parent="scene/factory/predios"]
+z_index = 1
+position = Vector2(2824, 172)
+scale = Vector2(3, 3)
+texture = ExtResource("15_082n1")
 
 [node name="Parallax2D" type="Parallax2D" parent="scene/factory"]
 scroll_offset = Vector2(-816, -726)
@@ -126,356 +486,6 @@ game = NodePath("../../../..")
 condition = 0
 req_item = 3
 required_amount = 3
-
-[node name="PredioMontado" type="Sprite2D" parent="scene/factory"]
-z_index = 1
-position = Vector2(719.00006, -17)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado6" type="Sprite2D" parent="scene/factory"]
-z_index = 1
-position = Vector2(1064, 174.00002)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado19" type="Sprite2D" parent="scene/factory"]
-z_index = -1
-position = Vector2(-995, -873.26)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado20" type="Sprite2D" parent="scene/factory"]
-z_index = -1
-position = Vector2(-693, -719)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado3" type="Sprite2D" parent="scene/factory"]
-position = Vector2(-1493, -441)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado8" type="Sprite2D" parent="scene/factory"]
-position = Vector2(-1847, -289)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado11" type="Sprite2D" parent="scene/factory"]
-position = Vector2(1972, 420)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado12" type="Sprite2D" parent="scene/factory"]
-position = Vector2(1618, 572)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado2" type="Sprite2D" parent="scene/factory"]
-z_index = 2
-position = Vector2(-1066.0002, 850.0001)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado14" type="Sprite2D" parent="scene/factory"]
-z_index = 2
-position = Vector2(-721.00024, 1041.0001)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado25" type="Sprite2D" parent="scene/factory"]
-z_index = -1
-position = Vector2(-2746, 12.739992)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado26" type="Sprite2D" parent="scene/factory"]
-z_index = -1
-position = Vector2(-2444, 167)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado27" type="Sprite2D" parent="scene/factory"]
-z_index = 2
-position = Vector2(222, 1273)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado28" type="Sprite2D" parent="scene/factory"]
-z_index = 2
-position = Vector2(-98, 1447)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado29" type="Sprite2D" parent="scene/factory"]
-z_index = 1
-position = Vector2(-1514.0001, 414)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado30" type="Sprite2D" parent="scene/factory"]
-z_index = 1
-position = Vector2(-1823.0001, 585)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado17" type="Sprite2D" parent="scene/factory"]
-z_index = 1
-position = Vector2(208, 439)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado18" type="Sprite2D" parent="scene/factory"]
-z_index = 1
-position = Vector2(-106, 594)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado5" type="Sprite2D" parent="scene/factory"]
-position = Vector2(-1012, -13)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado10" type="Sprite2D" parent="scene/factory"]
-position = Vector2(-705, 144)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado15" type="Sprite2D" parent="scene/factory"]
-z_index = 1
-position = Vector2(746, 875)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado16" type="Sprite2D" parent="scene/factory"]
-z_index = 1
-position = Vector2(1056, 1032)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado4" type="Sprite2D" parent="scene/factory"]
-position = Vector2(237, -1311)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado9" type="Sprite2D" parent="scene/factory"]
-position = Vector2(-85, -1145)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado21" type="Sprite2D" parent="scene/factory"]
-position = Vector2(1942, -450)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado22" type="Sprite2D" parent="scene/factory"]
-position = Vector2(1625, -298)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado31" type="Sprite2D" parent="scene/factory"]
-z_index = -2
-position = Vector2(-1911, -1325.26)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado32" type="Sprite2D" parent="scene/factory"]
-z_index = -2
-position = Vector2(-1566, -1134.26)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado33" type="Sprite2D" parent="scene/factory"]
-z_index = -1
-position = Vector2(-3602.9998, -440.99997)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado34" type="Sprite2D" parent="scene/factory"]
-z_index = -1
-position = Vector2(-3282.9998, -291.99997)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado39" type="Sprite2D" parent="scene/factory"]
-z_index = 2
-position = Vector2(-1066.0002, 850.0001)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado40" type="Sprite2D" parent="scene/factory"]
-z_index = 2
-position = Vector2(-721.00024, 1041.0001)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado41" type="Sprite2D" parent="scene/factory"]
-z_index = -1
-position = Vector2(-2746, 12.739992)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado42" type="Sprite2D" parent="scene/factory"]
-z_index = -1
-position = Vector2(-2444, 167)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado43" type="Sprite2D" parent="scene/factory"]
-z_index = 2
-position = Vector2(222, 1273)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado44" type="Sprite2D" parent="scene/factory"]
-z_index = 2
-position = Vector2(-98, 1447)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado45" type="Sprite2D" parent="scene/factory"]
-z_index = 1
-position = Vector2(-1514.0001, 414)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado46" type="Sprite2D" parent="scene/factory"]
-z_index = 1
-position = Vector2(-1823.0001, 585)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado49" type="Sprite2D" parent="scene/factory"]
-z_index = -2
-position = Vector2(2449, -875.99994)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado50" type="Sprite2D" parent="scene/factory"]
-z_index = -2
-position = Vector2(2776, -708)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado51" type="Sprite2D" parent="scene/factory"]
-z_index = -3
-position = Vector2(748, -1735.26)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado52" type="Sprite2D" parent="scene/factory"]
-z_index = -3
-position = Vector2(1050, -1581)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado53" type="Sprite2D" parent="scene/factory"]
-z_index = -1
-position = Vector2(3738, -433)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado54" type="Sprite2D" parent="scene/factory"]
-z_index = -1
-position = Vector2(3418, -259)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado55" type="Sprite2D" parent="scene/factory"]
-z_index = -3
-position = Vector2(1911.9999, -1306)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado56" type="Sprite2D" parent="scene/factory"]
-z_index = -3
-position = Vector2(1602.9999, -1135)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado57" type="Sprite2D" parent="scene/factory"]
-z_index = -4
-position = Vector2(-183.00002, -2210.26)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado58" type="Sprite2D" parent="scene/factory"]
-z_index = -4
-position = Vector2(161.99998, -2019.26)
-scale = Vector2(3.02, 3.02)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado35" type="Sprite2D" parent="scene/factory"]
-z_index = -2
-position = Vector2(-2398, -869)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado36" type="Sprite2D" parent="scene/factory"]
-z_index = -2
-position = Vector2(-2712, -714)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado37" type="Sprite2D" parent="scene/factory"]
-z_index = -3
-position = Vector2(-653, -1734)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado38" type="Sprite2D" parent="scene/factory"]
-z_index = -3
-position = Vector2(-970, -1582)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-flip_h = true
-
-[node name="PredioMontado7" type="Sprite2D" parent="scene/factory"]
-position = Vector2(717, -879.00006)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado13" type="Sprite2D" parent="scene/factory"]
-position = Vector2(1018, -719)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado23" type="Sprite2D" parent="scene/factory"]
-z_index = -1
-position = Vector2(2529, 27)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
-
-[node name="PredioMontado24" type="Sprite2D" parent="scene/factory"]
-z_index = 1
-position = Vector2(2824, 172)
-scale = Vector2(3, 3)
-texture = ExtResource("15_082n1")
 
 [node name="fabrica" type="Sprite2D" parent="scene/factory"]
 position = Vector2(41, -190)
@@ -551,19 +561,439 @@ condition = 0
 req_item = 0
 required_amount = 5
 
-[node name="Parallax2D2" type="Parallax2D" parent="scene/factory"]
+[node name="ruas" type="Parallax2D" parent="scene/factory"]
 repeat_size = Vector2(1727.975, 864.025)
 repeat_times = 4
 
-[node name="Rua" type="Sprite2D" parent="scene/factory/Parallax2D2"]
+[node name="Rua" type="Sprite2D" parent="scene/factory/ruas"]
 z_index = -4
 position = Vector2(-166, 212.5)
 texture = ExtResource("20_aa0lp")
 
-[node name="Rua2" type="Sprite2D" parent="scene/factory/Parallax2D2"]
+[node name="Rua2" type="Sprite2D" parent="scene/factory/ruas"]
 z_index = -4
 texture = ExtResource("21_iu0sx")
 offset = Vector2(11.125, 323.055)
+
+[node name="Arvore" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(-421, -237)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 20
+
+[node name="Arvore2" type="Sprite2D" parent="scene/factory"]
+position = Vector2(362, -677)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore2" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 30
+
+[node name="Arvore3" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(-272, -669)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore3" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 50
+
+[node name="Arvore4" type="Sprite2D" parent="scene/factory"]
+z_index = 1
+position = Vector2(710, 340)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore4" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 50
+
+[node name="Arvore5" type="Sprite2D" parent="scene/factory"]
+z_index = 1
+position = Vector2(-1078, 322)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore5" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 75
+
+[node name="Arvore6" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(1432, -644)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore6" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 75
+
+[node name="Arvore7" type="Sprite2D" parent="scene/factory"]
+position = Vector2(2044, -90)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore7" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 75
+
+[node name="Arvore8" type="Sprite2D" parent="scene/factory"]
+position = Vector2(-1045, -534)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore8" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 75
+
+[node name="Arvore9" type="Sprite2D" parent="scene/factory"]
+position = Vector2(-534, -1378)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore9" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 75
+
+[node name="Arvore10" type="Sprite2D" parent="scene/factory"]
+z_index = 2
+position = Vector2(718, 1229)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore10" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 75
+
+[node name="Arvore11" type="Sprite2D" parent="scene/factory"]
+z_index = 2
+position = Vector2(2011, 792)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore11" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 90
+
+[node name="Arvore12" type="Sprite2D" parent="scene/factory"]
+z_index = 2
+position = Vector2(2375, 629)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore12" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 90
+
+[node name="Arvore13" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(1337, -295)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore13" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 90
+
+[node name="Arvore14" type="Sprite2D" parent="scene/factory"]
+z_index = -3
+position = Vector2(2040, -939)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore14" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 90
+
+[node name="Arvore15" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(-335, -1161)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore15" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 90
+
+[node name="Arvore16" type="Sprite2D" parent="scene/factory"]
+position = Vector2(-1448, -59)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore16" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 90
+
+[node name="Arvore17" type="Sprite2D" parent="scene/factory"]
+position = Vector2(-2300, -500)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore17" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 90
+
+[node name="Arvore18" type="Sprite2D" parent="scene/factory"]
+z_index = 1
+position = Vector2(-1422, 805)
+scale = Vector2(3, 3)
+texture = ExtResource("24_klri6")
+script = ExtResource("25_eu6ph")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arvore18" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 1
+required_amount = 90
+
+[node name="Arbusto" type="Sprite2D" parent="scene/factory"]
+position = Vector2(36, 3)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 1
+
+[node name="Arbusto2" type="Sprite2D" parent="scene/factory"]
+position = Vector2(410, -172)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto2" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 2
+
+[node name="Arbusto3" type="Sprite2D" parent="scene/factory"]
+position = Vector2(-428, -464.99997)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto3" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 3
+
+[node name="Arbusto4" type="Sprite2D" parent="scene/factory"]
+position = Vector2(-538, 429.00003)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto4" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 3
+
+[node name="Arbusto5" type="Sprite2D" parent="scene/factory"]
+z_index = 1
+position = Vector2(588, 404.00003)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto5" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 3
+
+[node name="Arbusto6" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(1920, -35)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto6" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 3
+
+[node name="Arbusto7" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(2399, -442)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto7" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 4
+
+[node name="Arbusto8" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(665, -1303)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto8" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 4
+
+[node name="Arbusto9" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(-209, -1800)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto9" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 4
+
+[node name="Arbusto10" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(41, -1637)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto10" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 4
+
+[node name="Arbusto11" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(-2029, -889.9999)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto11" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 4
+
+[node name="Arbusto12" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(-3137, 273.00006)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto12" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 4
+
+[node name="Arbusto13" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(-2556.9998, 564.99994)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto13" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 4
+
+[node name="Arbusto14" type="Sprite2D" parent="scene/factory"]
+z_index = -1
+position = Vector2(-2224, 716)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("26_eu6ph")
+script = ExtResource("27_edr7y")
+update_type = 1
+
+[node name="UpgradeParticle" parent="scene/factory/Arbusto14" node_paths=PackedStringArray("game") instance=ExtResource("19_iu0sx")]
+game = NodePath("../../../..")
+condition = 0
+req_item = 4
+required_amount = 4
 
 [node name="LixeiraEldiSemlixo" type="Sprite2D" parent="scene"]
 position = Vector2(793.59204, 383)
@@ -578,6 +1008,21 @@ flip_h = true
 
 [node name="givemoney" type="Timer" parent="."]
 autostart = true
+
+[node name="MinigameHandler" type="Node2D" parent="."]
+script = ExtResource("8_lc2xo")
+
+[node name="MinigameAddTimer" type="Timer" parent="MinigameHandler"]
+wait_time = 15.0
+autostart = true
+
+[node name="taskcollision" type="Area2D" parent="." node_paths=PackedStringArray("mouse")]
+position = Vector2(640, 360)
+script = ExtResource("31_kq12w")
+mouse = NodePath("../CanvasLayer/cursor")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="taskcollision"]
+shape = SubResource("CircleShape2D_t46w6")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -673,8 +1118,7 @@ offset_left = 140.0
 offset_right = 296.0
 offset_bottom = 40.0
 theme = ExtResource("13_e36ub")
-text = "Nature Rating: 0.0%
-"
+text = "Nature Rating: 0.0%"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -693,17 +1137,6 @@ position = Vector2(-42, 318)
 [node name="fadeoutthresh" parent="CanvasLayer/shoppanel" index="2"]
 position = Vector2(66, 318)
 
-[node name="MinigameHandler" type="Node2D" parent="CanvasLayer"]
-script = ExtResource("8_lc2xo")
-
-[node name="MinigameAddTimer" type="Timer" parent="CanvasLayer/MinigameHandler"]
-wait_time = 15.0
-autostart = true
-
-[node name="cursor" parent="CanvasLayer" instance=ExtResource("2_tqrlg")]
-z_index = 4
-position = Vector2(640, 360)
-
 [node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
 position = Vector2(640, 360)
 script = ExtResource("7_f1jbl")
@@ -711,6 +1144,9 @@ settable_limit_left = -1500
 settable_limit_right = 3000
 settable_limit_top = -1200
 settable_limit_bottom = 1300
+
+[node name="cursor" parent="CanvasLayer" instance=ExtResource("2_tqrlg")]
+position = Vector2(640, 360)
 
 [node name="Comeback_popup" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 8
@@ -787,6 +1223,10 @@ text = "Proceed"
 
 [node name="Minigame Progress Panel" parent="CanvasLayer" instance=ExtResource("32_dhpj7")]
 
+[node name="TabContainer" parent="CanvasLayer/Minigame Progress Panel" index="0"]
+offset_left = -167.0
+offset_right = 81.0
+
 [node name="Label" parent="CanvasLayer/Minigame Progress Panel/TabContainer/teste 1/ScrollContainer/VBoxContainer" index="0"]
 theme_override_font_sizes/font_size = 32
 
@@ -843,8 +1283,8 @@ horizontal_alignment = 1
 visible = false
 
 [connection signal="timeout" from="givemoney" to="." method="_on_givemoney_timeout"]
-[connection signal="minigame_result" from="CanvasLayer/MinigameHandler" to="CanvasLayer/MinigameHandler" method="_on_minigame_result"]
-[connection signal="timeout" from="CanvasLayer/MinigameHandler/MinigameAddTimer" to="CanvasLayer/MinigameHandler" method="_add_minigame_window"]
+[connection signal="minigame_result" from="MinigameHandler" to="MinigameHandler" method="_on_minigame_result"]
+[connection signal="timeout" from="MinigameHandler/MinigameAddTimer" to="MinigameHandler" method="_add_minigame_window"]
 [connection signal="pressed" from="CanvasLayer/Comeback_popup/MarginContainer/VBoxContainer/Control/TextureButton" to="CanvasLayer/Comeback_popup" method="_hide_comeback_popup"]
 [connection signal="pressed" from="CanvasLayer/Main Menu Button" to="." method="_on_main_menu_button_pressed"]
 

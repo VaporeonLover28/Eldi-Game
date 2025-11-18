@@ -1,8 +1,8 @@
 extends Node2D
 
 @onready var game = $"../../../../../"
-@onready var minigame_handler = $"../../../"
-@onready var minigame_window = $"../../"
+@onready var minigame_handler = $"../../../../"
+@onready var minigame_window = $"../../../"
 @onready var throwable_trash = preload("res://throwable_trash.tscn")
 @onready var winning_detection_area: Area2D = $"Winning Detection Area"
 @onready var number_of_tries : int = 3

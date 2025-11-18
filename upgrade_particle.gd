@@ -19,7 +19,9 @@ func update():
 		##condition is rating
 		else:
 			##if rating is enough
-			if required_amount >= game.rating:
+			if required_amount <= int(game.rating):
 				##animate
 				emitting = true
 				get_parent().animate()
+			else:
+				pass
